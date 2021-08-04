@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style type="text/css">
+td.linenos { background-color: #f0f0f0; padding-right: 10px; }
+span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
+pre { line-height: 125%; }
+body .hll { background-color: #ffffcc }
+body  { background: #f8f8f8; }
+body .c { color: #408080; font-style: italic } /* Comment */
+body .err { border: 1px solid #FF0000 } /* Error */
+body .k { color: #008000; font-weight: bold } /* Keyword */
+body .o { color: #666666 } /* Operator */
+body .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+body .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+body .cp { color: #BC7A00 } /* Comment.Preproc */
+body .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+body .c1 { color: #408080; font-style: italic } /* Comment.Single */
+body .cs { color: #408080; font-style: italic } /* Comment.Special */
+body .gd { color: #A00000 } /* Generic.Deleted */
+body .ge { font-style: italic } /* Generic.Emph */
+body .gr { color: #FF0000 } /* Generic.Error */
+body .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+body .gi { color: #00A000 } /* Generic.Inserted */
+body .go { color: #888888 } /* Generic.Output */
+body .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+body .gs { font-weight: bold } /* Generic.Strong */
+body .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+body .gt { color: #0044DD } /* Generic.Traceback */
+body .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+body .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+body .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+body .kp { color: #008000 } /* Keyword.Pseudo */
+body .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+body .kt { color: #B00040 } /* Keyword.Type */
+body .m { color: #666666 } /* Literal.Number */
+body .s { color: #BA2121 } /* Literal.String */
+body .na { color: #7D9029 } /* Name.Attribute */
+body .nb { color: #008000 } /* Name.Builtin */
+body .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+body .no { color: #880000 } /* Name.Constant */
+body .nd { color: #AA22FF } /* Name.Decorator */
+body .ni { color: #999999; font-weight: bold } /* Name.Entity */
+body .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+body .nf { color: #0000FF } /* Name.Function */
+body .nl { color: #A0A000 } /* Name.Label */
+body .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+body .nt { color: #008000; font-weight: bold } /* Name.Tag */
+body .nv { color: #19177C } /* Name.Variable */
+body .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+body .w { color: #bbbbbb } /* Text.Whitespace */
+body .mb { color: #666666 } /* Literal.Number.Bin */
+body .mf { color: #666666 } /* Literal.Number.Float */
+body .mh { color: #666666 } /* Literal.Number.Hex */
+body .mi { color: #666666 } /* Literal.Number.Integer */
+body .mo { color: #666666 } /* Literal.Number.Oct */
+body .sb { color: #BA2121 } /* Literal.String.Backtick */
+body .sc { color: #BA2121 } /* Literal.String.Char */
+body .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+body .s2 { color: #BA2121 } /* Literal.String.Double */
+body .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+body .sh { color: #BA2121 } /* Literal.String.Heredoc */
+body .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+body .sx { color: #008000 } /* Literal.String.Other */
+body .sr { color: #BB6688 } /* Literal.String.Regex */
+body .s1 { color: #BA2121 } /* Literal.String.Single */
+body .ss { color: #19177C } /* Literal.String.Symbol */
+body .bp { color: #008000 } /* Name.Builtin.Pseudo */
+body .vc { color: #19177C } /* Name.Variable.Class */
+body .vg { color: #19177C } /* Name.Variable.Global */
+body .vi { color: #19177C } /* Name.Variable.Instance */
+body .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+  </style>
+</head>
+<body>
+<h2></h2>
+
+<div class="highlight"><pre><span class="c1"># -*- encoding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">nltk</span> 
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+
+<span class="c1">###  Find the 50 most frequent bigrams (see Week 6) in Jane Austen&#39;s Emma.</span>
+<span class="c1">###  Then find the 50 most frequent bigrams that do not include a stopword.</span>
+<span class="n">emma</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">gutenberg</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;austen-emma.txt&#39;</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Find the 50 most frequent bigrams in emma&quot;</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">([</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">nltk</span><span class="o">.</span><span class="n">FreqDist</span><span class="p">(</span><span class="n">nltk</span><span class="o">.</span><span class="n">bigrams</span><span class="p">(</span><span class="n">emma</span><span class="p">))</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">50</span><span class="p">)])</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Find the 50 most frequent bigrams in emma without stopwords&quot;</span><span class="p">)</span>
+
+<span class="n">stopen</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">)</span>
+
+<span class="c1"># that do not contain stopwords (or punct)</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="n">nltk</span><span class="o">.</span><span class="n">FreqDist</span><span class="p">(</span><span class="n">nltk</span><span class="o">.</span><span class="n">bigrams</span><span class="p">(</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">emma</span> 
+                                 <span class="k">if</span> <span class="n">w</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopen</span> 
+                                 <span class="ow">and</span> <span class="n">w</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()))</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
+
+<span class="c1">### find the bigrams first then remove stop words</span>
+<span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Find the 50 most frequent bigrams without stopwords in emma&quot;</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">nltk</span><span class="o">.</span><span class="n">FreqDist</span><span class="p">((</span><span class="n">w1</span><span class="p">,</span> <span class="n">w2</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">w1</span><span class="p">,</span> <span class="n">w2</span><span class="p">)</span> <span class="ow">in</span> <span class="n">nltk</span><span class="o">.</span><span class="n">bigrams</span><span class="p">(</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">emma</span>
+                                                          <span class="k">if</span> <span class="n">w</span><span class="o">.</span><span class="n">isalpha</span><span class="p">())</span>
+                     <span class="k">if</span> <span class="n">w1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopen</span> <span class="ow">and</span> <span class="n">w2</span>  <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopen</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
+
+
+
+<span class="c1">###</span>
+<span class="c1">### A Pronouncing Dictionary</span>
+<span class="c1">###</span>
+
+
+<span class="n">pron</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">cmudict</span><span class="o">.</span><span class="n">entries</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;First ten entries&quot;</span><span class="p">,</span> <span class="n">pron</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
+
+<span class="c1"># Find python in the Pronouncing Dictionary and print its pronunciation.</span>
+<span class="n">python_pron</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span> <span class="k">for</span> <span class="n">w</span><span class="p">,</span><span class="n">p</span> <span class="ow">in</span> <span class="n">pron</span> <span class="k">if</span> <span class="n">w</span> <span class="o">==</span><span class="s1">&#39;python&#39;</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Python is pronounced&quot;</span><span class="p">,</span> <span class="n">python_pron</span><span class="p">)</span>
+
+<span class="c1"># Find marathon and print its pronunciation.</span>
+<span class="n">marathon_pron</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span> <span class="k">for</span> <span class="n">w</span><span class="p">,</span><span class="n">p</span> <span class="ow">in</span> <span class="n">pron</span> <span class="k">if</span> <span class="n">w</span> <span class="o">==</span><span class="s1">&#39;marathon&#39;</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Marathon is pronounced&quot;</span><span class="p">,</span> <span class="n">marathon_pron</span><span class="p">)</span>
+
+
+<span class="c1"># Find all the words whose last syllable rhymes with python.</span>
+<span class="c1"># Find all the words whose last syllable rhymes with marathon. </span>
+
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;marathon&#39;</span><span class="p">]:</span>
+    <span class="n">wp</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span> <span class="k">for</span> <span class="n">w</span><span class="p">,</span><span class="n">p</span> <span class="ow">in</span> <span class="n">pron</span> <span class="k">if</span> <span class="n">w</span> <span class="o">==</span><span class="n">word</span><span class="p">]</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;{} is pronounced {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">wp</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;These words rhyme with it (assuming last three phonemes are ok):&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">([(</span><span class="n">w</span><span class="p">,</span><span class="n">p</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:])</span> <span class="k">for</span> <span class="n">w</span><span class="p">,</span><span class="n">p</span> <span class="ow">in</span> <span class="n">pron</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">2</span> <span class="ow">and</span> <span class="n">wp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span><span class="o">==</span><span class="n">p</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]])</span>
+
+<span class="c1">## A better definition of &quot;rhyme&quot; is </span>
+<span class="c1">### &quot;identical in pronunciation from the main-stressed vowel to the end&quot;,</span>
+<span class="c1">### See: http://languagelog.ldc.upenn.edu/nll/?p=1946</span>
+
+
+<span class="c1">### And of course: http://en.wiktionary.org/wiki/Rhymes:English</span>
+
+<span class="c1"># ★ Write a function that converts Arbabet to IPA</span>
+<span class="c1"># Use it to print the pronunciations of python and marathon</span>
+
+<span class="c1"># Load wordnet inside python.</span>
+
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">wordnet</span> <span class="k">as</span> <span class="n">wn</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Wordnet</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1">#     Look at the different synsets for bird.</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Synsets for bird:&quot;</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">wn</span><span class="o">.</span><span class="n">synsets</span><span class="p">(</span><span class="s1">&#39;bird&#39;</span><span class="p">))</span>
+
+<span class="c1">#     How many are there?</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="s2">&quot;# of senses for bird:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">wn</span><span class="o">.</span><span class="n">synsets</span><span class="p">(</span><span class="s1">&#39;bird&#39;</span><span class="p">)))</span>
+
+<span class="c1">#     How deep in the hierarchy and what are the definitions?</span>
+
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">wn</span><span class="o">.</span><span class="n">synsets</span><span class="p">(</span><span class="s1">&#39;bird&#39;</span><span class="p">):</span>
+    <span class="k">print</span> <span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">name</span><span class="p">(),</span> <span class="n">s</span><span class="o">.</span><span class="n">min_depth</span><span class="p">(),</span> <span class="n">s</span><span class="o">.</span><span class="n">definition</span><span class="p">())</span>
+
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Which  languages have lemmas for &#39;bird.n.01&#39;?&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">wn</span><span class="o">.</span><span class="n">langs</span><span class="p">():</span>
+    <span class="c1">### bug in Croation and Bulgarian, my bad</span>
+    <span class="c1"># if l in (&#39;hrv&#39;, &#39;bul&#39;):</span>
+    <span class="c1">#     continue ## skip to the next language</span>
+    <span class="k">if</span> <span class="n">wn</span><span class="o">.</span><span class="n">synset</span><span class="p">(</span><span class="s1">&#39;bird.n.01&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lemmas</span><span class="p">(</span><span class="n">lang</span><span class="o">=</span><span class="n">l</span><span class="p">):</span>
+        <span class="k">print</span> <span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;: &#39;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">wn</span><span class="o">.</span><span class="n">synset</span><span class="p">(</span><span class="s1">&#39;bird.n.01&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lemma_names</span><span class="p">(</span><span class="n">lang</span><span class="o">=</span><span class="n">l</span><span class="p">)))</span>
+
+
+<span class="c1">#     For each synset, print out each lemma and its frequency (hint freqency of a lemma is given by lemma.count)</span>
+
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">wn</span><span class="o">.</span><span class="n">synsets</span><span class="p">(</span><span class="s1">&#39;bird&#39;</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">lemmas</span><span class="p">():</span>
+        <span class="k">print</span> <span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">name</span><span class="p">(),</span> <span class="n">l</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
+    <span class="k">print</span><span class="p">()</span>
+    
+<span class="c1">#     Give the total frequency for each synset </span>
+
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">wn</span><span class="o">.</span><span class="n">synsets</span><span class="p">(</span><span class="s1">&#39;bird&#39;</span><span class="p">):</span>
+    <span class="k">print</span> <span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">name</span><span class="p">(),</span> <span class="nb">sum</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">lemmas</span><span class="p">()),</span> <span class="n">s</span><span class="o">.</span><span class="n">definition</span><span class="p">())</span>
+    
+
+<span class="c1"># ★ Tabulate the average polysemy per word length for all words in wordnet, and then seperately for each part of speech. (Hint: polysemy is number of synsets/word; you can get all words by [w for w in wn.all_lemma_names()]; for just nouns you can do: [w for w in wn.all_lemma_names(&#39;n&#39;)]. ) </span>
+
+
+<span class="c1">##</span>
+<span class="c1">## another way to do it</span>
+<span class="c1">##</span>
+
+<span class="n">cmu</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">cmudict</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>
+
+<span class="c1"># Find python in the Pronouncing Dictionary and print its pronunciation.</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="s2">&quot;&#39;python&#39; is pronounced:&quot;</span><span class="p">,</span> <span class="n">cmu</span><span class="p">[</span><span class="s1">&#39;python&#39;</span><span class="p">])</span>
+
+    <span class="c1"># Find marathon and print its pronunciation.</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="s2">&quot;&#39;marathon&#39; is pronounced:&quot;</span><span class="p">,</span> <span class="n">cmu</span><span class="p">[</span><span class="s1">&#39;marathon&#39;</span><span class="p">])</span>
+<span class="c1">##</span>
+<span class="c1">## simple</span>
+<span class="c1">##</span>
+
+<span class="c1">## A better definition of &quot;rhyme&quot; is </span>
+<span class="c1">### &quot;identical in pronunciation from the main-stressed vowel to the end&quot;,</span>
+<span class="c1">### See: http://languagelog.ldc.upenn.edu/nll/?p=1946</span>
+
+<span class="c1">##</span>
+<span class="c1">## complicated but fully automatic</span>
+<span class="c1">##</span>
+
+<span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">]:</span>
+    <span class="n">poly</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Wordlength: Average Polysemy for </span><span class="si">%s</span><span class="s2">:&quot;</span> <span class="o">%</span> <span class="n">pos</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">pos</span> <span class="o">==</span> <span class="s1">&#39;all&#39;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">wn</span><span class="o">.</span><span class="n">all_lemma_names</span><span class="p">():</span>
+            <span class="n">poly</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">wn</span><span class="o">.</span><span class="n">synsets</span><span class="p">(</span><span class="n">w</span><span class="p">)))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">wn</span><span class="o">.</span><span class="n">all_lemma_names</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+            <span class="n">poly</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">wn</span><span class="o">.</span><span class="n">synsets</span><span class="p">(</span><span class="n">w</span><span class="p">)))</span>
+    <span class="k">for</span> <span class="n">length</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">poly</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">%2d</span><span class="s2">: </span><span class="si">%2.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="nb">sum</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="n">length</span><span class="p">])</span> <span class="o">/</span> 
+                              <span class="nb">len</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="n">length</span><span class="p">])))</span>
+
+
+
+
+
+<span class="k">def</span> <span class="nf">lastsyllable</span> <span class="p">(</span><span class="n">pron</span><span class="p">):</span>
+    <span class="s2">&quot;take the pronunciation from cmudict, return the last syllable&quot;</span>
+    <span class="c1"># e.g. [&#39;P&#39;, &#39;AY1&#39;, &#39;TH&#39;, &#39;AA0&#39;, &#39;N&#39;] -&gt; [&#39;TH&#39;, &#39;AA0&#39;, &#39;N&#39;]</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">nrop</span> <span class="o">=</span> <span class="n">pron</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pron</span><span class="p">)</span> <span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+        <span class="c1">## &#39;I&#39;</span>
+        <span class="k">return</span> <span class="n">pron</span>
+    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">nrop</span><span class="p">:</span>
+        <span class="n">end</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">l</span><span class="p">)</span>
+        <span class="c1">## stop when we come to a vowel</span>
+        <span class="k">if</span> <span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="ow">and</span> <span class="n">nrop</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1">## add the precceding phoneme as well if there is one</span>
+            <span class="c1">## don&#39;t do this if it is the second vowel &#39;Hammer&#39;</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">end</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">nrop</span><span class="p">)</span> <span class="ow">and</span> \
+                <span class="nb">len</span><span class="p">([</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">end</span> <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()])</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>  
+                <span class="n">end</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">nrop</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">end</span><span class="p">)])</span>
+            <span class="k">return</span> <span class="n">end</span>
+
+<span class="k">def</span> <span class="nf">rhymes</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">pdict</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">pron</span> <span class="ow">in</span> <span class="n">pdict</span><span class="p">[</span><span class="n">word</span><span class="p">]:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Rhymes for:&quot;</span><span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="n">pron</span><span class="p">,</span> <span class="n">lastsyllable</span><span class="p">(</span><span class="n">pron</span><span class="p">))</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="n">lastsyllable</span><span class="p">(</span><span class="n">pron</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">w</span><span class="p">,</span> <span class="n">prons</span> <span class="ow">in</span> <span class="n">pdict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">prons</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">p</span><span class="p">[</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">end</span><span class="p">):]</span> <span class="o">==</span> <span class="n">end</span> <span class="ow">and</span> <span class="n">w</span> <span class="o">!=</span> <span class="n">word</span><span class="p">:</span>
+                    <span class="k">print</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+
+ 
+<span class="n">rhymes</span><span class="p">(</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="n">cmu</span><span class="p">)</span>
+<span class="n">rhymes</span><span class="p">(</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">cmu</span><span class="p">)</span>
+<span class="n">rhymes</span><span class="p">(</span><span class="s1">&#39;love&#39;</span><span class="p">,</span> <span class="n">cmu</span><span class="p">)</span>
+
+<span class="n">rhymes</span><span class="p">(</span><span class="s1">&#39;hammer&#39;</span><span class="p">,</span> <span class="n">cmu</span><span class="p">)</span>
+<span class="n">rhymes</span><span class="p">(</span><span class="s1">&#39;accident&#39;</span><span class="p">,</span> <span class="n">cmu</span><span class="p">)</span>
+
+<span class="n">rhymes</span><span class="p">(</span><span class="s1">&#39;eye&#39;</span><span class="p">,</span> <span class="n">cmu</span><span class="p">)</span>
+</pre></div>
+</body>
+</html>

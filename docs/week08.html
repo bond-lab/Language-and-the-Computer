@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>8. Mid-review: Writing Structured Programs. - HG2051</title>
+</head>
+<body>
+
+<h1>8. Mid-review: Writing Structured Programs.</h1>
+
+<h3>Lecture notes</h3>
+<ul>
+  <li>NLTK Chapter 4:
+    <a href="http://www.nltk.org/book/ch04.html">
+      Writing Structured Programs</a>
+    <ul>
+      <li>4.1:
+	<a href="http://www.nltk.org/book/ch04.html#back-to-the-basics">
+	  Back to the Basics</a>
+      </li>
+      <li>4.2:
+	<a href="http://www.nltk.org/book/ch04.html#sequences">
+	  Sequences (Strings, Lists and Tuples)</a>
+      </li>
+      <li>4.3:
+	<a href="http://www.nltk.org/book/ch04.html#questions-of-style">
+	  Questions of Style</a>
+      <li>4.4:
+	<a href="http://www.nltk.org/book/ch04.html#functions-the-foundation-of-structured-programming"
+<p>Functions: The Foundation of Structured Programming</a>
+      <li>4.5:	<a href="http://www.nltk.org/book/ch04.html#doing-more-with-functions">Doing More with Functions</a>
+      </li>
+    </ul>
+    
+  <li>Why do we test in NLP?
+    <ol>
+      <li> Confirm or Disprove a Hypothesis
+      <li> Confirm Coverage of the System
+      <li> Discover Problems
+      <li> Stop Backsliding (Regression testing)
+      <li> Algorithm Comparison
+	<ul>
+	  <li> Discover the best way to do something
+	</ul>
+      <li> System comparison
+	<ul>
+	  <li> Discover the best system for a task
+	</ul>
+  </ol> <li> How do we test?
+    <ol>
+      <li> <b>Functional Tests</b> (<a href="http://in.pycon.org/2009/smedia/slides/tdd_with_python.pdf">Unit Testing with Python</a>)
+	<ul>
+	  <li> Test system on test suites and structured data
+	</ul>
+      <li> <b>Regression Tests</b>
+	<ul>
+	  <li> Test different versions of the system
+	</ul>
+	  <li> <b>Performance Tests</b>
+	    <ul>
+	      <li> Test on normal input data
+	    </ul>
+	  <li> <b>Stress Tests</b> (Fuzz tests)
+	    <ul>
+	      <li>  Test on abnormal input data
+	    </ul>
+    </ol>
+    </li>
+</ul>
+<h3>Further reading</h3>
+<ul>
+  <li>The rest of  <a href="http://www.nltk.org/book/ch04.html">
+      Chapter 4</a>
+    <ul>
+      <li>4.6   Program Development
+      <li>4.7   Algorithm Design
+      <li>4.8   A Sample of Python Libraries
+      <li>4.9   Summary
+      <li>4.10   Further Reading
+    </ul>
+  </li>
+
+</ul>
+
+
+<h3>Before Class (<a href='code/wk8a.html'>code</a>)</h3>
+<ul>
+<li>Convert the following <tt>for</tt> loop into a <tt>while</tt> loop (which does the same thing as the
+<tt>for</tt> loop):
+<pre>
+for i in range(1,10,2):
+      print "i = ", i
+</pre>
+Be careful about the start and end conditions.
+<li> Translate the following <tt>while</tt> loop into a <tt>for</tt> loop 
+(which does the same thing as the <tt>while</tt> loop):
+<pre>
+i = 20
+while (i > 0):
+      print "i = ", i
+      i -= 1
+</pre>
+Be careful about the start and end conditions.
+
+<li>When empty strings and empty lists occur in the condition part of
+an <b>if</b> clause, they evaluate to <tt>False</tt>. In this case,
+they are said to be occurring in a Boolean context. Experiment with
+different kind of non-Boolean expressions in Boolean contexts, and see
+whether they evaluate as <tt>True</tt> or <tt>False</tt>.
+</ul>
+
+<h3>Practical work (<a href='code/wk8b.html'>code</a>)</h3>
+<ul>
+<li>Write a function <tt>shorten(text, n)</tt> to process a text,
+omitting the <tt>n</tt> most frequently occurring words of the text. How
+readable is it?
+
+<li>Write a list comprehension that sorts a list of WordNet synsets
+for proximity to a given synset. For example, given the synsets
+<tt>minke_whale.n.01, orca.n.01, novel.n.01, and tortoise.n.01</tt>, sort them
+according to their <tt>shortest_path_distance()</tt> from <tt>right_whale.n.01</tt>
+
+<li>Write a function that takes a list of words (containing
+duplicates) and returns a list of words (with no duplicates) sorted by
+decreasing frequency. E.g. if the input list contained 10 instances of
+the word <i>table</i> and 9 instances of the word <i>chair</i>, then <i>table</i> would
+appear before <i>chair</i> in the output list.
+
+<li>Write some code to sort words by length. 
+Use a key that gives the length of the word. 
+(<b>Note</b>: you must have read <a href="http://www.nltk.org/book/ch04.html#doing-more-with-functions">4.5 Doing more with Functions</a>)
+
+<!-- <li>Given the following sentence represented as a list of word, -->
+<!-- concept tuples; write two programs: one to replace the words with the -->
+<!-- most frequent lemmas, one with the least frequent. -->
+
+
+
+</ul>
+
+<hr>
+<p><a href="index.html">HG2051: Language and the Computer</a> Francis Bond.
+</body>
+
+</html>

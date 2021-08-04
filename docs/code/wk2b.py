@@ -1,0 +1,86 @@
+##  Open Python IDLE from the Start menu and do:
+## 
+import nltk
+from nltk.book import *
+    
+
+## Counting Vocabulary
+## How many words (tokens) are there in the novel Sense and Sensibility?
+
+len(text2.tokens)
+
+## How many different words (types) are there in the novel?
+
+len(set(text2.tokens))
+
+## How many times does the word /the/ occur in the novel?
+
+text2.tokens.count('the')
+
+## What is this as a percentage of all the words in the novel?
+
+100.0 * text2.tokens.count('the') / len(text2.tokens)
+
+##
+## Lists and Variables
+##
+
+## How do you write "To be or not to be?" as a list of strings in Python?
+## Assign this list of strings to a variable named the_question.
+
+the_question = ["To", "be", "or", "not", "to", "be", "?"]
+
+## What exactly is calculated by len(the_question)?
+
+print(("The number of words in the_question is", len(the_question)))
+
+## Indexing Lists
+
+## What happens when you do the following? Why?
+print(text2[0:100])
+print(text2[100:200])
+print(text2[0:200])
+
+## What happens when you do the following? Why?
+first = text2[0:100]
+second = text2[100:200]
+print(first + second)
+##
+## Frequency Distributions
+##
+## Make a frequency distribution fdist2 for Sense and Sensibility (text2).
+sas_fdst = nltk.FreqDist(text2.tokens)
+
+## What are the 50 most frequent words (tokens) in the novel?
+print("Most frequent 50 words in Sense and Sensibility")
+print(list(sas_fdst.keys())[:50])
+print()
+## How many times does the word Mrs occur in the novel?
+print("'Mrs' occurs", sas_fdst['Mrs'], "times")
+print("'Mrs' occurs", text2.count('Mrs'), "times")
+
+##
+## Fine-grained Selection of Words
+##
+
+## Find all the words from Sense and Sensibility that are longer than 10 letters.
+print("Words from Sense and Sensibility that are longer than 10 letters")
+print([w for w in text2.tokens if len(w) > 10])
+
+## Find all the words longer than 10 letters, that occur more than 10 times.
+print("longer than 10 letters and occur more than 10 times")
+print([w for w in text2.tokens if len(w) > 10 and sas_fdst[w] > 10])
+# This is quite slow
+[w for w in text2.tokens if len(w) > 10 and text2.count(w) > 10]
+
+
+## Counting Other Things
+## In Moby Dick, 4-letter words are more frequent than 2-letter words.
+
+## Check if this is true for Sense and Sensibility.
+fdl2 = FreqDist(len(w) for w in text2)
+print('Are 4 letter words more frequent than 2 letter words:', fdl2[4] > fdl2[2])
+
+## Which functions defined for NLTK frequency distributions give the same results as Python functions that you already know? For example:
+## Compare fdist2.N() and Python len(text2).
+## Compare fdist2['very'] and Python text2.count('very'). 

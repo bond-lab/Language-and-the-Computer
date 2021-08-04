@@ -1,0 +1,35 @@
+
+Regular Expressions
+
+[a-zA-Z]+
+matches one or more ascii letters
+[A-Z][a-z]*
+matches zero or more ascii letters
+p[aeiou]{,2}t
+matches p followed by up to 2 vowels, followed by t
+\d+(\.\d+)?
+matches a digit followed possibly by a full stop and more digits
+([^aeiou][aeiou][^aeiou])*
+Matches zero or more CVC combinations
+\w+|[^\w\s]+
+Matches one or more letters or one or more (non (letters or white space))
+
+Strings and things
+
+['Peter ', 'i', 'er ', 'icked a ', 'eck of ', 'ickled ', 'e', '', 'ers']
+p
+e
+t
+e
+r
+p
+e
+t
+e
+r
+['Peter', 'piper', 'picked', 'a', 'peck', 'of', 'pickled', 'peppers']
+['Peter', 'piper', 'picked\n', 'a', 'peck', '', 'of', 'pickled', 'peppers']
+['Peter', 'a', 'of', 'peck', 'peppers', 'picked', 'pickled', 'piper']
+['Peter', 'piper', 'picked', 'a', 'peck', 'of', 'pickled', 'peppers']
+None
+['Peter', 'a', 'of', 'peck', 'peppers', 'picked', 'pickled', 'piper']

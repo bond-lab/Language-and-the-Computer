@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>3. Language Processing and Python: Strings. - HG2051</title>
+</head>
+<body>
+
+<h1>3. Language Processing and Python: Strings and Control.</h1>
+
+<h3>Lecture notes</h3>
+<ul>
+  <li>
+    <a href="OOPython-Strings.pdf">Getting Started with Python (Strings)</a> 
+    <br> Slides from <i>Object-Oriented Programming in Python</i>
+            (Goldwasser and Letscher, 2008)
+  </li>
+  <li>NLTK Chapter 1:
+    <a href="http://www.nltk.org/book/ch01.html">
+      Language Processing and Python</a>
+    <ul>
+      <li>NLTK 1.4:
+	<a href="http://www.nltk.org/book/ch01.html#back-to-python-making-decisions-and-taking-control">
+	  Back to Python: Making Decisions and Taking Control</a>
+      </li>
+      <li>NLTK 1.6:
+	<a href="http://www.nltk.org/book/ch01.html#summary">
+	  Summary</a>
+   </ul>
+      </li>
+  <li>Printing things nicely: <tt>print ("Is '{}' what you wanted or maybe '{}'?".format("string", 27))
+    <ul>
+      <li>NLTK 3.9:
+	<a href="http://www.nltk.org/book/ch03.html#formatting-from-lists-to-strings">Formatting: From lists to strings</a>
+
+      <li><a href="http://www.diveintopython3.net/strings.html#formatting-strings">Formatting Strings</a>
+	from <i>Dive into Python 3</i> (Pilgrim, 2009)
+      <li><a href="https://docs.python.org/3/library/string.html">Strings</a> (Python Doc)
+    </ul>
+</ul>
+
+<h3>Further reading</h3>
+
+<ul>
+  <li>NLTK 1.5:
+    <a href="http://www.nltk.org/book/ch01.html#sec-automatic-natural-language-understanding">
+      Automatic Natural Language Understanding</a>
+  </li>
+  <li>NLTK 1.7:
+    <a href="http://www.nltk.org/book/ch01.html#further-reading">
+      Further Reading</a>
+  </li>
+</ul>
+<h3>Before Class (<a href='code/wk3a.html'>code</a>)</h3>
+<ul>
+  <li> Experiment with saving some code in IDLE (see  <a href="http://hkn.eecs.berkeley.edu/~dyoo/python/idle_intro" shape="rect">
+      One Day of IDLE Toying</a> for help).
+  <li> Try out this program:
+<pre>
+for i in range(1,12):
+    if i <= 6:
+        print('*' * i)
+    else:
+        print('*' * (12 -i))
+</pre>
+Try to make a different shape.
+
+  <li> Write a function that prints the second letter of every word, 
+    if and only if it has more than two letters. Test it on <tt>sent1</tt>
+    
+  <li> Write a program that prints out all (types of)  words that appear in as
+    both lowercase and non-lowercase in <tt>text6</tt>.
+	<br> Hint (break it down):
+	<ul> 
+	  <li> Find all unique words
+	  <li> Make two sets: one of all lowercase words and one of all non-lowercase words
+	  <li> Compare them
+	</ul>
+</ul>
+
+
+<h3>Practical work (<a href='code/wk3b.html'>code</a>)</h3>
+<ul>
+  <li>
+    In IDLE do this:
+    <pre xml:space="preserve">
+      &gt;&gt;&gt; abc_list = ["aaa", "bbb", "ccc"]
+      &gt;&gt;&gt; print(abc_list)
+      &gt;&gt;&gt; abc_list[-1] = "ddd"
+      &gt;&gt;&gt; print(abc_list)
+    </pre>
+  </li>
+  <li>
+    Then do this and compare:
+    <pre xml:space="preserve">
+      &gt;&gt;&gt; abc_string = "abc"
+      &gt;&gt;&gt; print(abc_string)
+      &gt;&gt;&gt; abc_string[-1] = "d"
+      &gt;&gt;&gt; print(abc_string) 
+    </pre>
+  </li>
+  <li>
+    How could you test a given string to check if it is a palindrome?
+    <br><a href="http://en.wikipedia.org/wiki/Palindrome">palindrome</a> "a word or phrase that reads the same backward as forward." (WordNet 3.0)
+  </li>
+  <li>
+    The "Word Comparison Operators" in NLTK 1.4:
+    <a href="http://www.nltk.org/book/ch01.html#back-to-python-making-decisions-and-taking-control">
+      Back to Python: Making Decisions and Taking Control</a>
+    are already defined and ready to use.
+    How would you make these tests if they were not already
+    defined?  Select one of the operators and write some
+    Python code that does the same test.  Think a little bit about weird input.
+  </li>
+</ul>
+
+<hr>
+<p><a href="index.html">HG2051: Language and the Computer</a> Francis Bond.
+</body>
+
+</html>

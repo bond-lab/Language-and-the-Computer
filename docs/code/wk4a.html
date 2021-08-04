@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style type="text/css">
+td.linenos { background-color: #f0f0f0; padding-right: 10px; }
+span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
+pre { line-height: 125%; }
+body .hll { background-color: #ffffcc }
+body  { background: #f8f8f8; }
+body .c { color: #408080; font-style: italic } /* Comment */
+body .err { border: 1px solid #FF0000 } /* Error */
+body .k { color: #008000; font-weight: bold } /* Keyword */
+body .o { color: #666666 } /* Operator */
+body .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+body .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+body .cp { color: #BC7A00 } /* Comment.Preproc */
+body .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+body .c1 { color: #408080; font-style: italic } /* Comment.Single */
+body .cs { color: #408080; font-style: italic } /* Comment.Special */
+body .gd { color: #A00000 } /* Generic.Deleted */
+body .ge { font-style: italic } /* Generic.Emph */
+body .gr { color: #FF0000 } /* Generic.Error */
+body .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+body .gi { color: #00A000 } /* Generic.Inserted */
+body .go { color: #888888 } /* Generic.Output */
+body .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+body .gs { font-weight: bold } /* Generic.Strong */
+body .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+body .gt { color: #0044DD } /* Generic.Traceback */
+body .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+body .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+body .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+body .kp { color: #008000 } /* Keyword.Pseudo */
+body .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+body .kt { color: #B00040 } /* Keyword.Type */
+body .m { color: #666666 } /* Literal.Number */
+body .s { color: #BA2121 } /* Literal.String */
+body .na { color: #7D9029 } /* Name.Attribute */
+body .nb { color: #008000 } /* Name.Builtin */
+body .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+body .no { color: #880000 } /* Name.Constant */
+body .nd { color: #AA22FF } /* Name.Decorator */
+body .ni { color: #999999; font-weight: bold } /* Name.Entity */
+body .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+body .nf { color: #0000FF } /* Name.Function */
+body .nl { color: #A0A000 } /* Name.Label */
+body .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+body .nt { color: #008000; font-weight: bold } /* Name.Tag */
+body .nv { color: #19177C } /* Name.Variable */
+body .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+body .w { color: #bbbbbb } /* Text.Whitespace */
+body .mb { color: #666666 } /* Literal.Number.Bin */
+body .mf { color: #666666 } /* Literal.Number.Float */
+body .mh { color: #666666 } /* Literal.Number.Hex */
+body .mi { color: #666666 } /* Literal.Number.Integer */
+body .mo { color: #666666 } /* Literal.Number.Oct */
+body .sb { color: #BA2121 } /* Literal.String.Backtick */
+body .sc { color: #BA2121 } /* Literal.String.Char */
+body .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+body .s2 { color: #BA2121 } /* Literal.String.Double */
+body .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+body .sh { color: #BA2121 } /* Literal.String.Heredoc */
+body .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+body .sx { color: #008000 } /* Literal.String.Other */
+body .sr { color: #BB6688 } /* Literal.String.Regex */
+body .s1 { color: #BA2121 } /* Literal.String.Single */
+body .ss { color: #19177C } /* Literal.String.Symbol */
+body .bp { color: #008000 } /* Name.Builtin.Pseudo */
+body .vc { color: #19177C } /* Name.Variable.Class */
+body .vg { color: #19177C } /* Name.Variable.Global */
+body .vi { color: #19177C } /* Name.Variable.Instance */
+body .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+  </style>
+</head>
+<body>
+<h2></h2>
+
+<div class="highlight"><pre><span class="c1">###</span>
+<span class="c1">### set up</span>
+<span class="c1">###</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">gutenberg</span>
+
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;How many words (tokens) are there in Jane Austen&#39;s novel Persuasion?&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">gutenberg</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s2">&quot;austen-persuasion.txt&quot;</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">()</span> 
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;How many times does the word persuasion occur?&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">gutenberg</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s2">&quot;austen-persuasion.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;persuasion&quot;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">gutenberg</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s2">&quot;austen-persuasion.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;Persuasion&quot;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Make a concordance for &#39;persuasion&#39; in the novel.&quot;</span><span class="p">)</span>
+<span class="n">per</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">gutenberg</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s2">&quot;austen-persuasion.txt&quot;</span><span class="p">))</span>
+<span class="n">per</span><span class="o">.</span><span class="n">concordance</span><span class="p">(</span><span class="s2">&quot;persuasion&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">()</span>
+<span class="k">print</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;How many characters (including punctuation and spaces) are there in the novel?&quot;</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">gutenberg</span><span class="o">.</span><span class="n">raw</span><span class="p">(</span><span class="s2">&quot;austen-persuasion.txt&quot;</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;How many &#39;sentences&#39; are there?&quot;</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">gutenberg</span><span class="o">.</span><span class="n">sents</span><span class="p">(</span><span class="s2">&quot;austen-persuasion.txt&quot;</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Find and print the longest sentence(s).&quot;</span><span class="p">)</span>
+<span class="n">longest</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">gutenberg</span><span class="o">.</span><span class="n">sents</span><span class="p">(</span><span class="s2">&quot;austen-persuasion.txt&quot;</span><span class="p">)])</span>
+<span class="k">print</span><span class="p">([</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">gutenberg</span><span class="o">.</span><span class="n">sents</span><span class="p">(</span><span class="s2">&quot;austen-persuasion.txt&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="n">longest</span><span class="p">)])</span>
+
+<span class="k">print</span><span class="p">()</span>
+<span class="k">print</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Make a frequency distribution for the &quot;news&quot; category of the Brown Corpus.&#39;</span><span class="p">)</span> 
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">brown</span>
+
+<span class="c1">### Simple:</span>
+<span class="c1"># bnfd = nltk.FreqDist(brown.words(categories=&quot;news&quot;))</span>
+<span class="c1">### better</span>
+<span class="n">bnfd</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">FreqDist</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">w</span>  <span class="ow">in</span> <span class="n">brown</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="n">categories</span><span class="o">=</span><span class="s2">&quot;news&quot;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Print counts of the modal verbs: &#39;can, could, may, might, must, will&#39;&quot;</span><span class="p">)</span> 
+<span class="n">modals</span> <span class="o">=</span> <span class="s1">&#39;can, could, may, might, must, will&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">modals</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">bnfd</span><span class="p">[</span><span class="n">m</span><span class="p">])</span>
+<span class="k">print</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Print counts of the wh-words: what, when, where, who, how, why.&quot;</span><span class="p">)</span> 
+<span class="n">whs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;what&quot;</span><span class="p">,</span> <span class="s2">&quot;when&quot;</span><span class="p">,</span> <span class="s2">&quot;how&quot;</span><span class="p">,</span> <span class="s2">&quot;why&quot;</span><span class="p">,</span> <span class="s2">&quot;where&quot;</span><span class="p">,</span> <span class="s2">&quot;who&quot;</span> <span class="p">]</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">whs</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">bnfd</span><span class="p">[</span><span class="n">m</span><span class="p">])</span>
+<span class="k">print</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Make a frequency distribution for the &quot;romance&quot; category.&#39;</span><span class="p">)</span>
+<span class="n">brfd</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">FreqDist</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">w</span>  <span class="ow">in</span> <span class="n">brown</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="n">categories</span><span class="o">=</span><span class="s2">&quot;romance&quot;</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Print counts of the modal verbs and the wh-words.&quot;</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Compare the counts for the two genres. Are there any clear  differences?&quot;</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%-5s</span><span class="s2">: </span><span class="si">%7s</span><span class="s2"> </span><span class="si">%7s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="s1">&#39;word&#39;</span><span class="p">,</span> <span class="s1">&#39;news&#39;</span><span class="p">,</span>  <span class="s1">&#39;romance&#39;</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">modals</span><span class="o">+</span><span class="n">whs</span><span class="p">:</span>
+	<span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%-5s</span><span class="s2">: </span><span class="si">%7d</span><span class="s2"> </span><span class="si">%7d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">bnfd</span><span class="p">[</span><span class="n">w</span><span class="p">],</span>  <span class="n">brfd</span><span class="p">[</span><span class="n">w</span><span class="p">]))</span>
+
+<span class="k">print</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Better to normalize for comparison (divide by number of words)&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%-5s</span><span class="s2">: </span><span class="si">%7s</span><span class="s2"> </span><span class="si">%7s</span><span class="s2"> (in words/thousand)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="s1">&#39;word&#39;</span><span class="p">,</span> <span class="s1">&#39;news&#39;</span><span class="p">,</span>  <span class="s1">&#39;rom&#39;</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">modals</span><span class="o">+</span><span class="n">whs</span><span class="p">:</span>
+	<span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%-5s</span><span class="s2">: </span><span class="si">%7.3f</span><span class="s2"> </span><span class="si">%7.3f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="mf">1000.0</span><span class="o">*</span> <span class="n">bnfd</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">/</span> <span class="n">bnfd</span><span class="o">.</span><span class="n">N</span><span class="p">(),</span>  <span class="mf">1000.0</span><span class="o">*</span><span class="n">brfd</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">/</span> <span class="n">brfd</span><span class="o">.</span><span class="n">N</span><span class="p">()))</span>
+
+<span class="k">print</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Swadesh Lists&quot;</span><span class="p">)</span>
+<span class="n">swen</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">swadesh</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;en&#39;</span><span class="p">)</span>
+<span class="n">swde</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">swadesh</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;de&#39;</span><span class="p">)</span>
+<span class="n">swfr</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">swadesh</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;fr&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">swen</span><span class="p">)):</span>
+    <span class="c1">## easier</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">swen</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">swde</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">swfr</span><span class="p">[</span><span class="n">i</span><span class="p">]]))</span>
+
+
+<span class="c1">### even pythonier</span>
+<span class="c1">###</span>
+<span class="c1">### use zip to zip lists together</span>
+<span class="c1">### use format to make them line up nicely</span>
+<span class="c1">###</span>
+<span class="k">print</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;In the best python style:&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">sw</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">swen</span><span class="p">,</span> <span class="n">swde</span><span class="p">,</span> <span class="n">swfr</span><span class="p">):</span>
+     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%-20s</span><span class="s2"> </span><span class="si">%-20s</span><span class="s2"> </span><span class="si">%-20s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sw</span><span class="p">)</span>
+</pre></div>
+</body>
+</html>

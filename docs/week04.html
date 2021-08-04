@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>4. NLTK Text Corpora and Conditional Frequencies. - HG251</title>
+</head>
+<body>
+
+<h1>4. NLTK Text Corpora and Conditional Frequencies.</h1>
+
+<h3>Lecture notes</h3>
+<ul>
+  <li>NLTK Chapter 2:
+    <a href="http://www.nltk.org/book/ch02.html">
+      Accessing Text Corpora and Lexical Resources</a>
+    <ul>
+      <li>2.1:
+	<a href="http://www.nltk.org/book/ch02.html#accessing-text-corpora">
+	  Accessing Text Corpora</a>
+	<br>NLTK specific methods for manipulating corpora
+      </li>
+      <li>2.2:
+	<a href="http://www.nltk.org/book/ch02.html#conditional-frequency-distributions">
+	  Conditional Frequency Distributions</a>
+	<ul>
+	  <li>NLTK specific data structure 
+	  <li>cfd[condition] = [(sample, freq), (sample, freq), ...
+	  <li><a href='week12.html#cfd'>See handy summary</a>
+	</ul>
+      </li>
+      <li>2.3:
+	<a href="http://www.nltk.org/book/ch02.html#more-python-reusing-code">
+	  More Python: Reusing Code</a>
+	<br>Functions: 
+<pre>
+def function(parameter1, parameter2, ...):
+    """Documentation String (optional)"""
+    code
+    return some_value
+</pre>
+      </li>
+    </ul>
+  <li>Dictionaries
+    <p>Pairs of <tt>key</tt> and <tt>value<tt>:
+	  <tt>dict[key]=value; dict = { key:value }</tt>
+	  <br><b>key</b> must be immutable,
+	  	
+<table border>
+  <caption>Dictionary Methods</caption>
+  <tr><th>Example</th>
+  <th>Description</th></tr>
+<tr><td>d = {}</td>
+  <td>create an empty dictionary and assign it to d</td></tr>
+<tr><td>d[key] = value</td>
+  <td>assign a value to a given dictionary key</td></tr>
+<tr><td>d.keys()</td>
+  <td>the list of keys of the dictionary<tr>
+<tr><td>list(d)</td>
+<td>the list of keys of the dictionary
+  <tr><td>sorted(d)</td>
+<td>the keys of the dictionary, sorted</td></tr>
+  <tr><td>key in d</td>
+<td>test whether a particular key is in the dictionary</td></tr>
+  <tr><td>for key in d</td>
+<td>iterate over the keys of the dictionary</td></tr>
+  <tr><td>d.values()</td>
+<td>the list of values in the dictionary</td></tr>
+  <tr><td>dict([(k1,v1), (k2,v2), ...])</td>
+<td>create a dictionary from a list of key-value pairs</td></tr>
+  <tr><td>d1.update(d2)</td>
+<td>add all items from d2 to d1</td></tr>
+  <tr><td>defaultdict(int)</td>
+<td>a dictionary whose default value is zero</td></tr>
+</table>
+Some Tutorials:
+    <ul>
+      <li><a href='https://www.programiz.com/python-programming/dictionary'>Programiz</a>
+      <li><a href='https://www.blog.pythonlibrary.org/2017/03/15/python-101-all-about-dictionaries/'>Mouse vs Python</a>
+      <!-- <li><a href=''></a> -->
+      <!-- <li><a href=''></a> -->
+      <!-- <li><a href=''></a> -->
+    </ul>
+  </li>
+</ul>
+
+<h3>Further reading</h3>
+
+<ul>
+  <li>Project Gutenberg:
+    <a href="http://www.gutenberg.org/wiki/Gutenberg:About">
+      About</a> and
+    <a href="http://www.gutenberg.org/wiki/Main_Page">
+      Main Page</a>
+  </li>
+  <li>
+    <a href="http://en.wikipedia.org/wiki/Brown_Corpus">
+      Brown Corpus</a> (Wikipedia)
+  </li>
+  <li>
+    <a href="http://en.wikipedia.org/wiki/George_Kingsley_Zipf">
+      George Kingsley Zipf</a> and
+    <a href="http://en.wikipedia.org/wiki/Zipf's_law">
+      Zipf's law</a> (Wikipedia)
+  </li>
+  <li>
+    <a href="http://en.wikipedia.org/wiki/Hapax_legomenon">
+      Hapax legomenon</a> (Wikipedia)
+  </li>
+  <li><a href="http://en.wikipedia.org/wiki/Swadesh_list">Swadesh List</a>  (Wikipedia)
+</ul>
+<h3>Before Class  (<a href='code/wk4a.html'>code</a>,
+  <a href='code/wk4a-out.txt'>output</a>)</h3>
+
+<ol>
+ <li>
+    <a href="http://www.nltk.org/book/ch02.html#gutenberg-corpus">
+      The Gutenberg Corpus</a> <br>
+    <ol>
+      <li>How many words (tokens) are there in Jane Austen's novel
+	<i>Persuasion</i>? 
+      <li>How many times does the word <i>persuasion</i> occur? 
+      <li>Make a concordance for <i>persuasion</i> in the novel. 
+      <li>How many <i>letters</i> (including punctuation and spaces)
+	are there in the novel? 
+      <li>How many <i>sentences</i> are there? Find and print the
+	longest sentence.
+</ol>
+<li>
+  <a href="http://www.nltk.org/book/ch02.html#brown-corpus">
+    The Brown Corpus</a> 
+  <ol>
+    <li>Make a frequency distribution for the "news" category of
+      the Brown Corpus. 
+    <li>Print counts of the modal verbs
+      <i>can, could, may, might, must, will</i>. 
+    <li>Print counts of the <i>wh-</i> words
+      <i>what, when, where, who, how, why</i>. 
+    <li>Make a frequency distribution for the "romance" category. 
+    <li>Print counts of the modal verbs and the <i>wh-</i>
+      words. 
+    <li>Compare the counts for the two genres. Are there any clear
+      differences? 
+    </ol>
+<li> Take a look at words from the Swadesh list.
+  <ol> 
+    <li>nltk has lists for many languages <tt>nltk.corpus.swadesh.fileids()</tt>
+      <br> You can access a single list for, e.g., English,
+      as:  <tt>nltk.corpus.swadesh.words('en')</tt>
+      <br>These are
+      the <a href='https://www.loc.gov/standards/iso639-2/php/code_list.php'>language codes</a>
+      <br>* Choose any language and print out the list, one entry per
+      line
+      
+      <li>Choose any three languages, make sure you know one of them
+      <br>* Print them in parallel, joined by semicolons: e.g.
+      <pre>
+I; eu;  ich
+you (singular), thou;  tu du; du, Sie
+he; el, ea; er
+...
+      </pre>
+      <br> Hint: you can use a range of numbers, and then the list
+      index function
+      <li> Think about how you could you test for similarity?
+</ol>
+</ol>
+
+<h3>Practical work (<a href='code/wk4b.html'>code</a>,
+  <a href='code/wk4b-out.txt'>output</a>)</h3>
+<ol>
+ 
+<li> <u>Comparing authors</u> 
+    <ol>
+      <li>Make a frequency distribution for Jane Austen's novel
+	<i>Persuasion</i>. 
+      <li>Print counts of the modal verbs
+	<i>can, could, may, might, must, will</i>. 
+      <li>Print counts of the personal pronouns
+	<i>he, him, himself, she, her, herself</i>. 
+      <li>Make a frequency distribution for Herman Melville's novel
+	<i>Moby Dick</i>. 
+      <li>Print counts of the modal verbs and the personal pronouns. 
+  <li>Compare the counts for the two authors. Are there any clear
+	differences?
+      <li>Now try to do the same thing with a single Conditional
+      Frequency Distribution
+	<br>Hint: make a list of [(novel1, word1), (novel1,word2), ... (novel2, word1), (novel2, word2), ....] to feed to <tt>nltk.ConditionalFreqDist()</tt>
+
+</ol>
+
+<li>Measure the similarity of two languages' Swadesh lists
+  <ol>
+    <li> Hint: measure the similarity of each pair of words
+      <br> e.g. by measuring the number of shared letters over all letters:
+      <br> 'thou' and 'tu' is |tu|/|thou| = 0.5
+      <br> 'we' and 'wir' is |w|/|weir| = 0.25
+    <li> If there is more than one word for a given entry
+      <ul>
+	<li> take the first one from each side [easy]
+	<li> take the maximum score [harder]
+      </ul>
+    <li> Sum this for all words
+    <li> Do you think you can get a better similarity score?
+  </ol>
+<li>Find the pair of languages that are most similar according to the Swadesh lists.
+
+  <h3>Extension problem (no need to do it if you don't want to)</h3>
+<li>
+  Using IDLE as an editor, as shown in
+  <a href="http://www.nltk.org/book/ch02.html#more-python-reusing-code">
+    More Python: Reusing Code</a>,
+  write a Python program  <code>generate.py</code>
+  to do the following. 
+<ol>
+<li>In
+  <a href="http://www.nltk.org/book/ch02.html#generating-random-text-with-bigrams">
+    Generating Random Text with Bigrams</a>,
+  a function <b><tt>generate_model()</b></tt> is defined. Copy this function
+  definition exactly as shown.
+<pre>
+def generate_model(cfdist, word, num=15):
+    for i in range(num):
+        print(word, end=' ')
+        word = cfdist[word].max()
+</pre>
+</li>
+
+<li>
+  Make a conditional frequency distribution
+  of all the bigrams in Jane Austen's novel <i>Emma</i>,
+  like this: 
+  <pre xml:space="preserve">
+    emma_text = nltk.corpus.gutenberg.words('austen-emma.txt')
+    emma_bigrams = nltk.bigrams(emma_text)
+    emma_cfd = nltk.ConditionalFreqDist(emma_bigrams)
+  </pre>
+</li>
+
+<li>
+  Try to generate 100 words of random <i>Emma</i>-like text: 
+  <pre xml:space="preserve">
+    generate_model(emma_cfd, 'The', 100)
+  </pre>
+</li>
+<li>
+  To avoid getting stuck in a loop, the generation function
+  needs to make a choice from the probable continuation words.
+  Modify the function like this:
+  <pre xml:space="preserve">
+    words = list(cfdist[word])
+    word = random.choice(words)
+  </pre>
+</li>
+
+<li>
+  Before using functions from the <code>random</code>
+  module, your program needs:
+  <pre xml:space="preserve">
+import random
+  </pre>
+</li>
+<li>
+  Now try again to generate 100 words of random <i>Emma</i>-like
+  text: <br> 
+  <pre xml:space="preserve">
+    generate_model(emma_cfd, 'The', 100)
+  </pre>
+  Repeat this several times to check if the texts are random.
+</li>
+<li>
+  Make a conditional frequency distribution
+  of all the bigrams in Melville's novel <i>Moby Dick</i>,
+  like this: 
+  <pre xml:space="preserve">
+    moby_text = nltk.corpus.gutenberg.words('melville-moby_dick.txt')
+moby_bigrams = nltk.bigrams(moby_text)
+    moby_cfd = nltk.ConditionalFreqDist(moby_bigrams)
+  </pre>
+</li>
+<li>
+  Now generate 100 words of random <i>Moby Dick</i>-like
+            text: <br> 
+  <pre xml:space="preserve">
+    generate_model(moby_cfd, 'The', 100)
+  </pre>
+  Repeat this several times to check if the texts are random.
+</li>
+<li>
+  Can you observe different styles in the two types of
+            generated texts?
+</li>
+</ol>
+</ol>
+
+<hr>
+<p><a href="index.html">HG2051: Language and the Computer</a> Francis Bond.
+</body>
+
+</html>

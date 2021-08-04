@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>6. Processing Raw Text - HG251</title>
+</head>
+<body>
+
+<h1>6. Processing Raw Text</h1>
+
+<h3>Lecture notes</h3>
+<ul>
+  <li>NLTK Chapter 3:
+    <a href="http://www.nltk.org/book/ch03.html">
+      Processing Raw Text</a>
+    <ul>
+      <li>3.1:
+	<a href="http://www.nltk.org/book/ch03.html#accessing-text-from-the-web-and-from-disk">
+	  Accessing Text from the Web and from Disk</a>
+      </li>
+      <li>3.2:
+	<a href="http://www.nltk.org/book/ch03.html#strings-text-processing-at-the-lowest-level">
+	  Strings: Text Processing at the Lowest Level</a>
+      </li>
+      <li>3.3:
+	<a href="http://www.nltk.org/book/ch03.html#text-processing-with-unicode">
+	  Text Processing with Unicode</a>
+      </li>
+            <li>3.9: 
+	<a href="http://www.nltk.org/book/ch03.html#formatting-from-lists-to-strings">
+	  Formatting: From Lists to Strings</a>
+      </li>
+
+      <li>
+      <a href='http://www.nltk.org/_modules/nltk/metrics/distance.html'>NLTK
+      Distance Metrics</a>
+<pre>
+binary_distance(s1, s2)  # 1 if the same/0 otherwise
+jaccard_distance(s1,s2)  # | s1  ∩  s2| / |s1 ∪  s2| 
+masi_distance(s1,s2)     # Measuring Agreement on Set-Valued Items
+edit_distance(str1, str2)    # additions, substitutions and  deletions
+                             # Levenshtien distance  
+</pre>
+    </ul>
+  <li>The <a href='http://www.nltk.org/howto/wordnet.html'>Wordnet How-To<a>
+	<br>Errata:
+	<ul>
+	  <li> You can use <tt>['n', 'v', 'a', 'r']</tt> for the pos 
+	      (instead of <tt>[wn.VERB, wn.NOUN, wn.ADJ, wn.ADV]</tt>)
+	  <li>With Python 3, unicode should display fine (no need to decode/encode):
+	    <br><tt>&gt;&gt;&gt; wn.synsets('犬', lang='jpn')</tt>
+	    <br><tt>[Synset('dog.n.01'), Synset('spy.n.01')]</tt>
+	    <br><tt>&gt;&gt;&gt; wn.synset('dog.n.01').lemma_names(lang='jpn')</tt>
+	    <br><tt>['ドッグ', 'イヌ', '洋犬', '犬', '飼い犬', '飼犬', '0', '0', '1', '1', '0', '0']
+</tt>
+	  <li>There is a bug that returns '0' and '1' as additional
+	  lemmas for some languages: I will fix a new <tt>omw.zip</tt> soon (2015-09-14)
+	  <li>The <tt>lemma.count()</tt> is only defined for English.
+	  <li>Some relations are only stored in one direction (the wordnet
+	  interface does not deduce the reverse, although it should) (2015-09-14)
+	</ul>
+  </li>
+</ul>
+<h3>Further reading</h3>
+<ul>
+  <li>
+    <a href="http://en.wikipedia.org/wiki/Binary_numeral_system">
+      Binary</a>,
+    <a href="http://en.wikipedia.org/wiki/Octal">
+      Octal</a> and
+    <a href="http://en.wikipedia.org/wiki/Hexadecimal">
+      Hexadecimal</a> (Wikipedia)
+  </li>
+  <li>
+    <a href="http://en.wikipedia.org/wiki/ASCII">
+      ASCII</a> and
+    <a href="http://en.wikipedia.org/wiki/Unicode">
+      Unicode</a> (Wikipedia)
+  </li>
+</ul>
+
+
+<h3>Before Class  (<a href='code/wk6a.html'>code</a>)</h3>
+
+<ol>
+ <li>Write a program to: 
+   <ol>
+     <li> Get the text of the Speckled Band (Sherlock Holmes)
+       <br>go to gutenberg and search for 'Speckled Band'
+       <br>find the url of the textfile
+       <br>read it in
+       <br>chop off extra text
+     <li>Save it as a file called "spec.txt"
+     <li>Read it in again and count characters, lines, tokens
+   </ol>
+ </ol>
+
+
+<h3>Practical work (<a href='code/wk6b.html'>code</a>)</h3>
+<ul>
+  <li> Take the following Chinese verbs ['学习', '开'] and write code to produce
+  the following variants: 
+    <br>['学习学习', '开开']  # reduplication
+    <br> ['学习不学习',　'学不学习',　'开不开'] # yes-no questions
+
+  <li>
+    In honour of Michael Palin, define a function
+    <code>isPalin(string)</code> that decides whether
+    <code>string</code> is
+    a <a href="https://en.wikipedia.org/wiki/Palindrome">palindrome</a>. This
+    should be a
+    <a href="http://www.greenteapress.com/thinkpython/thinkCSpy/html/chap05.html#4">
+      Boolean function</a>, 
+    it returns True if <code>string</code> is a palindrome
+    or False if it is not.
+  </li>
+  <li>
+    Write code to test the function with strings like "spam maps",
+    "Palin Drome". The tests should output the results, like this:
+    <pre xml:space="preserve">
+      "spam maps" is a palindrome.
+      "Palin Drome" is not a palindrome.</pre>
+  </li>
+          <li>
+	Note that the test result messages are output by the test
+	code, not by the function. The function only returns True or
+	False.
+          </li>
+          <li>
+	Define a non-Boolean function <code>normalize(string)</code>
+	that takes a string argument and returns a new string with all
+	punctuation and whitespace removed and all uppercase letters
+	changed to lowercase letters.
+          </li>
+          <li>
+	Test this function with	strings like "Spam! Maps!", "Palin?
+	Drome?". The tests should output messages, like this:
+        <pre xml:space="preserve">
+"Spam! Maps!" normalized to "spammaps".
+"Palin? Drome?" normalized to "palindrome".</pre>
+          </li>
+          <li>
+	Define a Boolean function <code>isPalinNormal(string)</code>
+	that decides whether <code>string</code> is a palindrome,
+	disregarding upper/lowercase, punctuation and whitespace.  Use
+	both <code>normalize()</code> and <code>isPalin()</code>
+	inside <code>isPalinNormal()</code>.
+          </li>
+          <li>
+	Test this function with strings like "Spam! Maps!", "Palin?
+	Drome?". The tests should output messages, like this:
+        <pre xml:space="preserve">
+"Spam! Maps!" is a palindrome when normalized.
+"Palin? Drome?" is not a palindrome when normalized.</pre>
+          </li>
+        </ul>
+      </li>
+</ul>
+
+<hr>
+<p><a href="index.html">HG251: Language and the Computer</a> Francis Bond.
+</body>
+
+</html>

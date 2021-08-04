@@ -1,0 +1,55 @@
+*** Introductory Examples for the NLTK Book ***
+Loading text1, ..., text9 and sent1, ..., sent9
+Type the name of the text or sentence to view it.
+Type: 'texts()' or 'sents()' to list the materials.
+text1: Moby Dick by Herman Melville 1851
+text2: Sense and Sensibility by Jane Austen 1811
+text3: The Book of Genesis
+text4: Inaugural Address Corpus
+text5: Chat Corpus
+text6: Monty Python and the Holy Grail
+text7: Wall Street Journal
+text8: Personals Corpus
+text9: The Man Who Was Thursday by G . K . Chesterton 1908
+*
+**
+***
+****
+*****
+******
+*****
+****
+***
+**
+*
+     *      
+    ***     
+   *****    
+  *******   
+ *********  
+*********** 
+*********** 
+ *********  
+  *******   
+   *****    
+    ***     
+     *      
+Call
+a
+
+me
+e
+
+Ishmael
+s
+
+.
+
+
+Mixed and lower case words (i)
+
+HEAD Mud Ha Thy ANIMATOR Four Hello When Holy Let Quiet Other Ere Great OF DEAD Grail Speak Himself Everything PERSON Shrubber Shut Brave Oooh Supreme Help Together Auuuuuuuugh Please Said Hmm Have Silly THE Ho Burn May Mine On So Winter Must Ask Hee KING Aaaah CRONE U MASTER Bring Pure Isn Lie Once Lady Anyway Actually Thou Tale Therefore Idiom Knights Could Put To What Ecky Just Oh Pull SHRUBBER SECOND Right GUESTS At Course Never Didn Open Like Walk Thank That Twenty Defeat Too With Between Enchanter LEFT Cut One Hoo We Ninepence Yeah LOVELY Over Guards Peril Would Dappy She His He And A Stop Court B Build Silence SCENE KNIGHT They KNIGHTS Aaaaaah Old Five Ooh Knight Grenade Castle Use Found Bloody Explain RIGHT Wayy Look Will Man Heh CRASH Haw Try Not Uh First If You There Wait Shall Sir BRIDE C It Am More Do Behold Table Does Listen CARTOON Beyond Ridden Make Father Why Every Bravest Then HEADS Today ENCHANTER Bones Now Get Come Which WOMAN Don Seek Stay Um Running Those Bad Oui O Clear Stand CART Eh MAN Packing Where Or Rather Far See Mother Round ALL Til Sorry I OLD Well N No Forward Off Here Are FATHER SUN Quick Really Forgive Until Very Lucky An In Your Bravely Hang Say Quite How Bridge Yes As Hand LUCKY Anarcho But Uhh Back King Tell Lord Hiyaah My Y Two Un All Order Follow Of Is Ni Who Did SIR Swamp S GUEST Even Shrubberies Good Welcome Nothing Looks W NI Go Our For Wood WITCH OTHER Run Be Fine Away Excuse MIDDLE Since The BRIDGEKEEPER By GUARD This Most Nine GUARDS Death OFFICER Three Keep 
+
+Mixed and lower case words (ii)
+
+HEAD Mud Ha Thy ANIMATOR Four Hello When Holy Let Quiet Other Ere Great OF DEAD Grail Speak Himself Everything PERSON Shrubber Shut Brave Oooh Supreme Help Together Auuuuuuuugh Please Said Hmm Have Silly THE Ho Burn May Mine On So Winter Must Ask Hee KING Aaaah CRONE U MASTER Bring Pure Isn Lie Once Lady Anyway Actually Thou Tale Therefore Idiom Knights Could Put To What Ecky Just Oh Pull SHRUBBER SECOND Right GUESTS At Course Never Didn Open Like Walk Thank That Twenty Defeat Too With Between Enchanter LEFT Cut One Hoo We Ninepence Yeah LOVELY Over Guards Peril Would Dappy She His He And A Stop Court B Build Silence SCENE KNIGHT They KNIGHTS Aaaaaah Old Five Ooh Knight Grenade Castle Use Found Bloody Explain RIGHT Wayy Look Will Man Heh CRASH Haw Try Not Uh First If You There Wait Shall Sir BRIDE C It Am More Do Behold Table Does Listen CARTOON Beyond Ridden Make Father Why Every Bravest Then HEADS Today ENCHANTER Bones Now Get Come Which WOMAN Don Seek Stay Um Running Those Bad Oui O Clear Stand CART Eh MAN Packing Where Or Rather Far See Mother Round ALL Til Sorry I OLD Well N No Forward Off Here Are FATHER SUN Quick Really Forgive Until Very Lucky An In Your Bravely Hang Say Quite How Bridge Yes As Hand LUCKY Anarcho But Uhh Back King Tell Lord Hiyaah My Y Two Un All Order Follow Of Is Ni Who Did SIR Swamp S GUEST Even Shrubberies Good Welcome Nothing Looks W NI Go Our For Wood WITCH OTHER Run Be Fine Away Excuse MIDDLE Since The BRIDGEKEEPER By GUARD This Most Nine GUARDS Death OFFICER Three Keep

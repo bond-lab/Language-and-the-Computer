@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>11. Classification. - HG251</title>
+</head>
+<body>
+
+<h1>11. Classification</h1>
+
+<h3>Lecture notes</h3>
+<ul>
+  <li>NLTK Chapter 6:
+    <a href="http://www.nltk.org/book/ch06.html">
+      Learning to Classify Text</a>
+    <ul>
+      <li><a href="http://www.nltk.org/book/ch06.html#supervised-classification">6.1 Supervised Classification</a>
+      <li><a href="http://www.nltk.org/book/ch06.html#evaluation">6.3   Evaluation</a>
+      <li><a href="http://www.nltk.org/book/ch06.html#decision-trees">6.4   Decision Trees</a>
+      <li><a href="http://www.nltk.org/book/ch06.html#modeling-linguistic-patterns">6.7   Modeling Linguistic Patterns</a>
+<li><a href="http://www.nltk.org/book/ch06.html#summary">6.8 Summary</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Further reading</h3>
+<ul>
+  <li><a href="http://www.nltk.org/book/ch06.html#further-examples-of-supervised-classification">6.2 Further Examples of Supervised Classification</a>
+  <li><a href="http://www.nltk.org/book/ch06.html#naive-bayes-classifiers">6.5 Naive Bayes Classifiers</a>
+  <li><a href="http://www.nltk.org/book/ch06.html#maximum-entropy-classifiers">6.6   Maximum Entropy Classifiers</a>
+  </li>
+</ul>
+
+
+<h3>Practical work (<a href='code/wk11b.html'>code</a>)</h3>
+<ul>
+  <li> Train a classifier to determine the gender of Japanese first names.
+    <ul>
+      <li> Download a list of Japanese names
+	from <a href="http://www.csse.monash.edu.au/~jwb/enamdict_doc.html">Enamdict</a>.
+	(<a href="code/enamdict">Local copy available here</a>).
+      <li>Extract the male (m), female (f)and unclassified (g)
+      Japanese given names
+	<br> (hint: use regular expressions).
+<pre>
+# -*- coding: utf-8 -*-
+import re
+import nltk
+import random
+import urllib.request
+
+f = urllib.request.urlopen('http://compling.hss.ntu.edu.sg/courses/hg2051/code/enamdict').read().decode('utf-8')
+
+
+name = dict()
+name['m'] = list()
+name['f'] = list()
+name['g'] = list()
+
+for line in f.splitlines():
+        #print (line)
+        ##Look for names
+        m = re.search(r'^(.*?) .*\(([fgm])\)/', line)
+        if (m):
+        #print ("@%s@@%s@" % (m.group(1), m.group(2)))
+            name[m.group(2)].append(m.group(1))
+            #print ( m.group(1), m.group(1)[-1])
+        
+print ("%6d male names: %s" % (len(name['m']), ', '.join(random.sample(name['m'], 5))))
+print ("%6d female names: %s" % (len(name['f']), ', '.join(random.sample(name['f'],5))))
+print ("%6d unknown names: %s" % (len(name['g']), ', '.join(random.sample(name['g'],5))))
+
+minlength = min(len(name['m']), len(name['f']))
+
+#names = list()
+names =  [(n, 'female') for n in random.sample(name['f'], minlength)] + \
+    [(n, 'male') for n in random.sample(name['m'], minlength)]
+#for name in random.sample(name['m'], minlength - 1):
+#for n in name['m']:
+#   names.append((n, 'male'))
+
+
+
+random.shuffle(names)
+print ( ', '.join([ n + t  for (n, t) in names[:10] ]))
+</pre>
+      <li> Splitting these into three subsets: 5% for test set, 5% for
+      the dev-test set, and the remainder for the training set. You
+      may wish to balance the male/female numbers.
+      <li> Then following the English name gender classifier 
+	(<a href="http://www.nltk.org/book/ch06.html#supervised-classification">6.1</a>), 
+	try to make one for Japanese.   Use the dev-test set to check your
+	progress. 
+      <li> Once you are satisfied with your classifier, check its
+	final performance on the test set. How does the performance on
+	the test set compare to the performance on the dev-test set? Is
+	this what you'd expect?
+</ul>
+<li> Train a classifier that does Word Sense Disambiguation:
+  <ul>
+    <li>The Senseval 2 Corpus contains data intended to train word-sense disambiguation classifiers. It contains data for four words: <i>hard, interest, line,</i> and <i>serve</i>. Choose one of these four words, and load the corresponding data:
+<pre>
+from nltk.corpus import senseval
+>>> instances = senseval.instances('hard.pos')
+>>> size = len(instances)
+>>> train_set, test_set = instances[size:], instances[:size]
+</pre>
+<li> Using this dataset, build a classifier that predicts the correct
+sense tag for a given instance
+  <br>Hint: Here is how to look at the individual contexts
+  <pre>
+    >>> for inst in senseval.instances('interest.pos')[:10]:
+    ...     p = inst.position
+    ...     left = ' '.join(w for (w,t) in inst.context[p-2:p])
+    ...     word = ' '.join(w for (w,t) in inst.context[p:p+1])
+    ...     right = ' '.join(w for (w,t) in inst.context[p+1:p+3])
+    ...     senses = ' '.join(inst.senses)
+    ...     print ('%20s |%10s | %-15s -> %s' % (left, word, right, senses))
+         declines in |  interest | rates .         -> interest_6
+  indicate declining |  interest | rates because   -> interest_6
+       in short-term |  interest | rates .         -> interest_6
+                 4 % |  interest | in this         -> interest_5
+        company with | interests | in the          -> interest_5
+              , plus |  interest | .               -> interest_6
+             set the |  interest | rate on         -> interest_6
+              's own |  interest | , prompted      -> interest_4
+       principal and |  interest | is the          -> interest_6
+        increase its |  interest | to 70           -> interest_5
+  </pre>
+  
+  <br>Hint: useful features
+  <ul>
+    <li>one or two words on either side
+    <li>one or two POSs on either side
+    <li> Bag of words
+  </ul>
+  </ul>
+</ul>
+  
+<hr>
+<p><a href="index.html">HG251: Language and the Computer</a> Francis Bond.
+</body>
+
+</html>

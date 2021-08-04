@@ -1,0 +1,53 @@
+ I can't do 2*{8}+4 in my head
+ I can't do {2*8+4} in my head
+ I can't do {2*8+4} in my head
+<html>
+<head>
+  <link rel="shortcut ic
+ Francis Bond's Humble Home Page Francis
+dog dogs
+apple apples
+fly flies
+boy boys
+woman womans
+chess None
+ox None
+stomach None
+octopus None
+[('The', 3), ('dog', 3), ('gave', 4), ('John', 4), ('the', 3), ('newspaper', 9)]
+[('The', 3), ('dog', 3), ('gave', 4), ('John', 4), ('the', 3), ('newspaper', 9)]
+force out
+forceing out
+forceen out
+forceed out
+forces out
+breathe out
+breatheing out
+breatheen out
+breatheed out
+breathes out
+breathe in
+breatheing in
+breatheen in
+breatheed in
+breathes in
+cough up
+coughing up
+coughen up
+coughed up
+coughs up
+cough out
+coughing out
+coughen out
+coughed out
+coughs out
+spit up
+spiting up
+spiten up
+spited up
+spits up
+spit out
+spiting out
+spiten out
+spited out
+spits out

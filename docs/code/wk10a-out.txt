@@ -1,0 +1,19 @@
+[[('Pierre', 'NNP'), ('Vinken', 'NNP'), (',', ','), ('61', 'CD'), ('years', 'NNS'), ('old', 'JJ'), (',', ','), ('will', 'MD'), ('join', 'VB'), ('the', 'DT'), ('board', 'NN'), ('as', 'IN'), ('a', 'DT'), ('nonexecutive', 'JJ'), ('director', 'NN'), ('Nov.', 'NNP'), ('29', 'CD'), ('.', '.')]]
+Training Bigram Tagger
+[('The', 'DT'), ('police', 'NN'), ('reported', 'VBD'), ('it', 'PRP'), ('.', '.')]
+[('The', 'DT'), ('police', 'NN'), ('saw', None), ('the', None), ('report', None), ('.', None)]
+Accuracy on Test:  0.13567430025445293
+Accuracy on Train: 0.9094671495085359
+
+Training Unigram Tagger
+Accuracy on Test:  0.8642239185750636
+Accuracy on Train: 0.9601545387502615
+
+Training Bigram Tagger with backoff to unigram
+Accuracy on Test:  0.8740966921119593
+
+Training Bigram Tagger with backoff to NNP (Proper Noun)
+Accuracy on Test:  0.8996437659033079
+
+Training Bigram Tagger with backoff to NN (Common Noun)
+Accuracy on Test: 0.8918066157760814

@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>9. Bi-grams, n-grams and collocations. - HG251</title>
+</head>
+<body>
+
+<h1>9. Bi-grams, <i>n</i>-grams and collocations.</h1>
+
+<h3>Lecture notes</h3>
+<ul>
+  <li>NLTK Chapter 5:
+    <a href="http://www.nltk.org/book/ch05.html">
+      Categorizing and Tagging Words</a>
+    <ul>
+      <li><a href="http://www.nltk.org/book/ch05.html#using-a-tagger">5.1: Using a Tagger
+	  </a>
+      <li><a href="http://www.nltk.org/book/ch05.html#tagged-corpora">5.2: Tagged Corpora
+	  </a>
+      <li><a href="http://www.nltk.org/book/ch05.html#mapping-words-to-properties-using-python-dictionaries">5.3: Mapping Words to Properties Using Python Dictionaries
+	  </a>
+      </li>
+      </li>
+<li><strong>Collocations</strong> are pairs of content words that occur together more
+often than one would expect if the words of a document were scattered randomly.
+We can find collocations by counting how many times a pair of words
+<em>w</em><sub>1</sub>, <em>w</em><sub>2</sub> occurs together, compared
+to the overall counts of these words (this program uses
+a heuristic related to the <a name="mutual_information_index_term" /><span class="termdef">mutual information</span> measure.  See <a href='http://www.collocations.de/'>Computational Approached to Collocations</a> for more detail.discussion and some code.
+<li> A Simple Program to Find Collocations: 
+<table border="1" cellpadding="0" cellspacing="0" class="pylisting" width="95%">
+<tr><td class="codeblock">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td width="1" class="copybar"
+        onclick="javascript:copy_codeblock_to_clipboard(this.nextSibling);"
+        >&nbsp;</td>
+<td class="pysrc"><pre class="doctest">
+<span class="pysrc-keyword">def</span> <span class="pysrc-defname">collocations</span>(words):
+    <span class="pysrc-keyword">from</span> operator <span class="pysrc-keyword">import</span> itemgetter
+
+    <span class="pysrc-comment"># Count the words and bigrams</span>
+
+    wfd = nltk.FreqDist(words)
+    pfd = nltk.FreqDist(tuple(words[i:i+2]) <span class="pysrc-keyword">for</span> i <span class="pysrc-keyword">in</span> range(len(words)-1))
+
+    <span class="pysrc-comment">#</span>
+    scored = [((w1,w2), score(w1, w2, wfd, pfd)) <span class="pysrc-keyword">for</span> w1, w2 <span class="pysrc-keyword">in</span> pfd]
+    ## sort according to the score
+    scored.sort(key=itemgetter(1), reverse=True)
+    return [p for (p,s) in scored]
+
+
+<span class="pysrc-keyword">def</span> <span class="pysrc-defname">score</span>(word1, word2, wfd, pfd, power=3):
+    '''return the collocation score f(w1,w2)^power/(f(w1)*f(w2))'''
+    freq1 = wfd[word1]
+    freq2 = wfd[word2]
+    freq12 = pfd[(word1, word2)]
+    return freq12 ** power / float(freq1 * freq2)</pre>
+</td>
+</tr></table></td></tr>
+<tr><td class="doctest">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td width="1" class="copybar"
+        onclick="javascript:copy_doctest_to_clipboard(this.nextSibling);"
+        >&nbsp;</td>
+<td class="pysrc"><pre class="doctest">
+<span class="pysrc-prompt">&gt;&gt;&gt; </span><span class="pysrc-keyword">for</span> file <span class="pysrc-keyword">in</span> nltk.corpus.webtext.files():
+    words = [word.lower() <span class="pysrc-keyword">for</span> word <span class="pysrc-keyword">in</span> nltk.corpus.webtext.words(file) <span class="pysrc-keyword">if</span> len(word) &gt; 2]
+    <span class="pysrc-keyword">print</span> (file, [w1+<span class="pysrc-string">' '</span>+w2 <span class="pysrc-keyword">for</span> w1, w2 <span class="pysrc-keyword">in</span> collocations(words)[:15]])
+
+<span class="pysrc-output">overheard ['new york', 'teen boy', 'teen girl', 'you know', 'middle aged',</span>
+<span class="pysrc-output">'flight attendant', 'puerto rican', 'last night', 'little boy', 'taco bell',</span>
+<span class="pysrc-output">'statue liberty', 'bus driver', 'ice cream', 'don know', 'high school']</span>
+<span class="pysrc-output">pirates ['jack sparrow', 'will turner', 'elizabeth swann', 'davy jones',</span>
+<span class="pysrc-output">'flying dutchman', 'lord cutler', 'cutler beckett', 'black pearl', 'tia dalma',</span>
+<span class="pysrc-output">'heh heh', 'edinburgh trader', 'port royal', 'bamboo pole', 'east india', 'jar dirt']</span>
+<span class="pysrc-output">singles ['non smoker', 'would like', 'dining out', 'like meet', 'age open',</span>
+<span class="pysrc-output">'sense humour', 'looking for', 'social drinker', 'down earth', 'long term',</span>
+<span class="pysrc-output">'quiet nights', 'easy going', 'medium build', 'nights home', 'weekends away']</span>
+
+<span class="pysrc-output">wine ['high toned', 'top ***', 'not rated', 'few years', 'medium weight',</span>
+<span class="pysrc-output">'year two', 'cigar box', 'cote rotie', 'mixed feelings', 'demi sec',</span>
+<span class="pysrc-output">'from half', 'brown sugar', 'bare ****', 'tightly wound', 'sous bois']</span></pre>
+</td>
+</tr></table></td></tr>
+</table></div>
+<!-- TODO: add section on Distributional Similarity -->
+</div>
+
+    </ul>
+  </li>
+</ul>
+<h3>Further reading</h3>
+<ul>
+  <li>Peter F. Brown; Peter V. deSouza; Robert L. Mercer; T. J. Watson; Vincent J. Della Pietra; Jenifer C. Lai (1992)
+    <a href="http://www.aclweb.org/anthology/J/J92/J92-4003.pdf">Class-Based n-gram Models of Natural Language</a> 
+    Computational Linguistics, <b>18</b>:4, 467--479
+  <!--<li>
+<a href='http://www-personal.umich.edu/~csev/books/py4inf/lectures/Py4Inf-09-Dictionaries.pdf'>Python for Infomatics: Exploring Dictionaries</a> 
+Charles Severance, University of Michigan-->
+</ul>
+<h3>Useful Links</h3>
+<ul>
+  <li><a href='http://www.clips.ua.ac.be/pages/mbsp-tags'>Penn Treebank Tags</a>
+  <li><a href='http://www.comp.leeds.ac.uk/amalgam/tagsets/tagmenu.html'>Various Tagsets</a>
+  <li><a href='http://compling.hss.ntu.edu.sg/ntumc/'>Tagsets with frequencies and examples at NTU-MC</a>
+</ul>
+
+<h3>Before Class (<a href='code/wk9a.html'>code</a>)</h3>
+<ul>
+  <li> From the <tt>treebank</tt> corpus make a list of all present
+    participles ('VBG'), and then collect a list of all the word-tag pairs
+    that immediately precede items in that list.
+<li>From the <tt>brown</tt> corpus make a list of all adverbs using
+    the universal tag set ('ADV'), and show the tags that follow
+    them and their frequencies.
+<li>Create a default dictionary that gives the value 'UNKNOWN' for an
+unknown key.
+</ul>
+
+
+<h3>Practical work (<a href='code/wk9b.html'>code</a>)</h3>
+<ul>
+  <li>Working with someone else, take turns to pick a word that can be
+  either a noun or a verb (e.g. contest); the opponent has to predict
+  which one is likely to be the most frequent in the Brown corpus;
+  check the opponent's prediction, and tally the score over several
+  turns.
+  <li>Guess which word is most likely to follow n-grams and test your intuition with 
+    the Brown corpus
+    <ul>
+      <li><i>for the</i>
+      <li><i>said that</i>
+      <li><i>it was</i>
+      <li><i>at the same</i>
+      <li><i>from time to</i>
+    </ul>
+<li>Use sorted() and set() to get a sorted list of tags used in the Brown corpus, removing duplicates.
+<li> Write programs to process the Brown Corpus and find answers to the following questions:
+  <ol>
+    <li>Which nouns are more common in their plural form, rather than their singular form? (Only consider regular plurals, formed with the -s suffix.)
+    <li>Which word has the greatest number of distinct tags. What are they, and what do they represent?
+    <li>List tags in order of decreasing frequency. What do the 20 most frequent tags represent?
+    <li>Which tags are nouns most commonly found after? What do these tags represent?
+  </ol>
+</ul>
+
+
+<hr>
+<p><a href="index.html">HG251: Language and the Computer</a> Francis Bond.
+</body>
+
+</html>

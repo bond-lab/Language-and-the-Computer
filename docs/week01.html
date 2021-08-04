@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>1. Introductions and Getting Started with NLTK. - HG2051</title>
+</head>
+<body>
+
+ <h1>1. Getting Started with NLTK.</h1>
+ 
+<h3>Lecture notes</h3>
+<ul>
+  <!--  <li><a href="http://www.ling.helsinki.fi/kit/2008s/clt231/nltk-0.9.5/doc/slides/preface.pdf">Introduction to the Natural Language Tool Kit</a> -->
+  <li><a href="HG2051-intro.pdf">Introduction to HG2051</a>
+  <li><a href="why.html">Why learn Python?</a>
+  <li><a href="preface.pdf">Introduction to the Natural Language Tool Kit</a>
+    
+    
+  <li>NLTK Chapter 1:
+    <a href="http://www.nltk.org/book/ch01.html">
+      Language Processing and Python</a>
+    <ul>
+      <li>1.1:
+	<a href="http://www.nltk.org/book/ch01.html#sec-computing-with-language-texts-and-words" shape="rect">
+	  Computing with Language: Texts and Words</a>
+      </li>
+      <li>1.5:
+	<a href="http://www.nltk.org/book/ch01.html#sec-automatic-natural-language-understanding" shape="rect">
+	  Automatic Natural Language Understanding</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<h4>Further reading</h4>
+<ul>
+  <li>NLTK book:
+    <a href="http://www.nltk.org/book/ch00.html" shape="rect">
+      Preface</a>
+  </li>
+</ul>
+<h3>Practical work</h3>
+<ul>
+  <li>
+    Open Python IDLE from the Start menu and do:
+    <pre xml:space="preserve">
+      &gt;&gt;&gt; import nltk
+      &gt;&gt;&gt; nltk.download()   <font color ='red'>← first time on that machine only</font>
+      &gt;&gt;&gt; from nltk.book import *
+    </pre>
+  </li>
+  <li>
+    <a href="http://www.nltk.org/book/ch01.html#searching-text" shape="rect">
+      Searching Text</a> <br>
+    Choose an English word, and see how it is used in the
+    different example texts by making concordances.
+    Try other words. Find a word that is used frequently in
+    one text and never used in the other texts.
+  </li>
+  <li>
+    <u>Generating Text</u> <br>
+    Generate paragraphs in the style of each different example
+    text, using <b>generate()</b>. An example is shown in  
+    <a href="http://www.nltk.org/book/ch01.html#searching-text" shape="rect">Searching Text</a>.
+  </li>
+  <li>
+    <a href="http://www.nltk.org/book/ch01.html#spoken-dialog-systems" shape="rect">
+      Spoken Dialog Systems</a> <br>
+    The
+    <a href="http://en.wikipedia.org/wiki/Turing_test" shape="rect">
+      Turing Test</a> (Wikipedia). Have a conversation with
+    at least two different NLTK chatbots. Do any of these
+    chatbots pass the test?
+  </li>
+  <li>
+    <u>IDLE</u> <br>
+    Learn more about IDLE with
+    <a href="http://hkn.eecs.berkeley.edu/~dyoo/python/idle_intro" shape="rect">
+      One Day of IDLE Toying</a> by Danny Yoo.
+  </li>
+</ul>
+<h3>NLTK demos (optional)</h3>
+  <ul>
+    <li>
+      In IDLE, run this NLTK application:
+      <pre xml:space="preserve">
+	&gt;&gt;&gt; nltk.app.rdparser()
+      </pre>
+    </li>
+    <li>
+      Keep clicking Step for a while and try to see what's going
+      on. Alternatively, click Autostep once and just watch.
+    </li>
+    <li>
+	    Challenge: can you parse the whole sentence successfully
+	    using only the Expand, Match and Backtrack buttons?
+          </li>
+          <li>
+	    In IDLE, run this NLTK application:
+<pre xml:space="preserve">
+&gt;&gt;&gt; nltk.app.srparser()
+</pre>
+          </li>
+          <li>
+	    Keep clicking Step for a while and try to see what's going
+	    on.
+          </li>
+          <li>
+	    Challenge: can you parse the whole sentence successfully
+	    using only the Shift and Reduce buttons?
+          </li>
+        </ul>
+<h3>Summary</h3>
+<ul>
+  <li><b>nltk</b> extends python with data and functions to process language
+  <li>we can use python to measure size: <tt>len(list1)</tt>
+  <li>a <b>list</b> has order and can have duplicates
+  <li>a <b>set</b> just has membership
+  <li>you can count how often something appears in a list: <tt>list1.count('thing')</tt>
+  <li>you can define your own functions with <tt>def function():</tt>
+  <li>there are many interesting problems in natural language understanding
+</ul>
+<p><a href="index.html">HG2051: Language and the Computer</a> Francis Bond.
+
+</body>
+</html>

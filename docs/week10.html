@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>10. Part of Speech Tagging. - HG251</title>
+</head>
+<body>
+
+<h1>10. Part of Speech Tagging.</h1>
+
+<h3>Lecture notes</h3>
+<ul>
+  <li>NLTK Chapter 5:
+    <a href="http://www.nltk.org/book/ch05.html">
+      Categorizing and Tagging Words</a>
+    <ul>
+      <li><a href="http://www.nltk.org/book/ch05.html#automatic-tagging">5.4   Automatic Tagging
+	</a>
+      <li><a href="http://www.nltk.org/book/ch05.html#n-gram-tagging">5.5 N-Gram Tagging</a>
+      <li><a href="http://www.nltk.org/book/ch05.html#how-to-determine-the-category-of-a-word">5.7   How to Determine the Category of a Word</a>    </li>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Further reading</h3>
+<ul>
+  <li><a href="http://en.wikipedia.org/wiki/Cross-validation_(statistics)">Cross validation</a>:
+    <b>K-fold cross validation</b> is a common in NLP:
+<p>"In K-fold cross-validation, the original sample is randomly
+partitioned into K subsamples. Of the K subsamples, a single subsample
+is retained as the validation data for testing the model, and the
+remaining K − 1 subsamples are used as training data. The
+cross-validation process is then repeated K times (the folds), with
+each of the K subsamples used exactly once as the validation data. The
+K results from the folds then can be averaged (or otherwise combined)"
+<br> E.G 5-fold: split into A, B, C, D, E
+<ul>
+  <li>Fold 1: Train on A, B, C, D --- test on E
+  <li>Fold 2: Train on A, B, C, E --- test on D
+  <li>Fold 3: Train on A, B, D, E --- test on C
+  <li>Fold 4: Train on A, C, D, E --- test on B
+  <li>Fold 5: Train on B, C, D, E --- test on A
+</ul>
+  <li><a href="http://www.nltk.org/book/ch05.html#transformation-based-tagging">5.6   Transformation-Based Tagging</a>
+</ul>
+
+
+<h3>Before Class (<a href='code/wk10a.html'>code</a>)</h3>
+<ul>
+  <li> Train a bigram tagger with no backoff tagger, and run it on some
+  of the training data. Next, run it on some new data. What happens to
+  the performance of the tagger? Why?
+<pre>
+  TRAIN (input is tagged sentences):
+  bigram_tagger = nltk.BigramTagger(train_sents)
+  TAG (input is an untagged sentence):
+  bigram_tagger.tag(unseen_sent)
+  EVALUATE (input is tagged sentences):
+  bigram_tagger.evaluate(test_sents)
+</pre>
+  <li> Now add a backoff tagger (your choice) and try it again (build then evaluate). What happens to
+  the performance of the tagger this time and why?
+<pre>
+backoff = ???
+
+bigram_taggert2 = nltk.BigramTagger(train_sents, backoff=backoff_tagger)
+</pre>
+<li> Think about how we could deal with sparseness by defining an 'unknown' word.  
+What would you have to do to the training and test data?
+    
+</ul>
+<h3>Practical work (<a href='code/wk10b.html'>code</a>)</h3>
+<ul>
+<li> Train and evaluate a bigram tagger with a data set transformed to use explicit unknown words.  
+How well does it perform?
+
+    
+<li>Consider the regular expression tagger described in
+<a href="http://www.nltk.org/book/ch05.html#the-regular-expression-tagger">Section 5.4</a>. Evaluate the tagger using its <t>accuracy()</t> method, and try to
+come up with ways to improve its performance. Discuss your
+findings. How does objective evaluation help in the development
+process?
+
+<li>Give an example of POS assignment ambiguity in a language other
+than English, and explain what context could be used to resolve it.
+<br>Note: computers find ambiguity where people typically will not.
+
+</ul>
+
+<hr>
+<p><a href="index.html">HG2051: Language and the Computer</a> Francis Bond.
+</body>
+
+</html>

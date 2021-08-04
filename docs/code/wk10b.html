@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style type="text/css">
+td.linenos { background-color: #f0f0f0; padding-right: 10px; }
+span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
+pre { line-height: 125%; }
+body .hll { background-color: #ffffcc }
+body  { background: #f8f8f8; }
+body .c { color: #408080; font-style: italic } /* Comment */
+body .err { border: 1px solid #FF0000 } /* Error */
+body .k { color: #008000; font-weight: bold } /* Keyword */
+body .o { color: #666666 } /* Operator */
+body .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+body .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+body .cp { color: #BC7A00 } /* Comment.Preproc */
+body .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+body .c1 { color: #408080; font-style: italic } /* Comment.Single */
+body .cs { color: #408080; font-style: italic } /* Comment.Special */
+body .gd { color: #A00000 } /* Generic.Deleted */
+body .ge { font-style: italic } /* Generic.Emph */
+body .gr { color: #FF0000 } /* Generic.Error */
+body .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+body .gi { color: #00A000 } /* Generic.Inserted */
+body .go { color: #888888 } /* Generic.Output */
+body .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+body .gs { font-weight: bold } /* Generic.Strong */
+body .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+body .gt { color: #0044DD } /* Generic.Traceback */
+body .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+body .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+body .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+body .kp { color: #008000 } /* Keyword.Pseudo */
+body .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+body .kt { color: #B00040 } /* Keyword.Type */
+body .m { color: #666666 } /* Literal.Number */
+body .s { color: #BA2121 } /* Literal.String */
+body .na { color: #7D9029 } /* Name.Attribute */
+body .nb { color: #008000 } /* Name.Builtin */
+body .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+body .no { color: #880000 } /* Name.Constant */
+body .nd { color: #AA22FF } /* Name.Decorator */
+body .ni { color: #999999; font-weight: bold } /* Name.Entity */
+body .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+body .nf { color: #0000FF } /* Name.Function */
+body .nl { color: #A0A000 } /* Name.Label */
+body .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+body .nt { color: #008000; font-weight: bold } /* Name.Tag */
+body .nv { color: #19177C } /* Name.Variable */
+body .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+body .w { color: #bbbbbb } /* Text.Whitespace */
+body .mb { color: #666666 } /* Literal.Number.Bin */
+body .mf { color: #666666 } /* Literal.Number.Float */
+body .mh { color: #666666 } /* Literal.Number.Hex */
+body .mi { color: #666666 } /* Literal.Number.Integer */
+body .mo { color: #666666 } /* Literal.Number.Oct */
+body .sb { color: #BA2121 } /* Literal.String.Backtick */
+body .sc { color: #BA2121 } /* Literal.String.Char */
+body .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+body .s2 { color: #BA2121 } /* Literal.String.Double */
+body .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+body .sh { color: #BA2121 } /* Literal.String.Heredoc */
+body .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+body .sx { color: #008000 } /* Literal.String.Other */
+body .sr { color: #BB6688 } /* Literal.String.Regex */
+body .s1 { color: #BA2121 } /* Literal.String.Single */
+body .ss { color: #19177C } /* Literal.String.Symbol */
+body .bp { color: #008000 } /* Name.Builtin.Pseudo */
+body .vc { color: #19177C } /* Name.Variable.Class */
+body .vg { color: #19177C } /* Name.Variable.Global */
+body .vi { color: #19177C } /* Name.Variable.Instance */
+body .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+  </style>
+</head>
+<body>
+<h2></h2>
+
+<div class="highlight"><pre><span class="c1">### *-* encoding: utf-8 -*-</span>
+<span class="c1">### baseline regular expression tagger</span>
+<span class="c1">###</span>
+
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">tagged</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">treebank</span><span class="o">.</span><span class="n">tagged_sents</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="n">tagged</span><span class="p">[:</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="n">ln</span> <span class="o">=</span>  <span class="nb">int</span><span class="p">(</span><span class="mf">0.9</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">tagged</span><span class="p">))</span>
+<span class="n">train</span> <span class="o">=</span> <span class="n">tagged</span><span class="p">[:</span><span class="n">ln</span><span class="p">]</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">tagged</span><span class="p">[</span><span class="n">ln</span><span class="p">:]</span>
+
+<span class="c1">### Train and evaluate a bigram tagger with a data set transformed to</span>
+<span class="c1">### use explicit unknown words. How well does it perform?</span>
+
+<span class="c1"># calculate the frequency</span>
+<span class="c1">### We should really only look at words in train to calculate the frequency</span>
+<span class="n">trainwords</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">train</span><span class="p">:</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">t</span><span class="p">)</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="n">trainwords</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+<span class="n">wfd</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">FreqDist</span><span class="p">(</span><span class="n">trainwords</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">unkme</span> <span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">fd</span><span class="p">,</span> <span class="n">threshold</span><span class="p">):</span>
+    <span class="s2">&quot;if the frequency &lt;= threshold, return &#39;UNK&#39; otherwise return the word&quot;</span>
+    <span class="k">if</span> <span class="n">fd</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">threshold</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;UNK&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">word</span>
+
+<span class="k">for</span> <span class="n">tau</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span> <span class="c1"># τ &#39;standard symbol for a threshold&#39;</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Calculating a model with threshold for unknowns set to </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">tau</span><span class="p">)</span>
+    <span class="c1">## replace low frequency words in both test and train</span>
+    <span class="n">trainu</span><span class="o">=</span> <span class="p">[[(</span><span class="n">unkme</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">wfd</span><span class="p">,</span><span class="n">tau</span><span class="p">),</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">t</span><span class="p">)</span> <span class="ow">in</span> <span class="n">s</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">train</span><span class="p">]</span>
+    <span class="n">testu</span><span class="o">=</span><span class="p">[[(</span><span class="n">unkme</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">wfd</span><span class="p">,</span><span class="n">tau</span><span class="p">),</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">t</span><span class="p">)</span> <span class="ow">in</span> <span class="n">s</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">test</span><span class="p">]</span>
+
+    <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Bigram Tagger with no backoff&quot;</span><span class="p">)</span>
+    <span class="n">bigram_tagger</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">BigramTagger</span><span class="p">(</span><span class="n">trainu</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Accuracy on Test: &quot;</span><span class="p">,</span> <span class="n">bigram_tagger</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">testu</span><span class="p">))</span>
+
+    <span class="n">unigram_tagger</span><span class="o">=</span><span class="n">nltk</span><span class="o">.</span><span class="n">UnigramTagger</span><span class="p">(</span><span class="n">trainu</span><span class="p">)</span>
+    <span class="n">bigram_tagger</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">BigramTagger</span><span class="p">(</span><span class="n">trainu</span><span class="p">,</span> <span class="n">backoff</span><span class="o">=</span><span class="n">unigram_tagger</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Bigram Tagger with backoff to Unigram&quot;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Accuracy on Test: &quot;</span><span class="p">,</span> <span class="n">bigram_tagger</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">testu</span><span class="p">))</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1">### Consider the regular expression tagger described in Section</span>
+<span class="c1">### 5.4. Evaluate the tagger using its accuracy() method, and try to</span>
+<span class="c1">### come up with ways to improve its performance. Discuss your</span>
+<span class="c1">### findings. How does objective evaluation help in the development</span>
+<span class="c1">### process?</span>
+
+<span class="n">patterns</span> <span class="o">=</span> <span class="p">[</span>      
+    <span class="p">(</span><span class="s1">r&#39;.*ing$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBG&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;.*ed$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBD&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;.*es$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBZ&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;.*ould$&#39;</span><span class="p">,</span> <span class="s1">&#39;MD&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;.*</span><span class="se">\&#39;</span><span class="s1">s$&#39;</span><span class="p">,</span> <span class="s1">&#39;NN$&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;.*s$&#39;</span><span class="p">,</span> <span class="s1">&#39;NNS&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;^-?[0-9]+(.[0-9]+)?$&#39;</span><span class="p">,</span> <span class="s1">&#39;CD&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;.*&#39;</span><span class="p">,</span> <span class="s1">&#39;NN&#39;</span><span class="p">)</span> <span class="p">]</span>
+<span class="n">regexp_tagger</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">RegexpTagger</span><span class="p">(</span><span class="n">patterns</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Accuracy of Regexp Tagger on Test: &quot;</span><span class="p">,</span> <span class="n">regexp_tagger</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">test</span><span class="p">))</span>
+<span class="c1">#0.24244274809160304</span>
+
+<span class="c1">### add NNP for capitalized words</span>
+<span class="n">patterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s1">r&#39;.*ing$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBG&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;.*ed$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBD&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;.*es$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBZ&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;.*ould$&#39;</span><span class="p">,</span> <span class="s1">&#39;MD&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;.*</span><span class="se">\&#39;</span><span class="s1">s$&#39;</span><span class="p">,</span> <span class="s1">&#39;NN$&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;.*s$&#39;</span><span class="p">,</span> <span class="s1">&#39;NNS&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;^-?[0-9]+(.[0-9]+)?$&#39;</span><span class="p">,</span> <span class="s1">&#39;CD&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;[A-Z].*&#39;</span><span class="p">,</span> <span class="s1">&#39;NNP&#39;</span><span class="p">),</span>  
+    <span class="p">(</span><span class="s1">r&#39;.*&#39;</span><span class="p">,</span> <span class="s1">&#39;NN&#39;</span><span class="p">)</span> <span class="p">]</span>
+
+<span class="n">regexp_tagger</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">RegexpTagger</span><span class="p">(</span><span class="n">patterns</span><span class="p">)</span>
+<span class="n">regexp_tagger</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+<span class="mf">0.32335877862595419</span>
+
+<span class="c1">### add NNP first</span>
+<span class="n">patterns</span> <span class="o">=</span> <span class="p">[</span>    
+    <span class="p">(</span><span class="s1">r&#39;[A-Z].*&#39;</span><span class="p">,</span> <span class="s1">&#39;NNP&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;.*ing$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBG&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;.*ed$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBD&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;.*es$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBZ&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;.*ould$&#39;</span><span class="p">,</span> <span class="s1">&#39;MD&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;.*</span><span class="se">\&#39;</span><span class="s1">s$&#39;</span><span class="p">,</span> <span class="s1">&#39;NN$&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;.*s$&#39;</span><span class="p">,</span> <span class="s1">&#39;NNS&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;^-?[0-9]+(.[0-9]+)?$&#39;</span><span class="p">,</span> <span class="s1">&#39;CD&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">r&#39;.*&#39;</span><span class="p">,</span> <span class="s1">&#39;NN&#39;</span><span class="p">)</span> <span class="p">]</span>
+<span class="n">regexp_tagger</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">RegexpTagger</span><span class="p">(</span><span class="n">patterns</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Accuracy of Regexp Tagger (with Capitals) on Test: &quot;</span><span class="p">,</span> <span class="n">regexp_tagger</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">test</span><span class="p">))</span>
+<span class="c1">#0.32885496183206109</span>
+
+
+<span class="c1">### how to find out more about the tags</span>
+<span class="c1">#nltk.help.upenn_tagset()</span>
+
+<span class="c1">#nltk.help.brown_tagset()</span>
+</pre></div>
+</body>
+</html>
