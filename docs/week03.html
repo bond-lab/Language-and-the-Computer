@@ -1,10 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>3. Language Processing and Python: Strings. - HG2051</title>
-</head>
-<body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
+    <title>3. Language Processing and Python: Strings. - HG2051</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	  crossorigin="anonymous">
+  </head>
+  <body class="container">
+    <div class="column">
 
 <h1>3. Language Processing and Python: Strings and Control.</h1>
 
@@ -28,7 +36,7 @@
 	  Summary</a>
    </ul>
       </li>
-  <li>Printing things nicely: <tt>print ("Is '{}' what you wanted or maybe '{}'?".format("string", 27))
+  <li>Printing things nicely: <code>print ("Is '{}' what you wanted or maybe '{}'?".format("string", 27))</code>
     <ul>
       <li>NLTK 3.9:
 	<a href="http://www.nltk.org/book/ch03.html#formatting-from-lists-to-strings">Formatting: From lists to strings</a>
@@ -53,8 +61,7 @@
 </ul>
 <h3>Before Class (<a href='code/wk3a.html'>code</a>)</h3>
 <ul>
-  <li> Experiment with saving some code in IDLE (see  <a href="http://hkn.eecs.berkeley.edu/~dyoo/python/idle_intro" shape="rect">
-      One Day of IDLE Toying</a> for help).
+  <li> Experiment with saving some code in VS Code
   <li> Try out this program:
 <pre>
 for i in range(1,12):
@@ -66,10 +73,10 @@ for i in range(1,12):
 Try to make a different shape.
 
   <li> Write a function that prints the second letter of every word, 
-    if and only if it has more than two letters. Test it on <tt>sent1</tt>
+    if and only if it has more than two letters. Test it on <code>sent1</code>
     
   <li> Write a program that prints out all (types of)  words that appear in as
-    both lowercase and non-lowercase in <tt>text6</tt>.
+    both lowercase and non-lowercase in <code>text6</code>.
 	<br> Hint (break it down):
 	<ul> 
 	  <li> Find all unique words
@@ -82,7 +89,7 @@ Try to make a different shape.
 <h3>Practical work (<a href='code/wk3b.html'>code</a>)</h3>
 <ul>
   <li>
-    In IDLE do this:
+    In VS Code do this:
     <pre xml:space="preserve">
       &gt;&gt;&gt; abc_list = ["aaa", "bbb", "ccc"]
       &gt;&gt;&gt; print(abc_list)
@@ -116,6 +123,9 @@ Try to make a different shape.
 
 <hr>
 <p><a href="index.html">HG2051: Language and the Computer</a> Francis Bond.
-</body>
 
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
 </html>

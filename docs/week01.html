@@ -1,11 +1,19 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
 <title>1. Introductions and Getting Started with NLTK. - HG2051</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	  crossorigin="anonymous">
 </head>
-<body>
-
+<body class="container">
+  <div class="column">
+    
  <h1>1. Getting Started with NLTK.</h1>
  
 <h3>Lecture notes</h3>
@@ -38,14 +46,26 @@
       Preface</a>
   </li>
 </ul>
+
+<h3>Getting Started></h3>
+
+<ul>
+  <li><a href='https://code.visualstudio.com/docs/python/python-tutorial'>Install
+      Visual Studio Code and Python 3</a>
+  <li>Install NTLK <code>pip install nltk</code> (Windows)
+    <br> <code>pip install nltk</code> (Mac/Linux)
+</ul>
+
 <h3>Practical work</h3>
 <ul>
   <li>
-    Open Python IDLE from the Start menu and do:
-    <pre xml:space="preserve">
+    Open VS Code from the Start menu and do:
+    <pre>
+      <code>
       &gt;&gt;&gt; import nltk
       &gt;&gt;&gt; nltk.download()   <font color ='red'>← first time on that machine only</font>
       &gt;&gt;&gt; from nltk.book import *
+      </code>
     </pre>
   </li>
   <li>
@@ -71,19 +91,15 @@
     at least two different NLTK chatbots. Do any of these
     chatbots pass the test?
   </li>
-  <li>
-    <u>IDLE</u> <br>
-    Learn more about IDLE with
-    <a href="http://hkn.eecs.berkeley.edu/~dyoo/python/idle_intro" shape="rect">
-      One Day of IDLE Toying</a> by Danny Yoo.
-  </li>
 </ul>
 <h3>NLTK demos (optional)</h3>
   <ul>
     <li>
-      In IDLE, run this NLTK application:
+      In VS Code, run this NLTK application:
       <pre xml:space="preserve">
-	&gt;&gt;&gt; nltk.app.rdparser()
+	<code>
+	  &gt;&gt;&gt; nltk.app.rdparser()
+	  </code>
       </pre>
     </li>
     <li>
@@ -95,10 +111,12 @@
 	    using only the Expand, Match and Backtrack buttons?
           </li>
           <li>
-	    In IDLE, run this NLTK application:
+	    In VS Code, run this NLTK application:
 <pre xml:space="preserve">
+	<code>
 &gt;&gt;&gt; nltk.app.srparser()
 </pre>
+  </code>
           </li>
           <li>
 	    Keep clicking Step for a while and try to see what's going
@@ -112,14 +130,19 @@
 <h3>Summary</h3>
 <ul>
   <li><b>nltk</b> extends python with data and functions to process language
-  <li>we can use python to measure size: <tt>len(list1)</tt>
+  <li>we can use python to measure size: <code>len(list1)</code>
   <li>a <b>list</b> has order and can have duplicates
   <li>a <b>set</b> just has membership
-  <li>you can count how often something appears in a list: <tt>list1.count('thing')</tt>
-  <li>you can define your own functions with <tt>def function():</tt>
+  <li>you can count how often something appears in a list: <code>list1.count('thing')</code>
+  <li>you can define your own functions with <code>def function():</code>
   <li>there are many interesting problems in natural language understanding
 </ul>
 <p><a href="index.html">HG2051: Language and the Computer</a> Francis Bond.
 
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

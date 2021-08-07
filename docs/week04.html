@@ -1,10 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
 <title>4. NLTK Text Corpora and Conditional Frequencies. - HG251</title>
-</head>
-<body>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	  crossorigin="anonymous">
+  </head>
+  <body class="container">
+    <div class="column">
 
 <h1>4. NLTK Text Corpora and Conditional Frequencies.</h1>
 
@@ -35,14 +43,16 @@
 <pre>
 def function(parameter1, parameter2, ...):
     """Documentation String (optional)"""
-    code
+    code that does something
     return some_value
 </pre>
       </li>
+
     </ul>
-  <li>Dictionaries
-    <p>Pairs of <tt>key</tt> and <tt>value<tt>:
-	  <tt>dict[key]=value; dict = { key:value }</tt>
+</ul>
+  <h4>Dictionaries</h4>
+    <p>Pairs of <code>key</code> and <code>value</code>:
+	  <code>dict[key]=value; dict = { key:value }</code>
 	  <br><b>key</b> must be immutable,
 	  	
 <table border>
@@ -72,6 +82,7 @@ def function(parameter1, parameter2, ...):
   <tr><td>defaultdict(int)</td>
 <td>a dictionary whose default value is zero</td></tr>
 </table>
+
 Some Tutorials:
     <ul>
       <li><a href='https://www.programiz.com/python-programming/dictionary'>Programiz</a>
@@ -80,16 +91,15 @@ Some Tutorials:
       <!-- <li><a href=''></a> -->
       <!-- <li><a href=''></a> -->
     </ul>
-  </li>
-</ul>
+
 
 <h3>Further reading</h3>
 
 <ul>
   <li>Project Gutenberg:
-    <a href="http://www.gutenberg.org/wiki/Gutenberg:About">
+    <a href="https://www.gutenberg.org/about/">
       About</a> and
-    <a href="http://www.gutenberg.org/wiki/Main_Page">
+    <a href="http://www.gutenberg.org/">
       Main Page</a>
   </li>
   <li>
@@ -143,9 +153,9 @@ Some Tutorials:
     </ol>
 <li> Take a look at words from the Swadesh list.
   <ol> 
-    <li>nltk has lists for many languages <tt>nltk.corpus.swadesh.fileids()</tt>
+    <li>nltk has lists for many languages <code>nltk.corpus.swadesh.fileids()</code>
       <br> You can access a single list for, e.g., English,
-      as:  <tt>nltk.corpus.swadesh.words('en')</tt>
+      as:  <code>nltk.corpus.swadesh.words('en')</code>
       <br>These are
       the <a href='https://www.loc.gov/standards/iso639-2/php/code_list.php'>language codes</a>
       <br>* Choose any language and print out the list, one entry per
@@ -159,7 +169,7 @@ you (singular), thou;  tu du; du, Sie
 he; el, ea; er
 ...
       </pre>
-      <br> Hint: you can use a range of numbers, and then the list
+      Hint: you can use a range of numbers, and then the list
       index function
       <li> Think about how you could you test for similarity?
 </ol>
@@ -184,7 +194,7 @@ he; el, ea; er
 	differences?
       <li>Now try to do the same thing with a single Conditional
       Frequency Distribution
-	<br>Hint: make a list of [(novel1, word1), (novel1,word2), ... (novel2, word1), (novel2, word2), ....] to feed to <tt>nltk.ConditionalFreqDist()</tt>
+	<br>Hint: make a list of [(novel1, word1), (novel1,word2), ... (novel2, word1), (novel2, word2), ....] to feed to <code>nltk.ConditionalFreqDist()</code>
 
 </ol>
 
@@ -294,6 +304,9 @@ moby_bigrams = nltk.bigrams(moby_text)
 
 <hr>
 <p><a href="index.html">HG2051: Language and the Computer</a> Francis Bond.
-</body>
 
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
 </html>

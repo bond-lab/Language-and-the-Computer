@@ -1,10 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
 <title>2. Language Processing and Python: Lists. - HG2051</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	  crossorigin="anonymous">
 </head>
-<body>
+<body class="container">
+  <div class="column">
 
 <h1>2. Language Processing and Python: Lists and Word Frequencies.</h1>
 
@@ -48,7 +56,7 @@
   </li>
 </ul>
 
-      <h3>Before Class (using python)</h3>
+      <h3>Before Class  (<a href='code/wk2a.html'>code</a>)</h3>
 	<ul>
 	  <li>Make a list of the words <i>one two three o'clock four o'clock rock</i>
 	  <li>Pick out the first word as a string
@@ -60,10 +68,10 @@
 	  <li>Count how many times <i>o'clock</i> appears in the list
 	</ul>
 
-<h3>Practical work</h3>
+<h3>Practical work (<a href='code/wk2b.html'>code</a>)</h3>
 <ul>
   <li>
-    Open Python IDLE from the Start menu and do:
+    Open Python VS Code from the Start menu and do:
     <pre xml:space="preserve">
       &gt;&gt;&gt; import nltk
       &gt;&gt;&gt; from nltk.book import *
@@ -139,18 +147,25 @@
         </ul>
 <h3>Summary</h3>
 <ul>
-  <li>you can access items in lists:  <tt>list1[0]</tt>,  <tt>list1[-1]</tt>, ...
-  <li>you can access sublists using slices: <tt>list1[first:last:step]</tt>
+  <li>you can access items in lists:  <code>list1[0]</code>,  <code>list1[-1]</code>, ...
+  <li>you can access sublists using slices: <code>list1[first:last:step]</code>
   <li>there are <a href= 'week12.html#list_methods'>many things</a> you can do to lists
   <li>similarly with strings and sets
-  <li>string → list: <tt>'string'.split()</tt>
-  <li>list → string: <tt>', '.join(['string', 'thing'])</tt>
-  <li>nltk defines frequency distributions: <tt>FreqDist()</tt>
-  <li>list comprehensions are powerful: <tt>[w for w in V if p(w)]</tt>
+  <li>string → list: <code>'string'.split()</code>
+  <li>list → string: <code>', '.join(['string', 'thing'])</code>
+  <li>nltk defines frequency distributions: <code>FreqDist()</code>
+  <li>list comprehensions are powerful: <code>[w for w in V if p(w)]</code>
 </ul>
 
 
 <hr>
-<p><a href="index.html">HG2051: Language and the Computer</a> Francis Bond.
+<p><a href="index.html">HG2051: Language and the Computer</a> Francis
+  Bond.
+  
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
