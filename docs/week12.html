@@ -1,10 +1,17 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html xmlns:xhtml="http://www.w3.org/1999/xhtml"><head>
-
-
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
 <title>12. Summary - HG251</title>
-</head><body>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	  crossorigin="anonymous">
+</head>
+<body class="container">
 
 <h1>12. Summary and Review</h1>
 
@@ -17,50 +24,50 @@
 <h3>Sequences</h3>
 <ol>
    <li> Strings, lists and tuples are different kinds of sequence
-     object, supporting common operations such as <b>indexing, slicing,
-     len(), sorted()</b>, and membership testing using <b>in</b>.
+     object, supporting common operations such as indexing, slicing,
+     finding the length, sorting, and membership testing using <code>in</code>.
 
-  </li><li> Texts are represented in Python using lists: ['Monty', 
+  </li><li> Texts can be represented in Python using lists: ['Monty', 
 'Python']. We can use indexing, slicing, and the len() function on 
 lists.
     <ul>
-      <li>list  = ['Monty', 'Python']
-      </li><li>list[0] = 'Monty'
-      </li><li>list[0:1] = ['Monty']
-      </li><li>len(list) = 2
+      <li><code>list  = ['Monty', 'Python']</code>
+      </li><li><code>list[0] = 'Monty'</code>
+      </li><li><code>list[0:1] = ['Monty']</code>
+      </li><li><code>len(list) = 2</code>
     </li></ul>
  </li><li> A string is specified in Python using single or double quotes: 
    'Monty Python', "Monty Python".
     <ul>
-      <li>string = "string"
-      </li><li>string[0] = "s"
-      </li><li>string[1:3] = "rin"
-      </li><li>len(string) = 5
+      <li><code>string = "string"</code>
+      </li><li><code>string[0] = "s"</code>
+      </li><li><code>string[1:3] = "rin"</code>
+      </li><li><code>len(string) = 5</code>
     </li></ul>
  </li><li> Strings have some special tests associated with them:
     <ul>
-      <li><b>string.startswith('substr')</b>
-      </li><li><b>string.endswith('substr')</b>
-      </li><li><b>string.isalpha()</b>
-      </li><li><b>string.islower()</b>
-      </li><li><b>string.istitle()</b>
-      </li><li><b>string.isupper()</b>
+      <li><code>string.startswith('substr')</code>
+      </li><li><code>string.endswith('substr')</code>
+      </li><li><code>string.isalpha()</code>
+      </li><li><code>string.islower()</code>
+      </li><li><code>string.istitle()</code>
+      </li><li><code>string.isupper()</code>
     </li></ul>
- </li><li> Strings can be split into lists: <b>'Monty Python'.split()</b> gives 
-   <b>['Monty', 'Python']</b>.
- </li><li> Lists can be joined into strings: <b>'/'.join(['Monty', 'Python'])</b> gives 
-    <b>'Monty/Python'</b>.
+ </li><li> Strings can be split into lists: <code>'Monty Python'.split()</code> gives 
+   <code>['Monty', 'Python']</code>.
+ </li><li> Lists can be joined into strings: <code>'/'.join(['Monty', 'Python'])</code> gives 
+    <code>'Monty/Python'</code>.
   </li><li> A dictionary is used to map between arbitrary types of
   information, such as a string and a number: 
-    <br> <b>freq['cat'] = 12</b>. 
+    <br> <code>freq['cat'] = 12</code>. 
   </li><li> We create dictionaries using the brace notation: 
-    <br> <b>pos = {}</b> 
-    <br> <b>pos = {'furiously': 'adv', 'ideas': 'n', 'colorless': 'adj'}</b>
+    <br> <code>pos = {}</code> 
+    <br> <code>pos = {'furiously': 'adv', 'ideas': 'n', 'colorless': 'adj'}</code>
 
   </li><li> A  tuple consists of a number of values separated by commas:
-    <br> <b> t = 12345, 54321, 'hello!'</b>
+    <br> <code> t = 12345, 54321, 'hello!'</code>
 
-  </li><li> Tuples are normally enclosed in parentheses <b>()</b>
+  </li><li> Tuples are normally enclosed in parentheses <code>()</code>
 
   </li><li> List comprehensions provide a concise way to create lists. The
     resulting list definition tends often to be clearer than lists built
@@ -70,13 +77,13 @@ lists.
     expression in the context of the for and if clauses which follow
     it. If the expression would evaluate to a tuple, it must be
     parenthesized.
-    <br>to get nouns from a tagged corpus: <b>nouns = [ w for (w, t) in tagged_text if t.startswith('N')]</b>
+    <br>to get nouns from a tagged corpus: <code>nouns = [ w for (w, t) in tagged_text if t.startswith('N')]</code>
 
   </li><li> A string formatting expression template % arg_tuple consists of
   a format string template that contains conversion specifiers like
   %-6s and %0.2d.
-    <br> <b> print "Tokens = %d; Types = %d; Tokens/Type = %0.2d" % 
-      (len(words), len(set(words), 1.0*len(words)/len(set(words)))</b>
+    <br> <code> print "Tokens = %d; Types = %d; Tokens/Type = %0.2d" % 
+      (len(words), len(set(words), 1.0*len(words)/len(set(words)))</code>
 </li></ol>
 
 <h4>Iterating over sequences</h4>
@@ -103,8 +110,8 @@ lists.
 <table border>
 <tr><th>Operation</th>
   <th>Result</th></tr>
-<tr><td>s[i] = x</td>
-  <td>item i of s is replaced by x</td></tr>
+<tr><td><code>s[i] = x</code></td>
+  <td>item <code>i</code> of <code>s</code> is replaced by <code>x</code></td></tr>
 <tr><td>s[i:j] = t</td>
   <td>slice of s from i to j is replaced by the contents of the iterable t</td></tr>
 <tr><td>del s[i:j]</td>
@@ -229,44 +236,44 @@ accessing, and visualizing distributions of frequency</caption>
 </tr>
 </thead>
 <tbody valign="top">
-<tr><td><tt class="doctest"><span class="pre">fdist = FreqDist(samples)</span></tt></td>
+<tr><td><code><span class="pre">fdist = FreqDist(samples)</span></code></td>
 <td>create a frequency distribution containing the given samples</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">fdist[sample] += 1</span></tt></td>
+<tr><td><code><span class="pre">fdist[sample] += 1</span></code></td>
 <td>increment the count for this sample</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">fdist[<span class="pysrc-string">'monstrous'</span>]</span></tt></td>
+<tr><td><code><span class="pre">fdist[<span class="pysrc-string">'monstrous'</span>]</span></code></td>
 <td>count of the number of times a given sample occurred</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">fdist.freq(<span class="pysrc-string">'monstrous'</span>)</span></tt></td>
+<tr><td><code><span class="pre">fdist.freq(<span class="pysrc-string">'monstrous'</span>)</span></code></td>
 <td>frequency of a given sample</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">fdist.N()</span></tt></td>
+<tr><td><code><span class="pre">fdist.N()</span></code></td>
 <td>total number of samples</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">fdist.most_common(n)</span></tt></td>
-<td>the <tt class="doctest"><span class="pre">n</span></tt> most common samples and their frequencies</td>
+<tr><td><code><span class="pre">fdist.most_common(n)</span></code></td>
+<td>the <code><span class="pre">n</span></code> most common samples and their frequencies</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre"><span class="pysrc-keyword">for</span> sample <span class="pysrc-keyword">in</span> fdist:</span></tt></td>
+<tr><td><code><span class="pre"><span class="pysrc-keyword">for</span> sample <span class="pysrc-keyword">in</span> fdist:</span></code></td>
 <td>iterate over the samples</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">fdist.max()</span></tt></td>
+<tr><td><code><span class="pre">fdist.max()</span></code></td>
 <td>sample with the greatest count</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">fdist.tabulate()</span></tt></td>
+<tr><td><code><span class="pre">fdist.tabulate()</span></code></td>
 <td>tabulate the frequency distribution</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">fdist.plot()</span></tt></td>
+<tr><td><code><span class="pre">fdist.plot()</span></code></td>
 <td>graphical plot of the frequency distribution</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">fdist.plot(cumulative=True)</span></tt></td>
+<tr><td><code><span class="pre">fdist.plot(cumulative=True)</span></code></td>
 <td>cumulative plot of the frequency distribution</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">fdist1 |= fdist2</span></tt></td>
-<td>update <tt class="doctest"><span class="pre">fdist1</span></tt> with counts from <tt class="doctest"><span class="pre">fdist2</span></tt></td>
+<tr><td><code><span class="pre">fdist1 |= fdist2</span></code></td>
+<td>update <code><span class="pre">fdist1</span></code> with counts from <code><span class="pre">fdist2</span></code></td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">fdist1 &lt; fdist2</span></tt></td>
-<td>test if samples in <tt class="doctest"><span class="pre">fdist1</span></tt> occur less frequently than in <tt class="doctest"><span class="pre">fdist2</span></tt></td>
+<tr><td><code><span class="pre">fdist1 &lt; fdist2</span></code></td>
+<td>test if samples in <code><span class="pre">fdist1</span></code> occur less frequently than in <code><span class="pre">fdist2</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -282,32 +289,32 @@ accessing, and visualizing a conditional frequency distribution of counters</cap
 <th class="head">Description</th>
 </tr>
 
-<tr><td><tt class="doctest"><span class="pre">cfdist = ConditionalFreqDist(pairs)</span></tt></td>
+<tr><td><code><span class="pre">cfdist = ConditionalFreqDist(pairs)</span></code></td>
 <td>create a conditional frequency distribution from a list of pairs</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">cfdist.conditions()</span></tt></td>
+<tr><td><code><span class="pre">cfdist.conditions()</span></code></td>
 <td>the conditions</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">cfdist[condition]</span></tt></td>
+<tr><td><code><span class="pre">cfdist[condition]</span></code></td>
 <td>the frequency distribution for this condition</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">cfdist[condition][sample]</span></tt></td>
+<tr><td><code><span class="pre">cfdist[condition][sample]</span></code></td>
 <td>frequency for the given sample for this condition</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">cfdist.tabulate()</span></tt></td>
+<tr><td><code><span class="pre">cfdist.tabulate()</span></code></td>
 <td>tabulate the conditional frequency distribution</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">cfdist.tabulate(samples, conditions)</span></tt></td>
+<tr><td><code><span class="pre">cfdist.tabulate(samples, conditions)</span></code></td>
 <td>tabulation limited to the specified samples and conditions</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">cfdist.plot()</span></tt></td>
+<tr><td><code><span class="pre">cfdist.plot()</span></code></td>
 <td>graphical plot of the conditional frequency distribution</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">cfdist.plot(samples, conditions)</span></tt></td>
+<tr><td><code><span class="pre">cfdist.plot(samples, conditions)</span></code></td>
 <td>graphical plot limited to the specified samples and conditions</td>
 </tr>
-<tr><td><tt class="doctest"><span class="pre">cfdist1 &lt; cfdist2</span></tt></td>
-<td>test if samples in <tt class="doctest"><span class="pre">cfdist1</span></tt> occur less frequently than in <tt class="doctest"><span class="pre">cfdist2</span></tt></td>
+<tr><td><code><span class="pre">cfdist1 &lt; cfdist2</span></code></td>
+<td>test if samples in <code><span class="pre">cfdist1</span></code> occur less frequently than in <code><span class="pre">cfdist2</span></code></td>
 </tr>
 </table>
 
@@ -317,36 +324,36 @@ accessing, and visualizing a conditional frequency distribution of counters</cap
 <h3>Control and Program Style</h3>
 <ol>
   <li> We process each word in a text using a for statement, such
-  as <b>for w in t:</b> or <b>for word in text:</b>. This must be
+  as <code>for w in t:</code> or <code>for word in text:</code>. This must be
   followed by the colon character and an indented block of code, to be
   executed each time through the loop.
 
   </li><li> We can also loop through things using a while loop.
-    <br><b>while (n != 20):</b>
+    <br><code>while (n != 20):</code>
 
   </li><li> We can also do this in a single command (a <i>list
   comprehension</i>).  To derive the vocabulary, collapsing case
   distinctions and ignoring punctuation, we can
-  write <b>set([w.lower() for w in text if w.isalpha()])</b>.
+  write <code>set([w.lower() for w in text if w.isalpha()])</code>.
 
 
-  </li><li> We test a condition using an if statement: <b>if len(word) &lt;
-  5:</b>. This must be followed by the colon character and an indented
+  </li><li> We test a condition using an if statement: <code>if len(word) &lt;
+  5:</code>. This must be followed by the colon character and an indented
   block of code, to be executed only if the condition is true.
 
 
   </li><li> A function is a block of code that has been assigned a name and
-  can be reused. Functions are defined using the <b>def</b> keyword,
-  as in <b>def mult(x, y)</b>; x and y are parameters of the function,
+  can be reused. Functions are defined using the <code>def</code> keyword,
+  as in <code>def mult(x, y)</code>; x and y are parameters of the function,
   and act as placeholders for actual data values.
 
   </li><li> A function is called by specifying its name followed by one or
-  more arguments inside parentheses, like this: <b>mult(3, 4)</b>,
-  e.g., <b>len(text1)</b>.
+  more arguments inside parentheses, like this: <code>mult(3, 4)</code>,
+  e.g., <code>len(text1)</code>.
 
 
   </li><li> Python programs more than a few lines long should be entered
-  using a text editor, saved to a file with a <b>.py</b> extension,
+  using a text editor, saved to a file with a <code>.py</code> extension,
   and accessed using an import statement.
 
   </li><li> Python functions permit you to associate a name with a
@@ -360,30 +367,32 @@ accessing, and visualizing a conditional frequency distribution of counters</cap
 
 <!--   <li> Some functions, known as "methods", are associated with an -->
 <!--   object and we give the object name followed by a period followed by -->
-<!--   the function, like this:<b> x.funct(y)</b>, -->
-<!--   e.g., <b>word.isalpha()</b>. -->
+<!--   the function, like this:<code> x.funct(y)</code>, -->
+<!--   e.g., <code>word.isalpha()</code>. -->
 
   </li><li> Some functions are not available by default, but must be
-  accessed using Python's import<b></b> statement.
+  accessed using Python's import<code></code> statement.
 
-  </li><li> To find out about some variable v, type <b>help(v)</b> in the
+  </li><li> To find out about some variable v, type <code>help(v)</code> in the
   Python interactive interpreter to read the help entry for this kind
   of object.
 
   </li><li> Python's assignment and parameter passing use object
-  references; e.g. if <b>a</b> is a list and we assign <b>b = a</b>, then any
-  operation on <b>a</b> will modify <b>b</b>, and vice versa.
+  references; e.g. if <code>a</code> is a list and we assign <code>b = a</code>, then any
+  operation on <code>a</code> will modify <code>b</code>, and vice versa.
 
-  </li><li> The <b>is</b> operation tests if two objects are identical internal
-  objects, while <b>==</b> tests if two objects are equivalent. This
+  </li><li> The <code>is</code> operation tests if two objects are identical internal
+  objects, while <code>==</code> tests if two objects are equivalent. This
   distinction parallels the type-token distinction.
 
   </li><li> It is good to test functions with specialized test data (unit tests) to check that they work.
-    <br> To test <b>+</b> we make some data <b>test = [(1, 1, 2), (1, 0, 1), (2, 2, 4)]</b>
+    <br> To test <code>+</code> we make some data <code>test = [(1, 1,
+      2), (1, 0, 1), (2, 2, 4)]</code>
+    <code>
     <pre> for (a, b,c ) in test:
 	if (a + b != c):
 		print "test failed: %s + %s not equal to %s" % (a, b, c) 
-</pre>
+    </pre></code>
 
 <!--   <li> A declarative programming style usually produces more compact, -->
 <!--   readable code; manually-incremented loop variables are usually -->
@@ -400,11 +409,11 @@ accessing, and visualizing a conditional frequency distribution of counters</cap
 <ol>
   <li> A word "token" is a particular appearance of a given word in a 
 text; a word "type" is the unique form of the word as a particular 
-sequence of letters. We count word tokens using <b>len(text)</b> and word types using <b>len(set(text))</b>.
+sequence of letters. We count word tokens using <code>len(text)</code> and word types using <code>len(set(text))</code>.
 
-  </li><li> We obtain the vocabulary of a text t using <b>sorted(set(t))</b>.
+  </li><li> We obtain the vocabulary of a text t using <code>sorted(set(t))</code>.
 
-  </li><li> We operate on each item of a text using <b>[f(x) for x in text]</b>.
+  </li><li> We operate on each item of a text using <code>[f(x) for x in text]</code>.
 
   </li><li> A frequency distribution is a collection of items along with
  their frequency counts (e.g., the words of a text and their frequency 
@@ -412,15 +421,15 @@ of appearance).
 
   </li><li> A text corpus is a large, structured collection of texts. NLTK
   comes with many corpora, e.g., the Brown
-  Corpus, <b>nltk.corpus.brown</b>.
+  Corpus, <code>nltk.corpus.brown</code>.
 
   </li><li> Often you can access many views:
     <ul>
-      <li>  <b>nltk.corpus.brown.raw</b> the whole corpus as one string
-      </li><li>  <b>nltk.corpus.brown.words</b> the whole corpus tokenized into words
-      </li><li>  <b>nltk.corpus.brown.sents</b> the whole corpus tokenized into words and split into sentences
-      </li><li>  <b>nltk.corpus.brown.tagged_words</b>  the whole corpus tokenized and tagged
-      </li><li>  <b>nltk.corpus.brown.tagged_sents</b>  the whole corpus tokenized and tagged and split into sents
+      <li>  <code>nltk.corpus.brown.raw</code> the whole corpus as one string
+      </li><li>  <code>nltk.corpus.brown.words</code> the whole corpus tokenized into words
+      </li><li>  <code>nltk.corpus.brown.sents</code> the whole corpus tokenized into words and split into sentences
+      </li><li>  <code>nltk.corpus.brown.tagged_words</code>  the whole corpus tokenized and tagged
+      </li><li>  <code>nltk.corpus.brown.tagged_sents</code>  the whole corpus tokenized and tagged and split into sents
     </li></ul>
 
   </li><li> Some text corpora are categorized, e.g., by genre or topic;
@@ -442,17 +451,17 @@ of appearance).
   a potentially long string containing words and whitespace
   formatting, and is how we typically store and visualize a text.
 
-  </li><li> We can read text from a file <b>f</b> using<b> text = open(f).read()</b>. 
+  </li><li> We can read text from a file <code>f</code> using<code> text = open(f).read()</code>. 
 
-  </li><li> We can read text from a URL <b>u</b> using <b>text = urlopen(u).read()</b>. 
+  </li><li> We can read text from a URL <code>u</code> using <code>text = urlopen(u).read()</code>. 
 
   </li><li> We can write text to a file by opening the file for writing:
-    <b>file = open('output.txt', 'w')</b>, then adding content to the file:
-    <b>file.write("Monty Python")</b>, and finally closing the file:
-    <b>file.close()</b>.
+    <code>file = open('output.txt', 'w')</code>, then adding content to the file:
+    <code>file.write("Monty Python")</code>, and finally closing the file:
+    <code>file.close()</code>.
 
 
-  </li><li> We can iterate over the lines of a text file using <b>for line in open(f):</b>.
+  </li><li> We can iterate over the lines of a text file using <code>for line in open(f):</code>.
 
   </li><li> Texts found on the web may contain unwanted material (such as
   headers, footers, markup), that need to be removed before we do any
@@ -463,36 +472,36 @@ of appearance).
   tokens such as words and punctuation. Tokenization based on
   whitespace is inadequate for many applications because it bundles
   punctuation together with words. NLTK provides an off-the-shelf
-  tokenizer <b>nltk.word_tokenize()</b>.
+  tokenizer <code>nltk.word_tokenize()</code>.
 
   </li><li> Lemmatization is a process that maps the various forms of a
   word (such as <i>appeared, appears</i>) to the canonical or citation form
-  of the word, also known as the lexeme or lemma (e.g. <b><i>appear</i></b>).
+  of the word, also known as the lexeme or lemma (e.g. <code><i>appear</i></code>).
 </li></ol>
 
 <h3><a name='regexp'>Regular Expressions</a></h3>
 <ol>
   <li> Regular expressions are a powerful and flexible method of
   specifying patterns. Once we have imported the re module, we can use
-  <b>re.findall()</b> to find all substrings in a string that match a
+  <code>re.findall()</code> to find all substrings in a string that match a
   pattern.
 
   </li><li> If a regular expression string includes a backslash, you should
   tell Python not to preprocess the string, by using a raw string with
-  an <b>r</b> prefix: <b>r'regexp'</b>.
+  an <code>r</code> prefix: <code>r'regexp'</code>.
 
- </li><li>Regular expressions use meta-characters: <b> . ^ $ * + ? { [ ] \ | ( )</b>
+ </li><li>Regular expressions use meta-characters: <code> . ^ $ * + ? { [ ] \ | ( )</code>
 
   </li><li> When backslash is used before certain characters,
-  e.g. <b>\n</b>, this takes on a special meaning (newline character);
+  e.g. <code>\n</code>, this takes on a special meaning (newline character);
   however, when backslash is used before regular expression wildcards
-  and operators, e.g. <b>\.</b>, <b>\|</b>, <b>\$</b>, these
+  and operators, e.g. <code>\.</code>, <code>\|</code>, <code>\$</code>, these
   characters lose their special meaning and are matched literally.
 
   </li><li> Regular expressions can be used to discover knowledge through patterns in text:
-    <br><b>「([non-ascii]+)」\(([ \w]+)\)</b> finds translation pairs 
+    <br><code>「([non-ascii]+)」\(([ \w]+)\)</code> finds translation pairs 
     <br> 「<u>自然言語処理</u> 」(<u>natural language processing</u>)
-    <br><b>\b(\w+) such as (w+)</b> finds hypernym-hyponyms
+    <br><code>\b(\w+) such as (w+)</code> finds hypernym-hyponyms
     <br> <u>animals</u> such as <u>cats,</u> dogs and raccoons
   <li>We can match and then see what we matched
     <pre>
@@ -680,55 +689,55 @@ of appearance).
   unrealistically optimistic.
 </li></ol>
 
-<h3>Sample Question</h3>
+<!-- <h3>Sample Question</h3> -->
 
-<p> The exam consists of 5 questions, with many sub-questions.
+<!-- <p> The exam consists of 5 questions, with many sub-questions. -->
 
-<p>Answers don't have to be perfect, do the best you can: better to sketch an outline than do nothing.
+<!-- <p>Answers don't have to be perfect, do the best you can: better to sketch an outline than do nothing. -->
 
-</p><h3>Question X: Tuples </h3>
+<!-- </p><h3>Question X: Tuples </h3> -->
 
-<p>This question tests your understanding of tuples.  Remember you
-will not be marked down for small errors in syntax or typos, so long
-as you demonstrate that you understand how tuples work in python.
+<!-- <p>This question tests your understanding of tuples.  Remember you -->
+<!-- will not be marked down for small errors in syntax or typos, so long -->
+<!-- as you demonstrate that you understand how tuples work in python. -->
 
-</p><p>(0) What is the value of <b>('Speaking', 'VBG', 'speak')[2]</b>? 
-  </p><pre>    'speak'
-  </pre>
-<p>(1) You have a list of words: <b>sent = ['Hello', 'there',  'Prof']</b>
-  Write some code to make a list of tuples, where the first element is 
-the word, and the second element is the word in lowercase.
-</p><pre>  new = [(w, w.lower()) for w in sent]
-</pre>
-<p>(2) You have a tagged corpus, consisting of a list of (word, pos) 
-tuples, and a function lemmatize, that takes a word and part of speech 
-and returns the lemma.
-  Show how you can make a new corpus consisting of (word, lemma, pos) 
-tuples.
-</p><pre>  [(w, lemmatize(w,p), p) for (w,p) in tagged]
-</pre>
-<p>(3) Write a function that takes a list of words and
-returns a list of tuples consisting of a word type and its frequency,
-sorted by the frequency, with the most frequent first.
-</p><pre>  
-  def FreqDist(words):
-      dist = sorted([(words.count(w), w) for w in set(words)], reverse=True) 
-      return [(w,c) for (c, w) in dist]
+<!-- </p><p>(0) What is the value of <code>('Speaking', 'VBG', 'speak')[2]</code>?  -->
+<!--   </p><pre>    'speak' -->
+<!--   </pre> -->
+<!-- <p>(1) You have a list of words: <code>sent = ['Hello', 'there',  'Prof']</code> -->
+<!--   Write some code to make a list of tuples, where the first element is  -->
+<!-- the word, and the second element is the word in lowercase. -->
+<!-- </p><pre>  new = [(w, w.lower()) for w in sent] -->
+<!-- </pre> -->
+<!-- <p>(2) You have a tagged corpus, consisting of a list of (word, pos)  -->
+<!-- tuples, and a function lemmatize, that takes a word and part of speech  -->
+<!-- and returns the lemma. -->
+<!--   Show how you can make a new corpus consisting of (word, lemma, pos)  -->
+<!-- tuples. -->
+<!-- </p><pre>  [(w, lemmatize(w,p), p) for (w,p) in tagged] -->
+<!-- </pre> -->
+<!-- <p>(3) Write a function that takes a list of words and -->
+<!-- returns a list of tuples consisting of a word type and its frequency, -->
+<!-- sorted by the frequency, with the most frequent first. -->
+<!-- </p><pre>   -->
+<!--   def FreqDist(words): -->
+<!--       dist = sorted([(words.count(w), w) for w in set(words)], reverse=True)  -->
+<!--       return [(w,c) for (c, w) in dist] -->
 
-OR
+<!-- OR -->
 
-  def FreqDist(words):
-      dist = sorted([(-words.count(w), w) for w in set(words)]) 
-      return [(w,-c) for (c, w) in dist]
+<!--   def FreqDist(words): -->
+<!--       dist = sorted([(-words.count(w), w) for w in set(words)])  -->
+<!--       return [(w,-c) for (c, w) in dist] -->
 
-OR
+<!-- OR -->
  
-  def FreqDist(words):
-      dist = sorted([(words.count(w), w) for w in set(words)]).reverse() 
-      return [(w,c) for (c, w) in dist]
-</pre>
-<p>Note: lists of tuples are sorted according to their first member,
-numbers are sorted smallest to largest.
+<!--   def FreqDist(words): -->
+<!--       dist = sorted([(words.count(w), w) for w in set(words)]).reverse()  -->
+<!--       return [(w,c) for (c, w) in dist] -->
+<!-- </pre> -->
+<!-- <p>Note: lists of tuples are sorted according to their first member, -->
+<!-- numbers are sorted smallest to largest. -->
 
 
 <h2>That's all folks</h2>
@@ -737,4 +746,9 @@ numbers are sorted smallest to largest.
  
 <hr>
 <p><a href="http://www.ntu.edu.sg/home/fcbond/hg2051/index.html">HG251: Language and the Computer</a> Francis Bond, 2011.
-</p></body></html>
+</p>
+
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
