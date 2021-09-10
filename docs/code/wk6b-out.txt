@@ -29,19 +29,19 @@ You can manipulate it even if you can't read it!
 
 With a test harness
 
-Do I think normalized "Madam I'm Adam" is a palindrome? True
-	(Test OK: True)
-Do I think normalized "Neither is this" is a palindrome? False
+Do I think normalized "madam" is a palindrome? True
 	(Test OK: True)
 Do I think normalized "eve" is a palindrome? True
 	(Test OK: True)
 Do I think normalized "adam" is a palindrome? False
 	(Test OK: True)
-Do I think normalized "1 ono 1" is a palindrome? True
-	(Test OK: True)
-Do I think normalized "madam" is a palindrome? True
+Do I think normalized "Madam I'm Adam" is a palindrome? True
 	(Test OK: True)
 Do I think normalized "1 on 1" is a palindrome? False
 	(Test OK: True)
+Do I think normalized "1 ono 1" is a palindrome? True
+	(Test OK: True)
 Do I think normalized "This isn't" is a palindrome? False
+	(Test OK: True)
+Do I think normalized "Neither is this" is a palindrome? False
 	(Test OK: True)

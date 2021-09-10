@@ -1,10 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>6. Processing Raw Text - HG251</title>
-</head>
-<body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
+    <title>6. Processing Raw Text - HG2051</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	  crossorigin="anonymous">
+  </head>
+  <body class="container">
+    <div class="column">   
 
 <h1>6. Processing Raw Text</h1>
 
@@ -51,18 +59,20 @@ edit_distance(str1, str2)    # additions, substitutions and  deletions
 	    <br><tt>&gt;&gt;&gt; wn.synsets('犬', lang='jpn')</tt>
 	    <br><tt>[Synset('dog.n.01'), Synset('spy.n.01')]</tt>
 	    <br><tt>&gt;&gt;&gt; wn.synset('dog.n.01').lemma_names(lang='jpn')</tt>
-	    <br><tt>['ドッグ', 'イヌ', '洋犬', '犬', '飼い犬', '飼犬', '0', '0', '1', '1', '0', '0']
+	    <br><tt>['ドッグ', 'イヌ', '洋犬', '犬', '飼い犬', '飼犬']
 </tt>
-	  <li>There is a bug that returns '0' and '1' as additional
-	  lemmas for some languages: I will fix a new <tt>omw.zip</tt> soon (2015-09-14)
 	  <li>The <tt>lemma.count()</tt> is only defined for English.
 	  <li>Some relations are only stored in one direction (the wordnet
-	  interface does not deduce the reverse, although it should) (2015-09-14)
+	  interface does not deduce the reverse, although it could) (2015-09-14)
 	</ul>
   </li>
 </ul>
 <h3>Further reading</h3>
 <ul>
+  <li>
+    <a href='https://zetcode.com/python/fstring/'>Python f-string</a>
+    a new and better interface to formatted strings!
+  </li>
   <li>
     <a href="http://en.wikipedia.org/wiki/Binary_numeral_system">
       Binary</a>,
@@ -80,7 +90,8 @@ edit_distance(str1, str2)    # additions, substitutions and  deletions
 </ul>
 
 
-<h3>Before Class  (<a href='code/wk6a.html'>code</a>)</h3>
+<h3>Before Class  (<a href='code/wk6a.html'>code</a>,
+  <a href='code/wk6a-out.txt'>output</a>)</h3>
 
 <ol>
  <li>Write a program to: 
@@ -92,11 +103,13 @@ edit_distance(str1, str2)    # additions, substitutions and  deletions
        <br>chop off extra text
      <li>Save it as a file called "spec.txt"
      <li>Read it in again and count characters, lines, tokens
+       <br> ★ Also count the number of sentences
    </ol>
  </ol>
 
 
-<h3>Practical work (<a href='code/wk6b.html'>code</a>)</h3>
+<h3>Practical work (<a href='code/wk6b.html'>code</a>,
+  <a href='code/wk6b-out.txt'>output</a>)</h3>
 <ul>
   <li> Take the following Chinese verbs ['学习', '开'] and write code to produce
   the following variants: 
@@ -158,7 +171,10 @@ edit_distance(str1, str2)    # additions, substitutions and  deletions
 </ul>
 
 <hr>
-<p><a href="index.html">HG251: Language and the Computer</a> Francis Bond.
-</body>
+<p><a href="index.html">HG2051: Language and the Computer</a> Francis Bond.
 
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
 </html>

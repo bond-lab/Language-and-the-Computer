@@ -12,17 +12,27 @@ import nltk
 ## Read
 
 ### Note URL has changed since the book was published
-url = "http://www.gutenberg.org/cache/epub/1661/pg1661.txt"
+#url = "http://www.gutenberg.org/cache/epub/1661/pg1661.txt"
+
+### and since last year!  Web data changes, ...
+
+url = "https://www.gutenberg.org/files/48320/48320-0.txt"
 response = request.urlopen(url)
 raw = response.read().decode('utf-8')
+
 #print (raw[:100])
 
 ##
 ## CHOP
 ##
-start=raw.index("THE ADVENTURE OF THE SPECKLED BAND") 
-stop=raw.index("THE ADVENTURE OF THE ENGINEER'S THUMB")
+
+# Need to find where to start and stop by looking at the file.
+
+start=raw.index("Adventure VIII") 
+stop=raw.index("Adventure IX")
 story=raw[start:stop]
+
+
 ##
 ## SAVE
 ##
@@ -42,8 +52,10 @@ for l in f:
     lines  += 1
     chars  += len(l)
     tokens += len(nltk.word_tokenize(l.strip()))
-    ### just for fun
-    raw += l.strip() + ' '
+    ### add all the lines together, then split into sentences
+    raw += l
 sents  = len(nltk.sent_tokenize(raw))
 
 print("This text of the Speckled Band has {:,d} characters, {:,d} lines, {:,d} sentences and {:,d} tokens.".format(chars, lines, sents, tokens))
+
+

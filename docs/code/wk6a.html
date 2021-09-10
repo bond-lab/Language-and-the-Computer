@@ -58,8 +58,10 @@ body .mf { color: #666666 } /* Literal.Number.Float */
 body .mh { color: #666666 } /* Literal.Number.Hex */
 body .mi { color: #666666 } /* Literal.Number.Integer */
 body .mo { color: #666666 } /* Literal.Number.Oct */
+body .sa { color: #BA2121 } /* Literal.String.Affix */
 body .sb { color: #BA2121 } /* Literal.String.Backtick */
 body .sc { color: #BA2121 } /* Literal.String.Char */
+body .dl { color: #BA2121 } /* Literal.String.Delimiter */
 body .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 body .s2 { color: #BA2121 } /* Literal.String.Double */
 body .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -70,9 +72,11 @@ body .sr { color: #BB6688 } /* Literal.String.Regex */
 body .s1 { color: #BA2121 } /* Literal.String.Single */
 body .ss { color: #19177C } /* Literal.String.Symbol */
 body .bp { color: #008000 } /* Name.Builtin.Pseudo */
+body .fm { color: #0000FF } /* Name.Function.Magic */
 body .vc { color: #19177C } /* Name.Variable.Class */
 body .vg { color: #19177C } /* Name.Variable.Global */
 body .vi { color: #19177C } /* Name.Variable.Instance */
+body .vm { color: #19177C } /* Name.Variable.Magic */
 body .il { color: #666666 } /* Literal.Number.Integer.Long */
 
   </style>
@@ -80,7 +84,7 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 <body>
 <h2></h2>
 
-<div class="highlight"><pre><span class="c1">##</span>
+<div class="highlight"><pre><span></span><span class="c1">##</span>
 <span class="c1">## Write a program to: </span>
 <span class="c1">## (i) get the text of the Speckled Band (Sherlock Holmes)</span>
 <span class="c1">##  * go to gutenberg and search for &#39;Speckled Band&#39;</span>
@@ -94,17 +98,27 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 <span class="c1">## Read</span>
 
 <span class="c1">### Note URL has changed since the book was published</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://www.gutenberg.org/cache/epub/1661/pg1661.txt&quot;</span>
+<span class="c1">#url = &quot;http://www.gutenberg.org/cache/epub/1661/pg1661.txt&quot;</span>
+
+<span class="c1">### and since last year!  Web data changes, ...</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.gutenberg.org/files/48320/48320-0.txt&quot;</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="n">raw</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+
 <span class="c1">#print (raw[:100])</span>
 
 <span class="c1">##</span>
 <span class="c1">## CHOP</span>
 <span class="c1">##</span>
-<span class="n">start</span><span class="o">=</span><span class="n">raw</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;THE ADVENTURE OF THE SPECKLED BAND&quot;</span><span class="p">)</span> 
-<span class="n">stop</span><span class="o">=</span><span class="n">raw</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;THE ADVENTURE OF THE ENGINEER&#39;S THUMB&quot;</span><span class="p">)</span>
+
+<span class="c1"># Need to find where to start and stop by looking at the file.</span>
+
+<span class="n">start</span><span class="o">=</span><span class="n">raw</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;Adventure VIII&quot;</span><span class="p">)</span> 
+<span class="n">stop</span><span class="o">=</span><span class="n">raw</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;Adventure IX&quot;</span><span class="p">)</span>
 <span class="n">story</span><span class="o">=</span><span class="n">raw</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">stop</span><span class="p">]</span>
+
+
 <span class="c1">##</span>
 <span class="c1">## SAVE</span>
 <span class="c1">##</span>
@@ -124,8 +138,8 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
     <span class="n">lines</span>  <span class="o">+=</span> <span class="mi">1</span>
     <span class="n">chars</span>  <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
     <span class="n">tokens</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">strip</span><span class="p">()))</span>
-    <span class="c1">### just for fun</span>
-    <span class="n">raw</span> <span class="o">+=</span> <span class="n">l</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span>
+    <span class="c1">### add all the lines together, then split into sentences</span>
+    <span class="n">raw</span> <span class="o">+=</span> <span class="n">l</span>
 <span class="n">sents</span>  <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nltk</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="n">raw</span><span class="p">))</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;This text of the Speckled Band has {:,d} characters, {:,d} lines, {:,d} sentences and {:,d} tokens.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">chars</span><span class="p">,</span> <span class="n">lines</span><span class="p">,</span> <span class="n">sents</span><span class="p">,</span> <span class="n">tokens</span><span class="p">))</span>
