@@ -6,12 +6,12 @@ import nltk
 print("Find the 50 most frequent words in emma")
 
 emma = nltk.corpus.gutenberg.words('austen-emma.txt')
-print(list(nltk.FreqDist(emma).keys())[:50])
 ## or 
 print(nltk.FreqDist(emma).most_common(50))
 ## or
 print([t[0] for t in nltk.FreqDist(emma).most_common(50)])
 print()
+
 
 print("Find the 50 most frequent words in emma without stopwords")
 from nltk.corpus import stopwords
@@ -23,7 +23,7 @@ print()
 ### faster: just look at the high frequency words (assume that 500 words is enough) 
 print("Find these faster by only looking at the most frequent words")
 print( [t[0] for t in nltk.FreqDist(emma).most_common(500) 
-       if t not in stopen][0:50])
+        if t not in stopen][0:50])
 print()
 
 # A Pronouncing Dictionary
@@ -44,12 +44,12 @@ print("%f of the words start with the same code" % \
 ## find irregular paterns
 ## Easy print them all and eyball them
 for (w, l) in cmu:
-    if  w[0] != l[0].lower()[0]:
+    if  w[0] != l[0].lower():
         print(w, l)
 
 ## Could  count them
 #print([(w[0], l[0]) for (w, l) in cmu if w[0] != l[0].lower()][:10]
-print(nltk.FreqDist([(w[0], l[0]) for (w, l) in cmu if w[0] != l[0].lower()[0]]).most_common(20))
+print(nltk.FreqDist([(w[0], l[0]) for (w, l) in cmu if w[0] != l[0].lower()]).most_common(20))
 
 ##
 ## Better to split into syllables
