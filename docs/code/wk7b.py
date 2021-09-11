@@ -8,6 +8,7 @@
 import nltk
 import re
 from urllib import request
+from nltk.book import text1, text2, text3, text4, text5, text6, text7, text8, text9
 ### Articles
 
 wordlist = [w for w in nltk.corpus.words.words('en') if w.islower()]
@@ -39,7 +40,7 @@ nltk.re_show(r'[\d+*-/]+', ' I can\'t do 2*8+4 in my head')
 ### e.g. raw_contents = urllib.urlopen('http://www.nltk.org/').read().
 ###
 def gettextfromurl(url):
-    '''Get cleaned text from a URL'''
+    """Get cleaned text from a URL"""
     ## get the raw html
     cooked = request.urlopen(url).read().decode('utf-8');
     ## lose the line endings
@@ -52,8 +53,8 @@ def gettextfromurl(url):
     cooked = re.sub(r'\s+', ' ', cooked)
     return cooked
 
-print (request.urlopen('http://www3.ntu.edu.sg/home/fcbond/').read().decode('utf-8')[:40])
-print (gettextfromurl('http://www3.ntu.edu.sg/home/fcbond/')[:40])
+print (request.urlopen('https://fcbond.github.io/').read().decode('utf-8')[:40])
+print (gettextfromurl('https://fcbond.github.io/')[:40])
 
 ###
 ### Create a function plural() that takes a word and returns its plural form.
@@ -66,7 +67,8 @@ irregs = request.urlopen('http://svn.delph-in.net/erg/trunk/irregs.tab').read().
 
 for l in irregs.splitlines():
     things = l.strip().split()
-    if len(things) == 3 and things[1] == 'N_PL_OLR':
+    if len(things) == 3 and things[1] in ('N_PL-IRREG_OLR',
+                                          'N_PL-IRREG-NOAFF_OLR'):
         irregular[things[2]]=things[0]
 
 ### or make a local copy
@@ -78,17 +80,43 @@ def plural(w):
     """return the plural of a word"""
     if word in irregular:
         plural = irregular[word]
-    # if (re.search(r'^(man|woman|policeman|fireman)$', w)):
-    #     return re.sub(r'man$', 'men', w)
     elif (re.search(r'[^aeiou]y$', w)):
-        return re.sub(r'y$', 'ies', w)
+         plural = re.sub(r'y$', 'ies', w)
     elif re.search(r'ch|sh|s|z|x', word):
         plural = word+'es'
     else:
-        return w +'s'
+        plural = w +'s'
+    return plural
 
 for word in "dog, apple, fly, boy, woman, chess, ox, stomach, octopus".split(", "):
     print (word, plural(word))
+
+
+###
+### Save some text into a file corpus.txt.
+### Define a function load(f) that reads
+### from the file named in its sole argument,
+### and returns a string containing the text of the file.
+###
+
+fh = open('corpus.txt', 'w')
+fh.write(gettextfromurl('https://fcbond.github.io/'))
+fh.close()
+
+def load(f):
+    """
+    read a file into a string
+    """
+    fh = open(f)
+    text = fh.read()
+    fh.close()
+    return text
+
+corpus = load('corpus.txt')
+
+print()
+print(f"loaded file {corpus[:50]}")
+print()
 
 ###
 ### loop == list comprehension
@@ -114,14 +142,54 @@ def inflectv(verb):
     return [v, v+'ing', v+'en', v+'ed', v+'s']
 
 allverbs=list(wn.all_synsets('v'))
-for s in allverbs[:20]:
+vp_inflected = set()
+for s in allverbs:
     for l in s.lemma_names():
         m = re.search(endprep,l)
         if m:
             (v,p) = m.groups()
             for vv in inflectv(v):
-                print (vv,p)
+                vp_inflected.add((vv,p))
 
+print(list(vp_inflected)[:20])             
 ###
 ### FIXME: store and  match against texts, improve the inflection
 ###
+
+
+def find_vps_in_text(text, vps):
+    """
+    Find all sentences with VP in
+    """
+    print(f"Processing {text}")
+    ### get sentences, check the first 100
+    raw = ' '.join(text.tokens)
+    for sent in nltk.sent_tokenize(raw)[:100]:
+        for (v,p) in vps:
+            ### skip up to three words
+            ### this both over and under matches a little, ...
+            matches = re.findall(rf'(\b{v}\b\s(\b\w+\b\s){{,3}}\b{p}\b)', sent)
+            if matches:
+                print (f"{v} {p}", sent, sep='\n')
+                print (matches)
+        
+find_vps_in_text(text1, vp_inflected)
+
+#### Note that I built up the regexp bit by bit
+
+#### verb + space + particle
+#### f"{v} {p}"
+
+#### verb + whitespace + particle, care about boundaries
+#### need 'r' to show it is a raw string
+#### rf"\b{v}\b\s\b{p}\b"
+
+#### allow 0 or word in between
+#### rf"\b{v}\b\s(\b\w+\b\s)?\b{p}\b"
+
+#### allow 0 - 3 words in between
+#### rf"\b{v}\b\s(\b\w+\b\s){,3}\b{p}\b"
+
+#### match everything so it shows better
+#### need {{ }} to escape { and }
+#### rf"(\b{v}\b\s(\b\w+\b\s){{,3}}\b{p}\b)"

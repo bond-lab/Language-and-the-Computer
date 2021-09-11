@@ -1,53 +1,69 @@
+*** Introductory Examples for the NLTK Book ***
+Loading text1, ..., text9 and sent1, ..., sent9
+Type the name of the text or sentence to view it.
+Type: 'texts()' or 'sents()' to list the materials.
+text1: Moby Dick by Herman Melville 1851
+text2: Sense and Sensibility by Jane Austen 1811
+text3: The Book of Genesis
+text4: Inaugural Address Corpus
+text5: Chat Corpus
+text6: Monty Python and the Holy Grail
+text7: Wall Street Journal
+text8: Personals Corpus
+text9: The Man Who Was Thursday by G . K . Chesterton 1908
  I can't do 2*{8}+4 in my head
  I can't do {2*8+4} in my head
  I can't do {2*8+4} in my head
 <html>
-<head>
-  <link rel="shortcut ic
+  <head>
+    <link rel="shortcut 
  Francis Bond's Humble Home Page Francis
 dog dogs
 apple apples
 fly flies
 boy boys
-woman womans
-chess None
-ox None
-stomach None
-octopus None
+woman women
+chess chess
+ox oxen
+stomach stomaches
+octopus octopi
+
+loaded file  Francis Bond's Humble Home Page Francis Bond Asso
+
 [('The', 3), ('dog', 3), ('gave', 4), ('John', 4), ('the', 3), ('newspaper', 9)]
 [('The', 3), ('dog', 3), ('gave', 4), ('John', 4), ('the', 3), ('newspaper', 9)]
-force out
-forceing out
-forceen out
-forceed out
-forces out
-breathe out
-breatheing out
-breatheen out
-breatheed out
-breathes out
-breathe in
-breatheing in
-breatheen in
-breatheed in
-breathes in
-cough up
-coughing up
-coughen up
-coughed up
-coughs up
-cough out
-coughing out
-coughen out
-coughed out
-coughs out
-spit up
-spiting up
-spiten up
-spited up
-spits up
-spit out
-spiting out
-spiten out
-spited out
-spits out
+[('called', 'down'), ('clutteren', 'up'), ('log', 'out'), ('tryed', 'for'), ('rounding', 'up'), ('fiting', 'in'), ('follow_uped', 'on'), ('wear', 'on'), ('dragen', 'up'), ('racked', 'up'), ('hoping', 'on'), ('bucketed', 'along'), ('give_tongueing', 'to'), ('soak', 'up'), ('sending', 'off'), ('do_welling', 'by'), ('lay_handsed', 'on'), ('hideed', 'out'), ('marched', 'on'), ('follow_uping', 'on')]
+Processing <Text: Moby Dick by Herman Melville 1851>
+take to
+While you take in hand to school others , and to teach them by what name a whale - fish is to be called in our tongue leaving out , through ignorance , the letter H , which almost alone maketh the signification of the word , you deliver that which is not true ."
+[('take in hand to', 'hand ')]
+called in
+While you take in hand to school others , and to teach them by what name a whale - fish is to be called in our tongue leaving out , through ignorance , the letter H , which almost alone maketh the signification of the word , you deliver that which is not true ."
+[('called in', '')]
+take in
+While you take in hand to school others , and to teach them by what name a whale - fish is to be called in our tongue leaving out , through ignorance , the letter H , which almost alone maketh the signification of the word , you deliver that which is not true ."
+[('take in', '')]
+picking up
+It will be seen that this mere painstaking burrower and grub - worm of a poor devil of a Sub - Sub appears to have gone through the long Vaticans and street - stalls of the earth , picking up whatever random allusions to whales he could anyways find in any book whatsoever , sacred or profane .
+[('picking up', '')]
+take to
+For by how much the more pains ye take to please the world , by so much the more shall ye for ever go thankless !
+[('take to', '')]
+clear out
+Would that I could clear out Hampton Court and the Tuileries for ye !
+[('clear out', '')]
+clearing out
+But gulp down your tears and hie aloft to the royal - mast with your hearts ; for your friends who have gone before are clearing out the seven - storied heavens , and making refugees of long - pampered Gabriel , Michael , and Raphael , against your coming .
+[('clearing out', '')]
+swallow up
+Now the Lord had prepared a great fish to swallow up Jonah ."
+[('swallow up', '')]
+take in
+The Indian Sea breedeth the most and the biggest fishes that are : among which the Whales and Whirlpooles called Balaene , take up as much in length as four acres or arpens of land ."
+[('take up as much in', 'much ')]
+take up
+The Indian Sea breedeth the most and the biggest fishes that are : among which the Whales and Whirlpooles called Balaene , take up as much in length as four acres or arpens of land ."
+[('take up', '')]
+swallowed up
+And whereas all the other things , whether beast or vessel , that enter into the dreadful gulf of this monster ' s ( whale ' s ) mouth , are immediately lost and swallowed up , the sea - gudgeon retires into it in great security , and there sleeps ."
+[('swallowed up', '')]
