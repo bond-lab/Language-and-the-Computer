@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
+  <title>HG2051: Language and the Computer &mdash; Assignment 1</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+</head>
+  <body class="container">
+    <div class="column">
+
+<h1>HG2051: Language and the Computer</h1>
+
+
+<h2>Assignment 1: Sentiment in a Semantic Network</h2>
+
+<p>This assignment constitutes 30% of your final grade
+for <a href='index.html'>HG2051</a>.  Please work on the final
+program and report individually.
+
+<p>You will be given some sentiment data from the NTU-MC corpus and a
+  function to read in sentiment scores (between -1.0 and 1.0 in
+  wordnet).  Use it to explore to see how the semantic relations
+  effect sentiment.
+
+<p>There is a some scaffolding to help you get started: Here is the
+  code: <a href='code/wn-senti.py'>wn-senti.py</a>
+  (<a href='code/wn-senti.html'>formatted</a>, <a href='code/wn-senti-out.txt'>output</a>), and here is the data it
+  needs <a href='ntumc-senti.tsv'>ntumc-senti.tsv</a>.  Put the data
+  in the same directory as the program.  Please feel free to extend
+  this (or start from scratch).
+  
+<h3>Minimal Requirements</h3>
+  <ol>
+    <li> Measure the average sentiment score for all synsets (for which
+      it exists)
+    <li> Measure the average sentiment score for all synsets (for which
+      it is non zero)
+    <li> Measure how similar the score is for similar concepts, synonyms,
+      hyponyms and antonyms (note you must use lemmas for this). 
+    <li> Discuss these results, with examples
+    <li> Think about how you can extend/check the scores
+  </ol>
+
+<p>The data is quite sparse: for many concepts we do not know the
+  sentiment value, and a little noisy: it may not always be annotated
+  correctly.  You should take these factors into consideration.
+  
+  <h3>Stretch Goals</h3>
+  <ol>
+    <li> Measure the average sentiment score for all parts-of-speech (for which
+      it exists)
+    <li> Measure the average sentiment score for all parts-of-speech  (for which
+      it is non zero)
+    <li> Measure how similar the score is for other relations
+    <li> Use better measurements for similarity (SD, correlation)
+    <li> Use morphological cues (<i>un-</i>, <i>dis-</i>, ...)
+    <li> Discuss these results
+    <li> Show how you can extend/check the scores
+  </ol>
+  
+<h3>Write up</h3>
+<ul>
+  <li> In the write up you should describe the strengths and weaknesses 
+    of using a lexical resource such as wordnet to model word meaning
+    and sentiment
+  <li> You should give concrete examples from the resource you
+    analyzed.
+  <li>Include quantitive results.
+  <li>Include representative examples.
+  <li> You don't need an extensive literature review, but you should
+    read and cite  the references below and  if you
+    consult other lexicons (which you are encouraged to do) then you
+    should cite them.
+  <li>Formatted according to
+    the LMS  guidelines</a> to submitting written work for the Division of LMS
+    (but see below).
+    <ul>
+      <li>You do not have to follow the suggested structure of "Introduction, Literature Review, Methodology, Results, Discussion, Conclusion, References."  A short introduction describing the task followed by Results, Discussion, Conclusion, References is enough.
+      <li>You should use single spacing, not double spacing.
+    </ul>
+    <li>Include your entire program (including internal
+documentation) as an appendix: this does <b>not</b> count
+  toward the six page total.
+  <br>In the main paper describe generally what the program does (no
+  need to go into extreme detail)
+  <li>If you want to make it even more beautiful, as I am sure you do,
+    take a look at my <a href =
+			 "http://www3.ntu.edu.sg/home/fcbond/data/ling-style.pdf">(Computational)
+      Linguistic Style Guidelines</a>: a guide for the flummoxed.
+  <li> Submit
+    <!-- both <b>hardcopy</b> (stapled, single-spaced, two sided,  no folder, no cover page) and -->
+    <b>softcopy</b> (via NTULearn). 
+  <li> The deadline is on the main page.</b>.  
+</ul>
+
+<h4>References</h4>
+<ul>
+  <li>Andrea Esuli, Fabrizio Sebastiani (2006)
+    <a href='https://aclanthology.org/L06-1225/'>SENTIWORDNET: A Publicly Available Lexical Resource for
+      Opinion Mining</a>
+    LREC
+    
+<li>Stefano Baccianella, Andrea Esuli, Fabrizio Sebastiani (2010)
+  <a href='https://aclanthology.org/L10-1531/'>SentiWordNet 3.0: An
+  Enhanced Lexical Resource for Sentiment Analysis and Opinion
+  Mining</a> LREC
+<li>Francis Bond, Tomoko Ohkuma, Luís Morgado da
+Costa, Yasuhide Miura, Rachel Chen, Takayuki
+Kuribayashi, and Wenjie Wang (2016). In 6th Emotion and Sentiment
+Analysis Workshop (at LREC 2016)
+  <a href='https://www.luismc.com/home/static/pubs/lrec2016-sentiment-corpus.pdf'> A multilingual sentiment corpus for Chinese, English
+and Japanese</a>  In the 6th Emotion and Sentiment Analysis Workshop (at LREC 2016)
+
+</ul>
+
+<p><a href="index.html">HG2051: Language and the Computer</a> Francis Bond.
+
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

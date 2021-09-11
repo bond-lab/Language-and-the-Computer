@@ -1,0 +1,6 @@
+5282 synsets have sentiment.
+2189 synsets have non-zero-sentiment.
+1000 synsets have positive sentiment.
+1189 synsets have negative sentiment.
+
+Average difference in non-zero sentiment for similar_to: 0.23616502498491942
