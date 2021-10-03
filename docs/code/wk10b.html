@@ -58,8 +58,10 @@ body .mf { color: #666666 } /* Literal.Number.Float */
 body .mh { color: #666666 } /* Literal.Number.Hex */
 body .mi { color: #666666 } /* Literal.Number.Integer */
 body .mo { color: #666666 } /* Literal.Number.Oct */
+body .sa { color: #BA2121 } /* Literal.String.Affix */
 body .sb { color: #BA2121 } /* Literal.String.Backtick */
 body .sc { color: #BA2121 } /* Literal.String.Char */
+body .dl { color: #BA2121 } /* Literal.String.Delimiter */
 body .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 body .s2 { color: #BA2121 } /* Literal.String.Double */
 body .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -70,9 +72,11 @@ body .sr { color: #BB6688 } /* Literal.String.Regex */
 body .s1 { color: #BA2121 } /* Literal.String.Single */
 body .ss { color: #19177C } /* Literal.String.Symbol */
 body .bp { color: #008000 } /* Name.Builtin.Pseudo */
+body .fm { color: #0000FF } /* Name.Function.Magic */
 body .vc { color: #19177C } /* Name.Variable.Class */
 body .vg { color: #19177C } /* Name.Variable.Global */
 body .vi { color: #19177C } /* Name.Variable.Instance */
+body .vm { color: #19177C } /* Name.Variable.Magic */
 body .il { color: #666666 } /* Literal.Number.Integer.Long */
 
   </style>
@@ -80,7 +84,7 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 <body>
 <h2></h2>
 
-<div class="highlight"><pre><span class="c1">### *-* encoding: utf-8 -*-</span>
+<div class="highlight"><pre><span></span><span class="c1">### *-* encoding: utf-8 -*-</span>
 <span class="c1">### baseline regular expression tagger</span>
 <span class="c1">###</span>
 
@@ -136,14 +140,14 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 <span class="c1">### process?</span>
 
 <span class="n">patterns</span> <span class="o">=</span> <span class="p">[</span>      
-    <span class="p">(</span><span class="s1">r&#39;.*ing$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBG&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;.*ed$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBD&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;.*es$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBZ&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;.*ould$&#39;</span><span class="p">,</span> <span class="s1">&#39;MD&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;.*</span><span class="se">\&#39;</span><span class="s1">s$&#39;</span><span class="p">,</span> <span class="s1">&#39;NN$&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;.*s$&#39;</span><span class="p">,</span> <span class="s1">&#39;NNS&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;^-?[0-9]+(.[0-9]+)?$&#39;</span><span class="p">,</span> <span class="s1">&#39;CD&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;.*&#39;</span><span class="p">,</span> <span class="s1">&#39;NN&#39;</span><span class="p">)</span> <span class="p">]</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*ing$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBG&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*ed$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBD&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*es$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBZ&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*ould$&#39;</span><span class="p">,</span> <span class="s1">&#39;MD&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*</span><span class="se">\&#39;</span><span class="s1">s$&#39;</span><span class="p">,</span> <span class="s1">&#39;NN$&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*s$&#39;</span><span class="p">,</span> <span class="s1">&#39;NNS&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^-?[0-9]+(.[0-9]+)?$&#39;</span><span class="p">,</span> <span class="s1">&#39;CD&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*&#39;</span><span class="p">,</span> <span class="s1">&#39;NN&#39;</span><span class="p">)</span> <span class="p">]</span>
 <span class="n">regexp_tagger</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">RegexpTagger</span><span class="p">(</span><span class="n">patterns</span><span class="p">)</span>
 
 <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Accuracy of Regexp Tagger on Test: &quot;</span><span class="p">,</span> <span class="n">regexp_tagger</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">test</span><span class="p">))</span>
@@ -151,15 +155,15 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 
 <span class="c1">### add NNP for capitalized words</span>
 <span class="n">patterns</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">(</span><span class="s1">r&#39;.*ing$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBG&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;.*ed$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBD&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;.*es$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBZ&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;.*ould$&#39;</span><span class="p">,</span> <span class="s1">&#39;MD&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;.*</span><span class="se">\&#39;</span><span class="s1">s$&#39;</span><span class="p">,</span> <span class="s1">&#39;NN$&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;.*s$&#39;</span><span class="p">,</span> <span class="s1">&#39;NNS&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;^-?[0-9]+(.[0-9]+)?$&#39;</span><span class="p">,</span> <span class="s1">&#39;CD&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;[A-Z].*&#39;</span><span class="p">,</span> <span class="s1">&#39;NNP&#39;</span><span class="p">),</span>  
-    <span class="p">(</span><span class="s1">r&#39;.*&#39;</span><span class="p">,</span> <span class="s1">&#39;NN&#39;</span><span class="p">)</span> <span class="p">]</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*ing$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBG&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*ed$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBD&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*es$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBZ&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*ould$&#39;</span><span class="p">,</span> <span class="s1">&#39;MD&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*</span><span class="se">\&#39;</span><span class="s1">s$&#39;</span><span class="p">,</span> <span class="s1">&#39;NN$&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*s$&#39;</span><span class="p">,</span> <span class="s1">&#39;NNS&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^-?[0-9]+(.[0-9]+)?$&#39;</span><span class="p">,</span> <span class="s1">&#39;CD&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[A-Z].*&#39;</span><span class="p">,</span> <span class="s1">&#39;NNP&#39;</span><span class="p">),</span>  
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*&#39;</span><span class="p">,</span> <span class="s1">&#39;NN&#39;</span><span class="p">)</span> <span class="p">]</span>
 
 <span class="n">regexp_tagger</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">RegexpTagger</span><span class="p">(</span><span class="n">patterns</span><span class="p">)</span>
 <span class="n">regexp_tagger</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
@@ -167,15 +171,15 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 
 <span class="c1">### add NNP first</span>
 <span class="n">patterns</span> <span class="o">=</span> <span class="p">[</span>    
-    <span class="p">(</span><span class="s1">r&#39;[A-Z].*&#39;</span><span class="p">,</span> <span class="s1">&#39;NNP&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;.*ing$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBG&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;.*ed$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBD&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;.*es$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBZ&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;.*ould$&#39;</span><span class="p">,</span> <span class="s1">&#39;MD&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;.*</span><span class="se">\&#39;</span><span class="s1">s$&#39;</span><span class="p">,</span> <span class="s1">&#39;NN$&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;.*s$&#39;</span><span class="p">,</span> <span class="s1">&#39;NNS&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;^-?[0-9]+(.[0-9]+)?$&#39;</span><span class="p">,</span> <span class="s1">&#39;CD&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">r&#39;.*&#39;</span><span class="p">,</span> <span class="s1">&#39;NN&#39;</span><span class="p">)</span> <span class="p">]</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[A-Z].*&#39;</span><span class="p">,</span> <span class="s1">&#39;NNP&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*ing$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBG&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*ed$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBD&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*es$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBZ&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*ould$&#39;</span><span class="p">,</span> <span class="s1">&#39;MD&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*</span><span class="se">\&#39;</span><span class="s1">s$&#39;</span><span class="p">,</span> <span class="s1">&#39;NN$&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*s$&#39;</span><span class="p">,</span> <span class="s1">&#39;NNS&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^-?[0-9]+(.[0-9]+)?$&#39;</span><span class="p">,</span> <span class="s1">&#39;CD&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*&#39;</span><span class="p">,</span> <span class="s1">&#39;NN&#39;</span><span class="p">)</span> <span class="p">]</span>
 <span class="n">regexp_tagger</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">RegexpTagger</span><span class="p">(</span><span class="n">patterns</span><span class="p">)</span>
 <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Accuracy of Regexp Tagger (with Capitals) on Test: &quot;</span><span class="p">,</span> <span class="n">regexp_tagger</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">test</span><span class="p">))</span>
 <span class="c1">#0.32885496183206109</span>

@@ -58,8 +58,10 @@ body .mf { color: #666666 } /* Literal.Number.Float */
 body .mh { color: #666666 } /* Literal.Number.Hex */
 body .mi { color: #666666 } /* Literal.Number.Integer */
 body .mo { color: #666666 } /* Literal.Number.Oct */
+body .sa { color: #BA2121 } /* Literal.String.Affix */
 body .sb { color: #BA2121 } /* Literal.String.Backtick */
 body .sc { color: #BA2121 } /* Literal.String.Char */
+body .dl { color: #BA2121 } /* Literal.String.Delimiter */
 body .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 body .s2 { color: #BA2121 } /* Literal.String.Double */
 body .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -70,9 +72,11 @@ body .sr { color: #BB6688 } /* Literal.String.Regex */
 body .s1 { color: #BA2121 } /* Literal.String.Single */
 body .ss { color: #19177C } /* Literal.String.Symbol */
 body .bp { color: #008000 } /* Name.Builtin.Pseudo */
+body .fm { color: #0000FF } /* Name.Function.Magic */
 body .vc { color: #19177C } /* Name.Variable.Class */
 body .vg { color: #19177C } /* Name.Variable.Global */
 body .vi { color: #19177C } /* Name.Variable.Instance */
+body .vm { color: #19177C } /* Name.Variable.Magic */
 body .il { color: #666666 } /* Literal.Number.Integer.Long */
 
   </style>
@@ -80,7 +84,7 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 <body>
 <h2></h2>
 
-<div class="highlight"><pre><span class="c1"># -*- coding: utf-8 -*-</span>
+<div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">nltk</span>
 <span class="kn">import</span> <span class="nn">random</span>
@@ -102,7 +106,7 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
         <span class="c1">#print (line)</span>
         <span class="c1">##Look for names</span>
         <span class="c1">## あるこ /Aruko (f)/  ### we want あるこ f</span>
-        <span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">r&#39;^(.*?) .*\(([fgm])\)/&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^(.*?) .*\(([fgm])\)/&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">m</span><span class="p">):</span>
         <span class="c1">#print (&quot;@%s@@%s@&quot; % (m.group(1), m.group(2)))</span>
             <span class="n">name</span><span class="p">[</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
@@ -130,8 +134,8 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 
 <span class="c1">### define some features</span>
 <span class="k">def</span> <span class="nf">gender_features</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;last_char&#39;</span><span class="p">:</span> <span class="n">word</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]}</span>
-<span class="c1">#        &#39;two_last&#39;:  word[-2:]}</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;last_char&#39;</span><span class="p">:</span> <span class="n">word</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+            <span class="s1">&#39;first_char&#39;</span><span class="p">:</span>  <span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]}</span>
 
 <span class="n">featuresets</span> <span class="o">=</span> <span class="p">[(</span><span class="n">gender_features</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">g</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">g</span><span class="p">)</span> <span class="ow">in</span> <span class="n">names</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">featuresets</span><span class="p">[:</span><span class="mi">10</span><span class="p">]:</span>

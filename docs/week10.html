@@ -1,12 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>10. Part of Speech Tagging. - HG251</title>
-</head>
-<body>
-
-<h1>10. Part of Speech Tagging.</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
+    <title>10. Part of Speech Tagging - HG2051</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	  crossorigin="anonymous">
+  </head>
+  <body class="container">
+    <div class="column">
+      
+<h1>10. Part of Speech Tagging</h1>
 
 <h3>Lecture notes</h3>
 <ul>
@@ -46,7 +54,8 @@ K results from the folds then can be averaged (or otherwise combined)"
 </ul>
 
 
-<h3>Before Class (<a href='code/wk10a.html'>code</a>)</h3>
+<h3>Before Class (<a href='code/wk10a.html'>code</a>,
+  <a href='code/wk10a-out.txt'>output</a>)</h3>
 <ul>
   <li> Train a bigram tagger with no backoff tagger, and run it on some
   of the training data. Next, run it on some new data. What happens to
@@ -70,7 +79,8 @@ bigram_taggert2 = nltk.BigramTagger(train_sents, backoff=backoff_tagger)
 What would you have to do to the training and test data?
     
 </ul>
-<h3>Practical work (<a href='code/wk10b.html'>code</a>)</h3>
+<h3>Practical work (<a href='code/wk10b.html'>code</a>,
+  <a href='code/wk10b-out.txt'>output</a>)</h3>
 <ul>
 <li> Train and evaluate a bigram tagger with a data set transformed to use explicit unknown words.  
 How well does it perform?
@@ -88,8 +98,13 @@ than English, and explain what context could be used to resolve it.
 
 </ul>
 
+
 <hr>
 <p><a href="index.html">HG2051: Language and the Computer</a> Francis Bond.
-</body>
 
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</div>
+</body>
 </html>

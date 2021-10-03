@@ -3,42 +3,42 @@
 Calculating a model with threshold for unknowns set to 0
 
 Bigram Tagger with no backoff
-Accuracy on Test:  0.13475826972010177
+Accuracy on Test:  0.13455470737913486
 
 Bigram Tagger with backoff to Unigram
-Accuracy on Test:  0.8743002544529263
+Accuracy on Test:  0.8729770992366412
 
 Calculating a model with threshold for unknowns set to 1
 
 Bigram Tagger with no backoff
-Accuracy on Test:  0.259236641221374
+Accuracy on Test:  0.25587786259541984
 
 Bigram Tagger with backoff to Unigram
-Accuracy on Test:  0.8948600508905853
+Accuracy on Test:  0.8934351145038167
 
 Calculating a model with threshold for unknowns set to 2
 
 Bigram Tagger with no backoff
-Accuracy on Test:  0.2860050890585242
+Accuracy on Test:  0.28468193384223917
 
 Bigram Tagger with backoff to Unigram
-Accuracy on Test:  0.8801017811704834
+Accuracy on Test:  0.8787786259541984
 
 Calculating a model with threshold for unknowns set to 3
 
 Bigram Tagger with no backoff
-Accuracy on Test:  0.30931297709923666
+Accuracy on Test:  0.30371501272264634
 
 Bigram Tagger with backoff to Unigram
-Accuracy on Test:  0.8689058524173028
+Accuracy on Test:  0.8674809160305343
 
 Calculating a model with threshold for unknowns set to 4
 
 Bigram Tagger with no backoff
-Accuracy on Test:  0.32132315521628496
+Accuracy on Test:  0.31643765903307886
 
 Bigram Tagger with backoff to Unigram
-Accuracy on Test:  0.8596437659033079
+Accuracy on Test:  0.8582188295165395
 
 
 

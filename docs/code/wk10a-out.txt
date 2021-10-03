@@ -2,18 +2,18 @@
 Training Bigram Tagger
 [('The', 'DT'), ('police', 'NN'), ('reported', 'VBD'), ('it', 'PRP'), ('.', '.')]
 [('The', 'DT'), ('police', 'NN'), ('saw', None), ('the', None), ('report', None), ('.', None)]
-Accuracy on Test:  0.13567430025445293
-Accuracy on Train: 0.9094671495085359
+Accuracy on Test:  0.13455470737913486
+Accuracy on Train: 0.9119107109442934
 
 Training Unigram Tagger
-Accuracy on Test:  0.8642239185750636
+Accuracy on Test:  0.8627989821882952
 Accuracy on Train: 0.9601545387502615
 
 Training Bigram Tagger with backoff to unigram
-Accuracy on Test:  0.8740966921119593
+Accuracy on Test:  0.8729770992366412
 
 Training Bigram Tagger with backoff to NNP (Proper Noun)
-Accuracy on Test:  0.8996437659033079
+Accuracy on Test:  0.8985241730279898
 
 Training Bigram Tagger with backoff to NN (Common Noun)
-Accuracy on Test: 0.8918066157760814
+Accuracy on Test: 0.8905852417302799

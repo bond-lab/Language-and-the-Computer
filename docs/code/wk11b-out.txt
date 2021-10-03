@@ -1,46 +1,37 @@
- 18829 male names: 知二郎, 殉之助, 有左朗, 忠臣, 煕
-104992 female names: てる奈, 佑優加, 知愛美, 佳音, 優鈴夏
- 58284 unknown names: 恭八, 登勢, 顕也, 錦山, 閑水
+ 18829 male names: 純五郎, 友之助, 伊十良, 勝功, 暁彦
+104992 female names: 龍栄, ひなせ, 愛恵, き乃, 涼莉
+ 58284 unknown names: 安統, 和智, いつゑ, 鍾正, 源澄
 A random selection of names
-恵之介 (male)
-愛映 (female)
-初蕗 (female)
-夏月 (female)
-智美 (female)
-鯉之亮 (male)
-岩三郎 (male)
-生枝 (female)
-文有子 (female)
-太一 (male)
-{'last_char': '介'} male 恵之介
-{'last_char': '映'} female 愛映
-{'last_char': '蕗'} female 初蕗
-{'last_char': '月'} female 夏月
-{'last_char': '美'} female 智美
-{'last_char': '亮'} male 鯉之亮
-{'last_char': '郎'} male 岩三郎
-{'last_char': '枝'} female 生枝
-{'last_char': '子'} female 文有子
-{'last_char': '一'} male 太一
-Dev Accuracy:  0.9659936238044633
-Test Accuracy:  0.966842105263158
+立花 (female)
+龍貴 (female)
+紹彦 (male)
+藤太郎 (male)
+貴至子 (female)
+トモ (female)
+実法 (female)
+務信 (male)
+友里夏 (female)
+快夏 (female)
+{'last_char': '花', 'first_char': '立'} female 立花
+{'last_char': '貴', 'first_char': '龍'} female 龍貴
+{'last_char': '彦', 'first_char': '紹'} male 紹彦
+{'last_char': '郎', 'first_char': '藤'} male 藤太郎
+{'last_char': '子', 'first_char': '貴'} female 貴至子
+{'last_char': 'モ', 'first_char': 'ト'} female トモ
+{'last_char': '法', 'first_char': '実'} female 実法
+{'last_char': '信', 'first_char': '務'} male 務信
+{'last_char': '夏', 'first_char': '友'} female 友里夏
+{'last_char': '夏', 'first_char': '快'} female 快夏
+Dev Accuracy:  0.9994686503719448
+Test Accuracy:  1.0
 
 A sample of up to ten errors (from Dev):
-correct=female   guess=male     name=一                             
-correct=female   guess=male     name=來良                            
-correct=male     guess=female   name=君秋                            
-correct=female   guess=male     name=希志                            
-correct=female   guess=male     name=弧臣                            
-correct=female   guess=male     name=智仁                            
-correct=male     guess=female   name=樹理杏                           
-correct=male     guess=female   name=渚亜                            
-correct=male     guess=female   name=行栄                            
-correct=female   guess=male     name=間由                            
+correct=male     guess=female   name=章美                            
               do the |      hard | work of         -> HARD2
               day of |      hard | work ;          -> HARD2
              dint of |      hard | work ?          -> HARD2
              of very |      hard | men ,           -> HARD2
                 i 'm |      hard | on myself       -> HARD2
-[({'wp': 'very', 'tp': 'RB'}, 'HARD1'), ({'wp': 'a', 'tp': 'DT'}, 'HARD1')]
-Accuracy on Dev: 0.78
-Accuracy on Test: 0.8309418210279155
+[({'wp': 'very', 'tp': 'RB'}, 'HARD1'), ({'wp': 'real', 'tp': 'JJ'}, 'HARD1')]
+Accuracy on Dev: 0.8
+Accuracy on Test: 0.8348552048004174
