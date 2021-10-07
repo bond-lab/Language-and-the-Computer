@@ -93,12 +93,12 @@
 
 <h3>Before Class (<a href='code/wk8a.html'>code</a>,
   <a href='code/wk8a-out.txt'>output</a>)</h3>
-<ul>
+<ol>
 <li>Convert the following <tt>for</tt> loop into a <tt>while</tt> loop (which does the same thing as the
 <tt>for</tt> loop):
 <pre>
 for i in range(1,10,2):
-      print "i = ", i
+      print ("i = ", i)
 </pre>
 Be careful about the start and end conditions.
 <li> Translate the following <tt>while</tt> loop into a <tt>for</tt> loop 
@@ -106,7 +106,7 @@ Be careful about the start and end conditions.
 <pre>
 i = 20
 while (i > 0):
-      print "i = ", i
+      print ("i = ", i)
       i -= 1
 </pre>
 Be careful about the start and end conditions.
@@ -116,19 +116,22 @@ an <b>if</b> clause, they evaluate to <tt>False</tt>. In this case,
 they are said to be occurring in a Boolean context. Experiment with
 different kind of non-Boolean expressions in Boolean contexts, and see
 whether they evaluate as <tt>True</tt> or <tt>False</tt>.
-</ul>
+</ol>
 
 <h3>Practical work (<a href='code/wk8b.html'>code</a>,
   <a href='code/wk8b-out.txt'>output</a>)</h3>
-<ul>
+<ol>
 <li>Write a function <tt>shorten(text, n)</tt> to process a text,
 omitting the <tt>n</tt> most frequently occurring words of the text. How
 readable is it?
 
-<li>Write a list comprehension that sorts a list of WordNet synsets
+<li>Write a function that sorts a list of WordNet synsets
 for proximity to a given synset. For example, given the synsets
 <tt>minke_whale.n.01, orca.n.01, novel.n.01, and tortoise.n.01</tt>, sort them
-according to their <tt>shortest_path_distance()</tt> from <tt>right_whale.n.01</tt>
+according to their <tt>shortest_path_distance()</tt>
+from <tt>right_whale.n.01</tt>.
+<br>Hint: you can use list comprehension to make sortable tuples, or try
+to make a key for the sort function.
 
 <li>Write a function that takes a list of words (containing
 duplicates) and returns a list of words (with no duplicates) sorted by
@@ -146,7 +149,7 @@ Use a key that gives the length of the word.
 
 
 
-</ul>
+</ol>
 
 <hr>
 <p><a href="index.html">HG2051: Language and the Computer</a> Francis Bond.
