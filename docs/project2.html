@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
+  <title>HG2051: Language and the Computer &mdash; Project 1</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+</head>
+  <body class="container">
+    <div class="column">
+
+<h1>HG2051: Language and the Computer: Project 2</h1>
+
+
+<p>This assignment constitutes 30% of your final grade
+for <a href='index.html'>HG2051</a>.  Please work on this in groups of
+two or three.
+
+
+<p>Pick one of the following:</p>
+
+
+<h2>A: Consistency in Sentiment Lexicons (monolingual)</h2>
+
+<p>You have been given some sentiment data from the NTU-MC corpus and a
+  function to read in sentiment scores (between -1.0 and 1.0 in
+  wordnet).  Compare it to word level sentiment lexicons from other
+  projects (and those projects to each other).
+
+  <p>There is a some scaffolding to help you get started with the
+  NTU-MC data: <a href='code/wn-senti.py'>wn-senti.py</a>
+  (<a href='code/wn-senti.html'>formatted</a>, <a href='code/wn-senti-out.txt'>output</a>),
+  and here is the data it
+  needs <a href='code/ntumc-senti.tsv'>ntumc-senti.tsv</a>.  Put the
+  data in the same directory as the program.  Please feel free to
+    extend this (or start from scratch).
+ <p>There is a some scaffolding to help you get started with the
+  English data: <a href='code/compare-senti.py'>compare-senti.py</a>
+  (<a href='code/compare-senti.html'>formatted</a>, <a href='code/compare-senti-out.txt'>output</a>),
+  and here is the data it
+  needs <a href='code/en_senti.zip'>en_senti.zip</a>.  Put the
+  data in the same directory as the program.  Please feel free to
+    extend this (or start from scratch).
+    
+  <p>  
+  
+<h3>Minimal Requirements</h3>
+  <ol>
+    <li> Compare at least three of these resources with each other and with
+      the  NTU-MC corpus data.
+      <ol>
+      <li> <a href='https://github.com/fnielsen/afinn'>AFINN sentiment
+	  data</a> Nielsen (2011)
+	
+       <li><a href='http://www.cs.columbia.edu/~julia/papers/dict_of_affect/DictionaryofAffect'>Dictionary
+	   of Affect in Language (DAL)</a> Whissel (2000)
+	 <li><a href='https://static-content.springer.com/esm/art%3A10.3758%2Fs13428-018-1099-3/MediaObjects/13428_2018_1099_MOESM2_ESM.csv'>Glasgow
+	     Norms</a> Scott et al (2019)
+	 <li><a
+	 href='https://github.com/cjhutto/vaderSentiment'>Vader
+	     Sentiment</a> C.J. Hutto and Eric Gilbert (2014)
+ 
+      </ol>
+    <li>How well do the lexicons compare in terms of consistency and
+      coverage?
+      <br>are there consistent differences?
+    <li>How do they compare with the NTU-MC wordnet data?
+    <li>Consider especially the problem of different senses having
+    different sentiment: the Glasgow Norms have some data sense
+    differentiated which may be useful for this.
+  </ol>
+
+  
+  <h3>Stretch Goals</h3>
+  <ol>
+    <li> Try to merge the lexicons into one bigger, better lexicon,
+    and explain why you think it is better
+    <li> Find other lexicons to compare
+    <li> Can the word level lexicons be used to extend the wordnet
+      lexicon?   If so, how?
+    <li> DAL and the Glasgow Norms have scores on other dimensions
+    (such as Activation and Imagery) compare them as well 
+    <li> Discuss these results
+    <li> Show how you can extend/check the scores
+  </ol>
+
+
+<h2>B: Consistency in Sentiment Lexicons (multilingual)</h2>
+
+<p> Look for sentiment lexicons in other languages, and use the
+  multilingual wordnet to compare values.
+
+<p>This is more difficult than <b>A</b> as you have to deal with translation shift
+  as well as word/sense and resource quality issues.
+
+
+
+
+<h2>C: Own Task</h2>
+
+<p>You can suggest your own task, and if I say ok, do it instead.
+  This can be used to fit in with other research you are doing, but
+  should not duplicate work done for other assessment, you must do
+  something new for this class.
+
+  
+  <h2>Deliverable</h2>
+<p>You should deliver a paper, the program and the output files.
+  
+  <ul>
+    <li>The paper should be no more than ten pages
+including diagrams, with up to two additional pages of references,
+  <li> You should give concrete examples from the resource(s) you
+    analyzed.
+  <li>Include quantitive results.
+  <li>Include representative examples.
+  <li> You don't need an extensive literature review, but you should
+    read and cite  the references below and  if you
+    consult other lexicons (which you are encouraged to do) then you
+    should read the papers that describe them carefully, and cite them.
+  <li>Formatted according to
+    the LMS  guidelines</a> to submitting written work for the Division of LMS
+    (but see below).
+    <ul>
+      <li>You do not have to follow the suggested structure of "Introduction, Literature Review, Methodology, Results, Discussion, Conclusion, References."  A short introduction describing the task followed by Results, Discussion, Conclusion, References is enough.
+      <li>You should use single spacing, not double spacing.
+    </ul>
+    <li>Include your entire program (including internal
+documentation) as an appendix: this does <b>not</b> count
+  toward the ten page total.
+  <br>In the main paper describe generally what the program does (no
+  need to go into extreme detail)
+  <li>If you want to make it even more beautiful, as I am sure you do,
+    take a look at my <a href =
+			 "http://www3.ntu.edu.sg/home/fcbond/data/ling-style.pdf">(Computational)
+      Linguistic Style Guidelines</a>: a guide for the flummoxed.
+  <li> Submit
+    <!-- both <b>hardcopy</b> (stapled, single-spaced, two sided,  no folder, no cover page) and -->
+    <b>softcopy</b> (via NTULearn). 
+  <li> The deadline is on the main page.</b>.  
+</ul>
+
+<h4>References</h4>
+<ul>
+  <li>Andrea Esuli, Fabrizio Sebastiani (2006)
+    <a href='https://aclanthology.org/L06-1225/'>SENTIWORDNET: A Publicly Available Lexical Resource for
+      Opinion Mining</a>
+    LREC
+    
+<li>Stefano Baccianella, Andrea Esuli, Fabrizio Sebastiani (2010)
+  <a href='https://aclanthology.org/L10-1531/'>SentiWordNet 3.0: An
+  Enhanced Lexical Resource for Sentiment Analysis and Opinion
+  Mining</a> LREC
+<li>Francis Bond, Tomoko Ohkuma, Luís Morgado da
+Costa, Yasuhide Miura, Rachel Chen, Takayuki
+Kuribayashi, and Wenjie Wang (2016). In 6th Emotion and Sentiment
+Analysis Workshop (at LREC 2016)
+  <a href='https://www.luismc.com/home/static/pubs/lrec2016-sentiment-corpus.pdf'> A multilingual sentiment corpus for Chinese, English
+and Japanese</a>  In the 6th Emotion and Sentiment Analysis Workshop (at LREC 2016)
+<li>C.J. Hutto and Eric Gilbert (2014))
+<a href='https://github.com/totalgood/nlpia/raw/master/src/nlpia/data/hutto_ICWSM_2014/vader_icwsm2014_final.pdf'>VADER: A Parsimonious Rule-based Model for Sentiment Analysis of
+  Social Media Text</a>
+Eighth International Conference on Weblogs and
+  Social Media (ICWSM-14). Ann Arbor, MI
+<li>Finn Årup Nielsen (2011),
+  "<a href='http://www2.imm.dtu.dk/pubdb/views/edoc_download.php/6006/pdf/imm6006.pdf'>A
+  new ANEW: evaluation of a word list for sentiment analysis in
+  microblogs</a>", Proceedings of the ESWC2011 Workshop on 'Making
+  Sense of Microposts': Big things come in small packages. Volume 718
+  in CEUR Workshop Proceedings: 93-98. 2011 May. Matthew Rowe, Milan
+    Stankovic, Aba-Sah Dadzie, Mariann Hardey (editors)
+    Cynthia Wessell Dictionary of Affect
+  <li> Graham G. Scott, Anne Keitel, Marc Becirspahic, Bo Yao
+    and Sara C. Sereno  (2019) <a href='Scott, G.G., Keitel, A., Becirspahic, M. et al.'>The Glasgow Norms:
+    Ratings of 5,500 words on nine scales.</a>
+    Behavior Research Methods 51, 1258–1270. 
+<li>  Cynthia Wessell (2000) <a href='http://www.cs.columbia.edu/~julia/papers/dict_of_affect/DictofAffectinLang.README.pdf'>Whissell's Dictionary of Affect in Language
+    Technical Manual and User's Guide</a>
+<li>  Cynthia Wessell
+  (2009) <a href='https://doi.org/10.2466/PR0.105.2.509-521'>Using the
+    Revised Dictionary of Affect in Language to Quantify the Emotional
+    Undertones of Samples of Natural Language</a> 
+  Psychological Reports <b>105</b>(2):509-521.
+
+</ul>
+
+<p>Project Two for <a href="index.html">HG2051: Language and the Computer</a> Francis Bond.
+
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
