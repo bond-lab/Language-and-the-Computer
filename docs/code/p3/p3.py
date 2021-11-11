@@ -2,7 +2,8 @@ from collections import defaultdict as dd
 import json
 import wn
 
-wn.download('https://github.com/omwn/omw-data/releases/download/v1.4/omw-en-1.4.tar.xz')
+### you can comment out the download to be faster
+#wn.download('https://github.com/omwn/omw-data/releases/download/v1.4/omw-en-1.4.tar.xz')
 wn = wn.Wordnet(lexicon='omw-en:1.4')
 prefix='omw-en'
 ##
@@ -103,8 +104,9 @@ with open(outfile, 'w', encoding='utf-8') as out:
         dfn = ''
         if tag2ss(tag):
             dfn=tag2ss(tag).definition()
-
-        print ("<span title='{}&#10;{}: {}'>{}</span> ".format(pos, tag, dfn, word), 
+        ###    title makes hover text
+        ###    &#10; puts a newline in the hover text
+        print (f"<span title='{pos}&#10;{tag}: {dfn}'>{word}</span> ", 
                file=out)
         ### 
     print_foot(out)
