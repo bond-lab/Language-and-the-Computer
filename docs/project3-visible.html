@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
+  <title>HG2051: Language and the Computer &mdash; Project 3</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+</head>
+  <body class="container">
+    <div class="column">
+
+<h1>HG2051: Language and the Computer: Project 3</h1>
+<h2>In-Class On-Line Open-Book Programming Challenge</h2>
+
+<p>This assignment constitutes 30% of your final grade
+for <a href='index.html'>HG2051</a>.  Please work on this in ones or
+  two:  but submit separate reports
+
+  <h2>Visualization</h2>
+  
+<p>Present nicely a tagged corpus of the form:
+  <pre>
+    [(sid, wid, word, pos, cid, clemma, tag, sentiment, comment)+]
+  </pre>
+  <pre>
+    The dog barked.
+    [(1, 1, 'The' , 'DT', 'the', '', '', '', 0.0, ''),
+    (1, 2, 'dog' , 'NNS', 'dog', 1, 'the', '02084071-n', 0.0, ''),
+    (1, 3, 'barked', 'VBD', 'bark', 2, 'the',  '01047745-v', 0.0, ''),
+    (1, 4, '.', '.', '.', None, 0.0, '')]
+  </pre>
+<p>You should first download:
+  <ul>
+    <li><a href='code/p3/sents.json'>sents.json</a> the sentences
+    <li><a href='code/p3/words.json'>words.json</a> the tagged words
+    <li><a href='code/p3/p3.py'>p3.py</a> some code to start you off
+      <br>Running this produces a file <tt>p3.html</tt>
+    <li>You may have to install the <a href='https://pypi.org/project/wn/'>Wn</a> module
+  </ul>
+
+
+<p>Richard Brath has a nice discussion of <a href='https://richardbrath.wordpress.com/2014/12/31/potential-uses-of-font-attributes-in-visualization/'>Potential uses of font attributes in visualization</a>.
+
+<p>I am most interested in seeing the sentiment
+  <ul>
+    <li> You can show polarity in color
+      <br>
+      <span style='color:black;'>I </span>
+      <span style='color:black;'>am </span>
+      <span style='color:green;'>happy</span>
+      <span style='color:black;'>.</span>
+      <br>
+  <span style='color:black;'>I </span>
+      <span style='color:black;'>am </span>
+      <span style='color:red;'>unhappy</span>
+      <span style='color:black;'>.</span>
+    <li> You can show strength in size
+        <br>
+      <span style='color:black;'>I </span>
+      <span style='color:black;'>am </span>
+      <span style='color:green;'>happy</span>
+      <span style='color:black;'>.</span>
+          <br>
+      <span style='color:black;'>I </span>
+      <span style='color:black;'>am </span>
+      <span style='font-size:120%;color:green;'>ecstatic</span>
+      <span style='color:black;'>.</span>
+     <li> You can show strength in weight
+        <br>
+      <span style='color:black;'>I </span>
+      <span style='color:black;'>am </span>
+      <span style='color:green;'>happy</span>
+      <span style='color:black;'>.</span>
+          <br>
+      <span style='color:black;'>I </span>
+      <span style='color:black;'>am </span>
+      <span style=';font-weight:670;color:green;'>ecstatic</span>
+      <span style='color:black;'>.</span>
+  <li> You could try to show the whole sentence, or paragraph, ...
+    <br>
+    <span style= 'background-color: rgba(0, 255, 0, 0.1);'>
+      <span style='color:black;'>I </span>
+      <span style='color:black;'>am </span>
+      <span style='color:green;'>happy</span>
+      <span style='color:black;'>.</span>
+      </span>
+    <br>
+       <span style= 'background-color: rgba(0, 255, 0, 0.2);'>
+      <span style='color:black;'>I </span>
+      <span style='color:black;'>am </span>
+      <span style=';font-weight:670;color:green;'>ecstatic</span>
+      <span style='color:black;'>.</span>
+       </span>
+  <li> You could try to show negators or operators
+        <br>
+      <span style='color:black;'>I </span>
+      <span style='color:black;'>am </span>
+       <span style='color:blue;'>not </span>
+      <span style='color:green;'>happy</span>
+      <span style='color:black;'>.</span>
+      <br>
+      <span style='color:black;'>I </span>
+      <span style='color:black;'>am </span>
+       <span style='text-transform: uppercase;'>very </span>
+      <span style='color:green;'>happy</span>
+      <span style='color:black;'>.</span>
+       <br>
+      <span style='color:black;'>I </span>
+      <span style='color:black;'>am </span>
+       <span style='font-variant: small-caps;'>very </span>
+      <span style='color:green;'>happy</span>
+      <span style='color:black;'>.</span>
+  </ul>
+</ul>
+
+<p>Try to do some extra calculation before you show things
+  <ul>
+    <li>use the structure of wordnet to, e.g. identify
+      negators or operators
+      <ul>
+	<li>or look for word lists (and reference them)
+      </ul>
+    <li>calculate the sentence polarity (even just summing the
+      polarity)
+    <li>calculate the paragraph polarity (even just summing the polarity)
+</ul>
+
+
+  <p>You could also show other things:
+  <ul>
+    <li>Make different POS different fonts (or colors)
+      <br>
+      <span style='color:black;'>The </span>
+      <span style='font-style:italic;color:black;'>dog </span>
+      <span style='font-weight:bold;color:black;'>barked</span>
+      <span style='color:black;'>.</span>
+      <br>
+      <span style='color:grey;'>The </span>
+      <span style='color:red;'>dog </span>
+      <span style='color:blue;'>barked</span>
+      <span style='color:black;'>.</span>
+      <xmp>
+ <span style='color:black;'>The </span>
+ <span style='font-style:italic;color:black;'>dog </span>
+ <span style='font-weight:bold;color:black;'>barked</span>
+ <span style='color:black;'>.</span>
+ <br>
+ <span style='color:grey;'>The </span>
+ <span style='color:red;'>dog </span>
+ <span style='color:blue;'>barked</span>
+ <span style='color:black;'>.</span>
+	</xmp>
+	
+      
+    <li>Show frequency with weight (may not have all weights)
+       <br>
+      <span style="color:black;font-weight:900;">The </span>
+      <span style="color:black;font-weight:600;">dog </span>
+      <span style="color:black;font-weight:300;">barked</span>
+      <span style="color:black;font-weight:800;">.</span>
+      <br>See <a href='https://richardbrath.wordpress.com/2015/09/01/dickens-and-oz-formatted-for-skimming/'>Dickens
+      and Oz formatted for Skimming</a> by Richard Brath for some
+      ideas.
+    <li>Show frequency with size
+       <br>
+      <span style='color:black;font-size:120%;'>The </span>
+      <span style='color:black;font-size:100%;'>dog </span>
+      <span style='color:black;font-size:80%;'>barked</span>
+      <span style='color:black;font-size:100%;'>.</span>
+
+  
+    <li>Replace words with hypernyms (and you can go many levels up)
+       <br>
+      <span style='color:black;'>The </span>
+      <span style='color:black;'>canine </span>
+      <span style='color:black;'>uttered</span><span style='color:black;'>.</span>
+      <br> Needs some morphology to look good (write a function and use
+      the ERG irregular forms)
+     <li>Augment words with hypernyms
+       <br>
+      <span style='color:black;'>The </span>
+      <span style='color:black;'>dog (canine) </span>
+      <span style='color:black;'>barked (utter)</span>
+      <span style='color:black;'>.</span>
+  <li>Augment words with hypernyms using a tooltip
+       <br>
+      <span style='color:black;'>The </span>
+      <span style='color:black;' title="canine">dog </span>
+      <span style='color:black;' title="uttered">barked</span>
+      <span style='color:black;'>.</span>  
+ <li>Augment words with translations using a tooltip
+       <br>
+      <span style='color:black;'>The </span>
+      <span style='color:black;' title="犬">dog </span>
+      <span style='color:black;' title="吠える">barked</span>
+      <span style='color:black;'>.</span>  
+ <li>And many more possibilities
+   <ul>
+     <li>Add the definition (in another language)
+     <li>replace with a synonym or sibling or hyponym
+       <br> should be wierd
+     <li>Swap gender (Mr/Mrs, he/she, ...): needs some hand coding
+     <li>Gentle (replace <i>fire</i> (and hyponyms)
+       with <i>smile</i>, <i>hit</i> with <i>stroke</i>, ...)
+     <li>Highlight all instances of a word/sense/pos on mouseover (requires java script)
+   </ul>
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<!-- <ol> -->
+<!--   <li>Take the data from <a href='http://www.omniglot.com/'>omniglot</a> -->
+<!--     <ul> -->
+<!--     <li>Thanks to them for letting us use it -->
+<!--     <li><a href='omndata.zip'>Omniglot data as tsv</a> -->
+<!--     <lI><a href='http://www-01.sil.org/iso639-3/iso-639-3_Code_Tables_20150505.zip'>ISO codes</a> -->
+<!--     </ul> -->
+<!--   <li>Complete the following tasks to the best of your ability -->
+<!--     <br>Divide the tasks among the group -->
+<!--     <ol> -->
+<!--       <li>Read all the files  that terminate as .tsv in the Omniglot folder. -->
+<!--       <li>Match the the language name in the file name with the ISO 639 lang codes. -->
+<!-- 	<br>Will require some tweaking -->
+<!--       <li>Create  dictionaries of the form: -->
+<!-- 	<br>lang_iso[ISOlangcode] = language name -->
+<!-- 	<br>lang_iso[language name] = ISOlangcode -->
+<!-- 	<br> -->
+<!-- 	E.g. The file 'Chinese (Cantonese).tsv' should be linked to 'Yue Chinese' (yue), -->
+<!-- 	according to the ISO 639-3. -->
+<!-- 	<br>If a language cannot be matched to an ISO code,  -->
+<!-- 	use the full name of the language as it appears in the file name. -->
+<!--       <li>Create  dictionaries for each language: -->
+<!-- 	<br>Maybe break this task up -->
+<!-- 	<ul> -->
+<!-- 	  <li>translations[english_phrase][ISOlangcode] = list(tuples of (translated phrases, transliteration, comment)) -->
+<!-- 	<br>If there is no transliteration for a particular language or word,  -->
+<!-- 	use the special	value <tt>None</tt>. -->
+<!-- 	  <li>you might want to write them out to a file to make it easy to merge them -->
+<!-- 	    <br>phrase \t ISO \t translation \t transliteration \t comment -->
+<!-- 	</ul> -->
+<!--       <li> For each file, parse the tab separated values assuming they are tables, -->
+<!-- where the first row defines the headers. -->
+<!-- 	<br>For each line of the table, you should extract, at least, the English phrase -->
+<!-- 	(to be used as keys to the dictionaries created in 3), the translation of each -->
+<!-- 	English sentence in that language and the transliteration (whenever available). -->
+<!--       <li>Load the dictionaries created in 3 with the data collected from each file. -->
+<!-- 	<b>AIM TO HAVE THIS DONE (at least a first go) BY 13:30</b> -->
+<!--       <li>Make a table showing the coverage (in %) -->
+<!-- 	of each language for the collection of all English phrases presented in all files. -->
+<!--       <li>Compare each language with each other (using original or -->
+<!--       transliteration (or better both), as you did for Project 1 -->
+<!-- 	<br>Output the pairs in order of closeness -->
+<!-- 	<br>There will be n(n-1) pairs, so leave some time for this -->
+<!--    </ol> -->
+<!--   <li>Hand in the deliverables -->
+<!--   <li>Go home, happy that it is over, proud of what you have accomplished -->
+<!-- </ol> -->
+
+<h4>Deliverables</h4>
+<ul>
+  <li>Per person:
+    <ul>
+      <li>1-2 page paper in any format, finally given as pdf, 
+	describing what you have done, and
+	what you think could be done given more time. 
+	<br>Include <b>title, author, date</b>
+	e.g.
+	<center>
+	  HG2051 Project 3: Transforming Text
+	  <br>Francis Bond (and Bancis Frond)
+	  <br>2021-11-11
+	</center>
+	
+	<br>The file should be named <tt>name_surname_matric.pdf</tt>
+	<br>e.g. <tt>francis_bond_007.pdf</tt>
+	<br>you do not need full citations, this is just a short summary
+	<br>don't include the program as an appendix (you submit it separately)
+      <li>program  (with comments in the code: can be shared by two
+      people) 
+	<br>The program should be named after one of the authors
+	<br>e.g. <tt>francis_bond.py</tt>
+      <li>program output
+	<br>e.g. <tt>francis_bond.html</tt>
+      <li>any input needed by your program
+    </ul>
+  <li>Copy them to the USB stick at the end of the exam.
+    <br>If you <b>don't</b> want me to show off your
+    code/output/paper, please let me know before the end of December, otherwise I
+    assume you are ok with me using it as an example to others
+</ul>
+
+  
+<h3>Pedagogical Goals</h3>
+<ul>
+  <li> Consolidate skills in a novel task under realistic conditions
+  <li> Demonstrate an ability to break a task into small chunks
+    <br>Should be able to consider and evaluate multiple approaches
+  <li> Demonstrate an ability to use python to solve tasks
+    <br>choosing the write approach, writing and debugging
+  <li> Demonstrate an ability to cooperate to solve a problem
+    <br>good communication, delivering (partial) results in time
+</ul>
+<hr>
+
+<p>Project Three for <a href="index.html">HG2051: Language and the Computer</a> Francis Bond.
+
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
