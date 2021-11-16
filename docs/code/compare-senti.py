@@ -40,7 +40,7 @@ def slurp_GLAS():
          SIZE_M, SIZE_SD, SIZE_N,
          GEND_M, GEND_SD, GEND_N) = l.strip().split(',')
         if word and word !='Words':
-            valence[word] = (float(VAL_M) - 5) /5.0
+            valence[word] = (float(VAL_M) - 5) /4.0
             # 1--9
     return valence
 
