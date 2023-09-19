@@ -90,7 +90,9 @@ def check_similar(ssnt):
                 ## keep only non-zero sentiments
                 diff= abs(ssnt[s2] - ssnt[s1])
                 diffs.append(diff)
-                #print (s1, s2, diff)
+                print (s1, s2, ssnt[s1], ssnt[s2],diff)
+                print(s1.definition())
+                print(s2.definition())
     return sum(diffs)/len(diffs) # or np.mean(diffs)
 
 
