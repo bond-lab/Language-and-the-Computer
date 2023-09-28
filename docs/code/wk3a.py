@@ -53,7 +53,7 @@ vnlc = [w for w in vocab if not w.islower()]
 for w in vnlc:
     if w.lower() in vlc:
         print(w, end=' ')
-### print a ne wline at the end
+### print a newline at the end
 print()
 
 print("\nMixed and lower case words (ii)\n")

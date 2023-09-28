@@ -35,15 +35,22 @@
 	<a href="https://www.nltk.org/book/ch01.html#summary">
 	  Summary</a>
    </ul>
-      </li>
-  <li>Printing things nicely: <code>print ("Is '{}' what you wanted or maybe '{}'?".format("string", 27))</code>
+  </li>
+  <li>Printing things nicely:
+    <br><code>this = 'tohle'</code>
+    <br><code>that = 27</code>
+    <br><code>print (f"Is {this} what you wanted or maybe {that}?")</code>
+    <br>Is tohle what you wanted or maybe 27?
     <ul>
+      <li>Python has a new very nice way of printing: <code>f-string</code> (from Python 3.6)
+	<ul>
+	  <li><a href='https://rowannicholls.github.io/python/intro/f_strings.html'>A great guide</a> by  Rowan Nicholls
+	  <li><a href = 'https://colab.research.google.com/github/KenzieAcademy/python-notebooks/blob/master/demo_string_formatting.ipynb'>A guide that also shows the older ways</a> by 
+      </ul>
       <li>NLTK 3.9:
 	<a href="https://www.nltk.org/book/ch03.html#formatting-from-lists-to-strings">Formatting: From lists to strings</a>
-
       <li><a href="http://www.diveintopython3.net/strings.html#formatting-strings">Formatting Strings</a>
 	from <i>Dive into Python 3</i> (Pilgrim, 2009)
-      <li><a href="https://docs.python.org/3/library/string.html">Strings</a> (Python Doc)
     </ul>
 </ul>
 
@@ -61,7 +68,6 @@
 </ul>
 <h3>Before Class (<a href='code/wk3a.html'>code</a>)</h3>
 <ul>
-  <li> Experiment with saving some code in VS Code
   <li> Try out this program:
 <pre>
 for i in range(1,12):
@@ -88,8 +94,26 @@ Try to make a different shape.
 
 <h3>Practical work (<a href='code/wk3b.html'>code</a>)</h3>
 <ul>
+  <li> Write expressions for finding all words in <code>text6</code> that meet the
+    conditions listed below.
+    <br>The result should be in the form of a list
+  of words: <code>['word1', 'word2', ...]</code>.
+    <ul>
+      <li> Ending in <i>ise</i>
+      <li> Containing the letter <i>z</i>
+      <li> Containing the sequence of letters <i>pt</i>
+      <li> Having all lowercase letters except for an initial capital
+	   (i.e., titlecase)
+    </ul>
+  <li> Define <code>sent</code> to be the list of words
+    <code>['she', 'sells', 'sea', 'shells', 'by', 'the', 'sea', 'shore']</code>.
+    <br>Now write code to perform the following tasks:
+    <ul>
+      <li> Print all words beginning with <i>sh</i>
+      <li> Print all words longer than four characters
+    </ul>
   <li>
-    In VS Code do this:
+    Try this:
     <pre xml:space="preserve">
       &gt;&gt;&gt; abc_list = ["aaa", "bbb", "ccc"]
       &gt;&gt;&gt; print(abc_list)
