@@ -31,6 +31,7 @@
 	<a href="https://www.nltk.org/book/ch02.html#wordnet">
 	  WordNet</a>
 	(<a href="https://www.nltk.org/howto/wordnet.html">How To</a>)
+	<br><a href='https://colab.research.google.com/drive/12fHOljna59xe2wDAQu-sIhYV8ertTCVF?usp=sharing'>The new wordnet module <code>wn</code></a>
       </li> 
       <li><a href="http://docs.python.org/library/random.html">Random choice in Python</a>
 	<li><a href="https://www.nltk.org/book/ch03.html#writing-results-to-a-file">Writing Results to a File</a>
@@ -96,21 +97,16 @@
   <li>
     Start a WordNet browser by doing any one of the following:
     <ol>
-      <li> Use NTU's  online
-    <a href="http://compling.hss.ntu.edu.sg/omw/cgi-bin/wn-gridx.cgi?gridmode=grid">
-      Open Multilingual Wordnet</a>
-    <li> Download and install
-    <a href="http://wordnet.princeton.edu/wordnet/download">
-      WordNet 2.1 for Windows</a>
+      <li> Use UPOL's  online
+    <a href="https://compling.upol.cz/ntumc/cgi-bin/wn-gridx.cgi?gridmode=grid">
+      Open Multilingual Wordnet v1.3</a>
+     <li> Use UPOL's  online
+    <a href="https://compling.upol.cz/omw/omw">
+      Open Multilingual Wordnet v2.0</a>
     <li> Use Princeton's online
     <a href="http://wordnetweb.princeton.edu/perl/webwn">
-      WordNet 3.0 Search</a>
-    <li> Use NLTK's WordNet browser from Python by
-    <pre xml:space="preserve">
-      &gt;&gt;&gt; import nltk
-      &gt;&gt;&gt; nltk.app.wordnet()
-    </pre>
-    Note: this did not work on my machine (FCB, 2017)
+      WordNet 3.1 Search</a>
+    <li> Use the <a href='https://en-word.net/'>Open English Wordnet</a>
     </ol>
     Whatever you use to access WordNet, try the following: 
     <ul>
@@ -136,6 +132,8 @@
 </ol>
 <h3>Practical work (<a href='code/wk5b.html'>code</a>,
   <a href='code/wk5b-out.txt'>output</a>)</h3>
+<br>Using the new wordnet module:  <a href='code/wk5c.html'>code</a>,
+  <a href='code/wk5c-out.txt'>output</a>
 <ol>
   <li>
     Find the 50 most frequent bigrams in Jane Austen's <i>Emma</i>. <br>
@@ -165,15 +163,15 @@
 	<br> How many are there?
 	<br> What are their definitions?
 	<br> How deep in the hierarchy are they?
-      <li> For the first synset (<tt>bird.n.01</tt>) print the lemmas in the
+      <li> For the first synset (<tt>omw-en-01503061-n</tt>) print the lemmas in the
       languages other than English
-      <li> For each synset, print out each lemma and its frequency
-	(hint freqency of a lemma is given by <tt>lemma.count</tt>)
+      <li> For each synset, print out each sense and its frequency
+	(hint freqency of a lemma is given by <tt>sense.counts</tt>)
       <li>Give the total frequency for each synset
     </ul>
   <li> ★ Tabulate the average polysemy per word length for all words
   in wordnet, and then seperately for each part of speech.
-(Hint: polysemy is number of synsets/word; you can get all words by [w for w  in wn.all_lemma_names()]; for just nouns you can do:  [w for w  in wn.all_lemma_names('n')]. )
+(Hint: polysemy is number of synsets/word; you can get all words by [w for w  in wn.synsets()]; for just nouns you can do:  [w for w  in wn.synsets(pos='n')]. )
 </ol>
 
 <p> ★ these problems are only for over achievers :-)
