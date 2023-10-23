@@ -21,9 +21,10 @@ print(nltk.FreqDist(w for w in emma if w not in stopen).most_common(50))
 print()
 
 ### faster: just look at the high frequency words (assume that 500 words is enough) 
+### faster: just look at the high frequency words (assume that 500 words is enough)
 print("Find these faster by only looking at the most frequent words")
-print( [t[0] for t in nltk.FreqDist(emma).most_common(500) 
-        if t not in stopen][0:50])
+print([t[0] for t in nltk.FreqDist(emma).most_common(500)
+       if t[0] not in stopen][0:50])
 print()
 
 # A Pronouncing Dictionary

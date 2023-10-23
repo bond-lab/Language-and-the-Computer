@@ -6,7 +6,7 @@ Find the 50 most frequent words in emma without stopwords
 [(',', 11454), ('.', 6928), ('I', 3178), (';', 2199), ('"', 2004), ('--', 1382), ('Mr', 1153), ('."', 1138), ("'", 1007), ('Emma', 865), ('could', 825), ('would', 815), ('Mrs', 699), ('.--', 685), ('Miss', 592), ('-', 574), ('must', 564), ('She', 562), ('!', 549), ('Harriet', 506), ('said', 484), ('much', 478), ('He', 441), ('Weston', 439), (',"', 421), ('one', 413), ('It', 400), ('every', 398), ('thing', 398), ('Knightley', 389), ('Elton', 385), ('think', 380), ('The', 357), ('little', 354), ('never', 347), ('good', 340), ('!--', 338), ('know', 337), ('might', 322), ('well', 315), ('Woodhouse', 313), ('say', 308), ('You', 303), ('Jane', 301), ('But', 293), ('time', 272), ('quite', 269), ('great', 263), ('Fairfax', 241), ('nothing', 237)]
 
 Find these faster by only looking at the most frequent words
-[',', '.', 'to', 'the', 'and', 'of', 'I', 'a', 'was', 'her', ';', 'it', 'in', 'not', '"', 'be', 'she', 'that', 'you', 'had', 'as', '--', 'he', 'for', 'have', 'is', 'with', 'Mr', 'very', 'but', '."', 'his', "'", 'at', 's', 'so', 'Emma', 'all', 'could', 'would', 'been', 'him', 'Mrs', '.--', 'on', 'any', 'my', 'no', 'Miss', 'were']
+[',', '.', 'I', ';', '"', '--', 'Mr', '."', "'", 'Emma', 'could', 'would', 'Mrs', '.--', 'Miss', '-', 'must', 'She', '!', 'Harriet', 'said', 'much', 'He', 'Weston', ',"', 'one', 'It', 'every', 'thing', 'Knightley', 'Elton', 'think', 'The', 'little', 'never', 'good', '!--', 'know', 'might', 'well', 'Woodhouse', 'say', 'You', 'Jane', 'But', 'time', 'quite', 'great', 'Fairfax', 'nothing']
 
 0.662711 of the words start with the same code
 a ['AH0']
