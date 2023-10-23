@@ -10,19 +10,24 @@
 ## 
 print ("\n")
 verbs = ['学习', '开'] 
+
 print("Verbs", verbs)
+
 verbsverbs= [w+w for w in verbs]
+
 print("Reduplicated verbs", verbsverbs)
+
 verbsnotverbs= []
 for v in verbs:
     if len(v) ==2:
-        verbsnotverbs.append('{}不{}'.format(v[0],v))
-    verbsnotverbs.append('{0}不{0}'.format(v))
+        verbsnotverbs.append(f'{v[0]}不{v}')
+    verbsnotverbs.append(f'{v}不{v}')
 print("Verb or not?", verbsnotverbs)
 
 print ("\n")
 print("You can manipulate it even if you can't read it!\n")
 print ("\n\n")
+
 #In honour of Michael Palin, define a function isPalin(string) that
 #decides whether string is a palindrome. This should be a Boolean
 #function, it returns True if string is a palindrome or False if it is

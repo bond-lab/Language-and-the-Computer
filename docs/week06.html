@@ -27,6 +27,14 @@
 	  Accessing Text from the Web and from Disk</a>
 	<br>Don't forget to think about the right to use the data!
       </li>
+      <li> <img src='colab.svg' width='36px'/> For google colab, files are stored  in your virtual machine.
+	<ul>
+      <li>⚠ They will disappear at the end of the session.
+	<li> You can upload or download them to your own machine
+	<br><code> from google.colab import files
+    <br>files.download('/content/spec.txt')</code>
+      <li> <a href = 'https://colab.research.google.com/notebooks/io.ipynb#scrollTo=hauvGV4hV-Mh'>Downloading files to your local file system</a>
+	</ul>
       <li>3.2:
 	<a href="https://www.nltk.org/book/ch03.html#strings-text-processing-at-the-lowest-level">
 	  Strings: Text Processing at the Lowest Level</a>
@@ -51,29 +59,10 @@ edit_distance(str1, str2)    # additions, substitutions and  deletions
                              # Levenshtien distance  
 </pre>
     </ul>
-  <li>The <a href='https://www.nltk.org/howto/wordnet.html'>Wordnet How-To<a>
-	<br>Errata:
-	<ul>
-	  <li> You can use <tt>['n', 'v', 'a', 'r']</tt> for the pos 
-	      (instead of <tt>[wn.VERB, wn.NOUN, wn.ADJ, wn.ADV]</tt>)
-	  <li>With Python 3, unicode should display fine (no need to decode/encode):
-	    <br><tt>&gt;&gt;&gt; wn.synsets('犬', lang='jpn')</tt>
-	    <br><tt>[Synset('dog.n.01'), Synset('spy.n.01')]</tt>
-	    <br><tt>&gt;&gt;&gt; wn.synset('dog.n.01').lemma_names(lang='jpn')</tt>
-	    <br><tt>['ドッグ', 'イヌ', '洋犬', '犬', '飼い犬', '飼犬']
-</tt>
-	  <li>The <tt>lemma.count()</tt> is only defined for English.
-	  <li>Some relations are only stored in one direction (the wordnet
-	  interface does not deduce the reverse, although it could) (2015-09-14)
-	</ul>
   </li>
 </ul>
 <h3>Further reading</h3>
 <ul>
-  <li>
-    <a href='https://zetcode.com/python/fstring/'>Python f-string</a>
-    a new and better interface to formatted strings!
-  </li>
   <li>
     <a href="http://en.wikipedia.org/wiki/Binary_numeral_system">
       Binary</a>,
@@ -103,6 +92,11 @@ edit_distance(str1, str2)    # additions, substitutions and  deletions
     pip3 install module
     python3.8 -m pip install module
   </pre>
+  <img src='colab.svg' width='36px'/> In colab you can use the Ipython pip magic
+  command <code>%pip</code>, which installs in the current python.
+  <pre>
+    %pip3 install module
+  </pre> 
   
 
 <h3>Before Class  (<a href='code/wk6a.html'>code</a>,

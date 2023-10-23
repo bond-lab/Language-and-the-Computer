@@ -40,6 +40,16 @@ story=raw[start:stop]
 f = open("spec.txt", 'w')
 f.write(story)
 
+##
+## Download 
+##
+import os
+
+if os.getenv("COLAB_RELEASE_TAG"):
+    from google.colab import files
+    files.download('/content/spec.txt')
+
+
 ###
 ### read
 ###
@@ -56,6 +66,5 @@ for l in f:
     raw += l
 sents  = len(nltk.sent_tokenize(raw))
 
-print("This text of the Speckled Band has {:,d} characters, {:,d} lines, {:,d} sentences and {:,d} tokens.".format(chars, lines, sents, tokens))
-
+print(f"This text of the Speckled Band has {chars:,d} characters, {lines:,d} lines, {sents:,d} sentences and {tokens:,d} tokens.")
 
