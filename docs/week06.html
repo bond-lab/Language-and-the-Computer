@@ -79,25 +79,7 @@ edit_distance(str1, str2)    # additions, substitutions and  deletions
   </li>
 </ul>
 
-<h4>A note on installing modules</h4>
 
-<p>In the same environment you will be using, do one of:
-  <pre>
-    pip install module
-    python -m pip install module
-  </pre>
-  Depending on which python you use and how many are installed on your
-  computer, you may have to be more specific, more like:
-  <pre>
-    pip3 install module
-    python3.8 -m pip install module
-  </pre>
-  <img src='colab.svg' width='36px'/> In colab you can use the Ipython pip magic
-  command <code>%pip</code>, which installs in the current python.
-  <pre>
-    %pip3 install module
-  </pre> 
-  
 
 <h3>Before Class  (<a href='code/wk6a.html'>code</a>,
   <a href='code/wk6a-out.txt'>output</a>)</h3>
@@ -180,6 +162,36 @@ edit_distance(str1, str2)    # additions, substitutions and  deletions
       </li>
 </ul>
 
+<h3>Miscellaneous Notes</h3>
+
+<h4>A note on installing modules</h4>
+
+<p>In the same environment you will be using, do one of:
+  <pre>
+    pip install module
+    python -m pip install module
+  </pre>
+  Depending on which python you use and how many are installed on your
+  computer, you may have to be more specific, more like:
+  <pre>
+    pip3 install module
+    python3.8 -m pip install module
+  </pre>
+  <img src='colab.svg' width='36px'/> In colab you can use the Ipython pip magic
+  command <code>%pip</code>, which installs in the current python.
+  <pre>
+    %pip3 install module
+  </pre> 
+  
+
+  <h4>How to remove accents from text:
+    
+    <p><code> from unidecode import unidecode
+         <br> unidecode('kožušček, 北亰') </code>
+	 <br> <tt> kozuscek Bei Jing <tt>
+    </p>
+    <p><a href='https://pypi.org/project/Unidecode/'>The Unidecode
+module</a> gives ASCII transliterations of Unicode text.
 <hr>
 <p><a href="index.html">LAC: Language and the Computer</a> Francis Bond.
 
