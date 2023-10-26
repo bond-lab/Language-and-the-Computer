@@ -76,50 +76,45 @@
     Do all the exercises marked "<b>Your Turn</b>" in both sections. 
   </li>
   <li>
-    Run Nemo, the NLTK regular expression demo:
-    <pre xml:space="preserve">
-      &gt;&gt;&gt; import nltk
-      &gt;&gt;&gt; nltk.app.nemo()
-    </pre>
+    Use <a href='https://regex101.com/'>RegEx101</a> to test some
+    regular expressions.  Make sure you tick 'Python' as the flavor.
   <ul>
     <li>
-      In Nemo, try changing the regular expression in the top
-      area, and see what parts of the text are matched. For
-      example, what happens if you add "\b" at the beginning of
-      the regular expression? And at the end? Why?
+      Put some text in the text string, and then tTry changing the
+      regular expression in the top area, and see what parts of the
+      text are matched. For example, what happens if you add "\b" at
+      the beginning of the regular expression? And at the end? Why?
     </li>
     <li>
-      The lower area is used to do substitutions, in the places
-      matched by the regular expression in the upper area.
+      You can click substitutions, if you want to test substitutions as well.
     </li>
 </ul>
   <li>Describe the class of strings matched by the following regular
     expressions:
     <ol>
-      <li><tt><span class="pre">[a-zA-Z]+</span></tt></li>
-      <li><tt><span class="pre">[A-Z][a-z]*</span></tt></li>
-      
-      <li><tt><span class="pre">p[aeiou]{,2}t</span></tt></li>
-      <li><tt><span class="pre">\d+(\.\d+)?</span></tt></li>
-      <li><tt><span class="pre">([^aeiou][aeiou][^aeiou])*</span></tt></li>
-      <li><tt><span class="pre">\w+|[^\w\s]+</span></tt></li>
+      <li> <code>[a-zA-Z]+</code></li>
+      <li> <code>[A-Z][a-z]*</code></li>
+      <li> <code>p[aeiou]{,2}t</code></li>
+      <li> <code>\d+(\.\d+)?</code></li>
+      <li> <code>([^aeiou][aeiou][^aeiou])*</code></li>
+      <li> <code>\w+|[^\w\s]+</code></li>
     </ol>
-    <p>Test your answers using <tt><span class="pre">nltk.re_show()</span></tt>.</p>
+</p>
   </li>
 </ul>
 <li> Strings and things
 <ul>
-   <li>Define a string <tt><span class="pre">raw</span></tt> containing a sentence of your own choosing.
-    Now, split <tt><span class="pre">raw</span></tt> on some character other than space, such as <tt><span class="pre"><span class="pysrc-string">'s'</span></span></tt>.
-  <li>Write a <tt><span class="pre"><span class="pysrc-keyword">for</span></span></tt> loop to print out the characters of a string, one per line.
-  <li>What is the difference between calling <tt><span class="pre">split</span></tt> on a string
-    with no argument or with <tt><span class="pre"><span class="pysrc-string">' '</span></span></tt> as the argument,
-    e.g. <tt><span class="pre">sent.split()</span></tt> versus <tt><span class="pre">sent.split(<span class="pysrc-string">' '</span>)</span></tt>?  What happens
+   <li>Define a string <code>raw</code> containing a sentence of your own choosing.
+    Now, split <code>raw</code> on some character other than space, such as <code><span class="pysrc-string">'s'</span></code>.
+  <li>Write a <code><span class="pysrc-keyword">for</span></code> loop to print out the characters of a string, one per line.
+  <li>What is the difference between calling <code>split</code> on a string
+    with no argument or with <code><span class="pysrc-string">' '</span></code> as the argument,
+    e.g. <code>sent.split()</code> versus <code>sent.split(<span class="pysrc-string">' '</span>)</code>?  What happens
     when the string being split contains tab characters, consecutive
     space characters, or a sequence of tabs and spaces?  (You
-    will need to use <tt><span class="pre"><span class="pysrc-string">'\t'</span></span></tt> to enter a tab character.)
-  <li>Create a variable <tt><span class="pre">words</span></tt> containing a list of words.
-    Experiment with <tt><span class="pre">words.sort()</span></tt> and <tt><span class="pre">sorted(words)</span></tt>.
+    will need to use <code><span class="pysrc-string">'\t'</span></code> to enter a tab character.)
+  <li>Create a variable <code>words</code> containing a list of words.
+    Experiment with <code>words.sort()</code> and <code>sorted(words)</code>.
     What is the difference?
 </ul>
 </ul>
@@ -130,22 +125,23 @@
 <ul>
   <li>Write regular expressions to match the following classes of strings:
     <ol>
-      <li>A single determiner (assume that <i>a</i>, <i>an</i>, and <i>the</i>
-	are the only determiners).</li>
+      <li>A single English article (assume that <i>a</i>, <i>an</i>, and <i>the</i>
+	are the only articles).</li>
       <li>An arithmetic expression using integers, addition, and
-	multiplication, such as <tt><span class="pre">2*3+8</span></tt>.</li>
+	multiplication, such as <code>2*3+8</code>.</li>
     </ol>
   </li>
   <li>Write a utility function that takes a URL as its argument, and returns
-    the contents of the URL, with all HTML markup removed.  Use <tt><span class="pre">from urllib import request</span></tt>
+    the contents of the URL, with all HTML markup removed.  Use <code>from urllib import request</code>
     to access the contents of the URL, e.g.
-    <tt><span class="pre">raw_contents = request.urlopen(<span class="pysrc-string">'https://www.nltk.org/'</span>).read().decode('utf-8')</span></tt>.
+    <code>raw_contents = request.urlopen(<span class="pysrc-string">'https://www.nltk.org/'</span>).read().decode('utf-8')</code>.
   </li>
  <li>Create a function <tt>plural()</tt> that takes a word and returns its plural form.
     <br>Test it on <i>dog, apple, fly, boy, woman</i>.
- <br>★ you can use the irregular inflections described below.
+    <br>★ you can use the irregular inflections described below.
+    <br>★ you can try it for Czech (or some other non-English language)
 
-  <li>Save some text into a file <tt><span class="pre">corpus.txt</span></tt>.  Define a function <tt><span class="pre">load(f)</span></tt>
+  <li>Save some text into a file <code>corpus.txt</code>.  Define a function <code>load(f)</code>   
     that reads from the file named in its sole argument, and returns a string
     containing the text of the file.
   <li>Rewrite the following loop as a list comprehension:
