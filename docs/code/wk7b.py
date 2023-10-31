@@ -133,18 +133,21 @@ print ([(w, len(w)) for w in sent])
 ###
 ###
 ###
-from nltk.corpus import wordnet as wn
+import wn
+wn.download('omw-en')
+ewn = wn.Wordnet(lexicon='omw-en:1.4')
 
-endprep = re.compile(r"^(\w+)_(abaft|aboard|about|above|absent|across|afore|after|against|along|alongside|amid|amidst|among|amongst|an|anenst|apropos|apud|around|as|aside|astride|at|athwart|atop|barring|before|behind|below|beneath|beside|besides|between|beyond|but|by|circa|concerning|despite|down|during|except|excluding|failing|following|for|forenenst|from|given|in|including|inside|into|lest|like|mid|midst|minus|modulo|near|next|notwithstanding|of|off|on|onto|opposite|out|outside|over|pace|past|per|plus|pro|qua|regarding|round|sans|save|since|than|through,|throughout|till|times|to|toward|towards|under|underneath|unlike|until|unto|up|upon|versus|via|vice|with|within|without|worth)$")
+
+endprep = re.compile(r"^(\w+) (abaft|aboard|about|above|absent|across|afore|after|against|along|alongside|amid|amidst|among|amongst|an|anenst|apropos|apud|around|as|aside|astride|at|athwart|atop|barring|before|behind|below|beneath|beside|besides|between|beyond|but|by|circa|concerning|despite|down|during|except|excluding|failing|following|for|forenenst|from|given|in|including|inside|into|lest|like|mid|midst|minus|modulo|near|next|notwithstanding|of|off|on|onto|opposite|out|outside|over|pace|past|per|plus|pro|qua|regarding|round|sans|save|since|than|through,|throughout|till|times|to|toward|towards|under|underneath|unlike|until|unto|up|upon|versus|via|vice|with|within|without|worth)$")
 
 def inflectv(verb):
     '''very simple: should use the irregulars from above'''
     return [v, v+'ing', v+'en', v+'ed', v+'s']
 
-allverbs=list(wn.all_synsets('v'))
+allverbs=list(ewn.synsets(pos='v'))
 vp_inflected = set()
 for s in allverbs:
-    for l in s.lemma_names():
+    for l in s.lemmas():
         m = re.search(endprep,l)
         if m:
             (v,p) = m.groups()

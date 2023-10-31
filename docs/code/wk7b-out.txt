@@ -15,9 +15,11 @@ text9: The Man Who Was Thursday by G . K . Chesterton 1908
  I can't do {2*8+4} in my head
  I can't do {2*8+4} in my head
 <html>
-  <head>
-    <link rel="shortcut 
- Francis Bond's Humble Home Page Francis
+
+<head>
+    <title>Home</title>
+ 
+ Home FCB Home CV Publications Recipes F
 dog dogs
 apple apples
 fly flies
@@ -28,21 +30,21 @@ ox oxen
 stomach stomaches
 octopus octopi
 
-loaded file  Francis Bond's Humble Home Page Francis Bond Asso
+loaded file  Home FCB Home CV Publications Recipes Francis (フラ
 
 [('The', 3), ('dog', 3), ('gave', 4), ('John', 4), ('the', 3), ('newspaper', 9)]
 [('The', 3), ('dog', 3), ('gave', 4), ('John', 4), ('the', 3), ('newspaper', 9)]
-[('called', 'down'), ('clutteren', 'up'), ('log', 'out'), ('tryed', 'for'), ('rounding', 'up'), ('fiting', 'in'), ('follow_uped', 'on'), ('wear', 'on'), ('dragen', 'up'), ('racked', 'up'), ('hoping', 'on'), ('bucketed', 'along'), ('give_tongueing', 'to'), ('soak', 'up'), ('sending', 'off'), ('do_welling', 'by'), ('lay_handsed', 'on'), ('hideed', 'out'), ('marched', 'on'), ('follow_uping', 'on')]
+[('looks', 'to'), ('asks', 'out'), ('sussen', 'out'), ('hooking', 'up'), ('pluging', 'in'), ('chopen', 'down'), ('bearen', 'down'), ('buttered', 'up'), ('passen', 'along'), ('closeen', 'out'), ('attachen', 'to'), ('watching', 'out'), ('place', 'down'), ('shoot', 'up'), ('pushed', 'up'), ('feel', 'like'), ('prim', 'out'), ('ebbing', 'out'), ('tightens', 'up'), ('smellen', 'out')]
 Processing <Text: Moby Dick by Herman Melville 1851>
-take to
-While you take in hand to school others , and to teach them by what name a whale - fish is to be called in our tongue leaving out , through ignorance , the letter H , which almost alone maketh the signification of the word , you deliver that which is not true ."
-[('take in hand to', 'hand ')]
 called in
 While you take in hand to school others , and to teach them by what name a whale - fish is to be called in our tongue leaving out , through ignorance , the letter H , which almost alone maketh the signification of the word , you deliver that which is not true ."
 [('called in', '')]
 take in
 While you take in hand to school others , and to teach them by what name a whale - fish is to be called in our tongue leaving out , through ignorance , the letter H , which almost alone maketh the signification of the word , you deliver that which is not true ."
 [('take in', '')]
+take to
+While you take in hand to school others , and to teach them by what name a whale - fish is to be called in our tongue leaving out , through ignorance , the letter H , which almost alone maketh the signification of the word , you deliver that which is not true ."
+[('take in hand to', 'hand ')]
 picking up
 It will be seen that this mere painstaking burrower and grub - worm of a poor devil of a Sub - Sub appears to have gone through the long Vaticans and street - stalls of the earth , picking up whatever random allusions to whales he could anyways find in any book whatsoever , sacred or profane .
 [('picking up', '')]
