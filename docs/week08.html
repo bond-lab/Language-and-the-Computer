@@ -124,14 +124,14 @@ whether they evaluate as <tt>True</tt> or <tt>False</tt>.
 <li>Write a function <tt>shorten(text, n)</tt> to process a text,
 omitting the <tt>n</tt> most frequently occurring words of the text. How
 readable is it?
-
-<li>Write a function that sorts a list of WordNet synsets
-for proximity to a given synset. For example, given the synsets
-<tt>minke_whale.n.01, orca.n.01, novel.n.01, and tortoise.n.01</tt>, sort them
-according to their <tt>shortest_path_distance()</tt>
-from <tt>right_whale.n.01</tt>.
+<li>Write a list comprehension that sorts a list of WordNet synsets
+for proximity to a given synset.
+<br>For example, given the synsets for the first noun sense of  <i>minke whale,
+  orca, novel</i> and </i>tortoise</i>, sort them according to their <a href='https://wn.readthedocs.io/en/latest/api/wn.similarity.html#wn.similarity.path'>path similarity</a>
+ from <i>right whale</i>
 <br>Hint: you can use list comprehension to make sortable tuples, or try
 to make a key for the sort function.
+
 
 <li>Write a function that takes a list of words (containing
 duplicates) and returns a list of words (with no duplicates) sorted by

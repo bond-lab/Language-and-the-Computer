@@ -22,27 +22,46 @@ print (shorten(text,2))
 
 #Write a list comprehension that sorts a list of WordNet synsets
 #for proximity to a given synset.
-#For example, given the synsets minke_whale.n.01, orca.n.01, novel.n.01,
-# and tortoise.n.01, sort them according to their shortest_path_distance()
-# from right_whale.n.01
+#For example, given the synsets for the first noun sense of  minke whale,
+# orca novel and tortoise, sort them according to their shortest_path_distance()
+# from right whale
+import wn
+from wn import similarity as sim
 
-from nltk.corpus import wordnet as wn
-whales = [wn.synset(s) for s in
-          "minke_whale.n.01, orca.n.01, novel.n.01, tortoise.n.01".split(', ')]
-print (whales)
+wn.download('oewn')
+oewn = wn.Wordnet('oewn:2021')
+ 
+comp = [oewn.synsets(s, pos='n')[0] for s in
+          ["minke whale", "orca", "novel", "tortoise"]]
 
-def semantic_sort(sslist,ss):
-    """return a list of synsets, sorted by similarity to another synset"""
-    sim = [(ss.shortest_path_distance(s), s) for s in sslist]
-    return [s for (sm, s) in sorted(sim)]
+rightwhale = oewn.synsets('right whale', pos='n')[0]
 
-print (semantic_sort(whales, wn.synset('right_whale.n.01')))
+print ("\n\n Unsorted")
+for s in comp:
+    print (s.id, s.definition())
+
+def semantic_sort(sslist, ss):
+    """
+    return a list of synsets, sorted by similarity to another synset
+    this method uses tuples to sort (a bit of a hack)
+    """
+    sims = [(sim.path(s, ss), s) for s in sslist]
+    return [s for (sm, s) in sorted(sims)]
+
+print ("\n\n Hacky sort")
+for s in (semantic_sort(comp, rightwhale)):
+    print (s.id, s.definition())
 
 def semantic_sort1(sslist,ss):
-    """return a list of synsets, sorted by similarity to another synset"""
-    return sorted(sslist, key=lambda x: ss.shortest_path_distance(x))     
-    
-print (semantic_sort1(whales, wn.synset('right_whale.n.01')))
+    """
+    return a list of synsets, sorted by similarity to another synset
+    this uses a lambda function as the key to sort
+    """
+    return sorted(sslist, key=lambda x: sim.path(ss,x))     
+
+print ("\n\n Pythonesque sort")   
+for s in (semantic_sort1(comp, rightwhale)):
+    print (s.id, s.definition())
 
 
 
@@ -53,12 +72,42 @@ print (semantic_sort1(whales, wn.synset('right_whale.n.01')))
 #  9 instances of the word chair, then table would appear before chair
 #  in the output list.
 
+
+           
 def dec_freq(liszt):
-    """take a list and returns a list of types in decreasing frequency"""
-    return list(nltk.FreqDist(liszt).keys())
+    """
+    take a list and returns a list of types in decreasing frequency
+    uses the Frequency Distribution from NLTK
+    """
+    FD = nltk.FreqDist(liszt)
+    return sorted(FD.keys(), key =lambda x: -FD[x])
 
+#
+# from scratch
+#        
+def dec_freq1(liszt):
+    """
+    take a list and returns a list of types in decreasing frequency
+    """
+    freq = dict()
+    for l in liszt:
+        if l in freq:
+           freq[l] += 1
+        else:
+           freq[l] = 1
+    return sorted(freq.keys(), key=lambda x: freq[x], reverse=True)
+
+print ("\n\n Sort by frequency in list (two ways)\n\n")   
+
+test = 'two two one three four three four three ten four ten ten four ten ten ten ten ten ten ten'.split()
+
+print(dec_freq(test))
+
+print(dec_freq1(test))       
+           
 #  Write a program to sort words by length.
-#  
+#
+print ("\n\n Sort words by length (two ways)\n\n")   
 
-print (sorted(text, key=lambda  x:len(x)))
-print (sorted(text, key=len))
+print (sorted(test, key=lambda  x:len(x)))
+print (sorted(test, key=len))
