@@ -121,9 +121,10 @@ whether they evaluate as <tt>True</tt> or <tt>False</tt>.
 <h3>Practical work (<a href='code/wk8b.html'>code</a>,
   <a href='code/wk8b-out.txt'>output</a>)</h3>
 <ol>
-<li>Write a function <tt>shorten(text, n)</tt> to process a text,
-omitting the <tt>n</tt> most frequently occurring words of the text. How
-readable is it?
+<li>Write some code to sort words by length. 
+Use a key that gives the length of the word. 
+(<b>Note</b>: you must have read <a href="https://www.nltk.org/book/ch04.html#doing-more-with-functions">4.5 Doing more with Functions</a>)
+
 <li>Write a list comprehension that sorts a list of WordNet synsets
 for proximity to a given synset.
 <br>For example, given the synsets for the first noun sense of  <i>minke whale,
@@ -136,12 +137,13 @@ to make a key for the sort function.
 <li>Write a function that takes a list of words (containing
 duplicates) and returns a list of words (with no duplicates) sorted by
 decreasing frequency. E.g. if the input list contained 10 instances of
-the word <i>table</i> and 9 instances of the word <i>chair</i>, then <i>table</i> would
-appear before <i>chair</i> in the output list.
+the word <i>table</i> and 9 instances of the word <i>chair</i>,
+then <i>table</i> would appear before <i>chair</i> in the output list.
 
-<li>Write some code to sort words by length. 
-Use a key that gives the length of the word. 
-(<b>Note</b>: you must have read <a href="https://www.nltk.org/book/ch04.html#doing-more-with-functions">4.5 Doing more with Functions</a>)
+<li>Write a function <tt>shorten(text, n)</tt> to process a text,
+omitting the <tt>n</tt> most frequently occurring words of the text. How
+readable is it?
+
 
 <!-- <li>Given the following sentence represented as a list of word, -->
 <!-- concept tuples; write two programs: one to replace the words with the -->

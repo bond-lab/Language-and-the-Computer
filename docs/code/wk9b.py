@@ -5,16 +5,18 @@
 #    several turns.
 
 import nltk
+from collections import defaultdict as dd
+
 bw = nltk.corpus.brown.words()
 bwt = nltk.corpus.brown.tagged_words()
-bwts = nltk.corpus.brown.tagged_words(tagset='universal')
+bwtu = nltk.corpus.brown.tagged_words(tagset='universal')
 
 
 ##
 ## count tags per word
 ##
-wtc = nltk.defaultdict(lambda: nltk.defaultdict(int))
-for (w,t) in bwts:
+wtc = dd(lambda: dd(int))
+for (w,t) in bwtu:
     wtc[w][t] +=1
 
 print ("\nParts of Speech per word\n")
@@ -27,7 +29,7 @@ print ('contest', wtc['contest'].items())
 #     at the same
 #     from time to 
 
-### remember n grams, nd coutn the following word
+### remember n grams, and count the following word
 
 for i in range(2,5):
 	for ngram in nltk.ngrams(bw,i):
@@ -45,7 +47,7 @@ for t in tags:
     print (t)
 
 print ("\nBrown corpus Universal Tags, sorted alphabetically\n")
-tags = sorted(set([t for (w,t) in bwts]))
+tags = sorted(set([t for (w,t) in bwtu]))
 for t in tags:
     print (t)
 
@@ -54,7 +56,7 @@ for t in tags:
 #        Which nouns are more common in their plural form, rather than
 #        their singular form? (Only consider regular plurals, formed
 #        with the -s suffix.)
-freq = nltk.defaultdict(int)
+freq = dd(int)
 for w in [w.lower() for (w,t) in bwt if t.startswith('N')]:
     freq[w] +=1
 print ("\nWhich Nouns are more common as plural?\n")
@@ -66,7 +68,7 @@ for w in freq:
 #        Which word has the greatest number of distinct tags. What are they, and what do they represent?
 
 print ("\nWord with the most distinct tags\n")
-word_tag = nltk.defaultdict(set)
+word_tag = dd(set)
 for w,t  in  bwt:
     word_tag[w.lower()].add(t)
 m = max(len(word_tag[w]) for w in word_tag)
@@ -80,15 +82,32 @@ print (tagfd.most_common(20))
 
 print ("\nTop 20 simplified tags in decreasing frequency\n")
 
-tagfd = nltk.FreqDist(t for (w,t)  in  bwts)
+tagfd = nltk.FreqDist(t for (w,t)  in  bwtu)
 print (tagfd.most_common(20))
 
-#        Which tags are nouns most commonly found after? What do these tags represent? 
+#  Which tags are nouns most commonly found after?
+#  What do these tags represent? 
 
-print ("\nTop 20 simplified tags that proceed nouns\n")
-tagbigram =nltk.bigrams(t for (w,t)  in  bwts)
+print ("\nTop 20 simplified tags that proceed nouns (using bigrams)\n")
+tagbigram =nltk.bigrams(t for (w,t)  in  bwtu)
 
 afterN = nltk.FreqDist(t1 for (t1,t2)  in  tagbigram if t2 == 'NOUN')
 
 print (afterN.most_common(20))
 
+# or
+print ("\nTop 20 simplified tags that proceed nouns (from scratch)\n")
+
+tags = [t for (w,t) in bwtu]
+prev = list()
+for i in range(len(tags)-1):
+  if tags[i+1] == 'NOUN':
+    prev.append(tags[i])
+
+# or
+#
+# prev =  [tags[i] for i in range(len(tags)-1) if tags[i+1] == 'NOUN']
+#
+
+
+print(nltk.FreqDist(prev).most_common(20))

@@ -30,7 +30,71 @@
 	  </a>
       </li>
       </li>
-<li><strong>Collocations</strong> are pairs of content words that occur together more
+    </ul>
+  </li>
+</ul>
+<h3>Further reading</h3>
+<ul>
+  <li>Peter F. Brown; Peter V. deSouza; Robert L. Mercer; T. J. Watson; Vincent J. Della Pietra; Jenifer C. Lai (1992)
+    <a href="http://www.aclweb.org/anthology/J/J92/J92-4003.pdf">Class-Based n-gram Models of Natural Language</a> 
+    Computational Linguistics, <b>18</b>:4, 467--479
+  <!--<li>
+<a href='http://www-personal.umich.edu/~csev/books/py4inf/lectures/Py4Inf-09-Dictionaries.pdf'>Python for Infomatics: Exploring Dictionaries</a> 
+Charles Severance, University of Michigan-->
+</ul>
+<h3>Useful Links</h3>
+<ul>
+  <li><a href='https://www.sketchengine.eu/penn-treebank-tagset/'>Penn Treebank Tags</a> (at the Sketch Engine site)
+  <li><a href='http://compling.upol.cz/ntumc/'>Tagsets with frequencies and examples at NTU-MC</a>
+</ul>
+
+<h3>Before Class (<a href='code/wk9a.html'>code</a>,
+  <a href='code/wk9a-out.txt'>output</a>)</h3>
+<ul>
+  <li> From the <tt>treebank</tt> corpus make a list of all present
+    participles ('VBG'), and then collect a list of all the word-tag pairs
+    that immediately precede items in that list.
+<li>From the <tt>brown</tt> corpus make a list of all adverbs using
+    the universal tag set ('ADV'), and show the tags that follow
+    them and their frequencies.
+<li>Create a default dictionary that gives the value 'UNKNOWN' for an
+unknown key.
+</ul>
+
+
+<h3>Practical work (<a href='code/wk9b.html'>code</a>,
+  <a href='code/wk9b-out.txt'>output</a>)</h3>
+<ul>
+  <li>Working with someone else, take turns to pick a word that can be
+  either a noun or a verb (e.g. contest); the opponent has to predict
+  which one is likely to be the most frequent in the Brown corpus;
+  check the opponent's prediction, and tally the score over several
+  turns.
+  <li>Guess which word is most likely to follow n-grams and test your intuition with 
+    the Brown corpus
+    <ul>
+      <li><i>for the</i>
+      <li><i>said that</i>
+      <li><i>it was</i>
+      <li><i>at the same</i>
+      <li><i>from time to</i>
+    </ul>
+<li>Use sorted() and set() to get a sorted list of tags used in the Brown corpus, removing duplicates.
+<li> Write programs to process the Brown Corpus and find answers to the following questions:
+  <ol>
+    <li>Which nouns are more common in their plural form, rather than their singular form? (Only consider regular plurals, formed with the -s suffix.)
+    <li>Which word has the greatest number of distinct tags. What are they, and what do they represent?
+    <li>List tags in order of decreasing frequency. What do the 20 most frequent tags represent?
+    <li>Which tags are nouns most commonly found after? What do these tags represent?
+<br> You can list the tags with documentation using <code>nltk.help.brown_tagset()</code>
+  </ol>
+  
+</ul>
+
+
+<hr>
+<h3>Collocations</h3>
+<strong>Collocations</strong> are pairs of content words that occur together more
 often than one would expect if the words of a document were scattered randomly.
 We can find collocations by counting how many times a pair of words
 <em>w</em><sub>1</sub>, <em>w</em><sub>2</sub> occurs together, compared
@@ -94,67 +158,9 @@ a heuristic related to the <a name="mutual_information_index_term" /><span class
 </tr></table></td></tr>
 </table></div>
 <!-- TODO: add section on Distributional Similarity -->
-</div>
-
-    </ul>
-  </li>
-</ul>
-<h3>Further reading</h3>
-<ul>
-  <li>Peter F. Brown; Peter V. deSouza; Robert L. Mercer; T. J. Watson; Vincent J. Della Pietra; Jenifer C. Lai (1992)
-    <a href="http://www.aclweb.org/anthology/J/J92/J92-4003.pdf">Class-Based n-gram Models of Natural Language</a> 
-    Computational Linguistics, <b>18</b>:4, 467--479
-  <!--<li>
-<a href='http://www-personal.umich.edu/~csev/books/py4inf/lectures/Py4Inf-09-Dictionaries.pdf'>Python for Infomatics: Exploring Dictionaries</a> 
-Charles Severance, University of Michigan-->
-</ul>
-<h3>Useful Links</h3>
-<ul>
-  <li><a href='http://www.clips.ua.ac.be/pages/mbsp-tags'>Penn Treebank Tags</a>
-  <li><a href='http://www.comp.leeds.ac.uk/amalgam/tagsets/tagmenu.html'>Various Tagsets</a>
-  <li><a href='http://compling.hss.ntu.edu.sg/ntumc/'>Tagsets with frequencies and examples at NTU-MC</a>
-</ul>
-
-<h3>Before Class (<a href='code/wk9a.html'>code</a>,
-  <a href='code/wk9a-out.txt'>output</a>)</h3>
-<ul>
-  <li> From the <tt>treebank</tt> corpus make a list of all present
-    participles ('VBG'), and then collect a list of all the word-tag pairs
-    that immediately precede items in that list.
-<li>From the <tt>brown</tt> corpus make a list of all adverbs using
-    the universal tag set ('ADV'), and show the tags that follow
-    them and their frequencies.
-<li>Create a default dictionary that gives the value 'UNKNOWN' for an
-unknown key.
-</ul>
 
 
-<h3>Practical work (<a href='code/wk9b.html'>code</a>,
-  <a href='code/wk9b-out.txt'>output</a>)</h3>
-<ul>
-  <li>Working with someone else, take turns to pick a word that can be
-  either a noun or a verb (e.g. contest); the opponent has to predict
-  which one is likely to be the most frequent in the Brown corpus;
-  check the opponent's prediction, and tally the score over several
-  turns.
-  <li>Guess which word is most likely to follow n-grams and test your intuition with 
-    the Brown corpus
-    <ul>
-      <li><i>for the</i>
-      <li><i>said that</i>
-      <li><i>it was</i>
-      <li><i>at the same</i>
-      <li><i>from time to</i>
-    </ul>
-<li>Use sorted() and set() to get a sorted list of tags used in the Brown corpus, removing duplicates.
-<li> Write programs to process the Brown Corpus and find answers to the following questions:
-  <ol>
-    <li>Which nouns are more common in their plural form, rather than their singular form? (Only consider regular plurals, formed with the -s suffix.)
-    <li>Which word has the greatest number of distinct tags. What are they, and what do they represent?
-    <li>List tags in order of decreasing frequency. What do the 20 most frequent tags represent?
-    <li>Which tags are nouns most commonly found after? What do these tags represent?
-  </ol>
-</ul>
+
 
 
 <hr>

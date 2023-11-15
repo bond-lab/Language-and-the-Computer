@@ -1362,7 +1362,7 @@ belonging (4, 1)
 
 Word with the most distinct tags
 
-[('that', {'CS', 'DT-TL', 'NIL', 'CS-HL', 'DT-HL', 'WPS-NC', 'WPS-HL', 'DT-NC', 'CS-NC', 'WPO', 'WPS-TL', 'WPS', 'WPO-NC', 'QL', 'DT'})]
+[('that', {'DT-TL', 'CS-NC', 'WPS-HL', 'DT', 'WPS', 'QL', 'DT-HL', 'DT-NC', 'WPS-NC', 'WPO', 'WPS-TL', 'NIL', 'CS-HL', 'CS', 'WPO-NC'})]
 
 Top 20 tags in decreasing frequency
 
@@ -1372,6 +1372,10 @@ Top 20 simplified tags in decreasing frequency
 
 [('NOUN', 275558), ('VERB', 182750), ('.', 147565), ('ADP', 144766), ('DET', 137019), ('ADJ', 83721), ('ADV', 56239), ('PRON', 49334), ('CONJ', 38151), ('PRT', 29829), ('NUM', 14874), ('X', 1386)]
 
-Top 20 simplified tags that proceed nouns
+Top 20 simplified tags that proceed nouns (using bigrams)
+
+[('DET', 85845), ('ADJ', 54653), ('NOUN', 41309), ('ADP', 37418), ('.', 20084), ('VERB', 17851), ('CONJ', 9294), ('NUM', 5668), ('ADV', 1851), ('PRT', 1068), ('PRON', 440), ('X', 77)]
+
+Top 20 simplified tags that proceed nouns (from scratch)
 
 [('DET', 85845), ('ADJ', 54653), ('NOUN', 41309), ('ADP', 37418), ('.', 20084), ('VERB', 17851), ('CONJ', 9294), ('NUM', 5668), ('ADV', 1851), ('PRT', 1068), ('PRON', 440), ('X', 77)]
