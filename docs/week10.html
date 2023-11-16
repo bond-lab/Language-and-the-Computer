@@ -34,7 +34,7 @@
 <h3>Further reading</h3>
 <ul>
   <li><a href="http://en.wikipedia.org/wiki/Cross-validation_(statistics)">Cross validation</a>:
-    <b>K-fold cross validation</b> is a common in NLP:
+    <b>K-fold cross validation</b> is common in NLP and ML
 <p>"In K-fold cross-validation, the original sample is randomly
 partitioned into K subsamples. Of the K subsamples, a single subsample
 is retained as the validation data for testing the model, and the
@@ -75,9 +75,12 @@ backoff = ???
 
 bigram_taggert2 = nltk.BigramTagger(train_sents, backoff=backoff_tagger)
 </pre>
-<li> Think about how we could deal with sparseness by defining an 'unknown' word.  
-What would you have to do to the training and test data?
-    
+<li>Try training with more context (trigram, 4gram) and see if things improve.  Try to explain the results.
+
+  <li> Think about how we could deal with sparseness by defining an 'unknown' word.   What would you have to do to the training and test data?
+
+
+  
 </ul>
 <h3>Practical work (<a href='code/wk10b.html'>code</a>,
   <a href='code/wk10b-out.txt'>output</a>)</h3>

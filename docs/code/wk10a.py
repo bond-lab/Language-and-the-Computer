@@ -47,14 +47,39 @@ print ("\nTraining Bigram Tagger with backoff to NNP (Proper Noun)")
 backoff_tagger=nltk.DefaultTagger('NNP')
 unigram_tagger=nltk.UnigramTagger(train, backoff=backoff_tagger)
 bigram_tagger = nltk.BigramTagger(train, backoff=unigram_tagger)
-print ("Accuracy on Test: ", bigram_tagger.evaluate(test))
+print ("Accuracy on Test (bigram/NNP): ", bigram_tagger.evaluate(test))
 #0.89954198473282443
 
 print ("\nTraining Bigram Tagger with backoff to NN (Common Noun)")
 backoff_tagger=nltk.DefaultTagger('NN')
 unigram_tagger=nltk.UnigramTagger(train, backoff=backoff_tagger)
 bigram_tagger = nltk.BigramTagger(train, backoff=unigram_tagger)
-print ("Accuracy on Test:", bigram_tagger.evaluate(test))
+print ("Accuracy on Test (bigram/NN):", bigram_tagger.evaluate(test))
 # 0.89251908396946567
+
+print ("\nTraining Bigram Tagger with backoff to NNP (Proper Noun)")
+backoff_tagger=nltk.DefaultTagger('NNP')
+unigram_tagger=nltk.UnigramTagger(train, backoff=backoff_tagger)
+bigram_tagger = nltk.BigramTagger(train, backoff=unigram_tagger)
+trigram_tagger = nltk.TrigramTagger(train, backoff=bigram_tagger)
+
+print ("Accuracy on Test (trigram/NNP): ", trigram_tagger.evaluate(test))
+
+fourgram_tagger = nltk.NgramTagger(4, train, backoff=trigram_tagger)
+
+print ("Accuracy on Test (4gram/NNP): ", fourgram_tagger.evaluate(test))
+
+perceptron_tagger = nltk.PerceptronTagger(train)
+
+print ("Accuracy on Test (Perceptron): ", perceptron_tagger.evaluate(test))
+
+
+
+
+
+
+#0.89954198473282443
+
+
 
 ## NNP is the better backoff

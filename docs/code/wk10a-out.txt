@@ -13,7 +13,12 @@ Training Bigram Tagger with backoff to unigram
 Accuracy on Test:  0.8729770992366412
 
 Training Bigram Tagger with backoff to NNP (Proper Noun)
-Accuracy on Test:  0.8985241730279898
+Accuracy on Test (bigram/NNP):  0.8985241730279898
 
 Training Bigram Tagger with backoff to NN (Common Noun)
-Accuracy on Test: 0.8905852417302799
+Accuracy on Test (bigram/NN): 0.8905852417302799
+
+Training Bigram Tagger with backoff to NNP (Proper Noun)
+Accuracy on Test (trigram/NNP):  0.898117048346056
+Accuracy on Test (4gram/NNP):  0.897913486005089
+Accuracy on Test (Perceptron):  0.8926208651399491
