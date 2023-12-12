@@ -60,7 +60,7 @@ def tagged_words(did=440):
     ORDER BY sid) as sent
     JOIN word on sent.sid=word.sid ORDER by word.sid, wid""", (did,))
   
-    words = list()
+    words = dd(list)
     for (sid, wid, word, lemma, pos, comment) in c:
         ##print (sid, wid, word, lemma, pos, comment)
         ok_clemma = ''
@@ -75,7 +75,8 @@ def tagged_words(did=440):
                 ok_tag = tag
             if cid in  sentiment[sid]:
                 ok_sentiment = sentiment[sid][cid] / 100
-        words.append((sid, wid,
+                
+        words[sid].append((wid,
                       word, lemma, pos,
                       ok_cid, ok_clemma, ok_tag, ok_sentiment,
                       comment))

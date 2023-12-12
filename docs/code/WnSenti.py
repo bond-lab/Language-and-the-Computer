@@ -11,8 +11,7 @@ import numpy as np
 import sys
 import re
 sentidata = "ntumc-senti.tsv"
-
-wn.download('https://github.com/omwn/omw-data/releases/download/v1.4/omw-en-1.4.tar.xz')
+wn.download('omw-en')
 wn = wn.Wordnet(lexicon='omw-en:1.4')
 prefix='omw-en'
 

@@ -3,8 +3,13 @@ import re
 import nltk
 import random
 import codecs
-#from urllib import request
-#f = request.urlopen('http://web.mysites.ntu.edu.sg/fcbond/open/pubs/enamdict').read().decode('utf-8')
+# from urllib import request
+
+# url = "https://bond-lab.github.io/Language-and-the-Computer/code/enamdict"
+# response = request.urlopen(url)
+# f = response.read().decode('utf-8')
+
+
 
 ### copy it locally to save time
 f = codecs.open('enamdict', encoding='utf8', mode='r')
