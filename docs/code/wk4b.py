@@ -12,8 +12,30 @@
 #       <li>Print counts of the modal verbs and the personal pronouns. 
 #   <li>Compare the counts for the two authors. Are there any clear
 # 	differences?
+
 import nltk
 from nltk.corpus import gutenberg
+##
+## Using Dictionaries
+##
+books = ['austen-persuasion.txt', 'melville-moby_dick.txt']
+stats = dict()
+words =dict()
+
+for f in books:
+  print(f)
+  words[f] = nltk.corpus.gutenberg.words(f)
+  stats[f] = nltk.FreqDist(words[f])
+
+modals = "can, could, may, might, must, will".split(', ')
+
+for m in modals:
+  print(f"{m:10} {100*stats[books[0]][m]/len(words[f]):5.3f}  {100*stats[books[1]][m]/len(words[f]):5.3f}")
+
+##
+## Using Conditional Frequency Distribution
+##
+
 pers = gutenberg.words('austen-persuasion.txt')
 cpers = [('Austen', w) for w in pers]
 moby = gutenberg.words('melville-moby_dick.txt')

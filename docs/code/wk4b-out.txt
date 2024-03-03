@@ -1,3 +1,11 @@
+austen-persuasion.txt
+melville-moby_dick.txt
+can        0.038  0.084
+could      0.170  0.082
+may        0.033  0.088
+might      0.064  0.070
+must       0.087  0.108
+will       0.062  0.145
 
 Modals
 
@@ -566,14 +574,14 @@ Compare everything with everything
 Highest similarity is 0.9859903381642512
 For:  [('bs', 'hr'), ('hr', 'bs')]
 Random Emma
-The distressing to hope , two young farmer !" She , truth . Warmth and applied to defend its impartiality .-- Talking about as before she seems long sentences : amazing match her reflections some 
+The plan to remove with forced on -- What were soon no doubts about eight persons came into . "' Tis a custom gone longer ; now lived above half this appeal ; better how 
 
 Random Moby
-The red - thirty separate plank thunders with extended hand ,-- quick phrensy . Lashed round jacket of stock , dotted with divineness ; she rechurned the pensive air -- poor plight than THAT shall 
+The Shark ," soliloquized at death his to THIS TABLET Is he yielded to another horn was swiftly but take in smoke ! how exceedingly brisk in tantalizing vicinity to snap ; or grooves ;-- 
 
 Random Emma and Moby
-The Gam . Thy coffin lid duly arrived to bound herself but Perry shall ye going that miserably . Shifting the bitterly sweating all connexions to occur there .-- Here palms now Gabriel , straining 
+The terror and mother ! Improving his proceedings in Mountains of Bowditch in when ye to wade through it disappeared in tolerable ;-- at nine miles in pleasure which instantly brought with halibut bones . 
 
 Random Emma and Moby with defaults
-Once a truer a summer must breed a peaked nose he ate in writing that 
+Once more valuable addition . Throwing aside at parting ; certainly will fix . Unwittingly 
 

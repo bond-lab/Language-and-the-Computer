@@ -53,16 +53,16 @@ brfd = nltk.FreqDist(w.lower() for w  in brown.words(categories="romance"))
 
 print()
 print("Print counts of the modal verbs and the wh-words.") 
-print("Compare the counts for the two genres. Are there any clear  differences?") 
-print("%-5s: %7s %7s" % ('word', 'news',  'romance'))
+print("Compare the counts for the two genres. Are there any clear differences?\n") 
+print("Word    News  Romance")
 for w in modals+whs:
-	print("%-5s: %7d %7d" % (w, bnfd[w],  brfd[w]))
+	print(f"{w:5} {bnfd[w]:7d} {brfd[w]:7}")
 
 print()
 print("Better to normalize for comparison (divide by number of words)")
 print("%-5s: %7s %7s (in words/thousand)" % ('word', 'news',  'rom'))
 for w in modals+whs:
-	print("%-5s: %7.3f %7.3f" % (w, 1000.0* bnfd[w] / bnfd.N(),  1000.0*brfd[w] / brfd.N()))
+	print(f"{w:7}  {1000.0* bnfd[w] / bnfd.N():5.3}   {1000.0*brfd[w] / brfd.N():5.3}")
 
 print()
 print("Swadesh Lists")

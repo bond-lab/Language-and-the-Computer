@@ -6,7 +6,7 @@ How many times does the word persuasion occur?
 1
 Make a concordance for 'persuasion' in the novel.
 Displaying 7 of 7 matches:
-                                  Persuasion by Jane Austen 1818 ] Chapter 1 S
+[ Persuasion by Jane Austen 1818 ] Chapter 1 S
  It had been the effect of over - persuasion . It had been weakness and timidi
 pally in poetry ; and besides the persuasion of having given him at least an e
 looks , that the same unfortunate persuasion , which had hastened him away fro
@@ -46,35 +46,36 @@ who 268
 Make a frequency distribution for the "romance" category.
 
 Print counts of the modal verbs and the wh-words.
-Compare the counts for the two genres. Are there any clear  differences?
-word :    news romance
-can  :      94      79
-could:      87     195
-may  :      93      11
-might:      38      51
-must :      53      46
-will :     389      49
-what :      95     171
-when :     169     163
-how  :      42      77
-why  :      14      62
-where:      59      58
-who  :     268      95
+Compare the counts for the two genres. Are there any clear differences?
+
+Word    News  Romance
+can        94      79
+could      87     195
+may        93      11
+might      38      51
+must       53      46
+will      389      49
+what       95     171
+when      169     163
+how        42      77
+why        14      62
+where      59      58
+who       268      95
 
 Better to normalize for comparison (divide by number of words)
 word :    news     rom (in words/thousand)
-can  :   0.935   1.128
-could:   0.865   2.785
-may  :   0.925   0.157
-might:   0.378   0.728
-must :   0.527   0.657
-will :   3.869   0.700
-what :   0.945   2.442
-when :   1.681   2.328
-how  :   0.418   1.100
-why  :   0.139   0.885
-where:   0.587   0.828
-who  :   2.665   1.357
+can      0.935    1.13
+could    0.865    2.78
+may      0.925   0.157
+might    0.378   0.728
+must     0.527   0.657
+will      3.87     0.7
+what     0.945    2.44
+when      1.68    2.33
+how      0.418     1.1
+why      0.139   0.885
+where    0.587   0.828
+who       2.67    1.36
 
 Swadesh Lists
 I; ich; je
