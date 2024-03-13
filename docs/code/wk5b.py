@@ -62,14 +62,69 @@ for word in ['python', 'marathon']:
 
 ### And of course: http://en.wiktionary.org/wiki/Rhymes:English
 
-# ★ Write a function that converts Arbabet to IPA
-# Use it to print the pronunciations of python and marathon
+print ("\nWordnet\n")
+
+print("\n\nLook up wordnet using the wn module\n\n")
+
+import wn
+
+wn.download('omw:1.4') ### all languages
+wnen = wn.Wordnet('omw-en:1.4')
+
+def show(ss):
+    print (ss.id, ss.lemmas())
+
+print("Synsets for bird")
+for ss in wnen.synsets('bird'):
+    show(ss)
+
+print ("\n\n# of senses for bird:", len(wnen.synsets('bird')))
+
+#     How deep in the hierarchy and what are the definitions?
+
+print ("\n\nDepth in hierarchy and definition")
+for s in wnen.synsets('bird'):
+    print (s.id, s.min_depth(), s.definition(), sep='\t')
+
+print ("\n\nPrint Translations")
+
+for t in wnen.synsets('bird')[0].translate():
+    print(t.lexicon().language,
+          t.lemmas())
+
+print ("\n\nNote my machine has some extra wordnets, so the number of languages may be different from you")
+    
+#     For each synset, print out each lemma and its frequency (hint freqency of a lemma is given by lemma.count)
+
+print ("\n\nPrint Lemma and frequency (sum of counts)")
+for ss in wnen.synsets('bird'):
+    print(ss)
+    for s in ss.senses():
+        print (s.id, sum(s.counts()))
+    print()
+    
+#     Give the total frequency for each synset 
+
+print ("\n\nTotal frequency for each synset")
+for ss in wn.synsets('bird'):
+    print (ss.id, sum(sum(s.counts()) for s in ss.senses()),
+           ss.lemmas(), ss.definition())
+    
+
+
+
+###
+### NLTK
+###
+
+print("\n\nLook up wordnet using nltk\n\n")
 
 # Load wordnet inside python.
 
 from nltk.corpus import wordnet as wn
+def show(ss):
+    print (ss.id, ss.lemmas())
 
-print ("\nWordnet\n")
 
 #     Look at the different synsets for bird.
 
@@ -193,3 +248,63 @@ rhymes('hammer', cmu)
 rhymes('accident', cmu)
 
 rhymes('eye', cmu)
+
+# ★ Write a function that converts Arbabet to IPA
+# Use it to print the pronunciations of python and marathon
+
+###
+### Map cmudict to IPA, thanks to Kateřina Chrápková for the first version!
+###
+
+_MAP_ARPA_IPA = {"AA": "ɑ", "AE": "æ", "AH": "ʌ", "AO": "ɔ","AW": "aʊ",
+                "AX": "ə", "AXR": "ɚ", "AY": "aɪ", "EH": "ɛ", "ER": "ɝ",
+                "EY": "eɪ", "IH": "ɪ", "IX": "ɨ", "IY": "i", "OW": "oʊ",
+                "OY": "ɔɪ", "UH": "ʊ", "UW": "u", "UX": "ʉ", "B": "b",
+                "CH": "tʃ", "D": "d", "DH": "ð", "DX": "ɾ", "EL": "l̩",
+                "EM": "m̩", "EN": "n̩", "F": "f", "G": "ɡ", "HH": "h",
+                "H": "h", "JH": "dʒ", "K": "k", "L": "l", "M": "m",
+                "N": "n", "NG": "ŋ", "NX": "ɾ̃", "P": "p", "Q": "ʔ",
+                "R": "ɹ", "S": "s", "SH": "ʃ", "T": "t", "TH": "θ",
+                "V": "v", "W": "w", "WH": "ʍ", "Y": "j", "Z": "z",
+                "ZH": "ʒ"}
+
+_MAP_ARPA_AUX = { 
+    "0": "⁰", "1": "¹", "2": "²", "3": "³", "4": "⁴", 
+    "5": "⁵", "6": "⁶", "7": "⁷", "8": "⁸", "9": "⁹", 
+    "-": "-",   "!": "!", "+": "+",
+    "/": "/",   "#": "#", ":": ":"} 
+
+def arpa2ipa(tag, mapping, aux_map):
+  """
+  function definition:
+  --> takes an Arpabet tag and maps into IPA
+  stress is shown as a superscript
+
+  >>> arpa2ipa("AA", _MAP_ARPA_IPA, _MAP_ARPA_AUX)
+  "ɑ"
+  >>> arpa2ipa("IY0", _MAP_ARPA_IPA, _MAP_ARPA_AUX)
+  "i⁰"
+  """
+  if tag[-1] in aux_map:
+    assert tag[:-1] in mapping, f"Unexpected arpabet: {tag[:-1]}"
+    return mapping[tag[:-1]] + aux_map[tag[-1]]
+  else: 
+    assert tag in mapping, f"Unexpected arpabet: {tag}"
+    return mapping[tag]
+
+green = ["G", "R", "IY0", "N"]
+
+print(green, [arpa2ipa(l, _MAP_ARPA_IPA, _MAP_ARPA_AUX) for l in green ])
+
+
+###
+### Let's look at the last ten words
+###
+
+
+print("Pronunciation of the last ten words in cmudict, shown as IPA")
+
+for w, p in pron[-10:]:
+  print(w, 
+        "".join(arpa2ipa(l, _MAP_ARPA_IPA, _MAP_ARPA_AUX) for l in p), 
+        p, sep = '\t')

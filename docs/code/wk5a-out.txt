@@ -45118,6 +45118,293 @@ zsa-zsa ['ZH', 'AA1', 'ZH', 'AA2']
 zsazsa ['ZH', 'AA1', 'ZH', 'AA2']
 zschau ['ZH', 'AW1']
 [(('c', 'K'), 8591), (('h', 'HH'), 6270), (('s', 'SH'), 2300), (('a', 'AE1'), 1938), (('a', 'AH0'), 1865), (('e', 'EH1'), 1648), (('i', 'IH0'), 1516), (('j', 'JH'), 1440), (('c', 'CH'), 1243), (('e', 'IH0'), 1148), (('i', 'IH1'), 850), (('c', 'S'), 763), (('g', 'JH'), 700), (('t', 'TH'), 643), (('o', 'OW1'), 641), (('u', 'AH0'), 635), (('a', 'AA1'), 608), (('i', 'IH2'), 600), (('a', 'AE2'), 566), (('a', 'AA0'), 521)]
+Look up wordnet using the wn module
+Synset for student and its hypnonyms
+omw-en-10665698-n ['student', 'pupil', 'educatee']
+Hyponyms: 
+omw-en-09813351-n ['art student']
+omw-en-09823153-n ['auditor']
+omw-en-09901502-n ['catechumen', 'neophyte']
+omw-en-09937056-n ['collegian', 'college man', 'college boy']
+omw-en-09975933-n ['crammer']
+omw-en-10066206-n ['Etonian']
+omw-en-10218043-n ['Ivy Leaguer']
+omw-en-10249869-n ['law student']
+omw-en-10283366-n ['major']
+omw-en-10306181-n ['medical student', 'medico']
+omw-en-10361901-n ['nonreader']
+omw-en-10388321-n ['overachiever']
+omw-en-10404426-n ['passer']
+omw-en-10558773-n ['scholar']
+omw-en-10578162-n ['seminarian', 'seminarist']
+omw-en-10604275-n ['sixth-former']
+omw-en-10607824-n ['skipper']
+omw-en-10736394-n ['underachiever', 'underperformer', 'nonachiever']
+omw-en-10784922-n ['withdrawer']
+omw-en-10801561-n ['Wykehamist']
+
+
+omw-en-10557854-n ['scholar', 'scholarly person', 'bookman', 'student']
+Hyponyms: 
+omw-en-09759311-n ['academician', 'schoolman']
+omw-en-09786338-n ['alumnus', 'alumna', 'alum', 'graduate', 'grad']
+omw-en-09802951-n ['Arabist']
+omw-en-09852558-n ['bibliographer']
+omw-en-09852679-n ['bibliophile', 'booklover', 'book lover']
+omw-en-09885416-n ['Cabalist', 'Kabbalist']
+omw-en-10021892-n ['doctor', 'Dr.']
+omw-en-10137632-n ['goliard']
+omw-en-10177150-n ['historian', 'historiographer']
+omw-en-10191192-n ['humanist']
+omw-en-10206887-n ['initiate', 'learned person', 'pundit', 'savant']
+omw-en-10217335-n ['Islamist']
+omw-en-10258786-n ['licentiate']
+omw-en-10297655-n ['Masorete', 'Massorete', 'Masorite']
+omw-en-10298798-n ['master']
+omw-en-10337913-n ['mujtihad']
+omw-en-10341243-n ['musicologist']
+omw-en-10411356-n ['pedant', 'bookworm', 'scholastic']
+omw-en-10423514-n ['philomath']
+omw-en-10423589-n ['philosopher']
+omw-en-10456696-n ['postdoc', 'post doc']
+omw-en-10508710-n ['reader']
+omw-en-10520109-n ['Renaissance man']
+omw-en-10520286-n ['Renaissance man', 'generalist']
+omw-en-10549315-n ['salutatorian', 'salutatory speaker']
+omw-en-10559009-n ['scholiast']
+omw-en-10559683-n ['Schoolman', 'medieval Schoolman']
+omw-en-10586166-n ['Shakespearian', 'Shakespearean']
+omw-en-10601234-n ['Sinologist']
+omw-en-10705615-n ['theologian', 'theologist', 'theologizer', 'theologiser']
+omw-en-10745006-n ['valedictorian', 'valedictory speaker']
+omw-en-10747294-n ['Vedist']
+omw-en-10915025-n ['Crichton', 'James Crichton', 'The Admirable Crichton']
+omw-en-11138681-n ["Lorenzo de'Medici", 'Lorenzo the Magnificent']
+omw-en-11152122-n ['Malone', 'Edmund Malone', 'Edmond Malone']
+omw-en-11361039-n ['Varro', 'Marcus Terentius Varro']
+
+
+Synset for student and its hypernyms
+omw-en-10665698-n ['student', 'pupil', 'educatee']
+Hypernyms: 
+omw-en-10059162-n ['enrollee']
+
+
+omw-en-10557854-n ['scholar', 'scholarly person', 'bookman', 'student']
+Hypernyms: 
+omw-en-09621545-n ['intellectual', 'intellect']
+
+
+Synset for professor its hypernyms
+omw-en-10480730-n ['professor', 'prof']
+Hypernyms: 
+omw-en-09759069-n ['academician', 'academic', 'faculty member']
+
+
+Some size adjectives and their antonyms
+omw-en-01382086-a ['large', 'big']
+omw-en-large-01382086-a ['large']
+<=>  omw-en-small-01391351-a ['small']
+omw-en-big-01382086-a ['big', 'bigger', 'biggest']
+<=>  omw-en-little-01391351-a ['little']
+
+omw-en-01276872-s ['big']
+omw-en-big-01276872-s ['big', 'bigger', 'biggest']
+
+omw-en-01510444-s ['bad', 'big']
+omw-en-bad-01510444-s ['bad', 'worse', 'worst']
+omw-en-big-01510444-s ['big', 'bigger', 'biggest']
+
+omw-en-01453084-s ['big']
+omw-en-big-01453084-s ['big', 'bigger', 'biggest']
+
+omw-en-00579622-s ['big', 'large', 'prominent']
+omw-en-big-00579622-s ['big', 'bigger', 'biggest']
+omw-en-large-00579622-s ['large']
+omw-en-prominent-00579622-s ['prominent']
+
+omw-en-02402439-s ['big', 'heavy']
+omw-en-big-02402439-s ['big', 'bigger', 'biggest']
+omw-en-heavy-02402439-s ['heavy', 'heavier', 'heaviest']
+
+omw-en-01890752-s ['boastful', 'braggart', 'bragging', 'braggy', 'big', 'cock-a-hoop', 'crowing', 'self-aggrandizing', 'self-aggrandising']
+omw-en-boastful-01890752-s ['boastful']
+omw-en-braggart-01890752-s ['braggart']
+omw-en-bragging-01890752-s ['bragging']
+omw-en-braggy-01890752-s ['braggy']
+omw-en-big-01890752-s ['big', 'bigger', 'biggest']
+omw-en-cock--a--hoop-01890752-s ['cock-a-hoop']
+omw-en-crowing-01890752-s ['crowing']
+omw-en-self--aggrandizing-01890752-s ['self-aggrandizing']
+omw-en-self--aggrandising-01890752-s ['self-aggrandising']
+
+omw-en-01890187-s ['big', 'swelled', 'vainglorious']
+omw-en-big-01890187-s ['big', 'bigger', 'biggest']
+omw-en-swelled-01890187-s ['swelled']
+omw-en-vainglorious-01890187-s ['vainglorious']
+
+omw-en-01488616-s ['adult', 'big', 'full-grown', 'fully grown', 'grown', 'grownup']
+omw-en-adult-01488616-s ['adult']
+omw-en-big-01488616-s ['big', 'bigger', 'biggest']
+omw-en-full--grown-01488616-s ['full-grown']
+omw-en-fully_grown-01488616-s ['fully grown']
+omw-en-grown-01488616-s ['grown']
+omw-en-grownup-01488616-s ['grownup']
+
+omw-en-01191780-s ['big']
+omw-en-big-01191780-s ['big', 'bigger', 'biggest']
+
+omw-en-01114658-s ['big', 'large', 'magnanimous']
+omw-en-big-01114658-s ['big', 'bigger', 'biggest']
+omw-en-large-01114658-s ['large']
+omw-en-magnanimous-01114658-s ['magnanimous']
+
+omw-en-01111418-s ['big', 'bighearted', 'bounteous', 'bountiful', 'freehanded', 'handsome', 'giving', 'liberal', 'openhanded']
+omw-en-big-01111418-s ['big', 'bigger', 'biggest']
+omw-en-bighearted-01111418-s ['bighearted']
+omw-en-bounteous-01111418-s ['bounteous']
+omw-en-bountiful-01111418-s ['bountiful']
+omw-en-freehanded-01111418-s ['freehanded']
+omw-en-handsome-01111418-s ['handsome']
+omw-en-giving-01111418-s ['giving']
+omw-en-liberal-01111418-s ['liberal']
+omw-en-openhanded-01111418-s ['openhanded']
+
+omw-en-00173391-s ['big', 'enceinte', 'expectant', 'gravid', 'great', 'large', 'heavy', 'with child']
+omw-en-big-00173391-s ['big', 'bigger', 'biggest']
+omw-en-enceinte-00173391-s ['enceinte']
+omw-en-expectant-00173391-s ['expectant']
+omw-en-gravid-00173391-s ['gravid']
+omw-en-great-00173391-s ['great']
+omw-en-large-00173391-s ['large']
+omw-en-heavy-00173391-s ['heavy', 'heavier', 'heaviest']
+omw-en-with_child-00173391-s ['with child']
+
+omw-en-00226054-r ['big']
+omw-en-big-00226054-r ['big']
+
+omw-en-00225672-r ['boastfully', 'vauntingly', 'big', 'large']
+omw-en-boastfully-00225672-r ['boastfully']
+omw-en-vauntingly-00225672-r ['vauntingly']
+omw-en-big-00225672-r ['big']
+omw-en-large-00225672-r ['large']
+
+omw-en-00225892-r ['big']
+omw-en-big-00225892-r ['big']
+<=>  omw-en-small-00225971-r ['small']
+
+omw-en-00225805-r ['big']
+omw-en-big-00225805-r ['big']
+
+
+omw-en-01382086-a ['large', 'big']
+omw-en-large-01382086-a ['large']
+<=>  omw-en-small-01391351-a ['small']
+omw-en-big-01382086-a ['big', 'bigger', 'biggest']
+<=>  omw-en-little-01391351-a ['little']
+
+omw-en-02163307-s ['large']
+omw-en-large-02163307-s ['large']
+
+omw-en-02016881-s ['bombastic', 'declamatory', 'large', 'orotund', 'tumid', 'turgid']
+omw-en-bombastic-02016881-s ['bombastic']
+omw-en-declamatory-02016881-s ['declamatory']
+omw-en-large-02016881-s ['large']
+omw-en-orotund-02016881-s ['orotund']
+omw-en-tumid-02016881-s ['tumid']
+omw-en-turgid-02016881-s ['turgid']
+
+omw-en-01114658-s ['big', 'large', 'magnanimous']
+omw-en-big-01114658-s ['big', 'bigger', 'biggest']
+omw-en-large-01114658-s ['large']
+omw-en-magnanimous-01114658-s ['magnanimous']
+
+omw-en-00579622-s ['big', 'large', 'prominent']
+omw-en-big-00579622-s ['big', 'bigger', 'biggest']
+omw-en-large-00579622-s ['large']
+omw-en-prominent-00579622-s ['prominent']
+
+omw-en-00527870-s ['large']
+omw-en-large-00527870-s ['large']
+
+omw-en-00173391-s ['big', 'enceinte', 'expectant', 'gravid', 'great', 'large', 'heavy', 'with child']
+omw-en-big-00173391-s ['big', 'bigger', 'biggest']
+omw-en-enceinte-00173391-s ['enceinte']
+omw-en-expectant-00173391-s ['expectant']
+omw-en-gravid-00173391-s ['gravid']
+omw-en-great-00173391-s ['great']
+omw-en-large-00173391-s ['large']
+omw-en-heavy-00173391-s ['heavy', 'heavier', 'heaviest']
+omw-en-with_child-00173391-s ['with child']
+
+omw-en-05096191-n ['large']
+omw-en-large-05096191-n ['large']
+
+omw-en-00386393-r ['large']
+omw-en-large-00386393-r ['large']
+
+omw-en-00386307-r ['large']
+omw-en-large-00386307-r ['large']
+
+omw-en-00225672-r ['boastfully', 'vauntingly', 'big', 'large']
+omw-en-boastfully-00225672-r ['boastfully']
+omw-en-vauntingly-00225672-r ['vauntingly']
+omw-en-big-00225672-r ['big']
+omw-en-large-00225672-r ['large']
+
+
+omw-en-01386883-s ['great']
+omw-en-great-01386883-s ['great']
+
+omw-en-01278818-s ['great', 'outstanding']
+omw-en-great-01278818-s ['great']
+omw-en-outstanding-01278818-s ['outstanding']
+
+omw-en-01677433-s ['great']
+omw-en-great-01677433-s ['great']
+
+omw-en-01123879-s ['bang-up', 'bully', 'corking', 'cracking', 'dandy', 'great', 'groovy', 'keen', 'neat', 'nifty', 'not bad', 'peachy', 'slap-up', 'swell', 'smashing']
+omw-en-bang--up-01123879-s ['bang-up']
+omw-en-bully-01123879-s ['bully']
+omw-en-corking-01123879-s ['corking']
+omw-en-cracking-01123879-s ['cracking']
+omw-en-dandy-01123879-s ['dandy', 'dandier', 'dandiest']
+omw-en-great-01123879-s ['great']
+omw-en-groovy-01123879-s ['groovy', 'groovier', 'grooviest']
+omw-en-keen-01123879-s ['keen']
+omw-en-neat-01123879-s ['neat']
+omw-en-nifty-01123879-s ['nifty', 'niftier', 'niftiest']
+omw-en-not_bad-01123879-s ['not bad']
+omw-en-peachy-01123879-s ['peachy', 'peachier', 'peachiest']
+omw-en-slap--up-01123879-s ['slap-up']
+omw-en-swell-01123879-s ['swell']
+omw-en-smashing-01123879-s ['smashing']
+
+omw-en-01467919-s ['capital', 'great', 'majuscule']
+omw-en-capital-01467919-s ['capital']
+omw-en-great-01467919-s ['great']
+omw-en-majuscule-01467919-s ['majuscule']
+
+omw-en-00173391-s ['big', 'enceinte', 'expectant', 'gravid', 'great', 'large', 'heavy', 'with child']
+omw-en-big-00173391-s ['big', 'bigger', 'biggest']
+omw-en-enceinte-00173391-s ['enceinte']
+omw-en-expectant-00173391-s ['expectant']
+omw-en-gravid-00173391-s ['gravid']
+omw-en-great-00173391-s ['great']
+omw-en-large-00173391-s ['large']
+omw-en-heavy-00173391-s ['heavy', 'heavier', 'heaviest']
+omw-en-with_child-00173391-s ['with child']
+
+omw-en-10145081-n ['great']
+omw-en-great-10145081-n ['great']
+
+
+big sister
+omw-en-09854218-n ['big sister']
+big toe
+omw-en-05577741-n ['big toe', 'great toe', 'hallux']
+great toe
+omw-en-05577741-n ['big toe', 'great toe', 'hallux']
 Synset('student.n.01')
 Hyponyms: 
 Synset('art_student.n.01')

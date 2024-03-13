@@ -149,9 +149,88 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 <span class="c1">#print([(w[0], l[0]) for (w, l) in cmu if w[0] != l[0].lower()][:10]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">nltk</span><span class="o">.</span><span class="n">FreqDist</span><span class="p">([(</span><span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span> <span class="ow">in</span> <span class="n">cmu</span> <span class="k">if</span> <span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()])</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
 
-<span class="c1">##</span>
-<span class="c1">## Better to split into syllables</span>
-<span class="c1">##</span>
+<span class="c1">###</span>
+<span class="c1">### I like the new wn module</span>
+<span class="c1">###</span>
+<span class="c1">### you may have to install it</span>
+<span class="c1">### pip install wn</span>
+<span class="c1">###</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Look up wordnet using the wn module&quot;</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">wn</span>
+
+<span class="n">wn</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;omw-en:1.4&#39;</span><span class="p">)</span>
+<span class="n">wnen</span> <span class="o">=</span> <span class="n">wn</span><span class="o">.</span><span class="n">Wordnet</span><span class="p">(</span><span class="s1">&#39;omw-en:1.4&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="n">ss</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">ss</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">ss</span><span class="o">.</span><span class="n">lemmas</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Synset for student and its hypnonyms&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">ss</span> <span class="ow">in</span> <span class="n">wnen</span><span class="o">.</span><span class="n">synsets</span><span class="p">(</span><span class="s1">&#39;student&#39;</span><span class="p">):</span>
+    <span class="n">show</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hyponyms: &quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">ss</span><span class="o">.</span><span class="n">hyponyms</span><span class="p">():</span>
+        <span class="n">show</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Synset for student and its hypernyms&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">ss</span> <span class="ow">in</span> <span class="n">wnen</span><span class="o">.</span><span class="n">synsets</span><span class="p">(</span><span class="s1">&#39;student&#39;</span><span class="p">):</span>
+    <span class="n">show</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hypernyms: &quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">ss</span><span class="o">.</span><span class="n">hypernyms</span><span class="p">():</span>
+        <span class="n">show</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">()</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Synset for professor its hypernyms&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">ss</span> <span class="ow">in</span> <span class="n">wnen</span><span class="o">.</span><span class="n">synsets</span><span class="p">(</span><span class="s1">&#39;professor&#39;</span><span class="p">):</span>
+    <span class="n">show</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hypernyms: &quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">ss</span><span class="o">.</span><span class="n">hypernyms</span><span class="p">():</span>
+        <span class="n">show</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Some size adjectives and their antonyms&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;big&#39;</span><span class="p">,</span> <span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="s1">&#39;great&#39;</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">ss</span> <span class="ow">in</span> <span class="n">wnen</span><span class="o">.</span><span class="n">synsets</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+        <span class="n">show</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">ss</span><span class="o">.</span><span class="n">senses</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">word</span><span class="p">()</span><span class="o">.</span><span class="n">forms</span><span class="p">())</span>
+            <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">get_related</span><span class="p">(</span><span class="s1">&#39;antonym&#39;</span><span class="p">):</span>
+                <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;&lt;=&gt; &#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">word</span><span class="p">()</span><span class="o">.</span><span class="n">forms</span><span class="p">())</span>
+        <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="s2">&quot;big/large/great&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">):</span> 
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="s2">&quot;sister/uncle/toe&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">):</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">if</span> <span class="n">wnen</span><span class="o">.</span><span class="n">synsets</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">wnen</span><span class="o">.</span><span class="n">synsets</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+                <span class="n">show</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="c1">###</span>
+<span class="c1">### Or you can use nltk</span>
+<span class="c1">###</span>
 
 <span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">wordnet</span> <span class="k">as</span> <span class="n">wn</span>
 

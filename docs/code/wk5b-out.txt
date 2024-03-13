@@ -16,6 +16,140 @@ These words rhyme with it (assuming last three phonemes are ok):
 
 Wordnet
 
+
+
+Look up wordnet using the wn module
+
+
+Synsets for bird
+omw-en-01503061-n ['bird']
+omw-en-07644382-n ['bird', 'fowl']
+omw-en-09989045-n ['dame', 'doll', 'wench', 'skirt', 'chick', 'bird']
+omw-en-07123870-n ['boo', 'hoot', 'Bronx cheer', 'hiss', 'raspberry', 'razzing', 'razz', 'snort', 'bird']
+omw-en-04212282-n ['shuttlecock', 'bird', 'birdie', 'shuttle']
+omw-en-01139865-v ['bird', 'birdwatch']
+
+
+# of senses for bird: 6
+
+
+Depth in hierarchy and definition
+omw-en-01503061-n	9	warm-blooded egg-laying vertebrates characterized by feathers and forelimbs modified as wings
+omw-en-07644382-n	6	the flesh of a bird or fowl (wild or domestic) used as food
+omw-en-09989045-n	7	informal terms for a (young) woman
+omw-en-07123870-n	6	a cry or noise made to express displeasure or contempt
+omw-en-04212282-n	9	badminton equipment consisting of a ball of cork or rubber with a crown of feathers
+omw-en-01139865-v	2	watch and study birds in their natural habitat
+
+
+Print Translations
+sv ['fågel']
+eu ['hegazti', 'txori']
+ja ['バード', '小鳥', '禽鳥', '飛禽', '鳥', '鳥類']
+ro ['pasăre']
+sq ['zogj']
+en ['bird']
+da ['fugl', 'pipfugl', 'piphans']
+lt ['paukštis']
+es ['ave', 'aves', 'pájaro']
+hr ['ptica']
+fr ['oiseau']
+nb ['fugl']
+bg ['птица']
+gl ['ave']
+cmn-Hans ['禽', '雀', '鸟', '鸟类']
+it ['uccello', 'pennuto', 'volatile', 'volativo', 'volatio']
+arb ['طائِر', 'طيْر']
+pl ['ptak']
+el ['πουλί', 'πτηνό']
+it ['pennuto', 'volatile', 'uccello', 'augello']
+nn ['fugl']
+id ['unggas', 'burung']
+is ['fugl']
+ca ['au', 'ocell']
+sk ['vták']
+fi ['lintu']
+nl ['vogel', 'vogeltje']
+sl ['ptica', 'ptič']
+th ['นก', 'วิหค', 'ปักษา', 'สกุณา']
+pt ['ave', 'pássaro']
+zsm ['unggas', 'burung']
+en ['bird']
+uz ['qush', 'parranda']
+en ['bird']
+ja ['バード', '小鳥', '禽鳥', '飛禽', '鳥', '鳥類']
+ja ['バード', '小鳥', '禽鳥', '飛禽', '鳥', '鳥類']
+ja ['バード', '小鳥', '禽鳥', '飛禽', '鳥', '鳥類']
+cmn-Hans ['雀', '禽', '鸟', '鸟类']
+vi ['chim', 'con chim']
+
+
+Note my machine has some extra wordnets, so the number of languages may be different from you
+
+
+Print Lemma and frequency (sum of counts)
+Synset('omw-en-01503061-n')
+omw-en-bird-01503061-n 29
+
+Synset('omw-en-07644382-n')
+omw-en-bird-07644382-n 1
+omw-en-fowl-07644382-n 0
+
+Synset('omw-en-09989045-n')
+omw-en-dame-09989045-n 1
+omw-en-doll-09989045-n 0
+omw-en-wench-09989045-n 0
+omw-en-skirt-09989045-n 0
+omw-en-chick-09989045-n 0
+omw-en-bird-09989045-n 0
+
+Synset('omw-en-07123870-n')
+omw-en-boo-07123870-n 0
+omw-en-hoot-07123870-n 0
+omw-en-Bronx_cheer-07123870-n 0
+omw-en-hiss-07123870-n 0
+omw-en-raspberry-07123870-n 0
+omw-en-razzing-07123870-n 0
+omw-en-razz-07123870-n 0
+omw-en-snort-07123870-n 0
+omw-en-bird-07123870-n 0
+
+Synset('omw-en-04212282-n')
+omw-en-shuttlecock-04212282-n 0
+omw-en-bird-04212282-n 0
+omw-en-birdie-04212282-n 0
+omw-en-shuttle-04212282-n 0
+
+Synset('omw-en-01139865-v')
+omw-en-bird-01139865-v 0
+omw-en-birdwatch-01139865-v 0
+
+
+
+Total frequency for each synset
+omw-en-01503061-n 29 ['bird'] warm-blooded egg-laying vertebrates characterized by feathers and forelimbs modified as wings
+omw-en-07644382-n 1 ['bird', 'fowl'] the flesh of a bird or fowl (wild or domestic) used as food
+omw-en-09989045-n 1 ['dame', 'doll', 'wench', 'skirt', 'chick', 'bird'] informal terms for a (young) woman
+omw-en-07123870-n 0 ['boo', 'hoot', 'Bronx cheer', 'hiss', 'raspberry', 'razzing', 'razz', 'snort', 'bird'] a cry or noise made to express displeasure or contempt
+omw-en-04212282-n 0 ['shuttlecock', 'bird', 'birdie', 'shuttle'] badminton equipment consisting of a ball of cork or rubber with a crown of feathers
+omw-en-01139865-v 0 ['bird', 'birdwatch'] watch and study birds in their natural habitat
+pwn-01503061-n 0 ['bird'] warm-blooded egg-laying vertebrates characterized by feathers and forelimbs modified as wings
+pwn-04212282-n 0 ['bird', 'shuttle', 'shuttlecock', 'birdie'] badminton equipment consisting of a ball of cork or rubber with a crown of feathers
+pwn-07123870-n 0 ['hiss', 'hoot', 'boo', 'bird', 'Bronx cheer', 'razzing', 'snort', 'raspberry', 'razz'] a cry or noise made to express displeasure or contempt
+pwn-07644382-n 0 ['bird', 'fowl'] the flesh of a bird or fowl (wild or domestic) used as food
+pwn-09989045-n 0 ['dame', 'wench', 'skirt', 'chick', 'bird', 'doll'] informal terms for a (young) woman
+pwn-01139865-v 0 ['birdwatch', 'bird'] watch and study birds in their natural habitat
+oewn-01505702-n 0 ['bird'] warm-blooded egg-laying vertebrates characterized by feathers and forelimbs modified as wings
+oewn-07659991-n 0 ['bird', 'fowl'] the flesh of a bird or fowl (wild or domestic) used as food
+oewn-10008583-n 0 ['doll', 'bird', 'skirt', 'dame', 'wench', 'chick'] informal terms for a (young) woman
+oewn-07138578-n 0 ['bird', 'hoot', 'raspberry', 'razzing', 'hiss', 'Bronx cheer', 'razz', 'snort', 'boo'] a cry or noise made to express displeasure or contempt
+oewn-04219349-n 0 ['birdie', 'shuttle', 'shuttlecock', 'bird'] badminton equipment consisting of a ball of cork or rubber with a crown of feathers
+oewn-01142291-v 0 ['birdwatch', 'bird'] watch and study birds in their natural habitat
+
+
+Look up wordnet using nltk
+
+
 Synsets for bird:
 [Synset('bird.n.01'), Synset('bird.n.02'), Synset('dame.n.01'), Synset('boo.n.01'), Synset('shuttlecock.n.01'), Synset('bird.v.01')]
 # of senses for bird: 6
@@ -620,3 +754,15 @@ y. ['W', 'AY1']
 yie ['Y', 'AY1']
 zhuhai ['Z', 'UW1', 'HH', 'AY1']
 
+['G', 'R', 'IY0', 'N'] ['ɡ', 'ɹ', 'i⁰', 'n']
+Pronunciation of the last ten words in cmudict, shown as IPA
+zylstra	zɪ¹lstɹʌ⁰	['Z', 'IH1', 'L', 'S', 'T', 'R', 'AH0']
+zyman	zaɪ¹mʌ⁰n	['Z', 'AY1', 'M', 'AH0', 'N']
+zynda	zɪ¹ndʌ⁰	['Z', 'IH1', 'N', 'D', 'AH0']
+zysk	zaɪ¹sk	['Z', 'AY1', 'S', 'K']
+zyskowski	zɪ⁰skɔ¹fski⁰	['Z', 'IH0', 'S', 'K', 'AO1', 'F', 'S', 'K', 'IY0']
+zyuganov	zju¹ɡɑ⁰nɑ⁰v	['Z', 'Y', 'UW1', 'G', 'AA0', 'N', 'AA0', 'V']
+zyuganov	zu¹ɡɑ⁰nɑ⁰v	['Z', 'UW1', 'G', 'AA0', 'N', 'AA0', 'V']
+zyuganov's	zju¹ɡɑ⁰nɑ⁰vz	['Z', 'Y', 'UW1', 'G', 'AA0', 'N', 'AA0', 'V', 'Z']
+zyuganov's	zu¹ɡɑ⁰nɑ⁰vz	['Z', 'UW1', 'G', 'AA0', 'N', 'AA0', 'V', 'Z']
+zywicki	zɪ⁰wɪ¹ki⁰	['Z', 'IH0', 'W', 'IH1', 'K', 'IY0']
