@@ -9,7 +9,10 @@
 ##
 from urllib import request
 import nltk 
+nltk.download('book')
+
 ## Read
+
 
 ### Note URL has changed since the book was published
 #url = "http://www.gutenberg.org/cache/epub/1661/pg1661.txt"
