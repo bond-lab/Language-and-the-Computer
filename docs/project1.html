@@ -17,22 +17,32 @@
 <h1>LAC: Language and the Computer</h1>
 
 
-<h2>Project 1: Sentiment in a Semantic Network</h2>
+<h2>Project 1: Japanese names</h2>
 
 <p>This project constitutes 30% of your final grade
 for <a href='index.html'>LAC</a>.  Please work on the final
 program and report individually.
 
 <p>You will be given some name data from the website
-  <a href=''>Heisei Namae Jiten</a> and use the
-  <a href=''>jamdict module</a> for accessing Jim Breen's kanjidic.
+  <a href='https://www.namaejiten.com/'>Heisei Namae Jiten</a> and use the
+  <a href='https://github.com/neocl/jamdict'>jamdict module</a> for accessing Jim Breen's kanjidic.
 
   
 <p>There is a some scaffolding to help you get started: Here is the
-  code in collab: <a href='https://colab.research.google.com/drive/1h0FmMEErb4saEgT_d_OCARcyPKHWo30D?usp=sharing'>2024-project1.ipynb</a>, and here is the data it
+  code in collab: <a href='https://colab.research.google.com/drive/1h0FmMEErb4saEgT_d_OCARcyPKHWo30D?usp=sharing'>2024-project1.ipynb</a>, and here is the data you
   needs <a href='names.tsv'>names.tsv</a>.   Please feel free to extend
   this or start from scratch as you prefer.
+
+<p><tt>names.tsv</tt> has the following columns:
+  <pre>
+type    year    rank    name     frequency
+boy     1       1       翔太     4639
+</pre>
+<p>Where type is one of <tt>boy/girl/name</tt> for boy's name, girl's
+name, full name.  Year is the year of the <a href='https://en.wikipedia.org/wiki/Heisei_era'>Heisei Era</a> (year 1 is from 8
+January 1989, year 21 is to 30 April 2019).
   
+    
   <h3>Minimal Requirements</h3>
   <ol>
     <li>Measure the average number of stroke counts
@@ -51,16 +61,19 @@ program and report individually.
   <h3>Stretch Goals</h3>
   <ol>
     <li>Look at differences between boys and girls.
-    <li>Look at differences between years.
+    <li>Look at differences between years (don't forget to normalize
+    for frequency: there may be different totals for different
+    years).
+    <li>Are some stroke counts more popular than others?
+    <li>Do people with complicated surnames tend to have simpler first
+    names or not?
   </ol>
   
 <h3>Write up</h3>
 <ul>
   <li> The paper should be up to six pages, include a title, date and name on the first page, you do not need a separate title page.
     <li>The paper should be single spaced.
-  <li> In the write up you should describe the strengths and weaknesses 
-    of using a lexical resource such as wordnet to model word meaning
-    and sentiment
+  <li> In the write up you should describe what you found out about the names
   <li> You should give concrete examples from the resource you
     analyzed.
   <li>Include quantitive results.
