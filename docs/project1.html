@@ -23,55 +23,35 @@
 for <a href='index.html'>LAC</a>.  Please work on the final
 program and report individually.
 
-<p>You will be given some sentiment data from the NTU-MC corpus and a
-  function to read in sentiment scores (between -1.0 and 1.0 in
-  wordnet).  Use it to explore to see how the semantic relations
-  effect sentiment.  The annotation is mainly from Sherlock Holmes
-  short stories. 
+<p>You will be given some name data from the website
+  <a href=''>Heisei Namae Jiten</a> and use the
+  <a href=''>jamdict module</a> for accessing Jim Breen's kanjidic.
 
+  
 <p>There is a some scaffolding to help you get started: Here is the
-  code in collab: <a href='https://colab.research.google.com/drive/1Xh03toUEAPGJaeOGhetYjnKCYa-MHIu1?usp=sharing'>LAC-wn-senti.ipynb</a>, and here is the data it
-  needs <a href='code/ntumc-senti-clean.tsv'>ntumc-senti-clean.tsv</a>.   Please feel free to extend
+  code in collab: <a href='https://colab.research.google.com/drive/1h0FmMEErb4saEgT_d_OCARcyPKHWo30D?usp=sharing'>2024-project1.ipynb</a>, and here is the data it
+  needs <a href='names.tsv'>names.tsv</a>.   Please feel free to extend
   this or start from scratch as you prefer.
   
-<h3>Minimal Requirements</h3>
+  <h3>Minimal Requirements</h3>
   <ol>
-    <li> Measure the average sentiment score for all synsets (for which
-      it exists)
-    <li> Measure the average sentiment score for all synsets (for which
-      it is non zero)
-    <li> Measure how similar the score is for similar concepts, synonyms,
-      hyponyms and antonyms (note: you must use <i>senses</i> for the antonyms, called lemmas in the NLTK wordnet). 
-    <li> Discuss these results, with examples
-    <li> Think about how you can extend/check the scores
-
     <li>Measure the average number of stroke counts
       <ol>
 	<li>For full names
 	<li>For first names
 	<li>For last names
       </ol>
+      Make sure you do something for hiragana
     <li>Are first names or last names more complicated (i.e. have more strokes)
       <br>Is this difference significant?
   </ol>
 
-<p>The data is quite sparse: for many concepts we do not know the
-  sentiment value, and a little noisy: it may not always be annotated
-  correctly.  You should take these factors into consideration.
+<p>The data is sorted by year, and we know the names of boys and girls.
   
   <h3>Stretch Goals</h3>
   <ol>
-    <li> Measure the average sentiment score for all parts-of-speech (for which
-      it exists)
-    <li> Measure the average sentiment score for all parts-of-speech  (for which
-      it is non zero)
-    <li> Measure how similar the score is for other relations
-    <li> Use better measurements for similarity (SD, correlation)
-    <li> Use morphological cues (<i>un-</i>, <i>dis-</i>, ...)
-    <li> Consider the direction?  Is the strength of positive antonyms
-    the same as negative?  Are hyponyms weaker or stronger than their hypernyms?
-    <li> Discuss these results
-    <li> Show how you can extend/check the scores
+    <li>Look at differences between boys and girls.
+    <li>Look at differences between years.
   </ol>
   
 <h3>Write up</h3>
@@ -85,10 +65,6 @@ program and report individually.
     analyzed.
   <li>Include quantitive results.
   <li>Include representative examples.
-  <li> You don't need an extensive literature review, but you should
-    read and cite  the references below and  if you
-    consult other lexicons (which you are encouraged to do) then you
-    should cite them.
   <li>Link to your program in coogle colab: this does <b>not</b> count
   toward the six page total.
   <br>In the main paper describe generally what the program does (no
@@ -105,22 +81,7 @@ program and report individually.
 
 <h4>References</h4>
 <ul>
-  <li>Andrea Esuli, Fabrizio Sebastiani (2006)
-    <a href='https://aclanthology.org/L06-1225/'>SENTIWORDNET: A Publicly Available Lexical Resource for
-      Opinion Mining</a>
-    LREC
-    
-<li>Stefano Baccianella, Andrea Esuli, Fabrizio Sebastiani (2010)
-  <a href='https://aclanthology.org/L10-1531/'>SentiWordNet 3.0: An
-  Enhanced Lexical Resource for Sentiment Analysis and Opinion
-  Mining</a> LREC
-<li>Francis Bond, Tomoko Ohkuma, Luís Morgado da
-Costa, Yasuhide Miura, Rachel Chen, Takayuki
-Kuribayashi, and Wenjie Wang (2016). In 6th Emotion and Sentiment
-Analysis Workshop (at LREC 2016)
-  <a href='https://www.luismc.com/home/static/pubs/lrec2016-sentiment-corpus.pdf'> A multilingual sentiment corpus for Chinese, English
-and Japanese</a>  In the 6th Emotion and Sentiment Analysis Workshop (at LREC 2016)
-
+<li>none
 </ul>
 
 <p><a href="index.html">LAC: Language and the Computer</a> Francis Bond.
