@@ -24,84 +24,76 @@ two or three.
 
 <p>Pick one of the following:</p>
 
+<ul>
+  <li>A: Disambiguate the individual words in all (or some) MWEs in wordnet (★★)
+    <ul>
+      <li>For <i>machine translation</i> in English return:
+	<br>  <tt>[("machine", Synset("machine.n.01")), 
+	  ("translation", Synset("translation.n.01"))]</tt>
+      <li>For <i>loose cannon</i>
+	<tt>[("loose", None), ("cannon", None)]</tt>
+      <li>Possibly also give "unsure" or a confidence score
+    </ul>
+  <li>B: Train and test a POS tagger for a new language (★)
+    <ul>
+      <li>Find a corpus (not from NLTK) with POS tags 
+      <li>Read it in and convert it into a list of tuples <tt>(word, tag)</tt>
+      <li>Divided it into train/dev/test
+      <li>Train the best POS tagger that you can
+      <li>Discuss which POS tags/words are hard and why
+      <li>It could be that you find errors in the corpus: discuss how they could be fixed
+      <li>Bonus: convert to Universal POS and see if the accuracy improves.
+    </ul>
+  <li>C:  Choose your own task of equivalent difficulty (★ - ★★★)
+    <br>Some suggestions:
+    <ul>
+      <li> Find all examples of some phenomena in a corpus semi-automatically and analyze them
+	<ul> 
+	  <li>Reduplication
+	  <li>Serial verb constructions
+	  <li>Taboo words (try the massive Enron corpus)
+	  <li>Productive affixes (<i>un-, -less, -ish</i>)
+	</ul>
+      <li> Identify loan words and their sources in the dictionary of a language
+    </ul>
+    <br>Check the task with me and I will let you know if I think it
+    is too easy or too difficult.
+</ul>
 
-<h2>A: Consistency in Sentiment Lexicons (monolingual)</h2>
 
-<p>You have been given some sentiment data from the NTU-MC corpus and a
-  function to read in sentiment scores (between -1.0 and 1.0 in
-  wordnet).  Compare it to word level sentiment lexicons from other
-  projects (and those projects to each other).
+<h2>A: Disambiguating Multi-Word Expressions</h2>
 
-<p>You can use the wordnet sentiment data from <a href='project1.html'>Project 1</a>.
+
+<p>Multi-word expressions come in various types, from those where the
+meaning is fully predictable from the individual words
+(<b>compositional</b>: like <i>colour television</i>) to those where
+knowing the individual words does not allow you to predict the meaning
+(<b>non-compositional</b>: like <i>red head</i> "person with red hair").
+
+<p>Write a program that takes a list of multi-word nouns (you can
+expand to other parts-of-speech) from a dictionary and determines the
+meaning (i.e. the synset) of the elements.  If it is compositional
+(e.g. in English, is <i>N1 N2</i> an <i>N2</i>) you can get the
+meaning of the head by looking at the hypernyms.  For other words, you
+can try to disambiguate by looking at the definitions and examples: in
+general, if you can find a close link, then that will be the right
+meaning.  You can use the <i>wordnet gloss corpus</i> to get disambiguated definitions.
+
+<p>This is a hard task --- for non-compositional words there will be
+no good sense, and even for compositional words accuracy is typically
+less than 70%.
+
+
+<h2>B: Part of Speech Tagging</h2>
+
+<p>This is a more straight-forward task.  Morphologically complex
+languages are much harder, try to pick something relatively analytic.  
+
+<p>NLTK has several POS taggers, you may want to try more than one and compare them.  
+
+<p>If you have text from different genres, you may want to test the cross-domain accuracy.
+
   
- <p>There is a some scaffolding to help you get started with the
-  English data: <a href='code/compare-senti.py'>compare-senti.py</a>
-  (<a href='code/compare-senti.html'>formatted</a>, <a href='code/compare-senti-out.txt'>output</a>),
-  and here is the data it
-  needs <a href='code/en_senti.zip'>en_senti.zip</a>.  Put the
-  data in the same directory as the program.  Please feel free to
-   extend this (or start from scratch).
- <p>And here is the data individually:
-   <ul>
-   <li><a href='code/en_senti/DAL/DictionaryofAffect'>DAL</a>
-   <li><a href='code/en_senti/AFINN/AFINN-111.txt'>AFINN</a>
-   <li><a href='code/en_senti/GLASGOW/13428_2018_1099_MOESM2_ESM.csv'>GLAS</a>
-   <li><a href='code/en_senti/VADER/vader_lexicon.txt'>VADER</a>
-   </ul>
-  <p>  
-  
-<h3>Minimal Requirements</h3>
-  <ol>
-    <li> Compare at least three of these resources with each other and with
-      the  NTU-MC corpus data.
-      <ol>
-      <li> <a href='https://github.com/fnielsen/afinn'>AFINN sentiment
-	  data</a> Nielsen (2011)
-	
-       <li><a href='http://www.cs.columbia.edu/~julia/papers/dict_of_affect/DictionaryofAffect'>Dictionary
-	   of Affect in Language (DAL)</a> Whissel (2000)
-	 <li><a href='https://static-content.springer.com/esm/art%3A10.3758%2Fs13428-018-1099-3/MediaObjects/13428_2018_1099_MOESM2_ESM.csv'>Glasgow
-	     Norms</a> Scott et al (2019)
-	 <li><a
-	 href='https://github.com/cjhutto/vaderSentiment'>Vader
-	     Sentiment</a> C.J. Hutto and Eric Gilbert (2014)
- 
-      </ol>
-    <li>How well do the lexicons compare in terms of consistency and
-      coverage?
-      <br>are there consistent differences?
-    <li>How do they compare with the NTU-MC wordnet data?
-    <li>Consider especially the problem of different senses having
-    different sentiment: the Glasgow Norms have some data sense
-    differentiated which may be useful for this.
-  </ol>
-
-  
-  <h3>Stretch Goals</h3>
-  <ol>
-    <li> Try to merge the lexicons into one bigger, better lexicon,
-    and explain why you think it is better
-    <li> Find other lexicons to compare
-    <li> Can the word level lexicons be used to extend the wordnet
-      lexicon?   If so, how?
-    <li> DAL and the Glasgow Norms have scores on other dimensions
-    (such as Activation and Imagery) compare them as well 
-    <li> Look at the effect of morphology (verb inflections,
-    comparatives and superlatives, derivational linsk)
-    <li> Show how you can extend/check the scores
-  </ol>
-
-
-<h2>B: Consistency in Sentiment Lexicons (multilingual)</h2>
-
-<p> Look for sentiment lexicons in other languages, and use the
-  multilingual wordnet to compare values.
-
-<p>This is more difficult than <b>A</b> as you have to deal with translation shift
-  as well as word/sense and resource quality issues.
-
-
-
 
 <h2>C: Own Task</h2>
 
@@ -125,71 +117,18 @@ including diagrams, with up to two additional pages of references,
     read and cite  the references below and  if you
     consult other lexicons (which you are encouraged to do) then you
     should read the papers that describe them carefully, and cite them.
-  <li>Formatted according to
-    the LMS  guidelines</a> to submitting written work for the Division of LMS
-    (but see below).
-    <ul>
-      <li>You do not have to follow the suggested structure of "Introduction, Literature Review, Methodology, Results, Discussion, Conclusion, References."  A short introduction describing the task followed by Results, Discussion, Conclusion, References is enough.
-      <li>You should use single spacing, not double spacing.
-    </ul>
-    <li>Include your entire program (including internal
-documentation) as an appendix: this does <b>not</b> count
-  toward the ten page total.
+  <li>Include a link to your entire program on google colab --- I should be able to run the entire page
   <br>In the main paper describe generally what the program does (no
   need to go into extreme detail)
-  <li>If you want to make it even more beautiful, as I am sure you do,
+ <li>If you want to make it even more beautiful, as I am sure you do,
     take a look at my <a href =
-			 "http://www3.ntu.edu.sg/home/fcbond/data/ling-style.pdf">(Computational)
+			 "https://fcbond.github.io/static/img/ling-style.pdf">(Computational)
       Linguistic Style Guidelines</a>: a guide for the flummoxed.
   <li> Submit
-    <!-- both <b>hardcopy</b> (stapled, single-spaced, two sided,  no folder, no cover page) and -->
-    <b>softcopy</b> (via NTULearn). 
+    <b>softcopy</b> (via moodle). 
   <li> The deadline is on the main page.</b>.  
 </ul>
 
-<h4>References</h4>
-<ul>
-  <li>Andrea Esuli, Fabrizio Sebastiani (2006)
-    <a href='https://aclanthology.org/L06-1225/'>SENTIWORDNET: A Publicly Available Lexical Resource for
-      Opinion Mining</a>
-    LREC
-    
-<li>Stefano Baccianella, Andrea Esuli, Fabrizio Sebastiani (2010)
-  <a href='https://aclanthology.org/L10-1531/'>SentiWordNet 3.0: An
-  Enhanced Lexical Resource for Sentiment Analysis and Opinion
-  Mining</a> LREC
-<li>Francis Bond, Tomoko Ohkuma, Luís Morgado da
-Costa, Yasuhide Miura, Rachel Chen, Takayuki
-Kuribayashi, and Wenjie Wang (2016). In 6th Emotion and Sentiment
-Analysis Workshop (at LREC 2016)
-  <a href='https://www.luismc.com/home/static/pubs/lrec2016-sentiment-corpus.pdf'> A multilingual sentiment corpus for Chinese, English
-and Japanese</a>  In the 6th Emotion and Sentiment Analysis Workshop (at LREC 2016)
-<li>C.J. Hutto and Eric Gilbert (2014))
-<a href='https://github.com/totalgood/nlpia/raw/master/src/nlpia/data/hutto_ICWSM_2014/vader_icwsm2014_final.pdf'>VADER: A Parsimonious Rule-based Model for Sentiment Analysis of
-  Social Media Text</a>
-Eighth International Conference on Weblogs and
-  Social Media (ICWSM-14). Ann Arbor, MI
-<li>Finn Årup Nielsen (2011),
-  "<a href='http://www2.imm.dtu.dk/pubdb/views/edoc_download.php/6006/pdf/imm6006.pdf'>A
-  new ANEW: evaluation of a word list for sentiment analysis in
-  microblogs</a>", Proceedings of the ESWC2011 Workshop on 'Making
-  Sense of Microposts': Big things come in small packages. Volume 718
-  in CEUR Workshop Proceedings: 93-98. 2011 May. Matthew Rowe, Milan
-    Stankovic, Aba-Sah Dadzie, Mariann Hardey (editors)
-    Cynthia Wessell Dictionary of Affect
-  <li> Graham G. Scott, Anne Keitel, Marc Becirspahic, Bo Yao
-    and Sara C. Sereno  (2019) <a href='Scott, G.G., Keitel, A., Becirspahic, M. et al.'>The Glasgow Norms:
-    Ratings of 5,500 words on nine scales.</a>
-    Behavior Research Methods 51, 1258–1270. 
-<li>  Cynthia Wessell (2000) <a href='http://www.cs.columbia.edu/~julia/papers/dict_of_affect/DictofAffectinLang.README.pdf'>Whissell's Dictionary of Affect in Language
-    Technical Manual and User's Guide</a>
-<li>  Cynthia Wessell
-  (2009) <a href='https://doi.org/10.2466/PR0.105.2.509-521'>Using the
-    Revised Dictionary of Affect in Language to Quantify the Emotional
-    Undertones of Samples of Natural Language</a> 
-  Psychological Reports <b>105</b>(2):509-521.
-
-</ul>
 
 <p>Project Two for <a href="index.html">LAC: Language and the Computer</a> Francis Bond.
 
