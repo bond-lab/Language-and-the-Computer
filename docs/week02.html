@@ -14,155 +14,70 @@
 <body class="container">
   <div class="column">
 
-<h1>2. Language Processing and Python: Lists and Word Frequencies.</h1>
+<h1>2. Introducing Lists.</h1>
 
 <h3>Lecture notes</h3>
         <ul>
 	  <li><strong>List</strong> is a collection which is ordered and changeable. Allows duplicate members.
-	    <br><a href="OOPython-Lists.pdf">
-	      Getting Started with Python (Lists)</a> <br>
-            Slides from <i>Object-Oriented Programming in Python</i>
-	    (Goldwasser and Letscher)
+	    <!-- <br><a href="OOPython-Lists.pdf"> -->
+	    <!--   Getting Started with Python (Lists)</a> <br> -->
+            <!-- Slides from <i>Object-Oriented Programming in Python</i> -->
+	    <!-- (Goldwasser and Letscher) -->
 	     <br><code> vocab = list() </code>
 	    <br><code> vocab.append('word') </code>
 	    <br><code> myvocab = ["kore", "sore", "are"]  </code>
 	  </li>
-	  <li><strong>Set</strong> is a collection which is unordered (and thus
-	  unindexed) and changeable. No duplicate members.
-	    <br><code> vocab = set() </code>
-	    <br><code> vocab.add('word') </code>
-	    <br><code> myvocab = {"kore", "sore", "are"}  </code>
-	  <li>NLTK Chapter 1:
-	    <a href="https://www.nltk.org/book/ch01.html">
-	      Language Processing and Python</a>
-            <ul>
-	      <li>1.1:
-	    <a href="https://www.nltk.org/book/ch01.html#sec-computing-with-language-texts-and-words">
-	      Computing with Language: Texts and Words</a>
-	      </li>
-	      <li>1.2:
-	    <a href="https://www.nltk.org/book/ch01.html#sec-a-closer-look-at-python-texts-as-lists-of-words">
-	      A Closer Look at Python: Texts as Lists of Words</a>
-	      </li>
-	      <li>1.3:
-	    <a href="https://www.nltk.org/book/ch01.html#sec-computing-with-language-simple-statistics">
-	      Computing with Language: Simple Statistics</a>
-	      </li>
-
-            
-	      
+	  <!-- <li><strong>Set</strong> is a collection which is unordered (and thus -->
+	  <!-- unindexed) and changeable. No duplicate members. -->
+	  <!--   <br><code> vocab = set() </code> -->
+	  <!--   <br><code> vocab.add('word') </code> -->
+	  <!--   <br><code> myvocab = {"kore", "sore", "are"}  </code> -->
+	  <li>Read Python Crash Course Chapter 3: 	      
             </ul>
 	  </li>
        </ul>
 
 <h3>Further reading</h3>
 <ul>
-  <li>
-    <a href="http://en.wikipedia.org/wiki/Corpus_linguistics">
-      Corpus linguistics</a> (Wikipedia)
-  </li>
-  <li>
-    <a href="http://en.wikipedia.org/wiki/Most_common_words_in_English">
-      Most common words in English</a> (Wikipedia)
-  </li>
-  <li> <img src='colab.svg' width='36px'/><a href= 'https://colab.research.google.com/github/BetoBob/NLTK-Book-Resource/blob/master/01/01_notes.ipynb'>Notebook for Chapter 1</a>
+  <li><a href="OOPython-Lists.pdf">
+      Getting Started with Python (Lists)</a> <br>
+    Slides from <i>Object-Oriented Programming in Python</i>
+    (Goldwasser and Letscher)
 </li>
 </ul>
 
       <h3>Before class  (<a href='code/wk2a.html'>code</a>)</h3>
 	<ul>
-	  <li>Make a list of the words <i>one two three o'clock four o'clock rock</i>
-	  <li>Pick out the first word as a string
-	  <li>Pick out the first word as a list
-	  <li>Pick out the last word as a string
-	  <li>Show how many words there are in the list
-	  <li>Transform the list into a new list that only has numbers in it
-	    <br>take as many steps as you need
-	  <li>Count how many times <i>o'clock</i> appears in the list
+	  <li>Make a list that includes at least three people you’d
+like to invite to dinner. Then use your list to print a message to
+	    each person, inviting them to dinner.  Try to choose interesting people (like in Van Loon's Lives)
+	  <li>You just found a bigger dinner table, so now more space is
+	    available. Think of three more guests to invite to dinner.
+	    <ul>
+	    <li> Start with your program fromt he first exercise Add a print() call to the
+	      end of your program, informing people that you found a bigger table.
+	    <li> Use insert() to add one new guest to the beginning of your list.
+	    <li> Use insert() to add one new guest to the middle of your list.
+	    <li> Use append() to add one new guest to the end of your list.
+	    <li>
+	      Print a new set of invitation messages, one for each person in your list.
+	    </ul>
+	    <li> use len() to print a message indicating the number
+of people you’re inviting to dinner.
 	</ul>
 
+	<p>Problems taken from PCC 3.4, 3.6, 3.9
+
 <h3>Practical work (<a href='code/wk2b.html'>code</a>)</h3>
-<ul>
-   <img src='colab.svg' width='36px'/> Open the <a href='https://colab.research.google.com/drive/1M1FVpy4ttbI54ginYrTp3GSU6DOX91fo?usp=sharing'>Colab page for week 2</a>.   Don't forget to make your own copy!
 
-  <li>
-    <a href="https://www.nltk.org/book/ch01.html#counting-vocabulary">
-      Counting Vocabulary</a> <br>
-    How many words (tokens) are there in the novel
-    <i>Sense and Sensibility</i>? <br>
-    How many <i>different</i> words (types) are there in the novel? <br>
-    How many times does the word <i>the</i> occur in the  novel? <br>
-    What is this as a percentage of all the words in the novel?
-  </li>
-          <li>
-	    <a href="https://www.nltk.org/book/ch01.html#lists">
-              Lists</a> and
-	    <a href="https://www.nltk.org/book/ch01.html#variables">
-              Variables</a> <br>
-	    How do you write "<i>To be or not to be?</i>" 
-            as a list of strings in Python? <br>
-            Assign this list of strings to a variable named
-            <code>the_question</code>. <br>
-            What exactly is calculated by <code>len(the_question)</code>?
-          </li>
-          <li>
-	    <a href="https://www.nltk.org/book/ch01.html#indexing-lists">
-              Indexing Lists</a> <br>
-            What happens when you do the following? Why? <br>
-            <code>&gt;&gt;&gt; print (text2[0:10])</code> <br>
-            <code>&gt;&gt;&gt; print (text2[10:20])</code> <br>
-            <code>&gt;&gt;&gt; print (text2[0:20])</code> <br>
-            What happens when you do the following? Why? <br>
-            <code>&gt;&gt;&gt; first = text2[0:10]</code> <br>
-            <code>&gt;&gt;&gt; second = text2[10:20]</code> <br>
-            <code>&gt;&gt;&gt; print (first + second)</code> <br>
+<p> TBA
 
-         </li>
-	  <li>
-	    <a href="https://www.nltk.org/book/ch01.html#frequency-distributions">
-              Frequency Distributions</a> <br>
-	    Make a frequency distribution <code>fdist2</code> for
-            <i>Sense and Sensibility</i> (<code>text2</code>: note
-            use <code>nltk.FreqDist</code>),
-	    <br>
-	    What are the 50 most frequent words (tokens) in the novel? <br>
-	    How many times does the word <i>Mrs</i> occur in the  novel? <br>
-          </li>
-          <li>
-	    <a href="https://www.nltk.org/book/ch01.html#fine-grained-selection-of-words">
-              Fine-grained Selection of Words</a> <br>
-            Find all the words from <i>Sense and Sensibility</i>
-	    that are longer than 10 letters. <br>
-            Find all the words longer than 10 letters, that occur more
-            than 10 times. 
-          </li>
-          <li>
-	    <a href="https://www.nltk.org/book/ch01.html#counting-other-things">
-              Counting Other Things</a> <br>
-            In <i>Moby Dick</i>, 4-letter words are more frequent than
-            2-letter words. <br>
-            Using the method shown, check if this is true for
-              <i>Sense and Sensibility</i>. <br> 
-	  <li>
-            Which functions defined for NLTK frequency distributions
-            give the same results as Python functions that
-            you already know? For example: <br>
-            Compare <code>fdist2.N()</code> and 
-              Python <code>len(text2)</code>. <br>
-	    Compare <code>fdist2['very']</code> and 
-              Python <code>text2.count('very')</code>. <br>
-          </li>
-        </ul>
 <h3>Summary</h3>
 <ul>
   <li>you can access items in lists:  <code>list1[0]</code>,  <code>list1[-1]</code>, ...
-  <li>you can access sublists using slices: <code>list1[first:last:step]</code>
+  <li>you can add and remove things to lists
+  <li>you can sort lists
   <li>there are <a href= 'week12.html#list_methods'>many things</a> you can do to lists
-  <li>similarly with strings and sets
-  <li>string → list: <code>'string'.split()</code>
-  <li>list → string: <code>', '.join(['string', 'thing'])</code>
-  <li>nltk defines frequency distributions: <code>FreqDist()</code>
-  <li>list comprehensions are powerful: <code>[w for w in V if p(w)]</code>
 </ul>
 
 
