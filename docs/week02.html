@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="hg2052.ico">
-<title>2. Language Processing and Python: Lists. - LAC</title>
+<title>2. Introducing and Working with Lists. - LAC</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet"
 	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -14,7 +14,7 @@
 <body class="container">
   <div class="column">
 
-<h1>2. Introducing Lists.</h1>
+<h1>2. Introducing and Working with Lists.</h1>
 
 <h3>Lecture notes</h3>
         <ul>
@@ -23,16 +23,21 @@
 	    <!--   Getting Started with Python (Lists)</a> <br> -->
             <!-- Slides from <i>Object-Oriented Programming in Python</i> -->
 	    <!-- (Goldwasser and Letscher) -->
-	     <br><code> vocab = list() </code>
-	    <br><code> vocab.append('word') </code>
 	    <br><code> myvocab = ["kore", "sore", "are"]  </code>
+	    <br><code> vocab = list() </code>
+	    <br><code> vocab.append('word') </code>
+	    <br><code> vocab.insert('another') </code>
 	  </li>
-	  <!-- <li><strong>Set</strong> is a collection which is unordered (and thus -->
+	  <li><strong>Tuple</strong> is a collection which is ordered and unchangeable.
+	    Allows duplicate members.
+	    <br><code> myvocab = ("kore", "sore", "are")  </code>
+	    <br><code> myques = ("dore", )  </code>	## need the comma to distinguish from a function
+	    <!-- <li><strong>Set</strong> is a collection which is unordered (and thus -->
 	  <!-- unindexed) and changeable. No duplicate members. -->
 	  <!--   <br><code> vocab = set() </code> -->
 	  <!--   <br><code> vocab.add('word') </code> -->
 	  <!--   <br><code> myvocab = {"kore", "sore", "are"}  </code> -->
-	  <li>Read Python Crash Course Chapter 3: 	      
+	  <li>Read Python Crash Course Chapters 3 and 4 	      
             </ul>
 	  </li>
        </ul>
@@ -43,10 +48,13 @@
       Getting Started with Python (Lists)</a> <br>
     Slides from <i>Object-Oriented Programming in Python</i>
     (Goldwasser and Letscher)
-</li>
+  </li>
+   <li><a href="https://rowannicholls.github.io/python/intro/f_strings.html">Formatting Strings</a>
+	from Rowan Nicholls' <i>Introduction to Python</i>
 </ul>
 
-      <h3>Before class  (<a href='code/wk2a.html'>code</a>)</h3>
+<h3>Before class  (<a href='code/wk2a.html'>code</a>,
+  <a href='code/wk2a-out.txt'>output</a>)</h3>
 	<ul>
 	  <li>Make a list that includes at least three people you’d
 like to invite to dinner. Then use your list to print a message to
@@ -54,29 +62,57 @@ like to invite to dinner. Then use your list to print a message to
 	  <li>You just found a bigger dinner table, so now more space is
 	    available. Think of three more guests to invite to dinner.
 	    <ul>
-	    <li> Start with your program fromt he first exercise Add a print() call to the
-	      end of your program, informing people that you found a bigger table.
-	    <li> Use insert() to add one new guest to the beginning of your list.
-	    <li> Use insert() to add one new guest to the middle of your list.
-	    <li> Use append() to add one new guest to the end of your list.
-	    <li>
-	      Print a new set of invitation messages, one for each person in your list.
+	    <li> Start with your program from the first exercise and add a <code>print()</code> call to the end of your program, informing people that you found a bigger table.
+	    <li> Use  <code>insert()</code> to add one new guest to the beginning of your list.
+	    <li> Use  <code>insert()</code> to add one new guest to the middle of your list.
+	    <li> Use  <code>append()</code> to add one new guest to the end of your list.
+
 	    </ul>
-	    <li> use len() to print a message indicating the number
-of people you’re inviting to dinner.
+	    <li> Use <code>len()</code> to print a message indicating the number
+	      of people you’re inviting to dinner.
+	    <li> Use a <code>for</code> loop to print a message to each of your guests, and then write a general message to all of them outside of the list
+	    <li> Do the same thing, but printing the names in alphabetical order
+	    <li> Use list comprehension,  <code>len()</code> and  <code>max()</code> to say how long the longest name is 
 	</ul>
 
-	<p>Problems taken from PCC 3.4, 3.6, 3.9
+	<p>Problems adapted from PCC 3.4, 3.6, 3.9
 
-<h3>Practical work (<a href='code/wk2b.html'>code</a>)</h3>
+<h3>Practical work (<a href='code/wk2b.html'>code</a>,
+  <a href='code/wk2b-out.txt'>output</a>)</h3>
+<ul>
+	  <li> You can multiply a string, and you get <code>n</code> copies of the string!
+	    
+	  <li> Try out this code:
+<pre>
+for i in range(1, 7):
+    print('*' * i)
+for i in range(7, 13):
+    print('*' * (12 -i))
+</pre>
+<ul>
+  <li>Make a square
+  <li>Make a pyramid
+  <li>Try something else!
+</ul>
+	  <li>Make a list of the numbers from one to one million, and
+then use <code>min()</code> and <code>max()</code> to make sure your list actually starts at one and ends at one million. Finally, use <code>sum()</code> to sum them.
+	  <li> Using the list of guest from your before class problem, divide them into two using list comprehension: list1 should have the odd numbered guests and list2 should have the even numbered guests.
+	  <li>Use a list comprehension to make a list of tuples!  The first element of each tuple should be a number from 1-9 and the second element should be its square: <code>[(1,1), (2,4), (3,9), ...]</code>.  Then use a <code>for</code> loop and  an <code>fstring</code> to print <tt>The square of 1 is 1</tt>,  <tt>The square of 2 is 4</tt>, ... 
+</ul>
+</ul>
 
-<p> TBA
+
+<p> Some problems adapted from PCC 4-5.
 
 <h3>Summary</h3>
+
 <ul>
   <li>you can access items in lists:  <code>list1[0]</code>,  <code>list1[-1]</code>, ...
-  <li>you can add and remove things to lists
+  <li>you can access sublists using slices: <code>list1[first:last:step]</code>
+  <li>list comprehensions are powerful: <code>[fun(w) for w in V if p(w)]</code>
+  <li>you can add to and remove things from lists
   <li>you can sort lists
+  <li>you can reverse lists
   <li>there are <a href= 'week12.html#list_methods'>many things</a> you can do to lists
 </ul>
 

@@ -1,0 +1,21 @@
+Welcome to dinner Conan Doyle
+Welcome to dinner Isaac Newton
+Welcome to dinner Dorothy Sayers
+We have some more space, I will invite some more people.
+['C. J. Cherryh', 'Conan Doyle', 'Marie Curie', 'Isaac Newton', 'Dorothy Sayers', 'Oscar Wilde']
+I invited 6 guests
+Welcome to dinner C. J. Cherryh
+Welcome to dinner Conan Doyle
+Welcome to dinner Marie Curie
+Welcome to dinner Isaac Newton
+Welcome to dinner Dorothy Sayers
+Welcome to dinner Oscar Wilde
+The party is at my house, starting at 7pm sharp
+Welcome to dinner C. J. Cherryh
+Welcome to dinner Conan Doyle
+Welcome to dinner Dorothy Sayers
+Welcome to dinner Isaac Newton
+Welcome to dinner Marie Curie
+Welcome to dinner Oscar Wilde
+The party is at my house, starting at 7pm sharp
+The longest name has length 14.
