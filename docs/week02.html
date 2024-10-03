@@ -18,11 +18,8 @@
 
 <h3>Lecture notes</h3>
         <ul>
+	  <li>Read <i>Python Crash Course</i> Chapters 3 and 4
 	  <li><strong>List</strong> is a collection which is ordered and changeable. Allows duplicate members.
-	    <!-- <br><a href="OOPython-Lists.pdf"> -->
-	    <!--   Getting Started with Python (Lists)</a> <br> -->
-            <!-- Slides from <i>Object-Oriented Programming in Python</i> -->
-	    <!-- (Goldwasser and Letscher) -->
 	    <br><code> myvocab = ["kore", "sore", "are"]  </code>
 	    <br><code> vocab = list() </code>
 	    <br><code> vocab.append('word') </code>
@@ -37,7 +34,6 @@
 	  <!--   <br><code> vocab = set() </code> -->
 	  <!--   <br><code> vocab.add('word') </code> -->
 	  <!--   <br><code> myvocab = {"kore", "sore", "are"}  </code> -->
-	  <li>Read Python Crash Course Chapters 3 and 4 	      
             </ul>
 	  </li>
        </ul>
@@ -96,10 +92,62 @@ for i in range(7, 13):
 </ul>
 	  <li>Make a list of the numbers from one to one million, and
 then use <code>min()</code> and <code>max()</code> to make sure your list actually starts at one and ends at one million. Finally, use <code>sum()</code> to sum them.
-	  <li> Using the list of guest from your before class problem, divide them into two using list comprehension: list1 should have the odd numbered guests and list2 should have the even numbered guests.
+	  <li> Using the list of guests from your before class problem, divide them into two using list comprehension: list1 should have the odd numbered guests and list2 should have the even numbered guests.
 	  <li>Use a list comprehension to make a list of tuples!  The first element of each tuple should be a number from 1-9 and the second element should be its square: <code>[(1,1), (2,4), (3,9), ...]</code>.  Then use a <code>for</code> loop and  an <code>fstring</code> to print <tt>The square of 1 is 1</tt>,  <tt>The square of 2 is 4</tt>, ... 
+<li> Produce a reversed list of Japanese numerals from "十" to "一" using a range and a for loop. Use the following tuple of Japanese numerals:
+  <pre><code>japanese_numerals = ("一", "二", "三", "四", "五", "六", "七", "八", "九", "十")</code></pre>
+  <ul>
+    <li><strong>Example Output:</strong>
+      <pre><code>'十', '九', '八', '七', '六', '五', '四', '三', '二', '一']</code></pre>
+  </ul>
+<li> Here are some examples of Onomatopoeia:
+<code><pre>
+onomatopoeia_data = [
+    # Korean Onomatopoeia
+    [
+        ("개굴개굴", "gaegul-gaegul", "Ribbit (frog sound)"),
+        ("멍멍", "meong-meong", "Woof (dog barking)"),
+        ("야옹", "ya-ong", "Meow (cat sound)"),
+        ("딸랑딸랑", "ddal-lang-ddal-lang", "Jingle (bell sound)"),
+    ],
+    
+    # Chinese Onomatopoeia
+    [
+        ("汪汪", "wāng wāng", "Woof (dog barking)"),
+        ("喵喵", "miāo miāo", "Meow (cat sound)"),
+        ("哗啦啦", "huā lā lā", "Splash (water flowing)"),
+    ],
+    
+    # Vietnamese Onomatopoeia
+    [
+        ("meo meo", "", "Meow (cat sound)"),
+        ("gâu gâu", "", "Woof (dog barking)"),
+        ("ục ịch", "", "Splash (water or something heavy dropping in water)"),
+        ("ro ro", "", "Purr (cat sound)"),
+    ],
+    
+    # Indonesian Onomatopoeia
+    [
+        ("guk guk", "", "Woof (dog barking)"),
+        ("meong", "", "Meow (cat sound)"),
+        ("kring kring", "", "Ring (phone or bell sound)"),
+]
+    # Japanese Onomatopoeia
+    [
+        ("ワンワン", "wan wan", "Woof (dog barking)"),
+        ("ニャーニャー", "nyaa nyaa", "Meow (cat sound)"),
+        ("ピヨピヨ", "piyo piyo", "Tweet (bird chirping)"),
+        ("ゴロゴロ", "goro goro", "Purring (cat purr) / Rolling"),
+    ]
+    ]
+</pre></code>
+<ul>
+  <li>print just the Korean list
+  <li>Make a new list of lists,
+    with the sub-lists having just the words (not the transliteration or gloss), sorted within each language
+ 
 </ul>
-</ul>
+</ul>      
 
 
 <p> Some problems adapted from PCC 4-5.

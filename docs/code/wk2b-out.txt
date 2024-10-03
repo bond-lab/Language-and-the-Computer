@@ -76,3 +76,13 @@ The square of 6 is 36
 The square of 7 is 49
 The square of 8 is 64
 The square of 9 is 81
+['十', '九', '八', '七', '六', '五', '四', '三', '二', '一']
+('十', '九', '八', '七', '六', '五', '四', '三', '二', '一')
+['十', '九', '八', '七', '六', '五', '四', '三', '二', '一']
+
+Just Korean:
+[('개굴개굴', 'gaegul-gaegul', 'Ribbit (frog sound)'), ('멍멍', 'meong-meong', 'Woof (dog barking)'), ('야옹', 'ya-ong', 'Meow (cat sound)'), ('딸랑딸랑', 'ddal-lang-ddal-lang', 'Jingle (bell sound)')]
+
+Just words:
+[['개굴개굴', '딸랑딸랑', '멍멍', '야옹'], ['哗啦啦', '喵喵', '汪汪'], ['gâu gâu', 'meo meo', 'ro ro', 'ục ịch'], ['guk guk', 'kring kring', 'meong'], ['ゴロゴロ', 'ニャーニャー', 'ピヨピヨ', 'ワンワン']]
+[['개굴개굴', '딸랑딸랑', '멍멍', '야옹'], ['哗啦啦', '喵喵', '汪汪'], ['gâu gâu', 'meo meo', 'ro ro', 'ục ịch'], ['guk guk', 'kring kring', 'meong'], ['ゴロゴロ', 'ニャーニャー', 'ピヨピヨ', 'ワンワン']]

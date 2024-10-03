@@ -143,6 +143,90 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 
 <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)]:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The square of </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># countdown in Japanese    </span>
+<span class="n">japanese_numerals</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;一&quot;</span><span class="p">,</span> <span class="s2">&quot;二&quot;</span><span class="p">,</span> <span class="s2">&quot;三&quot;</span><span class="p">,</span> <span class="s2">&quot;四&quot;</span><span class="p">,</span> <span class="s2">&quot;五&quot;</span><span class="p">,</span> <span class="s2">&quot;六&quot;</span><span class="p">,</span> <span class="s2">&quot;七&quot;</span><span class="p">,</span> <span class="s2">&quot;八&quot;</span><span class="p">,</span> <span class="s2">&quot;九&quot;</span><span class="p">,</span> <span class="s2">&quot;十&quot;</span><span class="p">)</span>
+
+<span class="n">countdown</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">japanese_numerals</span><span class="p">):</span>
+    <span class="n">countdown</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">countdown</span><span class="p">)</span>
+
+<span class="c1">## or</span>
+<span class="n">countdown</span> <span class="o">=</span> <span class="n">japanese_numerals</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">countdown</span><span class="p">)</span>
+
+<span class="n">countdown</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">japanese_numerals</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">countdown</span><span class="p">)</span>
+
+<span class="c1">### Onomatopoeia</span>
+
+<span class="n">onomatopoeia_data</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># Korean Onomatopoeia</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;개굴개굴&quot;</span><span class="p">,</span> <span class="s2">&quot;gaegul-gaegul&quot;</span><span class="p">,</span> <span class="s2">&quot;Ribbit (frog sound)&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;멍멍&quot;</span><span class="p">,</span> <span class="s2">&quot;meong-meong&quot;</span><span class="p">,</span> <span class="s2">&quot;Woof (dog barking)&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;야옹&quot;</span><span class="p">,</span> <span class="s2">&quot;ya-ong&quot;</span><span class="p">,</span> <span class="s2">&quot;Meow (cat sound)&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;딸랑딸랑&quot;</span><span class="p">,</span> <span class="s2">&quot;ddal-lang-ddal-lang&quot;</span><span class="p">,</span> <span class="s2">&quot;Jingle (bell sound)&quot;</span><span class="p">),</span>
+    <span class="p">],</span>
+    
+    <span class="c1"># Chinese Onomatopoeia</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;汪汪&quot;</span><span class="p">,</span> <span class="s2">&quot;wāng wāng&quot;</span><span class="p">,</span> <span class="s2">&quot;Woof (dog barking)&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;喵喵&quot;</span><span class="p">,</span> <span class="s2">&quot;miāo miāo&quot;</span><span class="p">,</span> <span class="s2">&quot;Meow (cat sound)&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;哗啦啦&quot;</span><span class="p">,</span> <span class="s2">&quot;huā lā lā&quot;</span><span class="p">,</span> <span class="s2">&quot;Splash (water flowing)&quot;</span><span class="p">),</span>
+    <span class="p">],</span>
+    
+    <span class="c1"># Vietnamese Onomatopoeia</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;meo meo&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Meow (cat sound)&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;gâu gâu&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Woof (dog barking)&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;ục ịch&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Splash (water or something heavy dropping in water)&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;ro ro&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Purr (cat sound)&quot;</span><span class="p">),</span>
+    <span class="p">],</span>
+    
+    <span class="c1"># Indonesian Onomatopoeia</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;guk guk&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Woof (dog barking)&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;meong&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Meow (cat sound)&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;kring kring&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Ring (phone or bell sound)&quot;</span><span class="p">),</span>
+    <span class="p">],</span>
+    <span class="c1"># Japanese Onomatopoeia</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;ワンワン&quot;</span><span class="p">,</span> <span class="s2">&quot;wan wan&quot;</span><span class="p">,</span> <span class="s2">&quot;Woof (dog barking)&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;ニャーニャー&quot;</span><span class="p">,</span> <span class="s2">&quot;nyaa nyaa&quot;</span><span class="p">,</span> <span class="s2">&quot;Meow (cat sound)&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;ピヨピヨ&quot;</span><span class="p">,</span> <span class="s2">&quot;piyo piyo&quot;</span><span class="p">,</span> <span class="s2">&quot;Tweet (bird chirping)&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;ゴロゴロ&quot;</span><span class="p">,</span> <span class="s2">&quot;goro goro&quot;</span><span class="p">,</span> <span class="s2">&quot;Purring (cat purr) / Rolling&quot;</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="p">]</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Just Korean:&quot;</span><span class="p">)</span>
+<span class="c1"># we know Korean is the first list</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">onomatopoeia_data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Just words:&quot;</span><span class="p">)</span>
+
+
+<span class="n">justwords</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">lang</span> <span class="ow">in</span> <span class="n">onomatopoeia_data</span><span class="p">:</span>
+    <span class="n">newlang</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">lang</span><span class="p">:</span>
+        <span class="n">newlang</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">justwords</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">newlang</span><span class="p">))</span> 
+
+    
+<span class="nb">print</span> <span class="p">(</span><span class="n">justwords</span><span class="p">)</span>
+
+<span class="c1">#OR use list comprehension</span>
+
+<span class="n">justwords</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">lang</span> <span class="ow">in</span> <span class="n">onomatopoeia_data</span><span class="p">:</span>
+    <span class="n">justwords</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">sorted</span><span class="p">([</span><span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">lang</span><span class="p">]))</span> 
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">justwords</span><span class="p">)</span>
 </pre></div>
 </body>
 </html>
