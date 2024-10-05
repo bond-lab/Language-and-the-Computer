@@ -17,26 +17,26 @@
 <h1>2. Introducing and Working with Lists.</h1>
 
 <h3>Lecture notes</h3>
-        <ul>
-	  <li>Read <i>Python Crash Course</i> Chapters 3 and 4
-	  <li><strong>List</strong> is a collection which is ordered and changeable. Allows duplicate members.
-	    <br><code> myvocab = ["kore", "sore", "are"]  </code>
-	    <br><code> vocab = list() </code>
-	    <br><code> vocab.append('word') </code>
-	    <br><code> vocab.insert('another') </code>
-	  </li>
-	  <li><strong>Tuple</strong> is a collection which is ordered and unchangeable.
-	    Allows duplicate members.
-	    <br><code> myvocab = ("kore", "sore", "are")  </code>
-	    <br><code> myques = ("dore", )  </code>	## need the comma to distinguish from a function
-	    <!-- <li><strong>Set</strong> is a collection which is unordered (and thus -->
-	  <!-- unindexed) and changeable. No duplicate members. -->
-	  <!--   <br><code> vocab = set() </code> -->
-	  <!--   <br><code> vocab.add('word') </code> -->
-	  <!--   <br><code> myvocab = {"kore", "sore", "are"}  </code> -->
-            </ul>
-	  </li>
-       </ul>
+<ul>
+  <li>Read <i>Python Crash Course</i> Chapters 3 and 4
+  <li><strong>List</strong> is a collection which is ordered and changeable. Allows duplicate members.
+    <br><code> myvocab = ["kore", "sore", "are"]  </code>
+    <br><code> vocab = list() </code>
+    <br><code> vocab.append('word') </code>
+    <br><code> vocab.insert('another') </code>
+  </li>
+  <li><strong>Tuple</strong> is a collection which is ordered and unchangeable.
+    Allows duplicate members.
+    <br><code> myvocab = ("kore", "sore", "are")  </code>
+    <br><code> myques = ("dore", )  </code>	## need the comma to distinguish from a function
+    <!-- <li><strong>Set</strong> is a collection which is unordered (and thus -->
+	    <!-- unindexed) and changeable. No duplicate members. -->
+	    <!--   <br><code> vocab = set() </code> -->
+	    <!--   <br><code> vocab.add('word') </code> -->
+	    <!--   <br><code> myvocab = {"kore", "sore", "are"}  </code> -->
+  <li><a href='pdf/cheat_sheet/beginners_python_cheat_sheet_pcc_lists.pdf'>Cheat Sheet: list</a>,
+    <a href='pdf/cheat_sheet/beginners_python_cheat_sheet_pcc_lists_bw.pdf'>Cheat Sheet: list&nbsp;BW</a>
+</ul>
 
 <h3>Further reading</h3>
 <ul>
@@ -100,52 +100,20 @@ then use <code>min()</code> and <code>max()</code> to make sure your list actual
     <li><strong>Example Output:</strong>
       <pre><code>'十', '九', '八', '七', '六', '五', '四', '三', '二', '一']</code></pre>
   </ul>
-<li> Here are some examples of Onomatopoeia:
+<li> Here are some examples of Korean Onomatopoeia:
 <code><pre>
-onomatopoeia_data = [
+    data = [
     # Korean Onomatopoeia
-    [
-        ("개굴개굴", "gaegul-gaegul", "Ribbit (frog sound)"),
-        ("멍멍", "meong-meong", "Woof (dog barking)"),
-        ("야옹", "ya-ong", "Meow (cat sound)"),
-        ("딸랑딸랑", "ddal-lang-ddal-lang", "Jingle (bell sound)"),
-    ],
-    
-    # Chinese Onomatopoeia
-    [
-        ("汪汪", "wāng wāng", "Woof (dog barking)"),
-        ("喵喵", "miāo miāo", "Meow (cat sound)"),
-        ("哗啦啦", "huā lā lā", "Splash (water flowing)"),
-    ],
-    
-    # Vietnamese Onomatopoeia
-    [
-        ("meo meo", "", "Meow (cat sound)"),
-        ("gâu gâu", "", "Woof (dog barking)"),
-        ("ục ịch", "", "Splash (water or something heavy dropping in water)"),
-        ("ro ro", "", "Purr (cat sound)"),
-    ],
-    
-    # Indonesian Onomatopoeia
-    [
-        ("guk guk", "", "Woof (dog barking)"),
-        ("meong", "", "Meow (cat sound)"),
-        ("kring kring", "", "Ring (phone or bell sound)"),
-]
-    # Japanese Onomatopoeia
-    [
-        ("ワンワン", "wan wan", "Woof (dog barking)"),
-        ("ニャーニャー", "nyaa nyaa", "Meow (cat sound)"),
-        ("ピヨピヨ", "piyo piyo", "Tweet (bird chirping)"),
-        ("ゴロゴロ", "goro goro", "Purring (cat purr) / Rolling"),
+    ("개굴개굴", "gaegul-gaegul", "Ribbit (frog sound)"),
+    ("멍멍", "meong-meong", "Woof (dog barking)"),
+    ("야옹", "ya-ong", "Meow (cat sound)"),
+    ("딸랑딸랑", "ddal-lang-ddal-lang", "Jingle (bell sound)"),
     ]
-    ]
+
 </pre></code>
 <ul>
-  <li>print just the Korean list
-  <li>Make a new list of lists,
-    with the sub-lists having just the words (not the transliteration or gloss), sorted within each language
- 
+  <li>Make a new list having just the words (not the transliteration or gloss)
+  <li>Sort this list.
 </ul>
 </ul>      
 

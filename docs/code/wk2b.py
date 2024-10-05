@@ -66,67 +66,30 @@ countdown = list(japanese_numerals[::-1])
 print(countdown)
 
 ### Onomatopoeia
-
-onomatopoeia_data = [
+data = [
     # Korean Onomatopoeia
-    [
-        ("개굴개굴", "gaegul-gaegul", "Ribbit (frog sound)"),
-        ("멍멍", "meong-meong", "Woof (dog barking)"),
-        ("야옹", "ya-ong", "Meow (cat sound)"),
-        ("딸랑딸랑", "ddal-lang-ddal-lang", "Jingle (bell sound)"),
-    ],
-    
-    # Chinese Onomatopoeia
-    [
-        ("汪汪", "wāng wāng", "Woof (dog barking)"),
-        ("喵喵", "miāo miāo", "Meow (cat sound)"),
-        ("哗啦啦", "huā lā lā", "Splash (water flowing)"),
-    ],
-    
-    # Vietnamese Onomatopoeia
-    [
-        ("meo meo", "", "Meow (cat sound)"),
-        ("gâu gâu", "", "Woof (dog barking)"),
-        ("ục ịch", "", "Splash (water or something heavy dropping in water)"),
-        ("ro ro", "", "Purr (cat sound)"),
-    ],
-    
-    # Indonesian Onomatopoeia
-    [
-        ("guk guk", "", "Woof (dog barking)"),
-        ("meong", "", "Meow (cat sound)"),
-        ("kring kring", "", "Ring (phone or bell sound)"),
-    ],
-    # Japanese Onomatopoeia
-    [
-        ("ワンワン", "wan wan", "Woof (dog barking)"),
-        ("ニャーニャー", "nyaa nyaa", "Meow (cat sound)"),
-        ("ピヨピヨ", "piyo piyo", "Tweet (bird chirping)"),
-        ("ゴロゴロ", "goro goro", "Purring (cat purr) / Rolling"),
-    ]
+    ("개굴개굴", "gaegul-gaegul", "Ribbit (frog sound)"),
+    ("멍멍", "meong-meong", "Woof (dog barking)"),
+    ("야옹", "ya-ong", "Meow (cat sound)"),
+    ("딸랑딸랑", "ddal-lang-ddal-lang", "Jingle (bell sound)"),
     ]
 
-print ("\nJust Korean:")
-# we know Korean is the first list
-print (onomatopoeia_data[0])
 
 print ("\nJust words:")
 
 
 justwords = []
-for lang in onomatopoeia_data:
-    newlang = []
-    for word in lang:
-        newlang.append(word[0])
-    justwords.append(sorted(newlang)) 
-
+for word in data:
+    justwords.append(word[0]) 
     
 print (justwords)
 
 #OR use list comprehension
 
-justwords = []
-for lang in onomatopoeia_data:
-    justwords.append(sorted([w[0] for w in lang])) 
+justwords = [w[0] for w in data] 
 
 print (justwords)
+
+print ("\nSorted:")
+
+print (sorted(justwords))

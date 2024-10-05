@@ -1,0 +1,12 @@
+1+1 == 2 is True
+'IT'.lower() == 'it'  is True
+...
+1+1 ! 2 is False
+'IT'.title() == 'it' is False
+...
+3 in range(0,3) is False
+3 in range(0,4) is True
+
+
+Stages of life
+The person is an adult.
