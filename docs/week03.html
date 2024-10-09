@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
+<title>3. If Statements - LAC</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	  crossorigin="anonymous">
+</head>
+  <body class="container">
+    <div class="column">
+
+      <h1>3. If Statements - LAC</h1>
+
+      <h3>Lecture notes</h3>
+      <ul>
+	<li>Read <i>Python Crash Course</i> Chapter 5
+	<li><strong>Boolean</strong>  is something that is either “true” or “false” named after the English mathematician George Boole)
+	  <br><code> checkme = True </code>
+	  <br><code> checked = False </code>
+	  <br><code> a == b</code>
+	  <code> vocab.insert('another') </code>
+	<li> Some more useful facts about Booleans
+	  <ul>
+	    <li> Most types have a value that evaluates to false
+	      <br> <code>"", [], (), {}, …</code>
+	      <br> You can take advantage of this to make programs easier to read
+          </ul>
+	<li> You can include a test in a list comrehension:
+	  <br> <code>[fun(w) for w in V if p(w)]</code>
+	<li><a href='pdf/cheat_sheet/beginners_python_cheat_sheet_pcc_if_while.pdf'>Cheat Sheet: if/while</a>,
+	  <a href='pdf/cheat_sheet/beginners_python_cheat_sheet_pcc_if_while_bw.pdf'>Cheat Sheet: if/while&nbsp;BW</a>
+	</ul>
+
+
+<h3>Before class  (<a href='code/wk3a.html'>code</a>,
+  <a href='code/wk3a-out.txt'>output</a>)</h3>
+<ul>
+  <li>Print 5 python statements that evaluate to <code>True</code>
+    and 5 to <code>False</code>.  Try to use different comparison operators (not just  <code>==</code> but also <code>!=, >,  …</code>
+    <br>Format like this
+    <br><code>print(f"1+1 == 2 {1+1 == 2}")</code>
+  <li>Write code to check if <code>3</code> is in <code>range(0,3)</code>.
+  <li>How can you change the range to include <code>3</code>?
+  <li>  Write an if - elif - else chain that determines a person’s stage
+of life. Set a value for the variable age, and then:
+<ul>
+  <li> If the person is less than 2 years old, print a message that the person is a baby.
+  <li> If the person is at least 2 years old but less than 4, print a message that the person is a toddler.
+  <li> If the person is at least 4 years old but less than 8, print a message that the person is an infant.
+  <li> If the person is at least 8 years old but less than 13, print a message that the person is a child.
+  <li> If the person is at least 13 years old but less than 20, print a message that the person is a teenager.
+  <li> If the person is at least 20 years old, print a message that the person is an adult.
+</ul>
+</ul>
+
+	<p>Some problems adapted from PCC 5-6
+
+<h3>Practical work (<a href='code/wk3b.html'>code</a>,
+  <a href='code/wk3b-out.txt'>output</a>)</h3>
+<ul>
+  <li>Make a tuple of  <code>person = (name, age)</code>
+  <li>Adjust the code you wrote before class to print a personalized message based on the name and age:
+    <br>e.g. Fanny is a baby: Sleep well!
+    <br>e.g. Fran is a teenager: Enjoy School!
+    <br>e.g. Francis is an adult: Work hard!
+
+
+  
+  <li> Take your guest list from last week, and change it to a list of
+  tuples: <code>[(name, age), (name, age), …]</code>
+    <ul>
+      <li>use list comprehension to make a list of just the ages
+      <li>use <code>sum()</code> and <code>len()</code> to find the
+	average
+      <li>Divide the guests into two groups, younger and older,
+	depending on their age
+      <li>Print the names of the youngest and oldest guests 
+
+    </ul>
+  <li>Czech numbers from 11 to 20 are semi-regularly derived from the numbers from 1 to 10. Loop through the numbers from 1 to 10 and print out that number and that plus 10.
+    <br>e.g.: jeden - jedenact
+   <code><pre> 
+    čislo = ["jeden", "dva", "tři", "čtyři", "pět", "šest", "sedm", "osm", "devět", "deset"]
+   </pre></code>
+   use <code>if - elif - else</code> to construct the number plus 10
+
+   <br>the teens are:  <code>["jedenáct", "dvanáct", "třináct", "čtrnáct", "patnáct", "šestnáct", "sedmnáct", "osmnáct", "devatenáct", "dvacet"]</code>
+  <li> Here are some examples of  Onomatopoeia:
+<code><pre>
+data = [
+    # Korean Onomatopoeia
+    [
+        ("개굴개굴", "gaegul-gaegul", "Ribbit (frog sound)"),
+        ("멍멍", "meong-meong", "Woof (dog barking)"),
+        ("야옹", "ya-ong", "Meow (cat sound)"),
+        ("딸랑딸랑", "ddal-lang-ddal-lang", "Jingle (bell sound)"),
+    ],
+    
+    # Chinese Onomatopoeia
+    [
+        ("汪汪", "wāng wāng", "Woof (dog barking)"),
+        ("喵喵", "miāo miāo", "Meow (cat sound)"),
+        ("哗啦啦", "huā lā lā", "Splash (water flowing)"),
+    ],
+    
+    # Vietnamese Onomatopoeia
+    [
+        ("meo meo", "", "Meow (cat sound)"),
+        ("gâu gâu", "", "Woof (dog barking)"),
+        ("ục ịch", "", "Splash (water or something heavy dropping in water)"),
+        ("ro ro", "", "Purr (cat sound)"),
+    ],
+    
+    # Indonesian Onomatopoeia
+    [
+        ("guk guk", "", "Woof (dog barking)"),
+        ("meong", "", "Meow (cat sound)"),
+        ("kring kring", "", "Ring (phone or bell sound)"),
+    ],
+    # Japanese Onomatopoeia
+    [
+        ("ワンワン", "wan wan", "Woof (dog barking)"),
+        ("ニャーニャー", "nyaa nyaa", "Meow (cat sound)"),
+        ("ピヨピヨ", "piyo piyo", "Tweet (bird chirping)"),
+        ("ゴロゴロ", "goro goro", "Purring (cat purr) / Rolling"),
+    ]
+    ]
+</pre></code>
+<ul>
+  <li>print just the Korean list
+  <li>Make a new list of lists,
+    with the sub-lists having the transliteration, if it exists, if not then the words
+ </ul>  
+</ul>
+
+
+<p> Some problems adapted from PCC 5-11.
+
+<h3>Summary</h3>
+
+<ul>
+  <li> You learned how to write conditional tests, which always
+    evaluate to <code>True</code> or <code>False</code>
+  <li> You learned about some of the different ways that you can test
+    <br>  <code>==, !=, &gt;, &lt;, element in list, … </code>
+  <li> You learned to test with <code>if - elif - else</code>
+  <li> You learned to handle certain items in a list differently
+</ul>
+
+
+<hr>
+<p><a href="index.html">LAC: Language and the Computer</a> Francis
+  Bond.
+  
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

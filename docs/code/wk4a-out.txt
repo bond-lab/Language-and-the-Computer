@@ -1,0 +1,50 @@
+list = seznam
+set = množina
+boolean = booleovská hodnota
+tuple = ntice
+dictionary = slovník
+string = řetězec
+
+seznam = list
+množina = set
+booleovská hodnota = boolean
+ntice = tuple
+slovník = dictionary
+řetězec = string
+
+
+Dictionary of Dictionaries
+Bread
+Ingredients:
+    flour
+    yeast
+    water
+    salt
+Prep/Cook time: 30 min/40 min
+Comments: nice with whole grains
+
+Jam
+Ingredients:
+    strawberry
+    apple
+    sugar
+Prep/Cook time: 15 min/30 min
+
+Temaki Sushi
+Ingredients:
+    rice
+    sushi vinegar
+    fish
+Prep/Cook time: 45 min/
+Comments: also need soy sauce to eat
+
+How many languages do you speak? 4
+Well done!
+
+Enter a food to cook for the party (or type 'quit' to stop): pizza
+I'll cook pizza for the party!
+Enter a food to cook for the party (or type 'quit' to stop): milkshake
+I'll cook milkshake for the party!
+Enter a food to cook for the party (or type 'quit' to stop): cake
+I'll cook cake for the party!
+Enter a food to cook for the party (or type 'quit' to stop): quit

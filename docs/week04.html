@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
+<title>4. Dictionaries, User Input and While Loops - LAC</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	  crossorigin="anonymous">
+</head>
+  <body class="container">
+    <div class="column">
+
+      <h1>4. Dictionaries, User Input and While Loops - LAC</h1>
+
+      <h3>Lecture notes</h3>
+      <ul>
+	<li>Read <i>Python Crash Course</i> Chapter 6 and 7 (the last time we do two chapters)
+	<li> A dictionary is a collection of key-value pairs which is
+	  indexed and changeable. Keys must be unique. (from Python 3.7 it
+	  is ordered)
+	  <br><code> vocab = dict() </code>
+	  <br><code> myvocab = {"kore":"これ", "sore":"それ", "are":"あれ" }</code>
+	  <br><code> vocab['kore'] = 'これ' </code>
+	<li><strong>Set</strong> is a collection which is unordered (and thus
+	  unindexed) and changeable. No duplicate members.
+	  <br><code> vocab = set() </code>
+	  <br><code> vocab.add('word') </code>
+	  <code class='text-warning'>#not append</code>
+	  <br><code> myvocab = {"kore", "sore", "are"}  </code>
+	<li> <code>while</code> loops continue until the condition is not true
+	  <br>be careful not to loops forever
+	<li>the <code>input()</code>
+	<li><a href='pdf/cheat_sheet/beginners_python_cheat_sheet_pcc_if_while.pdf'>Cheat Sheet: if/while</a>,
+	  <a href='pdf/cheat_sheet/beginners_python_cheat_sheet_pcc_if_while_bw.pdf'>Cheat Sheet: if/while&nbsp;BW</a>,
+<a href='pdf/cheat_sheet/beginners_python_cheat_sheet_pcc_dictionnaries.pdf'>Cheat Sheet dict.</a>,
+	<a href='pdf/cheat_sheet/beginners_python_cheat_sheet_pcc_dictionaries_bw.pdf'>Cheat Sheet dict.&nbsp;BW</a>
+	</ul>
+
+<h3>Before class  (<a href='code/wk4a.html'>code</a>,
+  <a href='code/wk4a-out.txt'>output</a>)</h3>
+<ul>
+  <li>Make a dictionary of some new terms you have learnt, and their translations in Czech.  Assume (contrary to real life) that each term only has one translation.
+<code><pre>
+    en2cs = {
+    "list": "seznam",
+    "set": "množina",
+    "boolean": "booleovská hodnota",
+    "tuple": "ntice",
+    "dictionary": "slovník",
+    "string": "řetězec" }
+</pre></code>
+Loop through the dictionary and print them nicely formatted, something like:
+<br><tt>list =  seznam</tt>
+<li> Now make a reversed dictionary <code>cs2en</code> (hint: loop through and se the values as keys ), then loop through the new dictionary and print it nicely formatted.
+<li>Make a dictionary called <code>food</code>. Use the names of three
+ dishes as in your dictionary. For each food, make a dictionary of details, like ingredients, cooking time, comments.  Then loop through the foods and the details, printing everything nicely.
+<li>Write a program that asks the user how many languages they speak.  If they say 1, tell them to study more, if they say 2 or 3, say 'good' if they speak more than 3, say 'well done'.
+
+ </ul>
+
+
+
+<h3>Practical work (<a href='code/wk4b.html'>code</a>,
+  <a href='code/wk4b-out.txt'>output</a>)</h3>
+<ul>
+  <li> Write a loop that prompts the user to enter a series of foods
+    until they enter a 'quit' value. As they enter each one, print a
+    message saying you’ll cook that for the party.  The program should
+    stop when they write 'quit'.
+  <li>This is the first paragraph of <i>The Adventure of the Dancing Men</i> (Conan Doyle), split into tokens.
+    <code><pre>
+tokens = [
+    "Holmes", "had", "been", "seated", "for", "some", "hours", "in", "silence",
+    "with", "his", "long", ",", "thin", "back", "curved", "over", "a", "chemical",
+    "vessel", "in", "which", "he", "was", "brewing", "a", "particularly",
+    "malodorous", "product", ".", "His", "head", "was", "sunk", "upon", "his",
+    "breast", ",", "and", "he", "looked", "from", "my", "point", "of", "view",
+    "like", "a", "strange", ",", "lank", "bird", ",", "with", "dull", "gray",
+    "plumage", "and", "a", "black", "top-knot", "." ]
+    </pre></code>
+    We will learn how to do this later!
+    <ul>
+      <li> Use <code>set()</code> to determine how many different tokens there are
+      <li> Should you count the words as they are, or should you make them lower cas e?  How different are the results?
+      <li> Loop through the tokens and use a dictionary to count the frequency.
+	<br> If you have not seen a word before, set its frequency to <code>0</code>
+	<br> If you have seen it before, add one to the frequency.
+	<br> Hint: you can use <code>in</code> to see if a key is in a dictionary
+    </ul>  
+
+  <li>   
+
+</ul>
+
+
+<h3>Summary</h3>
+
+<ul>
+  <li> You learned how to write conditional tests, which always
+    evaluate to <code>True</code> or <code>False</code>
+  <li> You learned about some of the different ways that you can test
+    <br>  <code>==, !=, &gt;, &lt;, element in list, … </code>
+  <li> You learned to test with <code>if - elif - else</code>
+  <li> You learned to handle certain items in a list differently
+</ul>
+
+
+<hr>
+<p><a href="index.html">LAC: Language and the Computer</a> Francis
+  Bond.
+  
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
