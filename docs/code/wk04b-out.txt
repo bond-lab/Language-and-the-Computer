@@ -1,0 +1,93 @@
+Enter a food to cook for the party (or type 'quit' to stop): pizza
+I'll cook pizza for the party!
+Enter a food to cook for the party (or type 'quit' to stop): quit
+
+Enter a food to cook for the party (or type 'quit' to stop): pasta
+I'll cook pasta for the party!
+Enter a food to cook for the party (or type 'quit' to stop): QUIT
+
+Enter a food to cook for the party (or type 'quit' to stop): pesto
+I'll cook pesto for the party!
+Enter a food to cook for the party (or type 'quit' to stop): Quit
+
+Counting tokens
+
+There are 62 tokens
+There are 49 different tokens
+There are 62 lower case tokens
+There are 48 different lower case tokens
+2	in
+2	with
+3	his
+4	,
+4	a
+2	he
+2	was
+2	.
+2	and
+
+2	in
+2	with
+3	his
+4	,
+4	a
+2	he
+2	was
+2	.
+2	and
+
+*	(holmes)
+*	(had)
+*	(been)
+*	(seated)
+*	(for)
+*	(some)
+*	(hours)
+**	(in)
+*	(silence)
+**	(with)
+***	(his)
+*	(long)
+****	(,)
+*	(thin)
+*	(back)
+*	(curved)
+*	(over)
+****	(a)
+*	(chemical)
+*	(vessel)
+*	(which)
+**	(he)
+**	(was)
+*	(brewing)
+*	(particularly)
+*	(malodorous)
+*	(product)
+**	(.)
+*	(head)
+*	(sunk)
+*	(upon)
+*	(breast)
+**	(and)
+*	(looked)
+*	(from)
+*	(my)
+*	(point)
+*	(of)
+*	(view)
+*	(like)
+*	(strange)
+*	(lank)
+*	(bird)
+*	(dull)
+*	(gray)
+*	(plumage)
+*	(black)
+*	(top-knot)
+
+Filtering Lists
+
+Tokens with out stop words: ['Holmes', 'had', 'been', 'seated', 'for', 'some', 'hours', 'in', 'silence', 'with', 'long', 'thin', 'back', 'curved', 'over', 'chemical', 'vessel', 'in', 'which', 'was', 'brewing', 'particularly', 'malodorous', 'product', 'head', 'was', 'sunk', 'upon', 'breast', 'and', 'looked', 'from', 'point', 'view', 'like', 'strange', 'lank', 'bird', 'with', 'dull', 'gray', 'plumage', 'and', 'black', 'top-knot']
+
+Tokens with out stop words: ['Holmes', 'had', 'been', 'seated', 'for', 'some', 'hours', 'in', 'silence', 'with', 'long', 'thin', 'back', 'curved', 'over', 'chemical', 'vessel', 'in', 'which', 'was', 'brewing', 'particularly', 'malodorous', 'product', 'head', 'was', 'sunk', 'upon', 'breast', 'and', 'looked', 'from', 'point', 'view', 'like', 'strange', 'lank', 'bird', 'with', 'dull', 'gray', 'plumage', 'and', 'black', 'top-knot']
+

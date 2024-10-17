@@ -33,15 +33,17 @@
 	  <br><code> myvocab = {"kore", "sore", "are"}  </code>
 	<li> <code>while</code> loops continue until the condition is not true
 	  <br>be careful not to loops forever
-	<li>the <code>input()</code>
+	<li>the <code>input()</code> function in Python reads a line of text input from the user and returns it as a string.
+
+	  <br><code>name = input("Enter your name: ")</code>
 	<li><a href='pdf/cheat_sheet/beginners_python_cheat_sheet_pcc_if_while.pdf'>Cheat Sheet: if/while</a>,
 	  <a href='pdf/cheat_sheet/beginners_python_cheat_sheet_pcc_if_while_bw.pdf'>Cheat Sheet: if/while&nbsp;BW</a>,
 <a href='pdf/cheat_sheet/beginners_python_cheat_sheet_pcc_dictionnaries.pdf'>Cheat Sheet dict.</a>,
 	<a href='pdf/cheat_sheet/beginners_python_cheat_sheet_pcc_dictionaries_bw.pdf'>Cheat Sheet dict.&nbsp;BW</a>
 	</ul>
 
-<h3>Before class  (<a href='code/wk4a.html'>code</a>,
-  <a href='code/wk4a-out.txt'>output</a>)</h3>
+<h3>Before class  (<a href='code/wk04a.html'>code</a>,
+  <a href='code/wk04a-out.txt'>output</a>)</h3>
 <ul>
   <li>Make a dictionary of some new terms you have learnt, and their translations in Czech.  Assume (contrary to real life) that each term only has one translation.
 <code><pre>
@@ -55,7 +57,7 @@
 </pre></code>
 Loop through the dictionary and print them nicely formatted, something like:
 <br><tt>list =  seznam</tt>
-<li> Now make a reversed dictionary <code>cs2en</code> (hint: loop through and se the values as keys ), then loop through the new dictionary and print it nicely formatted.
+<li> Now make a reversed dictionary <code>cs2en</code> (hint: loop through and set the values as keys ), then loop through the new dictionary and print it nicely formatted.
 <li>Make a dictionary called <code>food</code>. Use the names of three
  dishes as in your dictionary. For each food, make a dictionary of details, like ingredients, cooking time, comments.  Then loop through the foods and the details, printing everything nicely.
 <li>Write a program that asks the user how many languages they speak.  If they say 1, tell them to study more, if they say 2 or 3, say 'good' if they speak more than 3, say 'well done'.
@@ -64,13 +66,19 @@ Loop through the dictionary and print them nicely formatted, something like:
 
 
 
-<h3>Practical work (<a href='code/wk4b.html'>code</a>,
-  <a href='code/wk4b-out.txt'>output</a>)</h3>
+<h3>Practical work (<a href='code/wk04b.html'>code</a>,
+  <a href='code/wk04b-out.txt'>output</a>)</h3>
 <ul>
   <li> Write a loop that prompts the user to enter a series of foods
     until they enter a 'quit' value. As they enter each one, print a
     message saying you’ll cook that for the party.  The program should
     stop when they write 'quit'.
+    <br>Do this in three different ways: 
+    <ul>
+      <li> Use a conditional test in the while loop
+      <li> Use a variable <code>active</code>
+      <li> Use a <code>break</code> statement	
+    </ul>
   <li>This is the first paragraph of <i>The Adventure of the Dancing Men</i> (Conan Doyle), split into tokens.
     <code><pre>
 tokens = [
@@ -85,27 +93,49 @@ tokens = [
     We will learn how to do this later!
     <ul>
       <li> Use <code>set()</code> to determine how many different tokens there are
-      <li> Should you count the words as they are, or should you make them lower cas e?  How different are the results?
+      <li> Should you count the words as they are, or should you make them lower case?  How different are the results?
       <li> Loop through the tokens and use a dictionary to count the frequency.
-	<br> If you have not seen a word before, set its frequency to <code>0</code>
+	<br> If you have not seen a word before, set its frequency to <code>1</code>
 	<br> If you have seen it before, add one to the frequency.
 	<br> Hint: you can use <code>in</code> to see if a key is in a dictionary
+      <li> Loop through and show the frequency for each word that has a frequency greater than one, in two different ways.
+	<ul>
+	  <li> Use <code>items()</code>
+	  <li> Just loop through the keys
+	</ul>
+      <li>❂ Loop through and show the frequency for each word as a <a href='https://en.wikipedia.org/wiki/Histogram'>histogram</a>
+	<br> Print <code>n</code>  '*'s if the frequency is <code>n</code>
+	<br> ****	(a)
+	<br> *	(chemical)
+      <li> Make a new list that has none of these words in it:
+	<br><code>['.', ',', ';', 'a', 'an', 'of', 'the', 'he', 'his', 'him', 'me', 'my', 'I', 'you', 'your',  'we', 'our', 'us']</code>
+	<br> Make sure to remove words regardless of their case.
     </ul>  
 
-  <li>   
-
 </ul>
-
+<p> ❂ If you haved finished everything else, try this 
 
 <h3>Summary</h3>
 
+<p>You learned:
 <ul>
-  <li> You learned how to write conditional tests, which always
-    evaluate to <code>True</code> or <code>False</code>
-  <li> You learned about some of the different ways that you can test
-    <br>  <code>==, !=, &gt;, &lt;, element in list, … </code>
-  <li> You learned to test with <code>if - elif - else</code>
-  <li> You learned to handle certain items in a list differently
+  <li> how to define a dictionary and work with the information stored in it</li>
+  <li> how to access and modify individual elements in a dictionary</li>
+  <li> how to loop through a dictionary's key-value pairs, keys, and values</li>
+  <li> how to nest multiple dictionaries in a list, lists in a dictionary, and dictionaries inside a dictionary</li>
+  <li> how to use the <code>input()</code> function to allow users to provide their own information in programs</li>
+  <li> to work with both text and numerical input</li>
+  <li> how to use while loops to keep programs running as long as the users want them to</li>
+  <li> several ways to control the flow of a while loop:
+    <ul>
+      <li>setting an active flag</li>
+      <li>using the <code>break</code> statement</li>
+      <li>using the <code>continue</code> statement</li>
+    </ul>
+  </li>
+  <li> how to use a while loop to move items from one list to another</li>
+  <li> how to remove all instances of a value from a list</li>
+  <li> how while loops can be used with dictionaries</li>
 </ul>
 
 
