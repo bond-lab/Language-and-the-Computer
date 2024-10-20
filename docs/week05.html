@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
+<title>5. Functions - LAC</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	  crossorigin="anonymous">
+        <!-- https://github.com/speed-highlight/core -->
+    <link rel="stylesheet" href="https://unpkg.com/@speed-highlight/core/dist/themes/github-light.css">
+</head>
+  <body class="container">
+    <div class="column">
+
+      <h1>5. Functions - LAC</h1>
+
+      <h3>Lecture notes</h3>
+      <ul>
+	<li>Read <i>Python Crash Course</i> Chapter 8
+	<li><a href='pdf/cheat_sheet/beginners_python_cheat_sheet_pcc_functions.pdf'>Cheat Sheet: functions</a>,
+	  <a href='pdf/cheat_sheet/beginners_python_cheat_sheet_pcc_functions_bw.pdf'>Cheat Sheet: functions&nbsp;BW</a>,
+	</ul>
+
+<h3>Before class  (<a href='code/wk05a.html'>code</a>,
+  <a href='code/wk05a-out.txt'>output</a>,
+  <a href='code/mymath.py'>mymath.py</a>)</h3>
+<ul>
+  <li>Make a function with two arguments <code>flavour</code> and <code>size</code>.  The function should print a message similar to this
+    <br><tt>We will make a large pepperoni pizza</tt>
+    <br>Call the function once with positional arguments and once with keywords.
+  <li>Now add defaults to the function: the default flavour should be pepperoni, and the default size is large.
+    <br>Call it with one different value (your choice)
+  <li>Define a function called <code>average</code> which takes a list of numbers and returns their average.
+     <div class='shj-lang-py m-0 p-0 fs-6'>my_numbers = [10, 20, 30, 40, 50]
+print(f"The average of {my_numbers} is {average(my_numbers)}")
+
+> The average of [10, 20, 30, 40, 50] is 30.0</div>
+  <li>Modify the <code>average</code> function to return <code>None</code> if the list is empty, and print a message like "The list is empty."
+  <li>Save the function in another file, called <code>mymath.py</code>.
+    <ul>
+      <li>Make sure it is properly styled with a docstring
+      <li>Call it with an alias as <code>av</code>
+    </ul>
+<div class="alert alert-warning  d-inline-block" role="alert">
+  ⚠ Google Colab will not allow you to create a file locally or save it between sessions ⚠
+<br>  ⚠ So make the file on your computer and upload it!  ⚠
+<ul>
+  <li>You can use:
+    <ul>
+      <li>Notepad in Windows. Notepad should save plain text files by default.
+      <li>WordPad in Windows. Use File → Save As... and select the option that allows you to save the file as a Text Document — rather than Rich Text Format (RTF), which is the default.
+      <li>TextEdit on the Mac. Use the Make Plain Text command in the Format menu before saving the file.
+    </ul>
+  <li>Then in Colab
+    <ul>
+  <li>Click on the “Files” tab on the left-side menu. (Make sure it is the “Files tab” not the “File” Dropdown menu)
+    <li>Click on the “Upload to Session Storage” button and select the file(s) you want to upload.
+    </ul>
+</ul>
+  ⚠ I will ask you to show me this file and function at the beginning of class ⚠
+</div>
+ </ul>
+
+
+
+<h3>Practical work (<a href='code/wk05b.html'>code</a>,
+  <a href='code/wk05b-out.txt'>output</a>)</h3>
+<ul>
+  <li> 
+</ul>
+<p> ❂ If you haved finished everything else, try this 
+
+<h3>Summary</h3>
+
+<ul>
+  <li>You learned how to write functions and pass arguments to provide necessary information to functions.</li>
+  <li>You learned to use positional and keyword arguments, and accept an arbitrary number of arguments.</li>
+  <li>You saw functions that display output and those that return values.</li>
+  <li>You learned how to use functions with lists, dictionaries, if statements, and while loops.</li>
+  <li>You saw how to store functions in separate files called modules to simplify program files.</li>
+  <li>You learned how to style your functions for well-structured and readable code.</li>
+</ul>
+<p> Functions are import for the following reasons:
+<ul>
+  <li>Functions allow you to write blocks of code once and reuse them multiple times with a simple one-line call.</li>
+  <li>Modifying a function affects every place where that function is called, making updates easy.</li>
+  <li>Functions make programs easier to read, with good function names summarizing what each part does.</li>
+  <li>Functions help you test and debug your code by isolating specific jobs, making it easier to verify function behavior.</li>
+  <li>Testing functions separately gives you confidence that they will work correctly when called.</li>
+</ul>
+
+<hr>
+<p><a href="index.html">LAC: Language and the Computer</a> Francis
+  Bond.
+  
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script type="module">
+  import { highlightAll } from  'https://unpkg.com/@speed-highlight/core/dist/index.js';
+  // interface ShjOptions {
+  //     hideLineNumbers: boolean;
+  // }
+  const options = {
+      hideLineNumbers: true // This is equivalent to your TypeScript interface
+  };
+  highlightAll(options);
+</script>
+ 
+
+  </body>
+</html>

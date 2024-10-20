@@ -1,0 +1,31 @@
+
+First function:
+
+We will make a small diavola pizza
+We will make a large quatro formaggio pizza
+We will make a family-size artichoke pizza
+
+
+Second function (with defaults):
+
+We will make a large pepperoni pizza
+We will make a small diavola pizza
+We will make a large quatro formaggio pizza
+We will make a family-size artichoke pizza
+
+
+Third function (with averages):
+
+The average of [10, 20, 30, 40, 50] is 30.0
+
+
+Fourth function (with averages and check for []):
+
+The average of [10, 20, 30, 40, 50] is 30.0
+The list is empty!
+The average of [] is None
+
+
+Fifth function same as the fourth:
+
+The average of [10, 20, 30, 40, 50] is 30.0
