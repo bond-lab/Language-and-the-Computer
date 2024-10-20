@@ -64,3 +64,13 @@ print("\n\nFifth function same as the fourth:\n")
 from mymath import average as av
 
 print(f"The average of {my_numbers} is {av(my_numbers)}")
+
+print(f"The average of {[]} is {av([])}")
+
+print("\n\nSixth function (built in):\n")
+### normally do this at the top of the file
+from statistics import mean as av
+
+print(f"The average of {my_numbers} is {av(my_numbers)}")
+
+
