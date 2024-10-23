@@ -1,0 +1,30 @@
+
+
+Print list
+
+apple
+banana
+cherry
+
+
+Print details
+
+name: Alice
+age: 25
+city: Olomouc
+
+
+Reduplication
+
+buku-buku: True
+rumah: False
+
+
+Find Reduplication
+
+{'samar-samar': 1, 'sayup-sayup': 1, 'orang-orang': 1, 'sampai-sampai': 1, 'apa-apa': 1}
+
+
+Update Inventory
+
+{'apple': 3, 'banana': 4, 'cherry': 1}
