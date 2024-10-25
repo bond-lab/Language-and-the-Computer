@@ -170,6 +170,22 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 <span class="nb">print</span><span class="p">(</span><span class="n">redups</span><span class="p">)</span> 
 
 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">Informal</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">informal</span> <span class="p">(</span><span class="n">words</span><span class="p">):</span>
+    <span class="n">infrml</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">IsReduplicated</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+            <span class="c1">### change to non-reduplicated version</span>
+            <span class="n">word</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;2&#39;</span>
+        <span class="n">infrml</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">infrml</span>
+
+<span class="n">informal_text</span> <span class="o">=</span> <span class="n">informal</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">informal_text</span><span class="p">)</span>
+
+
+
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">Update Inventory</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">update_inventory</span><span class="p">(</span><span class="n">inventory</span><span class="p">,</span> <span class="o">*</span><span class="n">new_items</span><span class="p">):</span>

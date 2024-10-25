@@ -73,6 +73,22 @@ redups=find_redup(text.split())
 print(redups) 
 
 
+print("\n\nInformal\n")
+
+def informal (words):
+    infrml = []
+    for word in words:
+        if IsReduplicated(word):
+            ### change to non-reduplicated version
+            word = word.split('-')[0] + '2'
+        infrml.append(word)
+    return infrml
+
+informal_text = informal(text.split())
+print(informal_text)
+
+
+
 print("\n\nUpdate Inventory\n")
 
 def update_inventory(inventory, *new_items):
