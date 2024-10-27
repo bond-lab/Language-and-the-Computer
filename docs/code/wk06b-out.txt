@@ -1,0 +1,172 @@
+[
+  {
+    "lesson": "1",
+    "cs": "ne",
+    "en": [
+      "no",
+      "not"
+    ]
+  },
+  {
+    "lesson": "1",
+    "cs": "ano",
+    "en": [
+      "yes"
+    ]
+  },
+  {
+    "lesson": "1",
+    "cs": "dobrý",
+    "en": [
+      "good (masculine)"
+    ]
+  },
+  {
+    "lesson": "1",
+    "cs": "večer",
+    "en": [
+      "evening",
+      "night"
+    ]
+  },
+  {
+    "lesson": "1",
+    "cs": "den",
+    "en": [
+      "day"
+    ]
+  },
+  {
+    "lesson": "1",
+    "cs": "dobrý den",
+    "en": [
+      "hello",
+      "good afternoon",
+      "day"
+    ]
+  },
+  {
+    "lesson": "1",
+    "cs": "děkuji",
+    "en": [
+      "thank you",
+      "thanks"
+    ]
+  },
+  {
+    "lesson": "2",
+    "cs": "a",
+    "en": [
+      "and"
+    ]
+  },
+  {
+    "lesson": "2",
+    "cs": "dobré",
+    "en": [
+      "good (neuter)"
+    ]
+  },
+  {
+    "lesson": "2",
+    "cs": "odpoledne",
+    "en": [
+      "afternoon",
+      "in the afternoon"
+    ]
+  },
+  {
+    "lesson": "2",
+    "cs": "ráno",
+    "en": [
+      "morning",
+      "in the morning"
+    ]
+  },
+  {
+    "lesson": "2",
+    "cs": "hezký",
+    "en": [
+      "nice",
+      "handsome",
+      "pretty"
+    ]
+  },
+  {
+    "lesson": "2",
+    "cs": "víkend",
+    "en": [
+      "weekend"
+    ]
+  },
+  {
+    "lesson": "2",
+    "cs": "hezký vikend",
+    "en": [
+      "have a nice weekend"
+    ]
+  },
+  {
+    "lesson": "3",
+    "cs": "prosím",
+    "en": [
+      "please",
+      "you're welcome"
+    ]
+  },
+  {
+    "lesson": "3",
+    "cs": "ahoj",
+    "en": [
+      "hi",
+      "hello",
+      "bye"
+    ]
+  },
+  {
+    "lesson": "3",
+    "cs": "na shledanou",
+    "en": [
+      "goodbye",
+      "bye",
+      "see you soon"
+    ]
+  },
+  {
+    "lesson": "3",
+    "cs": "díky",
+    "en": [
+      "thanks",
+      "thank you"
+    ]
+  },
+  {
+    "lesson": "3",
+    "cs": "dobrou",
+    "en": [
+      "good (feminine)"
+    ]
+  },
+  {
+    "lesson": "3",
+    "cs": "noc",
+    "en": [
+      "night"
+    ]
+  }
+]
+
+Freq	Word
+20	cs
+35	en
+35	cs-en
+What is an English translation of ne
+ (or q to quit)? no
+Well done!
+What is an English translation of ano
+ (or q to quit)? yo
+What is an English translation of ano
+ (or q to quit)? yes
+Well done!
+What is an English translation of dobrý
+ (or q to quit)? q

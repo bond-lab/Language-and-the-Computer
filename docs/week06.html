@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
+<title>6. Files and Exceptions - LAC</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	  crossorigin="anonymous">
+    <!-- https://github.com/speed-highlight/core -->
+    <link rel="stylesheet" href="https://unpkg.com/@speed-highlight/core/dist/themes/github-light.css">
+</head>
+  <body class="container">
+    <div class="column">
+
+      <h1>6. Files and Exceptions - LAC</h1>
+
+      <h3>Lecture notes</h3>
+      <ul>
+	<li>Read <i>Python Crash Course</i> Chapter 8
+	<li> As well as <code>json</code>, similar interfaces exist for other formats like <code>yaml, toml, ...</code></li>
+	<li> We can also download things from the web as follows:
+	  <div class='shj-lang-py m-0 p-0 fs-6'>def text_from_url(url):
+  response = urllib.request.urlopen(url)
+  return response.read().decode('utf-8')
+
+houn = text_from_url("https://www.gutenberg.org/cache/epub/2852/pg2852.txt")</div>
+	  The main different is that you must decode from bytes to some encoding
+	  <br> And that you need to be connected to the internet!
+	<li>We will use two new methods for sequences (lists and strings):
+	  <ul>
+	    <li><code>seq.count(item)</code> returns the number of elements with the specified value
+	      <br><code>'green banana'.count('na')</code> returns 2
+	    <li><code>seq.index(item)</code> returns the position of the first match
+	      <br><code>'green banana'.count('na')</code> returns 8
+	  </ul>
+      </ul>
+      
+
+	<li><a href='pdf/cheat_sheet/beginners_python_cheat_sheet_pcc_files_exceptions.pdf'>Cheat Sheet: files and exceptions</a>,
+	  <a href='pdf/cheat_sheet/beginners_python_cheat_sheet_pcc_files_exceptions_bw.pdf'>Cheat Sheet: files and exceptions&nbsp;BW</a>,
+<li> <img src='colab.svg' width='36px'/> For google colab, files are stored  in your virtual machine.
+	<ul>
+      <li>⚠ They will disappear at the end of the session.
+	<li> You can upload or download them to your own machine
+	<br><code> from google.colab import files
+    <br>files.download('/content/spec.txt')</code>
+      <li> <a href = 'https://colab.research.google.com/notebooks/io.ipynb#scrollTo=hauvGV4hV-Mh'>Downloading files to your local file system</a>
+	</ul>
+</ul>
+
+<h3>Before class  (<a href='code/wk06a.html'>code</a>,
+  <a href='code/wk06a-out.txt'>output</a>)</h3>
+<ul>
+ <li>Write a program to: 
+   <ol>
+     <li> Get the text of All Cats are Grey by Andre Norton
+       <br>go to gutenberg and search for 'All Cats are Grey'
+       <br>find the url of the textfile
+       <br>read it in (using <code>text_from_url</code>)
+     <li>Save it as a file called "acag-raw.txt"
+     <li>Read it again and chop off extra text, then save as "acag.txt"
+       <br> guess how many letters, increase or decrease until you have the right amount!
+     <li>If you are in colab, download it to your computer.
+   </ol>
+ <li> Read it in again and count characters, words and lines
+   <br> store these in a dictionary
+   <br>  ❂ Also count the number of sentences
+ <li> Save that dictionary as JSON, YAML and TOML and look at the output
+ <li> See what happens when you get the URL wrong with <code>text_from_url</code>
+   <ul>
+     <li> Add exception handling to output a message if the URL cannot be found
+   </ul>
+ <li> Write a function to discard the header and footer of a GUTENBERG file:
+   <br> everything before the line '*** START'  ..., ' ***'
+   <br>  and after the line '*** END OF THE PROJECT GUTENBERG EBOOK', ...
+   <br> hint: use <code>index</code>
+   <br> Download a different book and print the first 200 and last 200 characters.
+ </ul>
+
+
+
+<h3>Practical work (<a href='code/wk06b.html'>code</a>,
+  <a href='code/wk06b-out.txt'>output</a>)</h3>
+<p>I have prepared a text file extracted from the <a href= 'https://duolingo.fandom.com/wiki/Czech'>duolino wiki for Czech</a>.  The file is at 
+ <a href='code/duowiki/skill0.txt'>skill0.txt</a> (it was made using  <a href='code/duowiki/extract.py'>extract.py</a> --- <a href='code/duowiki/README'>README</a>, <a href='code/duowiki/URLs'>URLs</a>).
+<ul>
+  <li> Download <code>skill0.txt</code> and extract the vocabulary.  The result should be a list of dictionaries, with each dictionary representing a word.   The dictionary should indicate which lesson a word was in, the Czech word, and a list of English translations.  For example, the first word in the first lesson is::
+    <div class='shj-lang-py m-0 p-0 fs-6'># ne = no/not
+
+  "lesson": "1",
+  "cs": "ne",
+  "en": [
+    "no",
+    "not"
+  ]
+}</div>
+    <ul>
+      <li> First download the file
+      <li> The write a function that loops through each line and does something
+      <li> If the line is a lesson, store it
+      <li> If the line is a word, process it using another function
+    </ul>
+    <li> Finally save the file as json
+    <br> Note to make the json more readable, you can
+    give <code>json.dumps</code> optional parameters: <code>indent =
+    2</code> formats is nicely,<code>ensure_ascii = False</code>
+    allows it to use unicode.  It is not necessary for the computer, but it can help you to debug.
+    <li> Read the json file and give some statistics
+      <ul>
+	<li>How many Czech words are there?
+	<li>How many English words are there?
+	<li>How many pairs of words are there?
+      </ul>
+      Print this nicely formatted
+    <li> Write a short program that reads the json file, and quizzes people.  It should give a Czech word, and ask them to type the English (or q for quit).  If the English is correct it should say 'Well done', and ask the next word.  If the English is incorrect it should ask again.
+      <br> Note, you may notice you want to improve your parsing of the vocabulary, ...
+</ul>
+<p> ❂ If you haved finished everything else, try this 
+
+<h3>Summary</h3>
+<ul>
+  <li>You learned how to work with files in Python.
+    <ul>
+      <li> You can now read the entire contents of a file
+      <li> You can process the contents line by line
+	<br> good for big files
+      <li> You can write to a file
+      <li> You can read and write structured data, like JSON, TOML and YAML	
+      <li> You also learned how to download from the internet 
+    </ul>
+
+    <li>Furthermore, you studied exceptions and how to handle them:
+        <code><pre>try:
+    with open('filename.txt') as file:
+        contents = file.read()
+except FileNotFoundError:
+    print("File not found.")
+</pre></code>
+    </li>
+</ul>
+
+
+<hr>
+<p><a href="index.html">LAC: Language and the Computer</a> Francis
+  Bond.
+  
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script type="module">
+  import { highlightAll } from  'https://unpkg.com/@speed-highlight/core/dist/index.js';
+  // interface ShjOptions {
+  //     hideLineNumbers: boolean;
+  // }
+  const options = {
+      hideLineNumbers: true // This is equivalent to your TypeScript interface
+  };
+  highlightAll(options);
+</script>
+  
+</body>
+</html>
