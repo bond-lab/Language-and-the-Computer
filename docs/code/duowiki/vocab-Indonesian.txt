@@ -1,0 +1,358 @@
+# Vocabulary for Indonesian
+
+=== Skill 0 - Basics_1 ===
+
+
+Lesson 1[]
+
+apel = an apple/apples
+jeruk = an orange/oranges
+mau = want
+makan = eat
+suka = like
+saya = I am, my (standard, polite)
+aku = I am (informal, familiar)
+
+Lesson 2[]
+
+susu = milk
+air = water
+minum = drink
+punya = have
+itu = that/those, it
+kamu = you (singular, informal, familiar)
+
+Lesson 3[]
+
+dan = and
+kucing = cat
+merah = red
+hitam = black
+putih = white
+kuat = strong
+dia = he/him,she/her (only used for humans)
+
+=== Skill 1 - Intro ===
+
+
+Lesson 1[]
+
+apa kabar = how are you - literally, "what (your) news", in English
+siapa = who am/is/are, whose
+Tini = Tini (name)
+Andi = Andi (name)
+halo = hello/hi
+nama = name
+nama saya = my name
+nama kamu siapa = what is your name
+
+Lesson 2[]
+
+bukan = no/not
+dari = from
+mana = where
+dari mana = from where
+Jepang = Japan (country in Asia)
+Bali = Bali (island in Indonesia)
+Jakarta = Jakarta (capital city of Indonesia)
+
+Lesson 3[]
+
+sepuluh = ten
+dua puluh = twenty
+tahun = years
+berapa = how many/how much/how
+umur = age/old
+usia = age/old (formal)
+berusia = age/old
+
+=== Skill 2 - Basics_2 ===
+
+
+Lesson 1[]
+
+aku = I  (informal, familiar)
+kamu = you (singular, informal, familiar)
+kami = we (excludes the person or people you are talking to)
+kita = we (includes the person or people you are talking to)
+menulis = write
+buku = book
+surat = letter
+
+Lesson 2[]
+
+Anda = you/your (singular, formal)
+mereka = they/their
+koran = newspaper
+menu = menu
+membaca = read
+ini = this
+punya = belongs/to have/own
+punya kamu = yours (informal)
+
+Lesson 3[]
+
+gaun= dress
+kalian = you (plural, familiar)
+kaya = rich
+besar = big/large
+ia = All pronouns (used for humans or animals)
+
+=== Skill 3 - Greetings ===
+
+
+Lesson 1[]
+
+tidak = no
+maaf = sorry
+ya = yes/please
+silakan = please
+terima kasih = thank you, thanks
+selamat = good/happy/congratulations
+pagi = morning
+selamat pagi = good morning
+
+Lesson 2[]
+
+selamat datang = welcome
+selamat jalan = goodbye (have a safe trip)
+sampai jumpa = see you
+sama-sama = you're welcome
+
+Lesson 3[]
+
+selamat siang = good afternoon
+assalamualaikum = greetings (always used by muslims)
+waalaikumsalam = greetings to you too (always used by muslims)
+permisi = excuse me
+selamat tinggal = goodbye (stay safe)
+
+Lesson 4[]
+
+idul fitri = Eid (a religious holiday celebrated by Muslims)
+salam = greetings
+selamat sore = good afternoon, good evening
+selamat malam = good evening, good night
+sampai jumpa lagi = see you again/until we meet again
+terima kasih banyak = thank you very much
+
+=== Skill 4 - Restaurant ===
+
+
+Lesson 1[]
+
+ayam = chicken/chickens
+nasi = rice
+restoran = restaurant/restaurants
+dengan = with
+goreng = fried/fry
+
+Lesson 2[]
+
+sop = soup
+daging = meat
+minuman = drink/drinks, beverage/beverages
+pesan = order
+makanan = food/dish/meal
+
+Lesson 3[]
+
+stroberi = strawberry/strawberries
+telur = egg
+tomat = tomato
+jus = juice
+tempe = tempe (a traditional Indonesian soy product, that is made from fermented soybeans)
+tahu = tofu
+
+Lesson 4[]
+
+kopi = coffee
+teh = tea
+kue = cake
+manis = sweet/sweetened
+sarapan = breakfast
+enak = delicious
+
+Lesson 5[]
+
+pisang = banana
+roti = bread
+cokelat = chocolate
+kacang = nuts, peanuts
+merica = pepper
+garam = salt
+gula = sugar
+
+Lesson 6[]
+
+minta = ask/ask for, request
+bayar = to pay (informal)
+membayar = to pay (formal)
+harga = cost
+berapa harga nya = how much
+panas = hot
+es = ice/iced
+sambal = chili/hot sauce, sambal
+kecap = soy sauce, sweet soy sauce
+
+=== Skill 5 - Places_1 ===
+
+
+Lesson 1[]
+
+rumah = house
+dapur = kitchen
+sekolah = school
+sini = here
+di = at/in
+ada = am/is/are, there is/are
+
+Lesson 2[]
+
+gedung = building
+hotel = hotel
+pasar = market/markets
+sana = there
+pergi = go/goes, leave/leaves
+ke = go/to
+
+Lesson 3[]
+
+bank = bank
+toilet = toilet
+toko = shop/store
+pulang = return/returns, go/goes/come/comes home
+situ = there/over there
+
+=== Skill 6 - Base_Verbs ===
+
+
+Lesson 1[]
+
+setuju = agree/agrees
+muncul = appear/appears
+datang = come/comes
+duduk = sit/sits
+
+Lesson 2[]
+
+masuk = come in, enter
+keluar = go out, exit
+jatuh = fall/falls, falling
+kembali = return/returns
+
+Lesson 3[]
+
+tahu = know/knows
+lupa = forget/forgets
+ingat = remember/remembers
+tidur = sleep/sleeps
+
+Lesson 4[]
+
+selesai = finish/finishes, complete/completes
+tinggal = live/lives
+mulai = start/starts
+bisa = can
+
+=== Skill 7 - Possessive ===
+
+
+Lesson 1[]
+
+-ku = my
+milik = belongs to, 's
+umurku = my age
+sri = Sri (name)
+dimas = Dimas (name)
+bola = ball
+
+Lesson 2[]
+
+anjing = dog
+-mu = your
+umurmu = your age
+suratmu = your letter
+
+Lesson 3[]
+
+-nya = his/her
+pensil = pencil
+
+=== Skill 8 - Clothing ===
+
+
+Lesson 1[]
+
+tas = bag
+kantong = pocket
+pakaian = clothes
+membeli = buy
+celana = pants
+sepatu = shoe/shoes
+dompet = wallet/purse
+
+Lesson 2[]
+
+payung = umbrella
+sabuk = belt
+kemeja = shirt
+mantel = coat
+jaket = jacket
+rok = skirt
+membawa = bring
+
+Lesson 3[]
+
+sarung tangan = glove/gloves
+kaus kaki = socks
+topi = hat/cap
+syal = scarf/shawl
+dasi = tie
+memakai = wear
+kaus = shirt
+
+=== Skill 9 - Conjunctions_1 ===
+
+
+Lesson 1[]
+
+tapi = but
+yang = that/one
+atau = or
+
+Lesson 2[]
+
+ketika = when/during
+karena = because
+jadi = so
+namun = however
+
+=== Skill 10 - Plurals ===
+
+
+Lesson 1[]
+
+apel-apel = apples
+jeruk-jeruk = oranges
+kucing-kucing = cats
+buku-buku = books
+surat-surat = letters
+koran-koran = newspapers
+gaun-gaun = dresses
+
+Lesson 2[]
+
+kue-kue = cakes
+hotel-hotel = hotels
+gedung-gedung = buildings
+toko-toko = stores
+rumah-rumah = houses
+bola-bola = balls
+anjing-anjing = dogs
+sekolah-sekolah = schools
+
+=== Skill 11 - Verbs:_Ber- ===
+
+
+

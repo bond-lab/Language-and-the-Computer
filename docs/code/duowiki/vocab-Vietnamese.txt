@@ -1,0 +1,642 @@
+# Vocabulary for Vietnamese
+
+=== Skill 0 - Basic ===
+
+
+Lesson 1[]
+
+chào = hi
+tôi = I
+là = to be
+
+Lesson 2[]
+
+Mỹ = America
+Việt Nam = Viet Nam
+người = classifier for people (excluding baby)
+nước = classifier for countries
+
+Lesson 3[]
+
+Úc = Australia
+vâng = yes
+hộ chiếu = passport
+xin lỗi = excuse me
+
+=== Skill 1 - Cafe ===
+
+
+Lesson 1[]
+
+cà phê = coffee
+nước = water
+trà = tea
+hay là = or
+vui lòng = please
+cho = to give
+
+Lesson 2[]
+
+tách = cup
+nóng = hot
+đá = ice
+một = one
+và = and
+
+Lesson 3[]
+
+sữa = milk
+đường = sugar
+với = with
+muốn = to would like
+
+=== Skill 2 - Basics_1 ===
+
+
+Lesson 1[]
+
+người = classifier for human
+đàn ông = man
+phụ nữ = woman
+đàn bà = woman (used in multiple choice question)
+tôi = I/me
+bạn = you (sg.)
+là = am/is/are
+một = a
+
+Lesson 2[]
+
+quả = classifier for fruit and spherical objects[1]
+trái = classifier for fruit and spherical objects[1]
+táo = apple
+bánh mì = bread (lit. "solid foods shaped round, flat, or puffy made from grain, legume, flour or rice"[2] + "wheat (flour)")
+cô ấy = she/her
+cô ta = she/her
+anh ấy = he/him
+ông ta = he/him (used to refer to middle-aged and elderly men colloquially)
+ăn = eat/eats/eating
+
+Lesson 3[]
+
+cậu ấy = he (used to refer to boys colloquially)
+nước = water
+nước ép = juice
+nước ép táo = apple juice
+học = to study, to learn
+uống = to drink
+đứa trẻ = child/kid
+
+Lesson 4[]
+
+cậu bé = little boy
+bé gái = little girl
+cô gái = girl (used for girls of ages child/teenage/youth)
+muốn = to want, wish
+
+=== Skill 3 - Alphabet_1 ===
+
+
+Lesson 1[]
+
+con = classifier for animals
+cái = classifier for everyday objects
+con cá = the fish
+cái ca = the mug
+và = and
+
+Lesson 2[]
+
+con ong = the bee
+con gá = the chicken
+cắn = bite/bites
+cà phê = coffee
+cái ca cà phê = the coffee mug
+An = An (proper name)
+
+Lesson 3[]
+
+cái găng tay = the glove
+nhà ga = train station
+con dơi = the bat (animal)
+ở = at/is/in
+dơ = dirty
+
+Lesson 4[]
+
+cái ô = the umbrella
+đu đủ = papaya
+cái đu quay = the ferris wheel
+con dê = the goat
+dì = aunt/aunts
+có = have/has, there is, yes
+
+=== Skill 4 - Alphabet_2 ===
+
+
+Lesson 1[]
+
+mẹ = mom/mother/mum
+cái xe đạp = the bike/bicycle
+con đom đóm = the firefly
+cây tre = bamboo tree
+me = tamarind
+
+Lesson 2[]
+
+đá = stone
+mây = cloud
+sấm sét = thunder
+chia sẻ = to share
+con chim sẻ = the sparrow
+
+Lesson 3[]
+
+ghế = chair
+ghi âm = record/records (verb)
+ghét = hate/hates, hatred
+phường = ward
+cái phòng = the room
+cái phà = the ferry, the ferryboat
+
+Lesson 4[]
+
+thư = letter (that you send)
+tờ giấy = sheet of paper
+giàu = rich/wealthy
+sợi dây = string
+giấu = hide/hides
+
+Lesson 5[]
+
+vĩnh viễn = forever
+vẽ = draw/draws, drawing
+dũng cảm = brave
+ngã = fall/falls
+mẫu giáo = kindergarten
+
+=== Skill 5 - Basics_2 ===
+
+
+Lesson 1[]
+
+Báo = Newspaper
+Bánh = Cake
+Thực đơn = Menu
+Đọc = Read/To read/Reading
+Chúng tôi = We/Us
+Tập = Practice/Practices [As in, “just started learning”]
+Đi = Go/Walk/Going [Also used to emphasize actions]
+
+Lesson 2[]
+
+Chúng ta = We
+Tạp chí = Magazine
+Đĩa = Plate
+Cơm = Rice
+Quyến/Cuốn sách = The book
+Họ = They
+Bánh táo = Apple pie
+
+Lesson 3[]
+
+Màu cam = Orange color
+Quả cam = Orange
+Gọi = To order
+Sữa = Milk
+Viết Nam = Vietnam
+Người Viết Nam = Vietnamese (Person)
+Hay = Or
+
+Lesson 4[]
+
+Nó = It
+Mỹ = America
+Người Mỹ = American (Person)
+Nước cam = Orange juice
+Thích = To like
+Trà = Tea
+Chè = Tea
+
+=== Skill 6 - Phrases ===
+
+
+Lesson 1[]
+
+Tên = Name
+Tên tôi là... = My name is...
+Tạm biệt = Goodbye
+Chào mừng = Welcome
+Chào = Hello
+Xin chào = Hello (Polite)
+Xin cảm ơn = Thank you (Polite)
+
+Lesson 2[]
+
+Khỏe = Fine/Well/Good
+Cảm ơn bạn = Thank you
+Vâng = Yes
+Vẫn = Still/Yet
+Ổn = OK/Okay/Well
+Bình Thường = Normal/Usual
+
+Lesson 3[]
+
+Chào buổi sáng = Good morning
+Xin lỡi = Sorry/Excuse me/Excuse
+Nói = Says/Speaks/To say
+Làm ơn = Please
+Tiếng Anh = English (Language)
+Cứ tự nhiên = Enjoy yourself
+
+Lesson 4[]
+
+Lặp lại = Repeat
+Cẩn thận = Look out/Be careful/Carefully
+Bằng = In/With/As
+Hẹn gặp lại = See you again/later
+Nổi tiếng = Famous
+
+=== Skill 7 - Animals_1 ===
+
+
+Lesson 1[]
+
+Sở thú = Zoo
+Chó = Dog
+Mèo = Cat
+Động vật = Animal
+Gấu = Bear
+
+Lesson 2[]
+
+Vịt = Duck
+Thỏ = Rabbit/Bunny
+Bò = Cow/Bull/Ox
+Rắn = Snake
+Chim = Bird
+
+Lesson 3[]
+
+Rùa = Turtle/Tortoise
+Rồng = Dragon
+Chuồn chuồn = Dragonfly
+Cá sấu = Alligator/Crocodile
+Heo = Pig
+
+Lesson 4[]
+
+Voi = Elephant
+Ngựa = Horse
+Chuột = Mouse
+Trâu = Buffalo
+Khỉ = Monkey
+
+=== Skill 8 - Clothing ===
+
+
+Lesson 1[]
+
+Váy = Skirt
+Áo = Shirt
+Áo khoác = Coat
+Mang = To wear (anything on the head/from waist to the ankles)
+Mặc = To wear (anything on the body/torso)
+
+Lesson 2[]
+
+Cởi = To take off
+Giày = Shoes
+Quần = Pants/Trousers
+Mũ = Hat
+Đội = To wear (anything on the head)
+Đôi = Two/Pair/Couple
+Đeo = To wear (gloves, mittens, etc.)
+Đi = To wear (socks, shoes, boots, sandals, etc.)
+
+Lesson 3[]
+
+Quần áo = Clothes
+Thắt lưng = Belt
+Áo lạnh = Sweater
+Tất = Sock(s)
+Khăn quàng = Scarf
+Ủng = Boot(s)
+
+=== Skill 9 - Food ===
+
+
+Lesson 1[]
+
+Rượu = Wine
+Đường = Sugar
+Món cá = Fish (dish) (lit. “dish [of] fish”)
+Dầu ăn = Cooking oil
+Dầu = Oil
+Món gà = Chicken (dish) (lit. “dish [of] chicken”)
+Món = Dish/Classifier for food
+
+Lesson 2[]
+
+Chuối = Banana
+Trái cây = Fruit
+Trưa = Noon
+Ăn trưa = (To) eat lunch
+Bữa trưa = Lunch
+Bữa sáng = Breakfast
+Bữa tối = Dinner
+Tối = Night/evening
+Bữa = Classifier for meals of the day
+Bữa chiều = Snacks
+
+Lesson 3[]
+
+Thức ăn = Food
+Canh = Soup/Broth
+Xúp/Súp = Soup (Western soup)
+Chanh = Lemon
+Với = With/Plus/Too
+Phở = Pho
+Canh gà = Chicken soup
+
+Lesson 4[]
+
+Thịt = Meat
+Rau = Vegetables
+Muối = Salt
+Nấm = Mushroom
+Ớt = Chili
+Mì ăn liền = Instant noodles (lit. “noodle [that can be] eaten instantly”)
+Canh nấm = Mushroom soup
+
+Lesson 5[]
+
+Trứng = Egg
+Chay = Vegetarian (adjective)
+Ăn chay = To be vegetarian (lit. “to eat ‘vegetarian-ly’”)
+Món chay = Vegetarian dish
+Bữa chay = Vegetarian meal
+Thức ăn chay = Vegetarian food
+Mì Ý = Pasta
+Cà chua = Tomato
+Người ăn chay = Vegetarian person
+Khoai tây chiên = French fries (lit. “fried potatoes”)
+Trứng gà = Chicken egg
+
+=== Skill 10 - Verbs_1 ===
+
+
+Lesson 1[]
+
+Mua = Buy/Buys/Buying
+Viết = Write/Writes/Writing
+Thấy = See/Feel/Sees (Also used to emphasize on having already done the action)
+Cho = To/For/Let (To give/To allow)
+Nghe = Hear/Hears/Listen
+Thử = Try/Tries/Try (something) on
+Nghe tiếng = Hear the sound (of)
+
+Lesson 2[]
+
+Ngủ = Sleep/Sleeps
+Cười = Smile/Smiles/Laugh/Laughs
+Yêu = Love/Loves/Loving
+Biết = Know/Knows/Can
+Khóc = Cry/Cries
+Nấu = Cook/Cooks/Make/Makes
+
+Lesson 3[]
+
+Dùng = Use/Eat/Drink
+Bán = Sell/Sells
+Lắng = Listen/Listens (to) [Used for emphasis on listening/hearing, but not common in regular conversation. Very common in literature.]
+Đi bộ = Walk/Walks
+Luyện tập = Practice/Practices
+
+Lesson 4[]
+
+Mở = Open/Opens/Opening
+Chơi = Play/Plays/Playing
+Giúp = Help/Helps (More common in speech)
+Cần = Need/Needs
+Giúp đỡ = Help/Helps
+Tìm = Find/Finds/Look for/Looking for
+Bơi = Swim/Swims/Swimming
+
+Lesson 5[]
+
+Chạy = Run/Runs/Running
+Hát = Sing/Sings/Singing
+Xem = See/Look at/Look
+Lấy = Take/Takes/Marry/Marries someone (in a relationship)
+Ủng hộ = Support/Supports
+Hộ = Support/Supports
+Làm việc = Work/Works/Working
+Làm = Make/Makes/Work
+Việc = Work/Business/(Nominalization)
+Nấu ăn = Cook/Cooks/Cooking
+Chạy bộ = Run/Runs/Running
+
+Lesson 6[]
+
+Nhảy = Jump/Jumps/Jumping/Dances
+Đứng = Stand/Stands/Standing
+Nhảy múa = Dance/Dances/Dancing (More emphasized action of dancing)
+Múa = Dance/Dances/Dancing
+Để = Put/Let/For
+Ngồi = Sit/Sits/Sitting
+Nghĩ = Think/Thinks/Thinking
+Bắt đầu = Starts/Begin/Begins
+Bắt = To catch/To seize
+Đầu = Head
+
+=== Skill 11 - Objects ===
+
+
+Lesson 1[]
+
+Bàn = Table
+Muỗng = Spoon
+Chai = Bottle
+Giường = Bed
+Bát = Bowl
+Chai nước = Water bottle/Bottle of water
+
+Lesson 2[]
+
+Tivi = Television/TV
+Đồng hồ = Clock/Watch
+Máy tính = Computer
+Cửa sổ = Window
+Gương = Mirror
+Điên thoại = Telephone/Phone
+
+Lesson 3[]
+
+Pin = Battery
+Đèn = Lamp
+Thuốc lá = Tobacco
+Ví = Wallet
+Chuột túi = Kangaroo
+Túi = Bag/Pouch
+Đèn pin = Flashlight
+
+=== Skill 12 - Colors ===
+
+
+Lesson 1[]
+
+Màu cam = Orange
+Màu trắng = White
+Màu đen = Black
+Màu đỏ = Red
+
+Lesson 2[]
+
+Màu nâu = Brown
+Màu xám = Gray/Grey
+Màu xanh da trời = Sky blue/Blue
+Màu xanh lá cây = Green
+
+Lesson 3[]
+
+Màu vàng = Yellow
+Màu tím = Purple/Violet
+Màu hồng = Pink
+
+=== Skill 13 - Adjectives_1 ===
+
+
+Lesson 1[]
+
+ngon = good
+thật = so
+đẹp = beautiful
+rất = very
+dễ = easy
+khó = difficult
+đặc biệt = special
+
+Lesson 2[]
+
+đơn giản = simple
+phức tạp = complicated
+hạnh phúc = happy
+nhanh = fast
+nhỏ = little
+lớn = big
+
+Lesson 3[]
+
+quan trọng = important
+hài hước = humorous/funny
+trung thực = honest
+đắt = expensive
+rẻ = cheap
+chậm = slow
+
+Lesson 4[]
+
+kiên nhẫn = patient
+hay = interesting
+cần thiết = necessary
+nổi tiếng = famous
+cũ = old (objects only)
+mới = new
+
+Lesson 5[]
+
+độc lập = independent
+xa xỉ = luxurious
+giàu = rich
+nghèo = poor
+nguy hiểm = dangerous
+hoàn hảo = perfect
+
+Lesson 6[]
+
+hiện đại = modern
+tích cực = positive
+bình thường = normal
+tốt = good
+lạc quan = optimistic
+ngắn = short
+dài = long
+
+Lesson 7[]
+
+sai = wrong
+đúng = right
+nghiêm túc = serious
+truyền thống = traditional
+buồn = sad
+tệ = bad
+bướng bỉnh = stubborn
+
+Lesson 8[]
+
+trưởng thành = mature
+tiện lợi = convenient
+thân thiện = friendly
+nặng = heavy
+lịch sự = polite
+ích kỷ = selfish
+
+=== Skill 14 - Numbers ===
+
+
+Lesson 1[]
+
+Một = One
+Hai = Two
+Ba = Three
+Bốn = Four
+Năm = Five
+Sáu = Six
+Bảy = Seven
+
+Lesson 2[]
+
+Tám = Eight
+Chín = Nine
+Mười lăm = Fifteen
+Mười = Ten
+Mươi = Classifier for tens
+Hai mươi tư/bốn = Twenty-four
+Hai mươi lăm = Twenty-five
+Tám mươi lăm = Eighty-five
+Bốn mươi tư/bốn = Forty-four
+Ba mươi tư/bốn = Thirty-four
+Chín mươi bảy = Ninety-seven
+
+Lesson 3[]
+
+Bảy mươi một = Seventy-one
+Chín triệu = Nine million
+Bảy tỷ = Seven billion
+Tám mươi mốt triệu = Eighty-one billion
+Hai mươi mốt tỷ = Twenty-one billion
+Hai mươi mốt tỷ = Twenty-one billion
+Một nghìn lẻ một = One thousand and one
+
+Lesson 4[]
+
+Đủ = Enough
+Tổng cộng = Total
+Nửa = Half
+Số = Number
+
+=== Skill 15 - Continuous ===
+
+
+Lesson 1[]
+
+hiện tại = now, moment, present
+bây giờ = now
+đang = am/is/are (present progressive)
+lúc này = now, this moment
+vào = in, at, to
+
+=== Skill 16 - Animals_2 ===
+
+
+

@@ -2,7 +2,7 @@
 ### Code to extract data from duo-wiki for LAC
 ###
 
-### https://duolingo.fandom.com/wiki/Czech
+### https://duolingo.fandom.com/wiki
 ### Community content is available under CC-BY-SA unless otherwise noted.
 
-The script downloads just the vocabulary from each page of the Czech wiki.  It pauses ten seconds between pages so as not to overwhelm the server.
+The script downloads just the vocabulary from each page of the Language's wiki.  It pauses ten seconds between pages so as not to overwhelm the server.

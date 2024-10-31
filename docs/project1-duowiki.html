@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
+  <title>LAC: Language and the Computer &mdash; Project 1</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+</head>
+  <body class="container">
+    <div class="column">
+
+<h1>LAC: Language and the Computer</h1>
+
+
+<h2>Project 1: Vocabulary Game</h2>
+
+<p>This project constitutes 30% of your final grade
+for <a href='index.html'>LAC</a>.  Please work on the final
+program and report individually.
+
+<p>The goal of this project is to learn how to extract data.   You will write a program to extract data for six languages:
+
+  <ul>
+    <li><a href='code/duowiki/vocab-Chinese.txt'>Chinese</a>
+    <li><a href='code/duowiki/vocab-Czech.txt'>Czech</a>
+    <li><a href='code/duowiki/vocab-Indonesian.txt'>Indonesian</a>
+    <li><a href='code/duowiki/vocab-Japanese.txt'>Japanese</a>
+    <li><a href='code/duowiki/vocab-Korean.txt'>Korean</a>
+    <li><a href='code/duowiki/vocab-Vietnamese.txt'>Vietnamese</a>
+  </ul>
+  
+<p> Then you will use this in a simple vocabulary testing game.
+
+<p> Finally you will describe what you have done, including a description of what you could and could not extract, and comments on the data.   Write a short future work section describing what you would like to do if you had more coding knowledge (or different data).
+  
+<p>You can use the code from <a href='week06.html'>week 6 to get started</a>.
+  
+    
+  <h3>Minimal Requirements</h3>
+  <ol>
+    <li> Extract data from all six languages
+    <li> Summarize the data for each language (at least: number of
+      Skills, number of Lessons, number of Words)
+    <li> The game should first list the available languages and ask
+    you to choose one, then give a word and ask for its translation
+    (or q for quit).
+  </ol>
+
+  
+  <h3>Stretch Goals</h3>
+
+  <p> Do at least one of the following:
+  
+  <ol>
+    <li> Improve the extraction process, e.g.
+      <ul>
+	<li> Save the metadata separately and analyze it
+      </ul>
+    <li> Improve the game
+      <ul>
+	<li> Ask which skill they would like to do, or which level?
+	<li> Ask questions in a random order
+	  <br> use the <code>random</code> module,
+	  i.e.  <code>random.choice()</code>
+	<li> Randomly ask questions from earlier modules
+	<li> Spice up the feedback
+	  <ul>
+	    <li> Have a random choice of feedback
+	    <li> Have feedback in the different languages
+	  </ul>
+      </ul>
+    <li>Allow people to go in either direction English-X or X to English
+  </ol>
+  
+<h3>Write up</h3>
+<ul>
+  <li> The paper should be up to six pages, include a title, date and name on the first page, you do not need a separate title page.
+    <li>The paper should be single spaced.
+  <li> In the write up you should describe what you found out about the difficulties of extracting data
+  <li> You should give concrete examples from the resource you
+    analyzed.
+  <li>Include quantitive results.
+  <li>Include representative examples.
+  <li>Link to your program in coogle colab or if you wrote it locally, zip it up and
+  email it to me.  This does <b>not</b> count
+  toward the six page total
+  <br>In the main paper describe generally what the program does (no
+  need to go into extreme detail)
+  <li>If you want to make it even more beautiful, as I am sure you do,
+    take a look at my <a href =
+			 "https://fcbond.github.io/static/img/ling-style.pdf">(Computational)
+      Linguistic Style Guidelines</a>: a guide for the flummoxed.
+  <li> Submit
+    <!-- both <b>hardcopy</b> (stapled, single-spaced, two sided,  no folder, no cover page) and -->
+    <b>softcopy</b> (via moodle). 
+  <li> The deadline is on the main page.</b>.  
+</ul>
+
+<h4>References</h4>
+<ul>
+<li><a href= 'https://duolingo.fandom.com/wiki/'>Duolingo Fan Wiki</a>
+</ul>
+
+<p><a href="index.html">LAC: Language and the Computer</a> Francis Bond.
+
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

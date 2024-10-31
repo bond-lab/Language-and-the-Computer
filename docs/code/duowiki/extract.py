@@ -32,15 +32,47 @@ def extract_vocabulary(html):
     # Join list into a single text block and return
     return "\n".join(vocabulary_text)
 
-urls = []
-with open('URLs', 'r') as file:
-    for l in file:
-        urls.append(l.strip())
+def get_skills(lang):
+    """
+    Extract a list of skills for a given language
+    """
+    wikiroot = 'https://duolingo.fandom.com'
+    langtext = text_from_url(f"{wikiroot}/wiki/{lang}")
+    skillroot = f'/wiki/{lang}_Skill:'
+    skills = []
+    for s in langtext.split('"'):
+        if s.startswith(skillroot):
+            skill = s[len(skillroot):]
+            skills.append((skill, f'{wikiroot}{s}'))
+    return skills
 
 
-for i, url in enumerate(urls):
-    html = text_from_url(url)
-    title = url[45:]
-    vocab_text = f"\n=== Skill {i} - {title} ===\n\n" +  extract_vocabulary(html)
-    time.sleep(10) 
-    print(vocab_text)
+
+langs = ['Chinese', 'Japanese', 'Vietnamese', 'Indonesian', 'Korean', 'Cantonese']
+
+for lang in langs:
+    urls = get_skills(lang)
+    with open(f'vocab-{lang}.txt', 'w') as out:
+        print(f'# Vocabulary for {lang}',
+              file = out)
+        for i, (title, url) in enumerate(urls):
+            print(f'Processing {lang}: {title} ({i})')
+            html = text_from_url(url)
+            vocab_text = f"\n=== Skill {i} - {title} ===\n\n" +  extract_vocabulary(html)
+            print(vocab_text,
+                  file=out)
+            time.sleep(10)
+        print(file=out)
+    
+#urls = []
+# with open('URLs', 'r') as file:
+#     for l in file:
+#         urls.append(l.strip())
+
+
+# for i, url in enumerate(urls):
+#     html = text_from_url(url)
+#     title = url[45:]
+#     vocab_text = f"\n=== Skill {i} - {title} ===\n\n" +  extract_vocabulary(html)
+#     time.sleep(10) 
+#     print(vocab_text)
