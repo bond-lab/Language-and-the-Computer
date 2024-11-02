@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
+<title>7. Testing your code. - LAC</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	  crossorigin="anonymous">
+</head>
+<body class="container">
+  <div class="column">
+
+<h1>7. Testing your code.</h1>
+
+<h3>Lecture notes</h3>
+<ul>
+  <li> Read <i>Python Crash Course</i> Chapters 11 (skip the section on testing classes).
+  <li> We will use <a href='https://pypi.org/project/ipytest/'>ipytest</> to make it work in google colab: please read the documentation
+ <li> We will also use <a href=''>doctest</a>
+   <br> Just call it in a cell in colab, and it will test all
+   functions defined up till now.
+ <div class='shj-lang-py m-0 p-0 fs-6'>import doctest
+doctest.testmod()  ### or doctest.testmod(verbose=True)</div>
+
+  <li><a href='pdf/cheat_sheet/beginners_python_cheat_sheet_pcc_testing.pdf'>Cheat Sheet: list</a>,
+    <a href='pdf/cheat_sheet/beginners_python_cheat_sheet_pcc_testing_bw.pdf'>Cheat Sheet: list&nbsp;BW</a>
+  <li><strong>Pytest</strong>
+    <ul>
+      <li>✓ Flexible and powerful test framework with plugins and fixtures for complex tests.</li>
+      <li>✓ Better error reporting with detailed tracebacks and debugging information.</li>
+      <li>✓ Allows parameterized testing, making it easier to run tests with multiple inputs.</li>
+      <li>✗ Requires learning additional syntax and setup.</li>
+      <li>✗ Heavier and slower for small, isolated tests.</li>
+    </ul>
+  </li>
+  <li><strong>Doctest</strong>
+    <ul>
+      <li>✓ Lightweight and easy to use.</li>
+      <li>✓ Promotes documentation as tests, helping ensure examples in docs are accurate.</li>
+      <li>✗ Limited in handling complex tests.</li>
+      <li>✗ Less informative error reporting,  minimal feedback on failed tests.</li>
+      <li>✗ Sensitive to formatting in test cases.</li>
+    </ul>
+  </li>
+<li> For code you will use again, it is important to have tests
+<li> For them to be useful, you need to actually run them regularly
+</ul>
+
+
+<h3>Before class  (<a href='code/wk07a.html'>code</a>,
+  <a href='code/wk07a-out.txt'>output</a>)</h3>
+<ul>
+  <li> Write tests with both pytest and doctest for the practical code from weeks 5 and 6.
+    <ul>
+      <li> For <code>IsReduplicated</code>
+      <li> For <code>find_redup</code>
+      <li> For <code>strip_gutenberg</code>
+      <li> For <code>process_line</code>
+    </ul>
+</ul>
+
+
+
+<h3>Practical work (<a href='code/wk07b.html'>code</a>,
+  <a href='code/wk07b-out.txt'>output</a>)</h3>
+</ul>      
+
+
+
+
+<h3>Summary</h3>
+
+<ul>
+  <li>Learned how to write tests for functions and classes using the <code>pytest</code> and <code>doctest</code> modules. </li>
+  
+  <li>Practiced writing test functions to verify specific behaviors of
+  functions.</li>
+  <li>Explored using fixtures to efficiently create reusable resources
+  for multiple tests.</li>
+</ul>
+
+<ul>
+  <li>Testing helps ensure that critical behaviors of functions and
+  classes actually work.</li>
+  <li>You should add tests on critical code behaviors, without aiming
+  for full coverage in early projects.</li>
+  <li>Tests provide confidence in maintaining and improving code
+  without breaking existing functionality.</li>
+</ul>
+
+<ul>
+  <li>Initial tests make projects more respected and encourage
+  collaboration with other programmers.</li>
+  <li>Responding to failed tests is easier and faster than handling
+  bug reports from users.</li>
+  <li>Contributions to collaborative projects often require passing
+  existing tests and adding new ones for any new functionality.</li>
+</ul>
+
+
+<hr>
+<p><a href="index.html">LAC: Language and the Computer</a> Francis
+  Bond.
+  
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
