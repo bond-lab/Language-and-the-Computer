@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
+    <title>8. Regular Expressions. - LAC</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	  crossorigin="anonymous">
+  </head>
+  <body class="container">
+    <div class="column">   
+
+<h1>8. Regular Expressions</h1>
+
+<h3>Lecture notes</h3>
+<ul>
+  <li>Read  <a href="https://docs.python.org/3/howto/regex.html">
+      Regular Expression HOWTO</a> A. M. Kuchling
+</ul>
+
+<h3>Further reading</h3>
+<ul>
+<li><a href="https://developers.google.com/edu/python/regular-expressions">Python Regular Expressions</a> Google Developers
+
+ <a title="Regexps are part of the fundamental makeup of modern software and can make everyday people's lives much easier" href="http://www.theguardian.com/technology/2012/dec/04/ict-teach-kids-regular-expressions?CMP=twt_fd">Here's what ICT should really teach kids: how to do regular expressions</a>
+
+    Cory Doctorow, <i>theguardian.com</i>, Tuesday 4 December 2012
+<li><a href="http://xkcd.com/208/">I know regular expressions!</a> XKCD
+<li><a href='week12.html#regexp'>My handy summary</a>
+</ul>
+
+<h3>Before class (<a href='code/wk08a.html'>code</a>,
+  <a href='code/wk08a-out.txt'>output</a>)</h3>
+<ul>
+<li>Regular Expressions
+<ul>
+  <li>
+    Use <a href='https://regex101.com/'>RegEx101</a> to test some
+    regular expressions.  Make sure you tick 'Python' as the flavor.
+  <ul>
+    <li>
+      Put some text in the text string, and then try changing the
+      regular expression in the top area, and see what parts of the
+      text are matched. For example, what happens if you add "\b" at
+      the beginning of the regular expression? And at the end? Why?
+    </li>
+    <li>
+      You can click substitutions, if you want to test substitutions as well.
+    </li>
+</ul>
+  <li>Describe the class of strings matched by the following regular
+    expressions:
+    <ol>
+      <li> <code>[a-zA-Z]+</code></li>
+      <li> <code>[A-Z][a-z]*</code></li>
+      <li> <code>p[aeiou]{,2}t</code></li>
+      <li> <code>\d+(\.\d+)?</code></li>
+      <li> <code>([^aeiou][aeiou][^aeiou])*</code></li>
+      <li> <code>\w+|[^\w\s]+</code></li>
+    </ol>
+</p>
+  </li>
+</ul>
+<li> Strings and things
+<ul>
+   <li>Define a string <code>raw</code> containing a sentence of your own choosing.
+    Now, split <code>raw</code> on some character other than space, such as <code><span class="pysrc-string">'s'</span></code>.
+  <li>Write a <code><span class="pysrc-keyword">for</span></code> loop to print out the characters of a string, one per line.
+  <li>What is the difference between calling <code>split</code> on a string
+    with no argument or with <code><span class="pysrc-string">' '</span></code> as the argument,
+    e.g. <code>sent.split()</code> versus <code>sent.split(<span class="pysrc-string">' '</span>)</code>?  What happens
+    when the string being split contains tab characters, consecutive
+    space characters, or a sequence of tabs and spaces?  (You
+    will need to use <code><span class="pysrc-string">'\t'</span></code> to enter a tab character.)
+  <li>Create a variable <code>words</code> containing a list of words.
+    Experiment with <code>words.sort()</code> and <code>sorted(words)</code>.
+    What is the difference?
+</ul>
+</ul>
+
+
+<h3>Practical work (<a href='code/wk08b.html'>code</a>,
+  <a href='code/wk08b-out.txt'>output</a>)</h3>
+<ul>
+  <li>Write regular expressions to match the following classes of strings:
+    <ol>
+      <li>A single English article (assume that <i>a</i>, <i>an</i>, and <i>the</i>
+	are the only articles).</li>
+      <li>An arithmetic expression using integers, addition, and
+	multiplication, such as <code>2*3+8</code>.</li>
+    </ol>
+  </li>
+  <li>Write a utility function that takes a URL as its argument, and returns
+    the contents of the URL, with all HTML markup removed.  Use <code>from urllib import request</code>
+    to access the contents of the URL, e.g.
+    <code>raw_contents = request.urlopen(<span class="pysrc-string">'https://www.nltk.org/'</span>).read().decode('utf-8')</code>.
+  </li>
+ <li>Create a function <tt>plural()</tt> that takes a word and returns its plural form.
+    <br>Test it on <i>dog, apple, fly, boy, woman</i>.
+    <br>★ you can use the irregular inflections described below.
+    <br>★ you can try it for Czech (or some other non-English language)
+
+  <li>Save some text into a file <code>corpus.txt</code>.  Define a function <code>load(f)</code>   
+    that reads from the file named in its sole argument, and returns a string
+    containing the text of the file.
+  <li>Rewrite the following loop as a list comprehension:
+    <div>
+      <table border="0" cellpadding="0" cellspacing="0" width="95%">
+	<tr><td>
+	    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+	      <tr><td width="1" class="copybar"
+		      onclick="javascript:copy_doctest_to_clipboard(this.nextSibling);"
+		      >&nbsp;</td>
+		<td class="pysrc"><pre>
+		    <span class="pysrc-prompt">&gt;&gt;&gt; </span>sent = [<span class="pysrc-string">'The'</span>, <span class="pysrc-string">'dog'</span>, <span class="pysrc-string">'gave'</span>, <span class="pysrc-string">'John'</span>, <span class="pysrc-string">'the'</span>, <span class="pysrc-string">'newspaper'</span>]
+		    <span class="pysrc-prompt">&gt;&gt;&gt; </span>result = []
+		    <span class="pysrc-prompt">&gt;&gt;&gt; </span><span class="pysrc-keyword">for</span> word <span class="pysrc-keyword">in</span> sent:
+		    <span class="pysrc-more">... </span>    word_len = (word, len(word))
+		    <span class="pysrc-more">... </span>    result.append(word_len)
+		    <span class="pysrc-prompt">&gt;&gt;&gt; </span>result
+		    
+		    <span class="pysrc-output">[('The', 3), ('dog', 3), ('gave', 4), ('John', 4), ('the', 3), ('newspaper', 9)]</span></pre>
+		</td>
+	</tr></table></td></tr>
+    </table></div>
+  </li>
+  <li>Find all <b>verb particles</b> (things like <i>give up</i>, <i>look out</i>) in wordnet.
+  <li>Try to expand them to different inflectional forms: <i>give up, giving up, gave up, given up</i>
+    <br>★ you can use the irregular inflections described below.
+  <li>★ Use the expanded verbs to find some sentences that contain
+    verb particles in one of the texts (text1 to text9).  This may be
+    a bit slow (it took me over 10 minutes to process Moby Dick), so
+    maybe you should just run on a hundred sentences first.
+    <br>Sandra Soh did something like this for her  <a href='https://bond-lab.github.io/theses.html#Soh:2014'>2014 FYP</a>.
+</ul>
+
+
+<hr>
+
+<h4>English morphological exceptions</h4>
+  <a href='http://svn.delph-in.net/erg/trunk/irregs.tab'>irregs.tab</a> from the <a href='https://github.com/delph-in/docs/wiki/ErgTop'>ERG</a>.
+  <pre>
+...
+admen N_PL-IRREG_OLR adman
+administered V_PST_OLR administer
+administered V_PSP_OLR administer
+administered V_PAS_ODLR administer
+administering V_PRP_OLR administer
+administerin V_PRP-NF_OLR administer
+admitted V_PST_OLR admit
+admitted V_PSP_OLR admit
+admitted V_PAS_ODLR admit
+admitting V_PRP_OLR admit
+admittin V_PRP-NF_OLR admit
+adventurous N_PL-IRREG-NOAFF_OLR adventurous
+affluent N_PL-IRREG-NOAFF_OLR affluent
+aircraft N_PL-IRREG-NOAFF_OLR aircraft
+airmen N_PL-IRREG_OLR airman
+aldermen N_PL-IRREG_OLR alderman
+algae N_PL-IRREG-NOAFF_OLR algae
+aliases N_PL-IRREG_OLR alias
+...
+</pre>
+
+
+<p> ★ these problems are only for over achievers :-)
+
+<hr>
+<p><a href="index.html">LAC: Language and the Computer</a> Francis Bond.
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>
