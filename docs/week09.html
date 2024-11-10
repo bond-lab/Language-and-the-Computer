@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
+<title>9. Tokenization - LAC</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	  crossorigin="anonymous">
+ <!-- https://github.com/speed-highlight/core -->
+      <link rel="stylesheet" href="https://unpkg.com/@speed-highlight/core/dist/themes/github-light.css">
+    
+</head>
+<body class="container">
+  <div class="column">
+
+<h1>9. Tokenization</h1>
+
+<h3>Lecture notes</h3>
+<ul>
+  <li>Tokenization is the process of breaking down text into smaller units, called tokens.</li>
+  <li>Tokens will typically approximate words, but can be sub-word units.</li>
+  <ul>
+    <li> <i>don't</i> may become <i>do not</i>
+    <li> <i>kdbys</i> may become <i>když bys</i>
+    <li> <i>ad hoc</i> may become <i>ad_hoc</i>
+  </ul>
+  <li> Typically punctuation and symbols will also be tokens</li>
+  <li>This step is foundational in NLP, allowing algorithms to handle text systematically.</li>
+  <li>Proper tokenization is crucial, as it directly affects the performance of NLP models.</li>
+  <li>Because it requires language specific information (and may not have one correct answer) we use statistical language models</a>
+  <li> We will use <a href ='https://spacy.io/'>spaCy</a> a free,
+    open-source library for advanced Natural Language Processing (NLP)
+    in Python.
+    <ul>
+      <li>Read <a href='https://spacy.io/usage/spacy-101'>spaCy 101: Everything you need to know</a> at least up to the end of the section on Linguistic Annotations
+      <li> Watch the video <a href='https://www.youtube.com/watch?v=8vAq-SSnMsM'>Text Analysis with Python: Intro to Spacy</a>
+    </ul>
+  <li>spaCy has <a href='https://spacy.io/usage/models'>models for many languages</a>, but not all the languages we want.  Note that these models are not small, and may take a long time to load on a computer with limited memory.
+    <ul>
+      <li>So we will also use models from the <a href='https://universaldependencies.org/'>Universal Dependency Project</a>
+      <li>These models are part of <a href='https://lindat.mff.cuni.cz/services/udpipe/'>UDPipe</a> a trainable
+	pipeline for tokenization, tagging, lemmatization and dependency
+      <li>These are brought together in the <a href='https://spacy.io/universe/project/spacy-udpipe'>spacy-udpipe</a> package
+    </ul>
+  <li>Another toolkit that looks useful is <a href='https://trankit.readthedocs.io/en/latest/index.html'>Trankit</a> a light-weight Transformer-based Python Toolkit for multilingual Natural Language Processing (NLP)
+</ul>
+
+<h4>Using spaCy in google colab</h4>
+<ul>
+  <li> spaCy is included in colab by default, you don't need to install it
+  <li>You must download a model before you can use it.
+  <li>⚠ <span class='warning'>Then you must restart to reload dependencies</span>
+  <li> You only have to do this once!
+  <li> So do this in one cell, then restart (Runtime|Restart) 
+    <div class='shj-lang-py m-0 p-0 fs-6'>import spacy
+spacy.cli.download("en_core_web_sm")  #download English model
+</div>
+    Or any other models you want!  Generally, use a small model <code>_sm</code>, larger models are more accurate but much slower.
+  <li> For <code>spacy-udpipe</code>, it is external so you need to install it with <code>%pip install spacy-udpipe</code>
+  <li>Then you can load your models.  Note that you do not have to restart anything.
+  <li>The list of supported languages and models is <a href='https://github.com/TakeLab/spacy-udpipe/blob/master/spacy_udpipe/resources/languages.json'>here</a>
+    <div class='shj-lang-py m-0 p-0 fs-6'>%pip install spacy_udpipe
+import spacy_udpipe
+spacy_udpipe.download("en") # download English model
+</div>
+</ul>
+      
+<h3>Before class  (<a href='code/wk09a.html'>code</a>,
+  <a href='code/wk09a-out.txt'>output</a>)</h3>
+<ul>
+  <li>Load appropriate models for the following languages and then process with spacy
+ <div class='shj-lang-py m-0 p-0 fs-6'>testdata = {
+    "zh": "有时，敏捷的棕色狐狸跳过了懒惰的猫。多么令人兴奋啊！",          # Chinese
+    "cs": "Někdy, rychlá hnědá liška přeskočí línou kočku. Jak vzrušující!",  # Czech
+    "ja": "時々、素早い茶色の狐が怠けた猫を飛び越える。なんて素晴らしい！",    # Japanese
+    "ko": "때때로, 빠른 갈색 여우가 게으른 고양이를 뛰어넘는다. 정말 신난다!",      # Korean
+    "id": "Kadang-kadang, rubah cokelat cepat melompati kucing malas. Betapa seru!", # Indonesian
+    "en": "Sometimes, the quick brown fox jumps over the lazy cat. How exciting!"  # English
+}</div>
+    
+  <li>Loop through the sentences (using <code>doc.sents</code>)
+  <li>Loop through the tokens in each sentence and display
+    <ul>
+      <li>word
+      <li>part-of-speech
+      <li>lemma
+      <li>morphology
+ </ul>
+    See how different the morphology is for each language!
+</ul>
+
+
+
+<h3>Practical work (<a href='code/wk09b.html'>code</a>,
+  <a href='code/wk09b-out.txt'>output</a>)</h3>
+<ul>
+  <li> Use NLTK to download a the Universal Declaration of Human Rights in all of the languages we looked at above and at least one more.
+    <br>Hint:
+    <div class='shj-lang-py m-0 p-0 fs-6'>%pip install nltk
+import nltk
+nltk.download('udhr2')
+# list the translations      
+print(nltk.corpus.udhr.fileids())
+# get the text of a translation      
+text = udhr.raw('Japanese_Nihongo-UTF8').
+    </div>
+    You will have to match the translations with the language code yourself!
+  <li> Count how many sentences there are in each language
+  <li> Count how many times each part of speech is used in each language
+  <li> Print out the results as a table
+  <li> Pick one POS that is surprising to you and look at some (or all examples) for a couple of languages.  For example, why are adjectives so rare in CJK?
+</ul>      
+
+
+
+
+<h3>Summary</h3>
+
+<ul>
+  <li> There are many packages to help with processing language
+  <li> They are all slightly different, so you have to get used to
+    reading the manual (and searching on google or asking a LLM).
+    <li> Typically you will have to do a bit of weird manual work to
+    make everything fit together (like looking for the languages you
+    want in a list of files ids)
+  <li> Some packages work with many languages
+  <li> Some are designed to work for just one language, and will often
+    be more accurate, or have more features
+  <li> It is worth looking around a little before you program
+  something yourself to see it already exists.
+</ul>
+<hr>
+<p><a href="index.html">LAC: Language and the Computer</a> Francis
+  Bond.
+  
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script type="module">
+  import { highlightAll } from  'https://unpkg.com/@speed-highlight/core/dist/index.js';
+  // interface ShjOptions {
+  //     hideLineNumbers: boolean;
+  // }
+  const options = {
+      hideLineNumbers: true // This is equivalent to your TypeScript interface
+  };
+  highlightAll(options);
+</script>
+ 
+  
+</body>
+</html>

@@ -1,0 +1,142 @@
+Collecting zh-core-web-sm==3.8.0
+  Downloading https://github.com/explosion/spacy-models/releases/download/zh_core_web_sm-3.8.0/zh_core_web_sm-3.8.0-py3-none-any.whl (48.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.5/48.5 MB 8.6 MB/s eta 0:00:00
+Requirement already satisfied: spacy-pkuseg<2.0.0,>=1.0.0 in ./venv/lib/python3.9/site-packages (from zh-core-web-sm==3.8.0) (1.0.0)
+Requirement already satisfied: srsly<3.0.0,>=2.3.0 in ./venv/lib/python3.9/site-packages (from spacy-pkuseg<2.0.0,>=1.0.0->zh-core-web-sm==3.8.0) (2.4.8)
+Requirement already satisfied: numpy<3.0.0,>=2.0.0 in ./venv/lib/python3.9/site-packages (from spacy-pkuseg<2.0.0,>=1.0.0->zh-core-web-sm==3.8.0) (2.0.2)
+Requirement already satisfied: catalogue<2.1.0,>=2.0.3 in ./venv/lib/python3.9/site-packages (from srsly<3.0.0,>=2.3.0->spacy-pkuseg<2.0.0,>=1.0.0->zh-core-web-sm==3.8.0) (2.0.10)
+Collecting ja-core-news-sm==3.8.0
+  Downloading https://github.com/explosion/spacy-models/releases/download/ja_core_news_sm-3.8.0/ja_core_news_sm-3.8.0-py3-none-any.whl (12.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.1/12.1 MB 7.2 MB/s eta 0:00:00
+Requirement already satisfied: sudachipy!=0.6.1,>=0.5.2 in ./venv/lib/python3.9/site-packages (from ja-core-news-sm==3.8.0) (0.6.8)
+Requirement already satisfied: sudachidict-core>=20211220 in ./venv/lib/python3.9/site-packages (from ja-core-news-sm==3.8.0) (20241021)
+Collecting ko-core-news-sm==3.8.0
+  Downloading https://github.com/explosion/spacy-models/releases/download/ko_core_news_sm-3.8.0/ko_core_news_sm-3.8.0-py3-none-any.whl (14.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.7/14.7 MB 9.1 MB/s eta 0:00:00
+Collecting en-core-web-sm==3.8.0
+  Downloading https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl (12.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 7.9 MB/s eta 0:00:00
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('zh_core_web_sm')
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('ja_core_news_sm')
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('ko_core_news_sm')
+[38;5;2m✔ Download and installation successful[0m
+You can now load the package via spacy.load('en_core_web_sm')
+Already downloaded a model for the 'cs' language
+Already downloaded a model for the 'id' language
+loading cs
+loading id
+
+Language: ZH
+---
+有时	ADV		
+，	PUNCT		
+敏捷	VERB		
+的	PART		
+棕色	NOUN		
+狐狸	VERB		
+跳过	VERB		
+了	PART		
+懒惰	ADJ		
+的	PART		
+猫	NOUN		
+。	PUNCT		
+---
+多么	ADV		
+令	VERB		
+人	NOUN		
+兴奋	VERB		
+啊	PART		
+！	PUNCT		
+
+Language: CS
+---
+Někdy	ADV	někdy	PronType=Ind
+,	PUNCT	,	
+rychlá	ADJ	rychlý	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos
+hnědá	ADJ	hnědý	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos
+liška	NOUN	liška	Case=Nom|Gender=Fem|Number=Sing|Polarity=Pos
+přeskočí	VERB	přeskočit	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act
+línou	ADJ	líný	Case=Acc|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos
+kočku	NOUN	kočka	Case=Acc|Gender=Fem|Number=Sing|Polarity=Pos
+.	PUNCT	.	
+---
+Jak	ADV	jak	PronType=Int,Rel
+vzrušující	ADJ	vzrušující	Aspect=Imp|Case=Nom|Gender=Fem|Number=Sing|Polarity=Pos|Tense=Pres|VerbForm=Part|Voice=Act
+!	PUNCT	!	
+
+Language: JA
+---
+時々	ADV	時々	Reading=トキドキ
+、	PUNCT	、	Reading=、
+素早い	ADJ	素早い	Inflection=形容詞;連体形-一般|Reading=スバヤイ
+茶	NOUN	茶	Reading=チャ
+色	NOUN	色	Reading=イロ
+の	ADP	の	Reading=ノ
+狐	NOUN	狐	Reading=キツネ
+が	ADP	が	Reading=ガ
+怠け	VERB	怠ける	Inflection=下一段-カ行;連用形-一般|Reading=ナマケ
+た	AUX	た	Inflection=助動詞-タ;連体形-一般|Reading=タ
+猫	NOUN	猫	Reading=ネコ
+を	ADP	を	Reading=ヲ
+飛び	VERB	飛ぶ	Inflection=五段-バ行;連用形-一般|Reading=トビ
+越える	VERB	越える	Inflection=下一段-ア行;終止形-一般|Reading=コエル
+。	PUNCT	。	Reading=。
+---
+なんて	PART	なんて	Reading=ナンテ
+---
+素晴らしい	ADJ	素晴らしい	Inflection=形容詞;終止形-一般|Reading=スバラシイ
+！	PUNCT	!	Reading=!
+
+Language: KO
+---
+때때로	ADV	때때로	
+,	PUNCT	,	
+빠른	ADJ	빠르+ㄴ	
+갈색	NOUN	갈색	
+여우가	NOUN	여우+가	
+게으른	VERB	게으르+ㄴ	
+고양이를	ADV	고양+이+를	
+뛰어넘는다	VERB	뛰어넘는다	
+.	PUNCT	.	
+---
+정말	ADV	정말	
+신난다	VERB	신난다	
+!	PUNCT	!	
+
+Language: ID
+---
+Kadang-kadang	ADV	Kadang-kadang	
+,	PUNCT	,	
+rubah	NOUN	rubah	Number=Sing
+cokelat	ADJ	cokelat	Number=Sing
+cepat	ADJ	cepat	Degree=Pos|Number=Sing
+melompati	VERB	melompati	Number=Sing|Voice=Act
+kucing	NOUN	kucing	
+malas	ADJ	malas	Number=Sing|Voice=Act
+.	PUNCT	.	
+---
+Betapa	ADV	betapa	
+seru	ADJ	seru	Degree=Pos|Number=Sing
+!	PUNCT	!	
+
+Language: EN
+---
+Sometimes	ADV	sometimes	
+,	PUNCT	,	PunctType=Comm
+the	DET	the	Definite=Def|PronType=Art
+quick	ADJ	quick	Degree=Pos
+brown	ADJ	brown	Degree=Pos
+fox	NOUN	fox	Number=Sing
+jumps	VERB	jump	Number=Sing|Person=3|Tense=Pres|VerbForm=Fin
+over	ADP	over	
+the	DET	the	Definite=Def|PronType=Art
+lazy	ADJ	lazy	Degree=Pos
+cat	NOUN	cat	Number=Sing
+.	PUNCT	.	PunctType=Peri
+---
+How	SCONJ	how	
+exciting	ADJ	exciting	Degree=Pos
+!	PUNCT	!	PunctType=Peri
