@@ -1,0 +1,14 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.10, pytest-8.3.3, pluggy-1.5.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+metadata: {'Python': '3.8.10', 'Platform': 'Linux-5.4.0-200-generic-x86_64-with-glibc2.29', 'Packages': {'pytest': '8.3.3', 'pluggy': '1.5.0'}, 'Plugins': {'metadata': '3.1.1', 'anyio': '4.3.0', 'html': '4.1.1'}}
+rootdir: /home/bond/git/Language-and-the-Computer/docs/code
+plugins: metadata-3.1.1, anyio-4.3.0, html-4.1.1
+collecting ... collected 4 items
+
+test_wk07a.py::test_IsReduplicated PASSED                                [ 25%]
+test_wk07a.py::test_find_redup PASSED                                    [ 50%]
+test_wk07a.py::test_strip_gutenberg PASSED                               [ 75%]
+test_wk07a.py::test_process_line PASSED                                  [100%]
+
+============================== 4 passed in 0.02s ===============================

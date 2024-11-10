@@ -1,0 +1,50 @@
+Trying:
+    IsReduplicated("buku-buku")
+Expecting:
+    True
+ok
+Trying:
+    IsReduplicated("Buku-buku")
+Expecting:
+    True
+ok
+Trying:
+    IsReduplicated("buku")
+Expecting:
+    False
+ok
+Trying:
+    IsReduplicated("itu-buku")
+Expecting:
+    False
+ok
+Trying:
+    find_redup ([ "buku-buku", "kucing", "Agak-agak", "agak-agak" ])
+Expecting:
+    {'buku-buku': 1, 'agak-agak': 2}
+ok
+Trying:
+    process_line('ne = no/not', 1)
+Expecting:
+    {'lesson': 1, 'cs': 'ne', 'en': ['no', 'not']}
+ok
+Trying:
+    process_line('na shledanou = goodbye/bye, see you soon', 3)
+Expecting:
+    {'lesson': 3, 'cs': 'na shledanou', 'en': ['goodbye', 'bye', 'see you soon']}
+ok
+Trying:
+    strip_gutenberg('The Project Gutenberg eBook of All cats are gray\n...\n*** START OF THE PROJECT GUTENBERG EBOOK ALL CATS ARE GRAY ***\n_An odd story, made up of oddly assorted elements that include a man, \n    a woman, a black cat, a treasure--and an invisible being that had to\n  be seen to be believed._\n*** END OF THE PROJECT GUTENBERG EBOOK ALL CATS ARE GRAY ***\nMost people start at our website which has the main PG search\nfacility: www.gutenberg.org.')
+Expecting:
+    '_An odd story, made up of oddly assorted elements that include a man, \n    a woman, a black cat, a treasure--and an invisible being that had to\n  be seen to be believed._'
+ok
+1 items had no tests:
+    __main__
+4 items passed all tests:
+   4 tests in __main__.IsReduplicated
+   1 tests in __main__.find_redup
+   2 tests in __main__.process_line
+   1 tests in __main__.strip_gutenberg
+8 tests in 5 items.
+8 passed and 0 failed.
+Test passed.

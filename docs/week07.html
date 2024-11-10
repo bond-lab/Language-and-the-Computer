@@ -19,8 +19,8 @@
 <h3>Lecture notes</h3>
 <ul>
   <li> Read <i>Python Crash Course</i> Chapters 11 (skip the section on testing classes).
-  <li> We will use <a href='https://pypi.org/project/ipytest/'>ipytest</> to make it work in google colab: please read the documentation
- <li> We will also use <a href=''>doctest</a>
+  <li> We will use <a href='https://pypi.org/project/ipytest/'>ipytest</a> to make it work in google colab: please read the documentation
+ <li> We will also use <a href='https://docs.python.org/3/library/doctest.html'>doctest</a>
    <br> Just call it in a cell in colab, and it will test all
    functions defined up till now.
  <div class='shj-lang-py m-0 p-0 fs-6'>import doctest
@@ -52,7 +52,9 @@ doctest.testmod()  ### or doctest.testmod(verbose=True)</div>
 
 
 <h3>Before class  (<a href='code/wk07a.html'>code</a>,
-  <a href='code/wk07a-out.txt'>output</a>)</h3>
+  <a href='code/wk07a-out.txt'>output</a>,
+<a href='code/test_wk07a.html'>test</a>,
+  <a href='code/test_wk07a-out.txt'>test output</a>)</h3>
 <ul>
   <li> Write tests with both pytest and doctest for the practical code from weeks 5 and 6.
     <ul>
@@ -61,12 +63,58 @@ doctest.testmod()  ### or doctest.testmod(verbose=True)</div>
       <li> For <code>strip_gutenberg</code>
       <li> For <code>process_line</code>
     </ul>
+  <li> Hint
+ <ul>
+   <li> for the doctest, write the test, and look at the failure
+     message to see the expected output, use this in the text
+   <li> for a multi-line string in the test, you need to escape the newlines 
+     <br> so      <code>"line one\\nline two"</code>
+     <br> instead of "<code>line one\nline two</code>
+ </ul>
 </ul>
 
 
 
 <h3>Practical work (<a href='code/wk07b.html'>code</a>,
-  <a href='code/wk07b-out.txt'>output</a>)</h3>
+  <a href='code/wk07b-out.txt'>output</a>,
+<a href='code/test_wk07b.html'>test</a>,
+  <a href='code/test_wk07b-out.txt'>test output</a>)</h3>
+<ul>
+  <li> Write code to analyze a text in terms of characters
+  <br> Return a dictionary with the count of
+  <ul>
+    <li> all characters (length)
+
+    <li> ascii (unaccented characters - hint use <code>isascii()</code> and <code>isalpha()</code>)
+    <li> accented characters
+    <li> vowels
+    <li> consonants
+  </ul>
+  <li> Document this using docstring or pytest
+    <ul>
+      <li>test with some Czech
+      <li>test with some Pinyin
+      <li>test with some Vietnamese 
+  </ul>
+  <li> Write a <code>swear_filter</code> function that censors
+offensive words by replacing them with asterisks (e.g., "darn" ->
+    "****").
+    <br> You should cover at least <a href='https://en.wikipedia.org/wiki/Seven_dirty_words'>Carlin's seven dirty words</a>: <!-- ' -->
+      shit, piss, fuck, cunt, cocksucker, motherfucker, tits
+  <li>Write pytest tests for <code>swear_filter</code>
+    <ul>
+      <li>Verify correct censoring of offensive
+      words in various contexts.
+      <li> Add a test for words within other words --- we will learn how to pass this next week
+	<br><strong>test driven development</strong> write tests, and then makes them pass
+    </ul>
+  <li> Add doctest examples showing censored versions of sentences
+    with sample swear words.
+  <li> Extend the function and tests to optionally
+    <ul>
+      <li> replace all letters except 1st and last: shit → s**t
+      <li> replace short words with bleep and long words with bleepbleep
+    </ul>
 </ul>      
 
 
@@ -100,8 +148,9 @@ doctest.testmod()  ### or doctest.testmod(verbose=True)</div>
   <li>Contributions to collaborative projects often require passing
   existing tests and adding new ones for any new functionality.</li>
 </ul>
-
-
+<ul>
+  <li> You should at least have doctests for your assignment
+</ul>
 <hr>
 <p><a href="index.html">LAC: Language and the Computer</a> Francis
   Bond.

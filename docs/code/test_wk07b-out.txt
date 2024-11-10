@@ -1,0 +1,17 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.10, pytest-8.3.3, pluggy-1.5.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+metadata: {'Python': '3.8.10', 'Platform': 'Linux-5.4.0-200-generic-x86_64-with-glibc2.29', 'Packages': {'pytest': '8.3.3', 'pluggy': '1.5.0'}, 'Plugins': {'metadata': '3.1.1', 'anyio': '4.3.0', 'html': '4.1.1'}}
+rootdir: /home/bond/git/Language-and-the-Computer/docs/code
+plugins: metadata-3.1.1, anyio-4.3.0, html-4.1.1
+collecting ... collected 7 items
+
+test_wk07b.py::test_analyze_text_czech PASSED                            [ 14%]
+test_wk07b.py::test_analyze_text_pinyin PASSED                           [ 28%]
+test_wk07b.py::test_analyze_text_vietnamese PASSED                       [ 42%]
+test_wk07b.py::test_swear_filter_full PASSED                             [ 57%]
+test_wk07b.py::test_swear_filter_partial PASSED                          [ 71%]
+test_wk07b.py::test_swear_filter_bleep PASSED                            [ 85%]
+test_wk07b.py::test_swear_filter_in_words XFAIL (we don't know regul...) [100%]
+
+========================= 6 passed, 1 xfailed in 0.04s =========================

@@ -1,0 +1,38 @@
+Trying:
+    analyze_text("Hà Nội có mưa")
+Expecting:
+    {'total': 10, 'ascii': 6, 'accented': 4, 'vowels': 6, 'consonants': 4}
+ok
+Trying:
+    analyze_text("pīnyīn")
+Expecting:
+    {'total': 6, 'ascii': 4, 'accented': 2, 'vowels': 2, 'consonants': 4}
+ok
+Trying:
+    swear_filter("You are a shit")
+Expecting:
+    'You are a ****'
+ok
+Trying:
+    swear_filter("You are a shit", censor_type='partial')
+Expecting:
+    'You are a s**t'
+ok
+Trying:
+    swear_filter("You are a shit", censor_type='bleep')
+Expecting:
+    'You are a bleep'
+ok
+Trying:
+    swear_filter("You are a motherfucker", censor_type='bleep')
+Expecting:
+    'You are a bleepbleep'
+ok
+1 items had no tests:
+    __main__
+2 items passed all tests:
+   2 tests in __main__.analyze_text
+   4 tests in __main__.swear_filter
+6 tests in 3 items.
+6 passed and 0 failed.
+Test passed.
