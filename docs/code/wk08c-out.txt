@@ -1,0 +1,13 @@
+Input: 我最近读了一本书《Pride and Prejudice》 (傲慢与偏见)，还有《Les Misérables》 (悲惨世界)。
+[('Pride and Prejudice', '傲慢与偏见'), ('Les Misérables', '悲惨世界')]
+Input: 空がピカピカ光っていたし、心臓がドキドキしていました。彼はニコニコ笑っていました。
+['ピカピカ', 'ドキドキ', 'ニコニコ']
+Input: Japanese duowiki
+['ガタガタ', 'ガタガタ', 'キラキラ', 'ネバネバ', 'ドキドキ', 'ズキズキ', 'ズキズキ']
+3 items had no tests:
+    __main__
+    __main__.extract_repeated_onomatopoeia
+    __main__.get_trans
+0 tests in 3 items.
+0 passed and 0 failed.
+Test passed.

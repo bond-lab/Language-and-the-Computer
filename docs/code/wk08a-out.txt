@@ -1,0 +1,125 @@
+
+Regular Expressions
+
+[a-zA-Z]+
+matches one or more ascii letters
+[A-Z][a-z]*
+matches zero or more ascii letters
+p[aeiou]{,2}t
+matches a word consisting of p followed by up to 2 vowels, followed by t
+\d+(\.\d+)?
+matches a digit followed possibly by a full stop and more digits
+([^aeiou][aeiou][^aeiou])*
+Matches zero or more CVC combinations
+\w+|[^\w\s]+
+
+Extract Dates
+
+Input: "My birthday is on 25/12/1990 and my friend's is on 01/01/2000."
+Output: ['25/12/1990', '01/01/2000']
+
+Normalize Spaces
+
+Input: "This   is   an example    sentence."
+Output: This is an example sentence.
+
+Mask Digits
+
+Input: My phone number is 123-456-7890.
+Year: 2023
+About four o'clock.
+
+Output: My phone number is 123-456-7890. Year: 2023 About four o'clock.
+
+Mask Digits
+
+Input: "My birthday is on 25/12/1990 and my friend's is on 01/01/2000."
+Output: My birthday is on ##/##/#### and my friend's is on ##/##/####.
+
+Count Word Occurences
+
+Input: "Pen, pineapple, apple-pen and pineapple-pen", "apple"
+Output: 1
+Input: PPAP, "apple"
+Output: 5
+In:
+ 
+I have a pen
+I have an apple
+Ah
+Apple pen
+I have a pen
+I have pineapple
+Ah
+Pineapple pen
+Apple pen
+Pineapple pen
+Ah
+Pen Pie Pineapple Apple Pen
+Pen Pie Pineapple Apple Pen
+
+Trying:
+    count_word_occurrences("This is an example. This is fun!", "this")
+Expecting:
+    2
+ok
+Trying:
+    count_word_occurrences("apple pie and pineapple", "apple")
+Expecting:
+    1
+ok
+Trying:
+    count_word_occurrences("Nothing to see here.", "banana")
+Expecting:
+    0
+ok
+Trying:
+    count_word_occurrences("Cat, caterpillar, and the cat.", "cat")
+Expecting:
+    2
+ok
+Trying:
+    extract_dates("My birthday is on 25/12/1990 and my friend's is on 01/01/2000.")
+Expecting:
+    ['25/12/1990', '01/01/2000']
+ok
+Trying:
+    extract_dates("No dates here.")
+Expecting:
+    []
+ok
+Trying:
+    mask_digits("My phone number is 123-456-7890.")
+Expecting:
+    'My phone number is ###-###-####.'
+ok
+Trying:
+    mask_digits("Year: 2023")
+Expecting:
+    'Year: ####'
+ok
+Trying:
+    mask_digits("No digits here.")
+Expecting:
+    'No digits here.'
+ok
+Trying:
+    normalize_spaces("This   is   an example    sentence.")
+Expecting:
+    'This is an example sentence.'
+ok
+Trying:
+    normalize_spaces("  Hello   world!  ")
+Expecting:
+    'Hello world!'
+ok
+1 items had no tests:
+    __main__
+4 items passed all tests:
+   4 tests in __main__.count_word_occurrences
+   2 tests in __main__.extract_dates
+   3 tests in __main__.mask_digits
+   2 tests in __main__.normalize_spaces
+11 tests in 5 items.
+11 passed and 0 failed.
+Test passed.

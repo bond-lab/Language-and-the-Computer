@@ -1,0 +1,66 @@
+{'ko': '안녕', 'tr': 'annyeong', 'en': ['hi', 'bye'], 'meta': 'informal'}
+{'ko': '안녕하세요', 'tr': 'annyeonghaseyo', 'en': ['hello'], 'meta': 'polite'}
+{'ko': '안녕하십니까', 'tr': 'anyeonghasimnikka', 'en': ['hello'], 'meta': 'formal'}
+{'ko': '만나서 반갑습니다', 'tr': 'mannaseo bangapseumnida', 'en': ['nice to meet you']}
+{'ko': '저', 'tr': 'jeo', 'en': ['I', 'me']}
+{'ko': '제', 'tr': 'je', 'en': ['my = 저의']}
+{'ko': '제', 'en': ['my']}
+Trying:
+    process_line("안녕하세요 (annyeonghaseyo) = hello (polite)")
+Expecting:
+    {'ko': '안녕하세요', 'tr': 'annyeonghaseyo', 'en': ['hello'], 'meta': 'polite'}
+ok
+Trying:
+    process_line("저 (jeo) = I, me")
+Expecting:
+    {'ko': '저', 'tr': 'jeo', 'en': ['I', 'me']}
+ok
+Trying:
+    process_rhs("hello (polite)")
+Expecting:
+    (['hello'], 'polite')
+ok
+Trying:
+    process_rhs("nice to meet you")
+Expecting:
+    (['nice to meet you'], '')
+ok
+Trying:
+    swear_filter("You are a shit")
+Expecting:
+    'You are a ****'
+ok
+Trying:
+    swear_filter("You are a shit", censor_type='partial')
+Expecting:
+    'You are a s**t'
+ok
+Trying:
+    swear_filter("You are a shit", censor_type='bleep')
+Expecting:
+    'You are a bleep'
+ok
+Trying:
+    swear_filter("You are a motherfucker", censor_type='bleep')
+Expecting:
+    'You are a bleepbleep'
+ok
+Trying:
+    swear_filter("Fuck you!")
+Expecting:
+    '**** you!'
+ok
+Trying:
+    swear_filter("Scunthorpe")
+Expecting:
+    'Scunthorpe'
+ok
+1 items had no tests:
+    __main__
+3 items passed all tests:
+   2 tests in __main__.process_line
+   2 tests in __main__.process_rhs
+   6 tests in __main__.swear_filter
+10 tests in 4 items.
+10 passed and 0 failed.
+Test passed.
