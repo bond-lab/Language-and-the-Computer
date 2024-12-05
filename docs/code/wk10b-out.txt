@@ -1,0 +1,347 @@
+
+Wordnet
+
+Synsets for bird:
+[Synset('omw-en-01503061-n'), Synset('omw-en-07644382-n'), Synset('omw-en-09989045-n'), Synset('omw-en-07123870-n'), Synset('omw-en-04212282-n'), Synset('omw-en-01139865-v')]
+# of senses for bird: 6
+omw-en-01503061-n 9 warm-blooded egg-laying vertebrates characterized by feathers and forelimbs modified as wings
+omw-en-07644382-n 6 the flesh of a bird or fowl (wild or domestic) used as food
+omw-en-09989045-n 7 informal terms for a (young) woman
+omw-en-07123870-n 6 a cry or noise made to express displeasure or contempt
+omw-en-04212282-n 9 badminton equipment consisting of a ball of cork or rubber with a crown of feathers
+omw-en-01139865-v 2 watch and study birds in their natural habitat
+
+Which  languages have lemmas for 'omw-en-01503061-n'?
+hr Synset('omw-hr-01503061-n') ['ptica']
+pl Synset('omw-pl-01503061-n') ['ptak']
+is Synset('omw-is-01503061-n') ['fugl']
+pt Synset('omw-pt-01503061-n') ['ave', 'pássaro']
+zsm Synset('omw-zsm-01503061-n') ['unggas', 'burung']
+ca Synset('omw-ca-01503061-n') ['au', 'ocell']
+eu Synset('omw-eu-01503061-n') ['hegazti', 'txori']
+da Synset('omw-da-01503061-n') ['fugl', 'pipfugl', 'piphans']
+it Synset('omw-it-01503061-n') ['uccello', 'pennuto', 'volatile', 'volativo', 'volatio']
+it Synset('omw-iwn-01503061-n') ['pennuto', 'volatile', 'uccello', 'augello']
+sv Synset('omw-sv-01503061-n') ['fågel']
+sl Synset('omw-sl-01503061-n') ['ptica', 'ptič']
+fi Synset('omw-fi-01503061-n') ['lintu']
+lt Synset('omw-lt-01503061-n') ['paukštis']
+el Synset('omw-el-01503061-n') ['πουλί', 'πτηνό']
+en Synset('omw-en-01503061-n') ['bird']
+ja Synset('omw-ja-01503061-n') ['バード', '小鳥', '禽鳥', '飛禽', '鳥', '鳥類']
+nb Synset('omw-nb-01503061-n') ['fugl']
+id Synset('omw-id-01503061-n') ['unggas', 'burung']
+sk Synset('omw-sk-01503061-n') ['vták']
+th Synset('omw-th-01503061-n') ['นก', 'วิหค', 'ปักษา', 'สกุณา']
+arb Synset('omw-arb-01503061-n') ['طائِر', 'طيْر']
+bg Synset('omw-bg-01503061-n') ['птица']
+sq Synset('omw-sq-01503061-n') ['zogj']
+ro Synset('omw-ro-01503061-n') ['pasăre']
+gl Synset('omw-gl-01503061-n') ['ave']
+nl Synset('omw-nl-01503061-n') ['vogel', 'vogeltje']
+es Synset('omw-es-01503061-n') ['ave', 'aves', 'pájaro']
+cmn-Hans Synset('omw-cmn-01503061-n') ['禽', '雀', '鸟', '鸟类']
+fr Synset('omw-fr-01503061-n') ['oiseau']
+nn Synset('omw-nn-01503061-n') ['fugl']
+Synset('omw-en-01503061-n')
+omw-en-bird-01503061-n 29
+
+Synset('omw-en-07644382-n')
+omw-en-bird-07644382-n 1
+omw-en-fowl-07644382-n 0
+
+Synset('omw-en-09989045-n')
+omw-en-dame-09989045-n 1
+omw-en-doll-09989045-n 0
+omw-en-wench-09989045-n 0
+omw-en-skirt-09989045-n 0
+omw-en-chick-09989045-n 0
+omw-en-bird-09989045-n 0
+
+Synset('omw-en-07123870-n')
+omw-en-boo-07123870-n 0
+omw-en-hoot-07123870-n 0
+omw-en-Bronx_cheer-07123870-n 0
+omw-en-hiss-07123870-n 0
+omw-en-raspberry-07123870-n 0
+omw-en-razzing-07123870-n 0
+omw-en-razz-07123870-n 0
+omw-en-snort-07123870-n 0
+omw-en-bird-07123870-n 0
+
+Synset('omw-en-04212282-n')
+omw-en-shuttlecock-04212282-n 0
+omw-en-bird-04212282-n 0
+omw-en-birdie-04212282-n 0
+omw-en-shuttle-04212282-n 0
+
+Synset('omw-en-01139865-v')
+omw-en-bird-01139865-v 0
+omw-en-birdwatch-01139865-v 0
+
+omw-en-01503061-n 29 warm-blooded egg-laying vertebrates characterized by feathers and forelimbs modified as wings
+omw-en-07644382-n 1 the flesh of a bird or fowl (wild or domestic) used as food
+omw-en-09989045-n 1 informal terms for a (young) woman
+omw-en-07123870-n 0 a cry or noise made to express displeasure or contempt
+omw-en-04212282-n 0 badminton equipment consisting of a ball of cork or rubber with a crown of feathers
+omw-en-01139865-v 0 watch and study birds in their natural habitat
+
+
+Sysnets for 'red'
+
+
+omw-en-09405949-n ['Red', 'Red River'] a tributary of the Mississippi River that flows eastward from Texas along the southern boundary of Oklahoma and through Louisiana
+omw-en-00381097-s ['red', 'reddish', 'ruddy', 'blood-red', 'carmine', 'cerise', 'cherry', 'cherry-red', 'crimson', 'ruby', 'ruby-red', 'scarlet'] of a color at the end of the color spectrum (next to orange); resembling the color of blood or cherries or tomatoes or rubies
+omw-en-00248560-s ['crimson', 'red', 'violent'] characterized by violence or bloodshed
+omw-en-00395626-s ['crimson', 'red', 'reddened', 'red-faced', 'flushed'] (especially of the face) reddened or suffused with or as if with blood from emotion or exertion
+omw-en-04962784-n ['red', 'redness'] red color or pigment; the chromatic color resembling the hue of blood
+omw-en-09863749-n ['Bolshevik', 'Marxist', 'red', 'bolshie', 'bolshy'] emotionally charged terms used to refer to extreme radicals or revolutionaries
+omw-en-13327231-n ['loss', 'red ink', 'red'] the amount by which the cost of a business exceeds its revenue
+
+
+All Hyponyms of 'red'
+
+
+omw-en-04963111-n ['sanguine'] a blood-red color
+omw-en-04963201-n ['chrome red'] a red pigment used in paints; basic lead chromate
+omw-en-04963307-n ['Turkey red', 'alizarine red'] a bright orange-red color produced in cotton cloth with alizarine dye
+omw-en-04963449-n ['cardinal', 'carmine'] a variable color averaging a vivid red
+omw-en-04963588-n ['crimson', 'ruby', 'deep red'] a deep and vivid red color
+omw-en-04963740-n ['dark red'] a red color that reflects little light
+omw-en-04964287-n ['purplish red', 'purplish-red'] a red with a tinge of purple
+omw-en-04964443-n ['cerise', 'cherry', 'cherry red'] a red the color of ripe cherries
+omw-en-04964977-n ['scarlet', 'vermilion', 'orange red'] a variable color that is vivid red but sometimes with an orange tinge
+omw-en-04963905-n ['burgundy'] a dark purplish-red to blackish-red color
+omw-en-04964001-n ['claret'] a dark purplish-red color
+omw-en-04964079-n ['oxblood red'] a dark brownish-red color
+omw-en-04964162-n ['wine', 'wine-colored', 'wine-coloured'] a red as dark as red wine
+omw-en-04964586-n ['magenta'] a primary subtractive color for light; a dark purple-red color; the dye for magenta was discovered in 1859, the year of the battle of Magenta
+omw-en-04964799-n ['fuschia'] a dark purplish-red color
+omw-en-04964878-n ['maroon'] a dark purplish-red to dark brownish-red color
+
+
+Average Polysemy vs Word Length (English)
+
+
+
+POS = n
+1	2.5
+2	1.2162162162162162
+3	1.7857707509881422
+4	2.0928813559322035
+5	1.7678879310344828
+6	1.5420997138123211
+7	1.420852732173487
+8	1.3214285714285714
+9	1.2560226275236517
+10	1.2225873916940544
+11	1.1717416499841955
+12	1.1179988499137434
+13	1.100442939030745
+14	1.064039408866995
+15	1.0416872631405503
+16	1.0231638418079096
+17	1.014692378328742
+18	1.0141976962228771
+19	1.0110067983166073
+20	1.004161464835622
+21	1.0091644204851753
+22	1.0021276595744681
+23	1.004980079681275
+24	1.0091623036649215
+25	1.0095057034220531
+26	1.0025
+27	1.0087719298245614
+28	1.0
+29	1.0051020408163265
+30	1.0071428571428571
+31	1.0
+32	1.0
+33	1.0
+34	1.0
+35	1.0
+36	1.0
+37	1.0
+38	1.0303030303030303
+39	1.0
+40	1.0
+41	1.0
+42	1.0769230769230769
+43	1.0
+44	1.0
+45	1.0
+46	1.0
+47	1.0
+48	1.0
+49	1.0
+50	1.0
+51	1.0
+52	1.0
+53	1.0
+54	1.0
+55	1.0
+56	1.0
+59	1.0
+60	1.0
+61	1.0
+63	1.0
+64	1.0
+69	1.0
+71	1.0
+
+POS = v
+2	8.714285714285714
+3	3.4563758389261743
+4	3.5563173359451516
+5	3.0182270091135046
+6	2.386202450032237
+7	2.1733800350262698
+8	1.8564993564993566
+9	1.7268608414239481
+10	1.5508228460793805
+11	1.48
+12	1.2479338842975207
+13	1.1545454545454545
+14	1.3363636363636364
+15	1.1428571428571428
+16	1.0666666666666667
+17	1.1
+18	1.0
+19	1.0
+20	1.0833333333333333
+21	1.0
+22	1.0
+23	1.0
+24	1.0
+25	1.0
+26	1.0
+27	1.0
+28	1.0
+32	1.0
+33	1.0
+
+POS = a
+1	1.0
+2	1.0833333333333333
+3	2.272727272727273
+4	2.5324675324675323
+5	2.002921129503408
+6	1.6863580998781973
+7	1.496570644718793
+8	1.419094419094419
+9	1.337443218689163
+10	1.2843003412969283
+11	1.2230707395498392
+12	1.1921420882669538
+13	1.1595576619273302
+14	1.1154422788605698
+15	1.0880681818181819
+16	1.0390243902439025
+17	1.0808080808080809
+18	1.0512820512820513
+19	1.0
+20	1.0294117647058822
+21	1.0
+22	1.0
+23	1.1111111111111112
+24	1.0
+25	1.0
+26	1.0
+27	1.0
+29	1.0
+30	1.0
+
+POS = r
+2	2.3846153846153846
+3	1.7647058823529411
+4	2.036363636363636
+5	1.9548872180451127
+6	1.496124031007752
+7	1.3577023498694516
+8	1.2515463917525773
+9	1.1912568306010929
+10	1.1600688468158347
+11	1.1647727272727273
+12	1.138004246284501
+13	1.0929577464788733
+14	1.0727272727272728
+15	1.0974025974025974
+16	1.1325301204819278
+17	1.0
+18	1.0740740740740742
+19	1.0
+20	1.0
+21	1.0
+22	1.0
+23	1.0
+24	1.0
+25	1.0
+26	1.0
+27	1.0
+28	1.0
+29	1.0
+
+POS = ALL
+1	2.1481481481481484
+2	1.3107861060329067
+3	2.112507138777841
+4	2.465111160026414
+5	2.0212644498358783
+6	1.6941526263627353
+7	1.535797509039775
+8	1.3969803370786518
+9	1.3171300797200078
+10	1.2557422008913266
+11	1.196935214686694
+12	1.1350663036796347
+13	1.109278133865714
+14	1.0724142296493226
+15	1.0463995179270864
+16	1.025804171085189
+17	1.0163753042708563
+18	1.0149019607843137
+19	1.0107799619530755
+20	1.0048800325335503
+21	1.0090377458798512
+22	1.0020979020979022
+23	1.0058881256133465
+24	1.0090791180285343
+25	1.009433962264151
+26	1.0024630541871922
+27	1.008695652173913
+28	1.0
+29	1.005050505050505
+30	1.0070921985815602
+31	1.0
+32	1.0
+33	1.0
+34	1.0
+35	1.0
+36	1.0
+37	1.0
+38	1.0303030303030303
+39	1.0
+40	1.0
+41	1.0
+42	1.0769230769230769
+43	1.0
+44	1.0
+45	1.0
+46	1.0
+47	1.0
+48	1.0
+49	1.0
+50	1.0
+51	1.0
+52	1.0
+53	1.0
+54	1.0
+55	1.0
+56	1.0
+59	1.0
+60	1.0
+61	1.0
+63	1.0
+64	1.0
+69	1.0
+71	1.0

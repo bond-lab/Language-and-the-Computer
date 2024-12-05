@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="hg2052.ico">
-    <title>5. Lexical Resources and WordNet. - LAC</title>
+    <title>10. Lexical Resources and WordNet. - LAC</title>
      <!-- Bootstrap CSS -->
     <link rel="stylesheet"
 	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -14,7 +14,7 @@
   <body class="container">
     <div class="column">   
 
-<h1>5. Lexical Resources and WordNet.</h1>
+<h1>10. Lexical Resources and WordNet.</h1>
 
 <h3>Lecture notes</h3>
 <ul>
@@ -31,11 +31,9 @@
 	<a href="https://www.nltk.org/book/ch02.html#wordnet">
 	  WordNet</a>
 	(<a href="https://www.nltk.org/howto/wordnet.html">How To</a>)
-	<br><a href='https://colab.research.google.com/drive/12fHOljna59xe2wDAQu-sIhYV8ertTCVF?usp=sharing'>The new wordnet module <code>wn</code></a>
-	<strong>Please use this</strong>
+      <li>We will use a new wordnet module <a href='https://pypi.org/project/wn/'>wn</a> (<a href='https://wn.readthedocs.io/en/latest/'>Documentation</a>; <a href='https://colab.research.google.com/drive/12fHOljna59xe2wDAQu-sIhYV8ertTCVF?usp=sharing'>How To</a>) --- 
+	<strong>Please use this not NLTK</strong>
       </li> 
-      <li><a href="http://docs.python.org/library/random.html">Random choice in Python</a>
-	<li><a href="https://www.nltk.org/book/ch03.html#writing-results-to-a-file">Writing Results to a File</a>
     </ul>
   </li>
 </ul>
@@ -55,10 +53,6 @@
       CMU Pronouncing Dictionary</a> (Wikipedia)
   </li>
   <li>
-    <a href="http://www.sil.org/computing/toolbox">
-      Field Linguist's Toolbox</a> (SIL International)
-  </li>
-  <li>
     <a href="http://wordnet.princeton.edu/wordnet/">
       About WordNet</a> 
     by George Miller et al. (Princeton)
@@ -75,17 +69,9 @@
   </li>
 </ul>
 
-<h3>Before class  (<a href='code/wk5a.html'>code</a>,
-  <a href='code/wk5a-out.txt'>output</a>)</h3>
+<h3>Before class  (<a href='code/wk10a.html'>code</a>,
+  <a href='code/wk10a-out.txt'>output</a>)</h3>
 <ol>
-  <li>
-    <a href="https://www.nltk.org/book/ch02.html#wordlist-corpora">
-      Wordlist Corpora</a> <br>
-    Find the 50 most frequent words (see 
-    <a href="week02.html">Week 2</a>)
-    in Jane Austen's <i>Emma</i>. <br>
-    Then find the 50 most frequent words that are not stopwords.
-  </li>
   <li>   
     <a href="https://www.nltk.org/book/ch02.html#a-pronouncing-dictionary">
       A Pronouncing Dictionary</a> <br>
@@ -131,33 +117,9 @@
       </li>
     </ul>
 </ol>
-<h3>Practical work (<a href='code/wk5b.html'>code</a>,
-  <a href='code/wk5b-out.txt'>output</a>)</h3>
-<br>Using the new wordnet module:  <a href='code/wk5c.html'>code</a>,
-  <a href='code/wk5c-out.txt'>output</a>
+<h3>Practical work -- in class (<a href='code/wk10b.html'>code</a>,
+  <a href='code/wk10b-out.txt'>output</a>)</h3>
 <ol>
-  <li>
-    Find the 50 most frequent bigrams in Jane Austen's <i>Emma</i>. <br>
-    Then find the 50 most frequent bigrams that do not include
-    a stopword.
-     <br>
-    ★ Find the 50 most frequent bigrams that include neither 
-    stopwords nor punctuation
-  </li>
-  <li>
-    <a href="https://www.nltk.org/book/ch02.html#a-pronouncing-dictionary">
-      A Pronouncing Dictionary</a> <br>
-    Find <i>python</i> in the Pronouncing Dictionary
-    and print its pronunciation. <br> 
-    Find <i>marathon</i> and print its pronunciation. <br> 
-    Find all the words whose last syllable rhymes with
-    <i>python</i>. <br>
-    Find all the words whose last syllable rhymes with
-    <i>marathon</i>. <br>
-    ★ Write a function that converts Arbabet to IPA
-    <br> Use it to print the pronunciations of <i>python</i> and <i>marathon</i>
-  </li>
-
   <li>Load wordnet inside python.  
     <ul>
       <li>  Look at the different synsets for <i>bird</i>.  
@@ -170,13 +132,42 @@
 	(hint freqency of a lemma is given by <tt>sense.counts</tt>)
       <li>Give the total frequency for each synset
     </ul>
+  <li> Find all hyponyms (including hyponyms of hyponyms, ...) for the colour red!
+    <ul>
+      <li>Use <code>closure</code> (shown in the How To)
+    </ul>
   <li> ★ Tabulate the average polysemy per word length for all words
-  in wordnet, and then seperately for each part of speech.
-(Hint: polysemy is number of synsets/word; you can get all words by [w for w  in wn.synsets()]; for just nouns you can do:  [w for w  in wn.synsets(pos='n')]. )
+    in one language in wordnet, and then seperately for each part of speech.
+<ul>
+  <li> polysemy is number of synsets/word
+  <li> you can get all words by <code>[w for w  in wn.words()]</code>
+  <li> for just nouns you can do:  <code>[w for w  in wn.synsets(pos='n')]</code>
+  <li> for just English you can do:  <code>[w for w  in wn.synsets(lang='en')]</code>
+  <li> if you do just <code>wn</code> then you get all words for all languages, this can be a lot!
+</ul>
 </ol>
 
 <p> ★ these problems are only for over achievers :-)
 
+<h3>Further work -- at home (<a href='code/wk10b.html'>code</a>,
+  <a href='code/wk10b-out.txt'>output</a>)</h3>
+
+<ol>
+  <li>Find all nouns in English that are both animals and food
+    <ul>
+      <li> Use the <i>supersense</i> (aka <i> lexfile, topic</i>) 
+    </ul>
+    e.g. <i>duck, salmon</i>
+  <li>Try in another language
+    <ul>
+      <li> Not all wordnets have supersenses, so you may have to
+      translate the synset to English, and look at the English
+	supersense
+    </ul>
+    e.g. 鶏, 兎
+</ol>
+
+  
 <hr>
 <p><a href="index.html">LAC: Language and the Computer</a> Francis Bond.
 
