@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
+<title>11. Plotting</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	  crossorigin="anonymous">
+    <!-- https://github.com/speed-highlight/core -->
+    <link rel="stylesheet" href="https://unpkg.com/@speed-highlight/core/dist/themes/github-light.css">
+
+
+    
+</head>
+<body class="container">
+  <div class="column">
+
+<h1>11. Plotting.</h1>
+
+<h3>Lecture notes</h3>
+<ul>
+  <li> Read <i>Python Crash Course</i> Chapter 15 (up to but not including the section on Random Walks).
+  <li> Take a look at <a href='https://pypi.org/project/matplotlib-tufte/'>matplotlib-tufte</a> and the 
+    <a href='https://gitlab.com/lemberger/matplotlib-tufte/-/blob/main/examples/Basic.ipynb'>demo</a> for some examples of making more beautiful graphs.
+  <li> Some more examples
+    <ul>
+      <li><a href='https://www.darkhorseanalytics.com/portfolio/data-looks-better-naked-bar-charts'>Bar charts</a>
+     <li><a href='https://www.darkhorseanalytics.com/portfolio/2016/1/7/data-looks-better-naked-pie-charts'>Pie Charts</a>
+      <li><a href='https://www.darkhorseanalytics.com/portfolio/2016/1/7/data-looks-better-naked-clear-off-the-table'>Tables</a>
+</ul>
+
+
+<h3>Before class  (<a href='code/wk11a.html'>code</a>,
+  <a href='code/wk11a-out.txt'>output</a>,
+ <a href='code/wk11a-fig1.png'>Fig 1</a>,
+ <a href='code/wk11a-fig1.png'>Fig 2</a> )</h3>
+<ul>
+  <li> Graph the cubes from 1-100, and save them as a png file.
+    <br> Hint <code>plt.savefig("fig1.png")</code>
+  <li> Graph the squares and cubes from 1-100, and save them as a png file.
+    <br> Hint, there is an example in the demo
+</ul>
+
+
+
+<h3>Practical work --- in class  (<a href='code/wk11b.html'>code</a>,
+  <a href='code/wk11b-out.txt'>output</a>,
+ <a href='code/wk11b-fig1.png'>Fig 1</a>)</h3>
+<ul>
+  <li> Remember the data we made for udhr POS from week 9:
+    <pre>
+      udhr = {"en": {"ADJ": 158, "ADV": 27, "NOUN": 443, "VERB": 139, "PROPN": 31, "INTJ": 0, "ADP": 246, "AUX": 90, "CCONJ": 129, "SCONJ": 15, "DET": 178, "NUM": 29, "PART": 42, "PRON": 85, "PUNCT": 154, "SYM": 0, "X": 0}, "cs": {"ADJ": 214, "ADV": 36, "NOUN": 434, "VERB": 114, "PROPN": 1, "INTJ": 0, "ADP": 133, "AUX": 58, "CCONJ": 121, "SCONJ": 31, "DET": 113, "NUM": 26, "PART": 5, "PRON": 41, "PUNCT": 173, "SYM": 0, "X": 0}, "id": {"ADJ": 103, "ADV": 48, "NOUN": 439, "VERB": 187, "PROPN": 23, "INTJ": 0, "ADP": 174, "AUX": 1, "CCONJ": 114, "SCONJ": 16, "DET": 70, "NUM": 27, "PART": 27, "PRON": 69, "PUNCT": 135, "SYM": 0, "X": 0}, "zh": {"ADJ": 47, "ADV": 174, "NOUN": 776, "VERB": 825, "PROPN": 35, "INTJ": 0, "ADP": 140, "AUX": 0, "CCONJ": 115, "SCONJ": 0, "DET": 75, "NUM": 208, "PART": 232, "PRON": 46, "PUNCT": 200, "SYM": 0, "X": 5}, "ko": {"ADJ": 70, "ADV": 131, "NOUN": 417, "VERB": 166, "PROPN": 4, "INTJ": 0, "ADP": 0, "AUX": 10, "CCONJ": 116, "SCONJ": 54, "DET": 17, "NUM": 25, "PART": 0, "PRON": 2, "PUNCT": 118, "SYM": 0, "X": 0}, "ja": {"ADJ": 58, "ADV": 6, "NOUN": 671, "VERB": 229, "PROPN": 8, "INTJ": 0, "ADP": 458, "AUX": 184, "CCONJ": 75, "SCONJ": 70, "DET": 18, "NUM": 36, "PART": 25, "PRON": 7, "PUNCT": 212, "SYM": 0, "X": 0}, "vi": {"ADJ": 78, "ADV": 0, "NOUN": 428, "VERB": 275, "PROPN": 58, "INTJ": 0, "ADP": 107, "AUX": 9, "CCONJ": 34, "SCONJ": 50, "DET": 67, "NUM": 50, "PART": 2, "PRON": 0, "PUNCT": 133, "SYM": 0, "X": 90}}
+      </pre>
+  <li> Graph one language as a bar graph (<a href='code/wk11b-fig1.png'>Fig 1</a>).
+  <li> Graph all the languages as bar graphs, change the colour of one or two parts-of-speech.
+    <br>
+    <table>
+      <tr>
+	<td><img width='200px' src='code/wk11b-fig2-en.png'></td>
+	<td><img width='200px' src='code/wk11b-fig2-cs.png'></td>
+	<td><img width='200px' src='code/wk11b-fig2-id.png'></td>
+      </tr>
+      <tr>
+	<td><img width='200px' src='code/wk11b-fig2-ja.png'></td>
+	<td><img width='200px' src='code/wk11b-fig2-ko.png'></td>
+	<td><img width='200px' src='code/wk11b-fig2-zh.png'></td>
+      </tr>
+      <tr>
+	<td><img width='200px' src='code/wk11b-fig2-vi.png'></td>
+      </tr>
+    </table>
+
+  <li>  ❂ Can you set them all to have the same y-axis height?
+    <br>
+    <table>
+      <tr>
+	<td><img width='200px' src='code/wk11b-fig3-en.png'></td>
+	<td><img width='200px' src='code/wk11b-fig3-cs.png'></td>
+	<td><img width='200px' src='code/wk11b-fig3-id.png'></td>
+      </tr>
+      <tr>
+	<td><img width='200px' src='code/wk11b-fig3-ja.png'></td>
+	<td><img width='200px' src='code/wk11b-fig3-ko.png'></td>
+	<td><img width='200px' src='code/wk11b-fig3-zh.png'></td>
+      </tr>
+      <tr>
+	<td><img width='200px' src='code/wk11b-fig3-vi.png'></td>
+      </tr>
+   </table>
+
+    
+</ul>      
+
+<p> ❂ If you haved finished everything else, try this 
+
+
+
+
+<h3>Summary</h3>
+
+<ul>
+  <li>You learned how to graph results in various results
+  <li>You learned the importance of making the graphs as easy to read as possible
+</ul>
+<hr>
+<p><a href="index.html">LAC: Language and the Computer</a> Francis
+  Bond.
+  
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script type="module">
+  import { highlightAll } from  'https://unpkg.com/@speed-highlight/core/dist/index.js';
+  // interface ShjOptions {
+  //     hideLineNumbers: boolean;
+  // }
+  const options = {
+      hideLineNumbers: true // This is equivalent to your TypeScript interface
+  };
+  highlightAll(options);
+</script>
+
+
+</body>
+</html>

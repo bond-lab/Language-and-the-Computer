@@ -2,3 +2,4 @@ spacy
 spacy_udpipe
 nltk
 wn
+matplotlib-tufte

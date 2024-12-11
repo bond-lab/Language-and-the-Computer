@@ -1,6 +1,7 @@
 ### Tokenization
 import spacy
 import spacy_udpipe
+import json
 
 ###
 ### Download models spacy has
@@ -79,4 +80,16 @@ for thing in ['sents']  + UPOS:
       else:
         print(0,  end='\t')
   print()
- 
+
+### print some data to be used later
+
+print("\n\nFor week 11\n\n")
+
+stats2 = dict()
+for lang in stats:
+  stats2[lang] = dict()
+  for thing in UPOS:
+    stats2[lang][thing] = len(stats[lang][thing]) if thing in stats[lang] else 0
+    
+with open('udhr_pos.json', 'w') as out:
+  json.dump(stats2, out)
