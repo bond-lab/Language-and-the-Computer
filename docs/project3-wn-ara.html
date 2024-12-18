@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
+  <title>LAC: Language and the Computer &mdash; Project 3</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300..900&display=swap">
+ <style>
+   body {
+       font-family: 'Oswald', serif !important;
+   }
+   </style>
+  </head>
+  <body class="container">
+    <div class="column">
+
+<h1>LAC: Language and the Computer: Project 3</h1>
+<h2>In-Class On-Line Open-Book Programming Challenge</h2>
+
+<p>This assignment constitutes 30% of your final grade
+for <a href='index.html'>LAC</a>. 
+
+<h2>Comparing and describing wordnets</h2>
+
+<p> Given a pair of wordnets, compare them.  Given a single wordnet describe it or illustrate it.
+
+<p> Please start with these wordnets:
+  <ul>
+    <li><a href = 'code/P3/tufs-en.xml'>Tokyo University of Foreign Studies Basic Vocabulary for English</a>
+       <ul>
+	 <li> Contains words and example sentences for basic vocabulary
+	 <li> Web page is here: <a href='https://arasaac.org/'>https://arasaac.org/</a>
+	 <li> Wordnet web page is here: <a href='https://arasaac.org/'>https://arasaac.org/</a>
+
+       </ul>
+    <li><a href = 'code/P3/ara-en-wn.xml.gz'>Arasaac for English</a>
+       <ul>
+	 <li> Contains words and links to pictures
+	 <li> Definition is a space-separated list of picture ids
+	 <li> Web page is here: <a href='https://arasaac.org/'>https://arasaac.org/</a>
+ 	 <li> Wordnet web page is here: <a href='https://github.com/bond-lab/wn-araasac/'>https://github.com/bond-lab/wn-araasac/</a>
+      </ul>
+    <li>Then test with similar wordnets, you can chose the languages
+      <ul>
+	<li>TUFS: ['as', 'de', 'en', 'es', 'fr', 'id', 'ja', 'km', 'ko', 'lo', 'mn', 'my', 'pt', 'ru', 'th', 'tl', 'tr', 'ur', 'vi', 'zsm']
+	<li>ARASAAC: ['an', 'ar', 'bg', 'ca', 'cs', 'de', 'en', 'es', 'et', 'eu', 'fa', 'fr', 'gl', 'he', 'hr', 'hu', 'it', 'ko', 'lt', 'mk', 'nb', 'nl', 'pl', 'pt', 'ro', 'ru', 'sk', 'sr', 'zh']
+      </ul>
+    <li>Core synsets are a semi-automatically compiled list of 5000
+"core" word senses in Princeton WordNet (approximately the 5000 most
+      frequently used word senses).  We have mapped them to ilis
+     <ul>
+	<li>  <a href = 'code/P3/wn-core-ili.tab'>wn-core-ili.tab</a>
+   </ul>	  
+    <li>Basic synsets are a compiled list of 578 "basic" synsets from
+the Tokyo University of Foreign Studies Basic Vocabulary for Japanese.
+We have mapped them to ilis
+     <ul>
+	<li>  <a href = 'code/P3/wn-basic-ili.tab'>wn-basic-ili.tab</a>
+   </ul>	  
+   </ul>	  
+      
+  <h3>Single wordnet description</h3>
+
+<p> Write a function (or functions) that take a wordnet lexicon id as input, assuming the wordnet has already been read.
+  
+  <ol>
+    <li> How many synsets, senses and words are there?
+    <li> How many synsets, senses and words are there for each pos (part of speech)?
+    <li> Show these as e.g. pi charts
+      <br> Make the size of the pi chart proportional to the actual size
+      <br> E.g if one wn has 100,000 synsets and one has 5,000, the first pi chart should be 20 times bigger
+    <li> Show three examples of each pos
+</ol>
+
+
+  <h3>Compare wordnets</h3>
+
+  <ol>
+    <li> How many synsets, senses and words are there only in one, in
+    both or only in the other?
+    <li> Show these as e.g. bar charts --- left for one wordnet, right for the other
+    <li> Show three examples of words in one, both or other for each pos
+  </ol>
+
+  <h3>Compare wordnet to curated list</h3>
+
+  <ol>
+    <li> Try this with the core and basic lists
+    <li> How many synsets are in the wordnet from the curated concept list
+    <li> See the coverage over the semantic fields (lexicographer files)
+    <li> Graph this and give examples
+    <li> Compare the two lists
+  </ol>
+
+ <h3>Illustrate a basic list</h3>
+
+  <ol>
+    <li> Go through the basic list, and show a picture for each word
+      <ul>
+	<li> Easiest to do by concepts
+	<li> Also show synonyms and examples, if any
+	<li> You can get a definition from another wordnet (like <i>en-omw:1.4</i>)
+     </ul>
+    <li> Try to break things into smaller groups (pos, semantic field)
+    <li> If the word has not picture, experiment with a hypernym or hyponym
+    <li> Not how many words are missing pictures, and list them
+    <li> You can show images in google colab like this:
+      <code><pre>
+from IPython.display import display, Markdown
+
+ara_id=2910
+
+display(Markdown((f"""**Computer**<br> 
+&lt;img width='48' src='https://static.arasaac.org/pictograms/{ara_id}/{ara_id}_300.png'&gt; *from Arasaac*""")))
+      </pre></code>
+  </ol>
+
+
+  
+<h4>Deliverables</h4>
+<ul>
+  <li>Per person:
+    <ul>
+      <li>1-2 page paper in any format, finally given as pdf, 
+	describing what you have done, and
+	what you think could be done given more time. 
+	<br>Include <b>title, author, date</b>
+	e.g.
+	<center>
+	  LAC Project 3: Comparing wordnets
+	  <br>Francis Bond
+	  <br> bond@ieee.org
+	  <br>2024-12-18
+	</center>
+	
+	<br>The file should be named <tt>name_surname_matric.pdf</tt>
+	<br>e.g. <tt>francis_bond_007.pdf</tt>
+	<br>you do not need full citations, this is just a short summary
+	<br>don't include the program as an appendix (just share a link)
+      <li>program 
+	<br>The program should be in a google colab
+	<br>Include the URL in the paper
+    </ul>
+  <li>Upload them to moodle
+    <br>If you <b>don't</b> want me to show off your
+    code/output/paper, please let me know within a month
+</ul>
+
+  
+<h3>Pedagogical Goals</h3>
+<ul>
+  <li> Consolidate skills in a novel task under realistic conditions
+    <br> You can do interesting tasks!
+  <li> Demonstrate an ability to break a task into small chunks
+    <br>Should be able to consider and evaluate multiple approaches
+  <li> Demonstrate an ability to use python to solve tasks
+    <br>choosing the right approach, writing and debugging
+  <li> Demonstrate an ability to cooperate to solve a problem
+    <br>good communication, delivering (partial) results in time
+</ul>
+<hr>
+
+<p>Project Three for <a href="index.html">LAC: Language and the Computer</a> Francis Bond.
+
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
