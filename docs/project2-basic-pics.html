@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
+  <title>LAC: Language and the Computer &mdash; Project 2</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300..900&display=swap">
+ <style>
+   body {
+       font-family: 'Oswald', serif !important;
+   }
+   </style>
+  </head>
+  <body class="container">
+    <div class="column">
+
+<h1>LAC: Language and the Computer: Project 2</h1>
+
+<p>This assignment constitutes 30% of your final grade
+for <a href='index.html'>LAC</a>.  Please work on this individually or
+  in groups of two or three.
+
+<p>Pick one of the following:</p>
+  
+<h2>A: Illustrate a basic list</h2>
+
+  <ol>
+    <li> Go through the basic list, and show a picture for each word
+      <ul>
+	<li> Easiest to do by concepts
+	<li> Also show synonyms and examples, if any
+	<li> You can get a definition from another wordnet (like <i>en-omw:1.4</i>)
+     </ul>
+    <li> Try to break things into smaller groups (pos, semantic field, first letter)
+    <li> Note how many words are missing pictures, and list them
+    <li> If the word has no picture, experiment with a hypernym or hyponym
+      <ul>
+	<li> take a sample and evaluate --- how appropriate is the picture
+	<li> you can use ome-wn:1.4 to find semantic relations
+      </ul>
+    <li> You can show images in google colab like this:
+      <code><pre>
+from IPython.display import display, Markdown
+
+ara_id=2910
+
+display(Markdown((f"""**Computer**<br> 
+&lt;img width='48' src='https://static.arasaac.org/pictograms/{ara_id}/{ara_id}_300.png'&gt; *from Arasaac*""")))
+      </pre></code>
+  <li> Convert the illustrated vocabulary to a pdf booklet (using for example <a href='markdown-pdf'>https://pypi.org/project/markdown-pdf/</a>)
+  </ol>
+
+<p> You can use these wordnets:
+  <ul>
+    <li><a href = 'code/P3/tufs-en.xml'>Tokyo University of Foreign Studies Basic Vocabulary for English</a>
+       <ul>
+	 <li> Contains words and example sentences for basic vocabulary
+	 <li> Web page is here: <a href='https://fcbond.github.io/tufs/'>https://fcbond.github.io/tufs/</a>
+	 <li> Wordnet web page is here: <a href='https://malindo.aa-ken.jp/TUFSOpenLgResources.html'>https://malindo.aa-ken.jp/TUFSOpenLgResources.html</a>
+	 <li> Vocab Search page is here [in Japanese]: <a href='https://www.coelang.tufs.ac.jp/mt/index_v.html'>https://www.coelang.tufs.ac.jp/mt/index_v.html</a>
+
+       </ul>
+    <li><a href = 'code/P3/ara-en-wn.xml.gz'>Arasaac for English</a>
+       <ul>
+	 <li> Contains words and links to pictures
+	 <li> Definition is a space-separated list of picture ids
+	 <li> Web page is here: <a href='https://arasaac.org/'>https://arasaac.org/</a>
+ 	 <li> Wordnet web page is here: <a href='https://github.com/bond-lab/wn-araasac/'>https://github.com/bond-lab/wn-araasac/</a>
+      </ul>
+    <li>Then test with similar wordnets, you can chose the languages
+      <ul>
+	<li>TUFS: ['as', 'de', 'en', 'es', 'fr', 'id', 'ja', 'km', 'ko', 'lo', 'mn', 'my', 'pt', 'ru', 'th', 'tl', 'tr', 'ur', 'vi', 'zsm']
+	<li>ARASAAC: ['an', 'ar', 'bg', 'ca', 'cs', 'de', 'en', 'es', 'et', 'eu', 'fa', 'fr', 'gl', 'he', 'hr', 'hu', 'it', 'ko', 'lt', 'mk', 'nb', 'nl', 'pl', 'pt', 'ro', 'ru', 'sk', 'sr', 'zh']
+      </ul>
+    <li>Core synsets are a semi-automatically compiled list of 5000
+"core" word senses in Princeton WordNet (approximately the 5000 most
+      frequently used word senses).  We have mapped them to ilis
+     <ul>
+	<li>  <a href = 'code/P3/wn-core-ili.tab'>wn-core-ili.tab</a>
+   </ul>	  
+    <li>Basic synsets are a compiled list of 578 "basic" synsets from
+the Tokyo University of Foreign Studies Basic Vocabulary for Japanese.
+We have mapped them to ilis
+     <ul>
+	<li>  <a href = 'code/P3/wn-basic-ili.tab'>wn-basic-ili.tab</a>
+   </ul>	  
+   </ul>	  
+
+<h2>B: Own Task</h2>
+
+<p>You can suggest your own task, and if I say ok, do it instead.
+  This can be used to fit in with other research you are doing, but
+  should not duplicate work done for other assessment, you must do
+  something new for this class.
+
+  
+
+
+  
+  <h2>Deliverable</h2>
+<p>You should deliver a paper, which contains a link to the program
+and if necessary the output files.  For task <i>A: Illustrate a basic list</i> attach the illustrated list as well, either as a separate file or as an appendix.
+  
+  <ul>
+    <li>The paper should be no more than ten pages
+including diagrams, with up to two additional pages of references,
+  <li> You should give concrete examples from the resource(s) you
+    analyzed.
+  <li>Include quantitive results.
+  <li>Include representative examples.
+  <li> You don't need an extensive literature review, but you should
+    read and cite  the references below and  if you
+    consult other lexicons (which you are encouraged to do) then you
+    should read the papers that describe them carefully, and cite them.
+  <li>Include a link to your entire program on google colab --- I should be able to run the entire page
+  <br>In the main paper describe generally what the program does (no
+  need to go into extreme detail)
+ <li>If you want to make it even more beautiful, as I am sure you do,
+    take a look at my <a href =
+			 "https://fcbond.github.io/static/img/ling-style.pdf">(Computational)
+      Linguistic Style Guidelines</a>: a guide for the flummoxed.
+  <li> Submit
+    <b>softcopy</b> (via moodle). 
+  <li> The deadline is on the main page.</b>.  
+</ul>
+
+
+<p>Project Two for <a href="index.html">LAC: Language and the Computer</a> Francis Bond.
+
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
