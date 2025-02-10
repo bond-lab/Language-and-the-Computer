@@ -41,45 +41,6 @@ Triangle
 *********
 ***********
 
-Min, Max and Sum of 1..1,000,000
-
-1
-1000000
-500000500000
-
-Splitting Guests
-
-['C. J. Cherryh', 'Conan Doyle', 'Marie Curie', 'Isaac Newton', 'Dorothy Sayers', 'Oscar Wilde']
-['C. J. Cherryh', 'Marie Curie', 'Dorothy Sayers']
-['Conan Doyle', 'Isaac Newton', 'Oscar Wilde']
-
-Squares
-
-The square of 1 is 1
-The square of 2 is 4
-The square of 3 is 9
-The square of 4 is 16
-The square of 5 is 25
-The square of 6 is 36
-The square of 7 is 49
-The square of 8 is 64
-The square of 9 is 81
-
-More Pythonic Squares
-
-The square of 1 is 1
-The square of 2 is 4
-The square of 3 is 9
-The square of 4 is 16
-The square of 5 is 25
-The square of 6 is 36
-The square of 7 is 49
-The square of 8 is 64
-The square of 9 is 81
-['十', '九', '八', '七', '六', '五', '四', '三', '二', '一']
-('十', '九', '八', '七', '六', '五', '四', '三', '二', '一')
-['十', '九', '八', '七', '六', '五', '四', '三', '二', '一']
-
 Just words:
 ['개굴개굴', '멍멍', '야옹', '딸랑딸랑']
 ['개굴개굴', '멍멍', '야옹', '딸랑딸랑']
