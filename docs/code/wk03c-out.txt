@@ -1,0 +1,16 @@
+
+Playing with guests
+[31, 45, 50, 21, 33, 28]
+Average age = 34.666666666666664
+Younger guests: [('C. J. Cherryh', 31), ('Isaac Newton', 21), ('Dorothy Sayers', 33), ('Oscar Wilde', 28)]
+Older guests: [('Conan Doyle', 45), ('Marie Curie', 50)]
+Youngest guest(s): ['Isaac Newton']
+Oldest guest(s): ['Marie Curie']
+
+Onomatopoeia
+
+Just Korean
+[('개굴개굴', 'gaegul-gaegul', 'Ribbit (frog sound)'), ('멍멍', 'meong-meong', 'Woof (dog barking)'), ('야옹', 'ya-ong', 'Meow (cat sound)'), ('딸랑딸랑', 'ddal-lang-ddal-lang', 'Jingle (bell sound)')]
+
+Just Latin+
+[['gaegul-gaegul', 'meong-meong', 'ya-ong', 'ddal-lang-ddal-lang'], ['wāng wāng', 'miāo miāo', 'huā lā lā'], ['meo meo', 'gâu gâu', 'ục ịch', 'ro ro'], ['guk guk', 'meong', 'kring kring'], ['wan wan', 'nyaa nyaa', 'piyo piyo', 'goro goro']]
