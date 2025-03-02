@@ -1,14 +1,12 @@
-Enter a food to cook for the party (or type 'quit' to stop): pizza
-I'll cook pizza for the party!
-Enter a food to cook for the party (or type 'quit' to stop): quit
-
-Enter a food to cook for the party (or type 'quit' to stop): pasta
-I'll cook pasta for the party!
-Enter a food to cook for the party (or type 'quit' to stop): QUIT
-
-Enter a food to cook for the party (or type 'quit' to stop): pesto
-I'll cook pesto for the party!
-Enter a food to cook for the party (or type 'quit' to stop): Quit
+Enter a food to cook for the party (or type 'quit' to stop): I'll cook cake for the party!
+Enter a food to cook for the party (or type 'quit' to stop): 
+Enter a food to cook for the party (or type 'quit' to stop): I'll cook rendang for the party!
+Enter a food to cook for the party (or type 'quit' to stop): I'll cook rice for the party!
+Enter a food to cook for the party (or type 'quit' to stop): I'll cook ikan bilis for the party!
+Enter a food to cook for the party (or type 'quit' to stop): 
+Enter a food to cook for the party (or type 'quit' to stop): I'll cook pesto for the party!
+Enter a food to cook for the party (or type 'quit' to stop): I'll cook penne for the party!
+Enter a food to cook for the party (or type 'quit' to stop): 
 
 Counting tokens
 
@@ -84,6 +82,7 @@ There are 48 different lower case tokens
 *	(plumage)
 *	(black)
 *	(top-knot)
+{'holmes': 1, 'had': 1, 'been': 1, 'seated': 1, 'for': 1, 'some': 1, 'hours': 1, 'in': 2, 'silence': 1, 'with': 2, 'his': 3, 'long': 1, ',': 4, 'thin': 1, 'back': 1, 'curved': 1, 'over': 1, 'a': 4, 'chemical': 1, 'vessel': 1, 'which': 1, 'he': 2, 'was': 2, 'brewing': 1, 'particularly': 1, 'malodorous': 1, 'product': 1, '.': 2, 'head': 1, 'sunk': 1, 'upon': 1, 'breast': 1, 'and': 2, 'looked': 1, 'from': 1, 'my': 1, 'point': 1, 'of': 1, 'view': 1, 'like': 1, 'strange': 1, 'lank': 1, 'bird': 1, 'dull': 1, 'gray': 1, 'plumage': 1, 'black': 1, 'top-knot': 1}
 
 Filtering Lists
 

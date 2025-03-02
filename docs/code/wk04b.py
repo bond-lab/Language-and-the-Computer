@@ -69,10 +69,29 @@ for w in freq:
     if freq[w] > 1:
         print(f'{freq[w]}\t{w}')
 print()
-#Just for fun
+
+###
+### After class
+###
+
+
+# Histograms
 for w, f in freq.items():
     print(f"{'*' * f}\t({w})")
 
+
+###
+### A better way to count
+###
+### if there is a value get it, otherwise return 0
+
+freq= dict()
+for w in tokens:
+    w = w.lower()
+    freq[w] = freq.get(w, 0) + 1
+
+print(freq)    
+    
 ### remove stop words
 
 print('\nFiltering Lists\n')
