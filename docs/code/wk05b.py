@@ -88,24 +88,3 @@ informal_text = informal(text.split())
 print(informal_text)
 
 
-
-print("\n\nUpdate Inventory\n")
-
-def update_inventory(inventory, *new_items):
-    """
-    Updates the inventory with new items.
-
-    Returns:
-    dict: The updated inventory with the new items and their counts.
-    """
-    for item in new_items:
-        if item in inventory:
-            inventory[item] += 1
-        else:
-            inventory[item] = 1
-    return inventory
-
-# Example dictionary and function call
-current_inventory = {"apple": 2, "banana": 3}
-new_inventory = update_inventory(current_inventory, "apple", "banana", "cherry")
-print(new_inventory)

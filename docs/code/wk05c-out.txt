@@ -1,0 +1,35 @@
+
+
+Count Vowels
+
+hello 2
+Python 1
+
+
+Count Czech Vowels
+
+Válka 2
+Krk 0
+Ano 2
+
+
+Repeated words
+
+['The', 'the', 'book', 'is', 'very', 'very', 'good']
+'the' repeated in position 0
+'very' repeated in position 4
+['hello', 'world', 'hello']
+Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo
+(Buffalonian bison whom other Buffalonian bison bully also bully Buffalonian bison.)
+'buffalo' repeated in position 0
+'buffalo' repeated in position 1
+'buffalo' repeated in position 2
+'buffalo' repeated in position 3
+'buffalo' repeated in position 4
+'buffalo' repeated in position 5
+'buffalo' repeated in position 6
+
+
+Update Inventory
+
+{'apple': 3, 'banana': 4, 'cherry': 1}

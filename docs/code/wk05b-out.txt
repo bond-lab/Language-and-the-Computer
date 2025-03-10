@@ -28,8 +28,3 @@ Find Reduplication
 Informal
 
 ['Ini', 'adalah', 'Chi', 'no', 'Ike', 'di', 'dasar', 'Neraka', ',', 'tempat', 'timbul-tenggelamnya', 'Kandata', 'bersama', 'para', 'pendosa', 'lain', '.', 'Dilihat', 'dari', 'sudut', 'manapun', 'tempat', 'ini', 'gelap', 'pekat', '.', 'Terkadang', ',', 'dari', 'balik', 'kegelapan', ',', 'samar2', 'terlihat', 'kilauan', 'jaru-jarum', 'dari', 'Bukit', 'Jarum', 'yang', 'mengerikan', '.', 'Kengerian', 'yang', 'muncul', 'tidak', 'terperikan', '.', 'Ditambah', 'lagi', 'suasananya', 'yang', 'senyap', 'bagai', 'dalam', 'kuburan', ',', 'seringali', 'sayup2', 'hanya', 'terdengar', 'suara', 'lenguhan', 'nafas', 'para', 'pendosa', '.', 'Orang2', 'yang', 'samapi', 'jatuh', 'ke', 'tempat', 'ini', ',', 'begitu', 'kelelahan', 'oleh', 'berbagai', 'macam', 'siksaan', 'Neraka', 'sampai2', 'tidak', 'lagi', 'punya', 'tenaga', 'untuk', 'mengeluarkan', 'rintihan', 'derita', '.', 'Karenanya', ',', 'tentu', 'sajasi', 'maling', 'besar', 'Kandata', 'pun', 'sesenggukan', 'di', 'kubangan', 'darah', 'dalam', 'kolam', 'dan', 'gelagapan', 'persis', 'seperti', 'katak', 'sekarat', 'yang', 'tidak', 'bisa', 'berbuat', 'apa2', '.']
-
-
-Update Inventory
-
-{'apple': 3, 'banana': 4, 'cherry': 1}
