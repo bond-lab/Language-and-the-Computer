@@ -111,15 +111,35 @@ print(redups)      </div>
   of words and return a list of words with reduplicated words replaced
   by the informal version: e.g.,  <i>word-word</i> with <i>word2</i>.
     <br>Hint: use <a href=' https://www.w3schools.com/python/ref_string_split.asp'>split()</a>
-    
-  <li> ❂Write a function called <code>update_inventory</code> that takes a dictionary representing current inventory and an arbitrary number of additional items. The function should add the new items to the inventory.
+
+</ul>
+<h3>After Class (<a href='code/wk05c.html'>code</a>,
+  <a href='code/wk05c-out.txt'>output</a>)</h3>
+<ul>
+  <li> Write a function <code>count_vowel</code>s that takes a string and returns the number of vowels (a, e, i, o, u) in it.
+ <div class='shj-lang-py m-0 p-0 fs-6'>print(count_vowels("hello"))  # Expected output: 2
+print(count_vowels("Python")) # Expected output: 1
+</div>
+ <li> Extend the function to work with Czech
+ <div class='shj-lang-py m-0 p-0 fs-6'>print(count_vowels("Válka"))  # Expected output: 2
+print(count_vowels("Krk")) # Expected output: 0
+print(count_vowels("Ano")) # Expected output: 2
+</div>
+ <li> In English, repeated words are often mistakes.  Write a function <code>repeats</code> 
+   that takes a list of words and warns if there are any words that appear twice in a row.
+ <div class='shj-lang-py m-0 p-0 fs-6'>repeats(['The', 'the', 'book', 'is', 'very', 'very', 'good'])
+# expect ['the', 'very']
+repeats(["hello", "world", "hello"])
+# expect []
+</div>
+<li> Write a function called <code>update_inventory</code> that takes a dictionary representing current inventory and an arbitrary number of additional items. The function should add the new items to the inventory.
     <div class='shj-lang-py m-0 p-0 fs-6'># Example dictionary and function call
 current_inventory = {"apple": 2, "banana": 3}
 new_inventory = update_inventory(current_inventory, "apple", "banana", "cherry")
 print(new_inventory)</div>
   
 </ul>
-<p> ❂ If you haved finished everything else, try this 
+
 
 <h3>Summary</h3>
 
