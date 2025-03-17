@@ -23,7 +23,9 @@
 	<li>Read <i>Python Crash Course</i> Chapter 8
 	<li> As well as <code>json</code>, similar interfaces exist for other formats like <code>yaml, toml, ...</code></li>
 	<li> We can also download things from the web as follows:
-	  <div class='shj-lang-py m-0 p-0 fs-6'>def text_from_url(url):
+	  <div class='shj-lang-py m-0 p-0 fs-6'>import urllib
+	    
+def text_from_url(url):
   response = urllib.request.urlopen(url)
   return response.read().decode('utf-8')
 
@@ -106,9 +108,10 @@ houn = text_from_url("https://www.gutenberg.org/cache/epub/2852/pg2852.txt")</di
     </ul>
     <li> Finally save the file as json
     <br> Note to make the json more readable, you can
-    give <code>json.dumps</code> optional parameters: <code>indent =
-    2</code> formats it nicely, <code>ensure_ascii = False</code>
-    allows it to use unicode.  It is not necessary for the computer, but it can help you to debug.
+    give <code>json.dump/json.dumps</code> optional parameters:
+    <br><code>indent = 2</code> formats it nicely,
+    <br> <code>ensure_ascii = False</code>  allows it to use unicode.
+    <br>It is not necessary for the computer, but it can help you to debug.
     <li> Read the json file and give some statistics
       <ul>
 	<li>How many Czech words are there?
@@ -137,12 +140,12 @@ houn = text_from_url("https://www.gutenberg.org/cache/epub/2852/pg2852.txt")</di
     </ul>
 
     <li>Furthermore, you studied exceptions and how to handle them:
-        <code><pre>try:
+         <div class='shj-lang-py m-0 p-0 fs-6'>try:
     with open('filename.txt') as file:
         contents = file.read()
 except FileNotFoundError:
     print("File not found.")
-</pre></code>
+</div>
     </li>
 </ul>
 
