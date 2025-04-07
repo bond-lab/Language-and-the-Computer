@@ -53,6 +53,66 @@ def swear_filter(text, censor_type='full'):
     
     return censored_text
 
+##
+## Another version, that does better with 
+##  partial matches of different capitalization
+
+
+
+def swear_filter(text, censor_type='full'):
+    """
+    Censors offensive words in a text by replacing them with asterisks or alternatives.
+    
+    Parameters:
+        text (str): The text to censor.
+        censor_type (str): 'full' (replace all letters with *),
+                           'partial' (replace all letters except 1st and last),
+                           'bleep' (replace short words with 'bleep' and long words with 'bleepbleep').
+                           
+    Returns:
+        str: The censored text.
+        
+    Example:
+        >>> swear_filter("You are a shit")
+        'You are a ****'
+        >>> swear_filter("You are a shit", censor_type='partial')
+        'You are a s**t'
+        >>> swear_filter("You are a shit", censor_type='bleep')
+        'You are a bleep'
+        >>> swear_filter("You are a motherfucker", censor_type='bleep')
+        'You are a bleepbleep'
+        >>> swear_filter("I live in Scunthorpe", censor_type='bleep')
+        'I live in Scunthorpe'
+        >>> swear_filter("Fuck!", censor_type='partial')
+        'F**k!'
+    """
+    ### check long words first!
+    offensive_words = ["cocksucker", "motherfucker",
+                       "shit", "piss", "fuck", "cunt", "tits"]
+    censored_text = text
+    
+    for word in offensive_words:
+        if censor_type == 'full':
+            censored_text = re.sub(rf'\b{word}\b', '*'*len(word), censored_text, 
+                                   flags=re.IGNORECASE)
+        elif censor_type == 'partial':
+            print(word)
+            m = re.search(rf'\b({word})\b', censored_text, flags=re.IGNORECASE)
+            if m:
+              matched=m.group(0)
+              censored_text = re.sub(rf'\b{matched}\b', 
+                                     matched[0] + '*'*len(matched[1:-1]) + matched[-1],
+                                     censored_text) 
+        elif censor_type == 'bleep':
+            if  len(word) > 4:
+                censored_text = re.sub(rf'\b{word}\b', 'bleepbleep', 
+                                       censored_text, flags=re.IGNORECASE)
+            else:
+                censored_text = re.sub(rf'\b{word}\b', 'bleep', 
+                                       censored_text, flags=re.IGNORECASE)
+    return censored_text
+
+
 
 text = """안녕 (annyeong) = hi/bye (informal)
 안녕하세요 (annyeonghaseyo) = hello (polite)

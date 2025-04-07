@@ -17,4 +17,5 @@ do
     python3 ${prog}.py > ${prog}-out.txt
     #pygmentize -f html -O full -o test_${prog}.html test_${prog}.py
     #pytest -v  test_${prog}.py > test_${prog}-out.txt
+    #python -m pytest test_${prog}.py
 done
