@@ -1,3 +1,9 @@
+docs/code/venv/
+docs/code/wn_data/
+
+grades/
+local/
+
 slides/*.aux
 slides/*.bbl
 slides/*.blg

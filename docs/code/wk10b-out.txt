@@ -12,37 +12,37 @@ omw-en-04212282-n 9 badminton equipment consisting of a ball of cork or rubber w
 omw-en-01139865-v 2 watch and study birds in their natural habitat
 
 Which  languages have lemmas for 'omw-en-01503061-n'?
-hr Synset('omw-hr-01503061-n') ['ptica']
+gl Synset('omw-gl-01503061-n') ['ave']
 pl Synset('omw-pl-01503061-n') ['ptak']
 is Synset('omw-is-01503061-n') ['fugl']
+lt Synset('omw-lt-01503061-n') ['paukštis']
+arb Synset('omw-arb-01503061-n') ['طائِر', 'طيْر']
+nl Synset('omw-nl-01503061-n') ['vogel', 'vogeltje']
 pt Synset('omw-pt-01503061-n') ['ave', 'pássaro']
-zsm Synset('omw-zsm-01503061-n') ['unggas', 'burung']
-ca Synset('omw-ca-01503061-n') ['au', 'ocell']
+sq Synset('omw-sq-01503061-n') ['zogj']
+fr Synset('omw-fr-01503061-n') ['oiseau']
+th Synset('omw-th-01503061-n') ['นก', 'วิหค', 'ปักษา', 'สกุณา']
+ro Synset('omw-ro-01503061-n') ['pasăre']
+id Synset('omw-id-01503061-n') ['unggas', 'burung']
 eu Synset('omw-eu-01503061-n') ['hegazti', 'txori']
+sk Synset('omw-sk-01503061-n') ['vták']
+ca Synset('omw-ca-01503061-n') ['au', 'ocell']
+sl Synset('omw-sl-01503061-n') ['ptica', 'ptič']
+bg Synset('omw-bg-01503061-n') ['птица']
+nb Synset('omw-nb-01503061-n') ['fugl']
+el Synset('omw-el-01503061-n') ['πουλί', 'πτηνό']
+ja Synset('omw-ja-01503061-n') ['バード', '小鳥', '禽鳥', '飛禽', '鳥', '鳥類']
+hr Synset('omw-hr-01503061-n') ['ptica']
+sv Synset('omw-sv-01503061-n') ['fågel']
+es Synset('omw-es-01503061-n') ['ave', 'aves', 'pájaro']
+zsm Synset('omw-zsm-01503061-n') ['unggas', 'burung']
+nn Synset('omw-nn-01503061-n') ['fugl']
 da Synset('omw-da-01503061-n') ['fugl', 'pipfugl', 'piphans']
 it Synset('omw-it-01503061-n') ['uccello', 'pennuto', 'volatile', 'volativo', 'volatio']
 it Synset('omw-iwn-01503061-n') ['pennuto', 'volatile', 'uccello', 'augello']
-sv Synset('omw-sv-01503061-n') ['fågel']
-sl Synset('omw-sl-01503061-n') ['ptica', 'ptič']
-fi Synset('omw-fi-01503061-n') ['lintu']
-lt Synset('omw-lt-01503061-n') ['paukštis']
-el Synset('omw-el-01503061-n') ['πουλί', 'πτηνό']
-en Synset('omw-en-01503061-n') ['bird']
-ja Synset('omw-ja-01503061-n') ['バード', '小鳥', '禽鳥', '飛禽', '鳥', '鳥類']
-nb Synset('omw-nb-01503061-n') ['fugl']
-id Synset('omw-id-01503061-n') ['unggas', 'burung']
-sk Synset('omw-sk-01503061-n') ['vták']
-th Synset('omw-th-01503061-n') ['นก', 'วิหค', 'ปักษา', 'สกุณา']
-arb Synset('omw-arb-01503061-n') ['طائِر', 'طيْر']
-bg Synset('omw-bg-01503061-n') ['птица']
-sq Synset('omw-sq-01503061-n') ['zogj']
-ro Synset('omw-ro-01503061-n') ['pasăre']
-gl Synset('omw-gl-01503061-n') ['ave']
-nl Synset('omw-nl-01503061-n') ['vogel', 'vogeltje']
-es Synset('omw-es-01503061-n') ['ave', 'aves', 'pájaro']
 cmn-Hans Synset('omw-cmn-01503061-n') ['禽', '雀', '鸟', '鸟类']
-fr Synset('omw-fr-01503061-n') ['oiseau']
-nn Synset('omw-nn-01503061-n') ['fugl']
+en Synset('omw-en-01503061-n') ['bird']
+fi Synset('omw-fi-01503061-n') ['lintu']
 Synset('omw-en-01503061-n')
 omw-en-bird-01503061-n 29
 
@@ -85,39 +85,28 @@ omw-en-09989045-n 1 informal terms for a (young) woman
 omw-en-07123870-n 0 a cry or noise made to express displeasure or contempt
 omw-en-04212282-n 0 badminton equipment consisting of a ball of cork or rubber with a crown of feathers
 omw-en-01139865-v 0 watch and study birds in their natural habitat
-
-
-Sysnets for 'red'
-
-
-omw-en-09405949-n ['Red', 'Red River'] a tributary of the Mississippi River that flows eastward from Texas along the southern boundary of Oklahoma and through Louisiana
-omw-en-00381097-s ['red', 'reddish', 'ruddy', 'blood-red', 'carmine', 'cerise', 'cherry', 'cherry-red', 'crimson', 'ruby', 'ruby-red', 'scarlet'] of a color at the end of the color spectrum (next to orange); resembling the color of blood or cherries or tomatoes or rubies
-omw-en-00248560-s ['crimson', 'red', 'violent'] characterized by violence or bloodshed
-omw-en-00395626-s ['crimson', 'red', 'reddened', 'red-faced', 'flushed'] (especially of the face) reddened or suffused with or as if with blood from emotion or exertion
-omw-en-04962784-n ['red', 'redness'] red color or pigment; the chromatic color resembling the hue of blood
-omw-en-09863749-n ['Bolshevik', 'Marxist', 'red', 'bolshie', 'bolshy'] emotionally charged terms used to refer to extreme radicals or revolutionaries
-omw-en-13327231-n ['loss', 'red ink', 'red'] the amount by which the cost of a business exceeds its revenue
-
-
-All Hyponyms of 'red'
-
-
-omw-en-04963111-n ['sanguine'] a blood-red color
-omw-en-04963201-n ['chrome red'] a red pigment used in paints; basic lead chromate
-omw-en-04963307-n ['Turkey red', 'alizarine red'] a bright orange-red color produced in cotton cloth with alizarine dye
-omw-en-04963449-n ['cardinal', 'carmine'] a variable color averaging a vivid red
-omw-en-04963588-n ['crimson', 'ruby', 'deep red'] a deep and vivid red color
-omw-en-04963740-n ['dark red'] a red color that reflects little light
-omw-en-04964287-n ['purplish red', 'purplish-red'] a red with a tinge of purple
-omw-en-04964443-n ['cerise', 'cherry', 'cherry red'] a red the color of ripe cherries
-omw-en-04964977-n ['scarlet', 'vermilion', 'orange red'] a variable color that is vivid red but sometimes with an orange tinge
-omw-en-04963905-n ['burgundy'] a dark purplish-red to blackish-red color
-omw-en-04964001-n ['claret'] a dark purplish-red color
-omw-en-04964079-n ['oxblood red'] a dark brownish-red color
-omw-en-04964162-n ['wine', 'wine-colored', 'wine-coloured'] a red as dark as red wine
-omw-en-04964586-n ['magenta'] a primary subtractive color for light; a dark purple-red color; the dye for magenta was discovered in 1859, the year of the battle of Magenta
-omw-en-04964799-n ['fuschia'] a dark purplish-red color
-omw-en-04964878-n ['maroon'] a dark purplish-red to dark brownish-red color
+tufs-ja-00109151-r ['そちら']
+tufs-ja-00296131-r ['たぶん']
+tufs-ja-00154449-r ['たぶん']
+tufs-ja-00081737-r ['毎年']
+tufs-ja-00009966-r ['どうぞ']
+tufs-ja-00031798-r ['もう(1)']
+tufs-ja-00157412-r ['時々']
+tufs-ja-00021212-r ['時々']
+tufs-ja-00081591-r ['毎週']
+tufs-ja-00059413-r ['よく(1)']
+tufs-ja-00035058-r ['よく(1)']
+tufs-ja-00161630-r ['ゆっくり']
+tufs-ja-00120223-r ['～ながら']
+tufs-ja-00120095-r ['～ながら']
+tufs-ja-00118032-r ['では', 'じゃあ']
+tufs-ja-00024356-r ['いいえ']
+tufs-ja-00056916-r ['どうぞ']
+tufs-ja-00121135-r ['そう']
+tufs-ja-00409709-r ['近く']
+tufs-ja-00027918-r ['まだ']
+tufs-ja-00031304-r ['まだ']
+tufs-ja-00254978-r ['毎月']
 
 
 Average Polysemy vs Word Length (English)

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="hg2052.ico">
+  <title>LAC: Language and the Computer &mdash; Project 2</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300..900&display=swap">
+ <style>
+   body {
+       font-family: 'Oswald', serif !important;
+   }
+   </style>
+  </head>
+  <body class="container">
+    <div class="column">
+
+<h1>LAC: Language and the Computer: Project 2</h1>
+
+<p>This assignment constitutes 30% of your final grade
+for <a href='index.html'>LAC</a>.  Please work on this individually or
+  in groups of two or three.
+
+<p>Pick one of the following:</p>
+  
+<h2>A: Check a basic list</h2>
+
+  <ol>
+    <li> Go through the Tokyo University of Foreign Studies Basic
+      Vocabulary for Indonesian and see how much is covered by the data
+      you extracted in Project 1 for Indonesian
+      <ul>
+	<li> Show what % are in the data
+	<li> Show what % have the same translation in wordnet
+	<br> You can get the translation from another wordnet, linked
+	by the inter-lingual index (ili)
+      </ul>
+    <br> e.g <i>kopi</i> is a concept  in
+    the Indonesian basic vocabulary  (tufs-id-07929519-n) and is  linked by
+      ili="i31263" to  <i>coffee</i> (tufs-en-07929519-n) in the English wordnet
+      <br>The Indonesian data you processed had:
+      <pre>
+	kopi = coffee</pre>
+      so the concept is: (i) in the data and (ii) has the same translation
+    <li> Give the results by part of speech
+    <li> Show the results graphically (you choose what kind of graph)
+  </ol>
+
+  <h3>Stretch Goals</h3>
+  <p>You should do at least <strong>one</strong> of these.
+  
+    <ol>
+      <li> Do some error analysis, for concepts that did not match, explain why
+      <li> Show for all the languages (preferably using a loop)
+      <li> List what basic concepts were not in the duolingo wiki data, and discuss why
+      <li> List what words were in the duolingo wiki data but not in
+      the basic conepts, and discuss why
+    </ol>
+
+<p> You should use these wordnets:
+  <ul>
+    <li><a href = 'code/P3/tufs-id.xml'>Tokyo University of Foreign Studies Basic Vocabulary for Indonesian (id)</a>
+       <ul>
+	 <li> Contains words and example sentences for basic vocabulary
+	 <li> Web page is here: <a href='https://fcbond.github.io/tufs/'>https://fcbond.github.io/tufs/</a>
+	 <li> TUFS web page is here: <a href='https://malindo.aa-ken.jp/TUFSOpenLgResources.html'>https://malindo.aa-ken.jp/TUFSOpenLgResources.html</a>
+	 <li> Vocab Search page is here [in Japanese]: <a href='https://www.coelang.tufs.ac.jp/mt/index_v.html'>https://www.coelang.tufs.ac.jp/mt/index_v.html</a>
+
+       </ul>
+    <li>Similarly there are:
+      <ul>
+	<li><a href = 'code/P3/tufs-en.xml'>Tokyo University of Foreign Studies Basic Vocabulary for English (en)</a>
+	<li><a href = 'code/P3/tufs-ja.xml'>Tokyo University of Foreign Studies Basic Vocabulary for Japanese (ja)</a>
+	<li><a href = 'code/P3/tufs-ko.xml'>Tokyo University of Foreign Studies Basic Vocabulary for Korean (ko)</a>
+	<li><a href = 'code/P3/tufs-zh.xml'>Tokyo University of Foreign Studies Basic Vocabulary for Mandarin Chinese (zh)</a>
+	<li><a href = 'code/P3/tufs-vi.xml'>Tokyo University of Foreign Studies Basic Vocabulary for Vietnamese (vi)</a>
+	<li> No Czech I'm afraid!
+      </ul>	         
+   </ul>	  
+
+<p>If you had trouble extracting data for P1, come and see me.
+  
+<h2>B: Own Task</h2>
+
+<p>You can suggest your own task, and if I say ok, do it instead.
+  This can be used to fit in with other research you are doing, but
+  should not duplicate work done for other assessment, you must do
+  something new for this class.
+
+  
+
+  
+  <h2>Deliverable</h2>
+<p>You should deliver a paper, which contains a link to the program
+and if necessary the output files. 
+  
+  <ul>
+    <li>The paper should be no more than ten pages
+including diagrams, with up to two additional pages of references,
+  <li> You should give concrete examples from the resource(s) you
+    analyzed.
+  <li>Include quantitive results.
+  <li>Include representative examples.
+  <li> You don't need an extensive literature review, but  if you
+    consult other lexicons (which you are encouraged to do) then you
+    should read the papers that describe them carefully, and cite them.
+  <li>Include a link to your entire program on google colab --- I should be able to run the entire page
+  <br>In the main paper describe generally what the program does (no
+  need to go into extreme detail)
+ <li>If you want to make it even more beautiful, as I am sure you do,
+    take a look at my <a href =
+			 "https://fcbond.github.io/static/img/ling-style.pdf">(Computational)
+      Linguistic Style Guidelines</a>: a guide for the flummoxed.
+  <li> Submit
+    <b>softcopy</b> (via moodle). 
+  <li> The deadline is on the main page.</b>.  
+</ul>
+
+
+<p>Project Two for <a href="index.html">LAC: Language and the Computer</a> Francis Bond.
+
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

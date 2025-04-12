@@ -52,18 +52,19 @@ for ss in ewn.synsets('bird'):
 
 
 ##
-## find all the hyponyms of the color red! (hint use closure)
+## Load the TUFS Basic Vocabulary for ja
+## https://bond-lab.github.io/Language-and-the-Computer/code/P3/tufs-ja.xml
+##  Print out all the adverbsfind all the hyponyms of the color red! (hint use closure)
 ##
-print("\n\nSysnets for 'red'\n\n")
+wn.download('https://bond-lab.github.io/Language-and-the-Computer/code/P3/tufs-ja.xml')
 
-# which is the color?
-for ss in ewn.synsets('red'):
-    print(ss.id, ss.lemmas(), ss.definition())
+tufsja = wn.Wordnet('tufs-ja:1.1')
 
-print("\n\nAll Hyponyms of 'red'\n\n")
 
-for ss in  ewn.synsets('red')[4].closure('hyponym'):
-    print(ss.id, ss.lemmas(), ss.definition())
+# What are the adverbs
+for ss in tufsja.synsets(pos='r'):
+    print(ss.id, ss.lemmas())
+
 
 ###
 ### Polysemy by length

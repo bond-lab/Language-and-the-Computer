@@ -27,12 +27,12 @@
 	<a href="https://www.nltk.org/book/ch02.html#lexical-resources">
 	  Lexical Resources</a>
       </li>
+      <li>We will use a new wordnet module <a href='https://pypi.org/project/wn/'>wn</a> (<a href='https://wn.readthedocs.io/en/latest/'>Documentation</a>; <a href='https://colab.research.google.com/drive/12fHOljna59xe2wDAQu-sIhYV8ertTCVF?usp=sharing'>How To</a>) --- 
+	<strong>Please use this not NLTK</strong>
       <li>2.5:
 	<a href="https://www.nltk.org/book/ch02.html#wordnet">
 	  WordNet</a>
 	(<a href="https://www.nltk.org/howto/wordnet.html">How To</a>)
-      <li>We will use a new wordnet module <a href='https://pypi.org/project/wn/'>wn</a> (<a href='https://wn.readthedocs.io/en/latest/'>Documentation</a>; <a href='https://colab.research.google.com/drive/12fHOljna59xe2wDAQu-sIhYV8ertTCVF?usp=sharing'>How To</a>) --- 
-	<strong>Please use this not NLTK</strong>
       </li> 
     </ul>
   </li>
@@ -120,7 +120,7 @@
 <h3>Practical work -- in class (<a href='code/wk10b.html'>code</a>,
   <a href='code/wk10b-out.txt'>output</a>)</h3>
 <ol>
-  <li>Load wordnet inside python.  
+  <li>Load the Open Multilingual Wordnet inside python. This will be slow the first time!
     <ul>
       <li>  Look at the different synsets for <i>bird</i>.  
 	<br> How many are there?
@@ -132,10 +132,10 @@
 	(hint freqency of a lemma is given by <tt>sense.counts</tt>)
       <li>Give the total frequency for each synset
     </ul>
-  <li> Find all hyponyms (including hyponyms of hyponyms, ...) for the colour red!
-    <ul>
-      <li>Use <code>closure</code> (shown in the How To)
-    </ul>
+  <li> Load the TUFS Basic Vocabulary for ja <a href='https://bond-lab.github.io/Language-and-the-Computer/code/P3/tufs-ja.xml'>https://bond-lab.github.io/Language-and-the-Computer/code/P3/tufs-ja.xml</a>
+  <ul>
+    <li>Print out all the adverbs (synset id and lemmas)
+  </ul>
   <li> ★ Tabulate the average polysemy per word length for all words
     in one language in wordnet, and then seperately for each part of speech.
 <ul>
@@ -158,7 +158,7 @@
       <li> Use the <i>supersense</i> (aka <i> lexfile, topic</i>) 
     </ul>
     e.g. <i>duck, salmon</i>
-  <li>Try in another language
+  <li> ★ Try in another language
     <ul>
       <li> Not all wordnets have supersenses, so you may have to
       translate the synset to English, and look at the English
