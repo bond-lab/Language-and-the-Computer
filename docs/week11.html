@@ -31,13 +31,46 @@
       <li><a href='https://www.darkhorseanalytics.com/portfolio/data-looks-better-naked-bar-charts'>Bar charts</a>
      <li><a href='https://www.darkhorseanalytics.com/portfolio/2016/1/7/data-looks-better-naked-pie-charts'>Pie Charts</a>
       <li><a href='https://www.darkhorseanalytics.com/portfolio/2016/1/7/data-looks-better-naked-clear-off-the-table'>Tables</a>
+    </ul>
 </ul>
 
+<p>Plotting involves design, you should aim for these points.  
+<ol>
+  <li><strong>Clarity</strong> — The graph should immediately convey the intended message without confusion.
+    <ul>
+      <li> Minimize visual clutter.</li>
+    </ul>
+  </li>
+  <li><strong>Accuracy</strong> — Represent the data honestly without distortion.
+    <ul>
+      <li> Maintain appropriate scales and proportions.</li>
+    </ul>
+  </li>
+  <li><strong>Relevance</strong> — Only include elements that support the key insight you want to communicate.
+    <ul>
+      <li> Avoid "chartjunk" — unnecessary decorations.</li>
+    </ul>
+  </li>
+  <li><strong>Good Labeling</strong> — Axes, legends, and data points should be labeled clearly and concisely.
+    <ul>
+      <li> Use annotations to highlight important features.</li>
+    </ul>
+  </li>
+  <li><strong>Effective Visual Encoding</strong> — Choose the best type of graph for the data and relationships you're showing:
+    <br>
+     — line for trends, bar for comparisons, scatter for relationships, …
+    <ul>
+      <li> Respect perceptual principles (e.g., don't use 3D effects that make it harder to judge values).</li>
+    </ul>
+  </li>
+</ol>
+
+<p><i><a href='https://www.darkhorseanalytics.com/portfolio-data-looks-better-naked'>Data looks better naked</a></i> Darkhorse Analytics (accessed 2025-04-28)
 
 <h3>Before class  (<a href='code/wk11a.html'>code</a>,
   <a href='code/wk11a-out.txt'>output</a>,
  <a href='code/wk11a-fig1.png'>Fig 1</a>,
- <a href='code/wk11a-fig1.png'>Fig 2</a> )</h3>
+ <a href='code/wk11a-fig2.png'>Fig 2</a> )</h3>
 <ul>
   <li> Graph the cubes from 1-100, and save them as a png file.
     <br> Hint <code>plt.savefig("fig1.png")</code>
@@ -47,11 +80,12 @@
 
 
 
+
 <h3>Practical work --- in class  (<a href='code/wk11b.html'>code</a>,
   <a href='code/wk11b-out.txt'>output</a>,
  <a href='code/wk11b-fig1.png'>Fig 1</a>)</h3>
 <ul>
-  <li> Remember the data we made for udhr POS from week 9:
+  <li> Remember the data we made for udhr POS from week 9 (the different POS distributions for the <i>Universal Declaration of Human Rights</i> in various languages):
     <pre>
       udhr = {"en": {"ADJ": 158, "ADV": 27, "NOUN": 443, "VERB": 139, "PROPN": 31, "INTJ": 0, "ADP": 246, "AUX": 90, "CCONJ": 129, "SCONJ": 15, "DET": 178, "NUM": 29, "PART": 42, "PRON": 85, "PUNCT": 154, "SYM": 0, "X": 0}, "cs": {"ADJ": 214, "ADV": 36, "NOUN": 434, "VERB": 114, "PROPN": 1, "INTJ": 0, "ADP": 133, "AUX": 58, "CCONJ": 121, "SCONJ": 31, "DET": 113, "NUM": 26, "PART": 5, "PRON": 41, "PUNCT": 173, "SYM": 0, "X": 0}, "id": {"ADJ": 103, "ADV": 48, "NOUN": 439, "VERB": 187, "PROPN": 23, "INTJ": 0, "ADP": 174, "AUX": 1, "CCONJ": 114, "SCONJ": 16, "DET": 70, "NUM": 27, "PART": 27, "PRON": 69, "PUNCT": 135, "SYM": 0, "X": 0}, "zh": {"ADJ": 47, "ADV": 174, "NOUN": 776, "VERB": 825, "PROPN": 35, "INTJ": 0, "ADP": 140, "AUX": 0, "CCONJ": 115, "SCONJ": 0, "DET": 75, "NUM": 208, "PART": 232, "PRON": 46, "PUNCT": 200, "SYM": 0, "X": 5}, "ko": {"ADJ": 70, "ADV": 131, "NOUN": 417, "VERB": 166, "PROPN": 4, "INTJ": 0, "ADP": 0, "AUX": 10, "CCONJ": 116, "SCONJ": 54, "DET": 17, "NUM": 25, "PART": 0, "PRON": 2, "PUNCT": 118, "SYM": 0, "X": 0}, "ja": {"ADJ": 58, "ADV": 6, "NOUN": 671, "VERB": 229, "PROPN": 8, "INTJ": 0, "ADP": 458, "AUX": 184, "CCONJ": 75, "SCONJ": 70, "DET": 18, "NUM": 36, "PART": 25, "PRON": 7, "PUNCT": 212, "SYM": 0, "X": 0}, "vi": {"ADJ": 78, "ADV": 0, "NOUN": 428, "VERB": 275, "PROPN": 58, "INTJ": 0, "ADP": 107, "AUX": 9, "CCONJ": 34, "SCONJ": 50, "DET": 67, "NUM": 50, "PART": 2, "PRON": 0, "PUNCT": 133, "SYM": 0, "X": 90}}
       </pre>
@@ -105,8 +139,8 @@
 <ul>
   <li>You learned how to graph results in various results
   <li>You learned the importance of making the graphs as easy to read as possible
-  <li>I find it very hard to remember all the parameters, I rely on
-  google on LLMs to help me.
+  <li>I find it very hard to remember all the parameters for plots, I rely on
+  google or LLMs to help me.
 </ul>
 <hr>
 <p><a href="index.html">LAC: Language and the Computer</a> Francis
