@@ -25,28 +25,28 @@
   <li>Tokens will typically approximate words, but can be sub-word units.</li>
   <ul>
     <li> <i>don't</i> may become <i>do not</i>
-    <li> <i>kdbys</i> may become <i>když bys</i>
+    <li> <i>kdybys</i> may become <i>když bys</i>
     <li> <i>ad hoc</i> may become <i>ad_hoc</i>
   </ul>
   <li> Typically punctuation and symbols will also be tokens</li>
-  <li>This step is foundational in NLP, allowing algorithms to handle text systematically.</li>
-  <li>Proper tokenization is crucial, as it directly affects the performance of NLP models.</li>
-  <li>Because it requires language specific information (and may not have one correct answer) we use statistical language models</a>
+  <li> This step is foundational in NLP, allowing algorithms to handle text systematically.</li>
+  <li> Proper tokenization is crucial, as it directly affects the performance of NLP models.</li>
+  <li> Because it requires language specific information (and may not have one correct answer) we use statistical language models</a>
   <li> We will use <a href ='https://spacy.io/'>spaCy</a> a free,
     open-source library for advanced Natural Language Processing (NLP)
     in Python.
     <ul>
-      <li>Read <a href='https://spacy.io/usage/spacy-101'>spaCy 101: Everything you need to know</a> at least up to the end of the section on Linguistic Annotations
+      <li> Read <a href='https://spacy.io/usage/spacy-101'>spaCy 101: Everything you need to know</a> at least up to the end of the section on Linguistic Annotations
       <li> Watch the video <a href='https://www.youtube.com/watch?v=8vAq-SSnMsM'>Text Analysis with Python: Intro to Spacy</a>
     </ul>
-  <li>spaCy has <a href='https://spacy.io/usage/models'>models for many languages</a>, but not all the languages we want.  Note that these models are not small, and may take a long time to load on a computer with limited memory.
+  <li> spaCy has <a href='https://spacy.io/usage/models'>models for many languages</a>, but not all the languages we want.  Note that these models are not small, and may take a long time to load on a computer with limited memory.
     <ul>
-      <li>So we will also use models from the <a href='https://universaldependencies.org/'>Universal Dependency Project</a>
-      <li>These models are part of <a href='https://lindat.mff.cuni.cz/services/udpipe/'>UDPipe</a> a trainable
+      <li> So we will also use models from the <a href='https://universaldependencies.org/'>Universal Dependency Project</a>
+      <li> These models are part of <a href='https://lindat.mff.cuni.cz/services/udpipe/'>UDPipe</a> a trainable
 	pipeline for tokenization, tagging, lemmatization and dependency
-      <li>These are brought together in the <a href='https://spacy.io/universe/project/spacy-udpipe'>spacy-udpipe</a> package
+      <li> These are brought together in the <a href='https://spacy.io/universe/project/spacy-udpipe'>spacy-udpipe</a> package
     </ul>
-  <li>Another toolkit that looks useful is <a href='https://trankit.readthedocs.io/en/latest/index.html'>Trankit</a> a light-weight Transformer-based Python Toolkit for multilingual Natural Language Processing (NLP)
+  <li> Another toolkit that looks useful is <a href='https://trankit.readthedocs.io/en/latest/index.html'>Trankit</a> a light-weight Transformer-based Python Toolkit for multilingual Natural Language Processing (NLP)
 </ul>
 
 <h4>Using spaCy in google colab</h4>
